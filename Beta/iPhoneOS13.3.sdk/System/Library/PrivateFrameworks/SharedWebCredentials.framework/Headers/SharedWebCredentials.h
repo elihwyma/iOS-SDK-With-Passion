@@ -1,7 +1,0 @@
-#import "_SWCApplicationIdentifier.h"
-#import "_SWCDomain.h"
-#import "_SWCGeneration.h"
-#import "_SWCPrefs.h"
-#import "_SWCServiceDetails.h"
-#import "_SWCServiceSettings.h"
-#import "_SWCServiceSpecifier.h"

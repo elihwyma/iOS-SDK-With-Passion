@@ -1,5 +1,0 @@
-#import "CRDRecentContactsLibraryInterface.h"
-#import "CRRecentContact.h"
-#import "CRRecentContactsLibrary.h"
-#import "CRSearchQuery.h"
-#import "CRSQLRow.h"
