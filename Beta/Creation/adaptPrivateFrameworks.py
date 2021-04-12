@@ -52,7 +52,7 @@ if len(sys.argv) <= 1 or sys.argv[1] in ['-h', '--help', 'help']:
     print('Usage:')
     print('    python3 adaptPrivateFrameworks.py <path to PrivateFrameworks folder>')
     print('Example:')
-    print('    python3 adaptPrivateFrameworks.py /Users/John/Downloads/HeaderDump/System/Library/PrivateFrameworks')
+    print('    python3 adaptPrivateFrameworks.py ~/Downloads/iPhoneOS.sdk/System/Library/PrivateFrameworks')
     exit()
 if not os.path.exists(sys.argv[1]):
     print('Error: specified folder does not exist')
