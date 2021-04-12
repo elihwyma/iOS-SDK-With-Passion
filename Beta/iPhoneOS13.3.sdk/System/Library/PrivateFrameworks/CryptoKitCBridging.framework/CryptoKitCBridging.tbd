@@ -1,0 +1,38 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64e ]
+uuids:                 [ 'arm64e: 4999CD83-CB3E-34A5-9B92-D773253E21C9' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/CryptoKitCBridging.framework/CryptoKitCBridging
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64e ]
+    symbols:              [ _CryptoKitCBridgingVersionNumber,
+                            _CryptoKitCBridgingVersionString,
+                            _SPAKE2Alishaz0Size, _SPAKE2CtxSize,
+                            _coordinateSizeForCurve, _getCMACContextSize,
+                            _getDigestSizeForDigestInfo, _getGCMCtxSize,
+                            _getHMACContextSizeForDigestInfo,
+                            _getccec_full_ctx_size, _getccec_pub_ctx_size,
+                            _keyIsCompactRepresentable ]
+    objc-classes:         [ _CKCBDER, _SEPUtils ]
+undefineds:
+  - archs:                [ arm64e ]
+    symbols:              [ _MGGetBoolAnswer, _SecAccessControlCopyData,
+                            ___CFConstantStringClassReference, ___chkstk_darwin,
+                            ___stack_chk_fail, ___stack_chk_guard,
+                            __objc_empty_cache, _bzero, _ccaes_cbc_encrypt_mode,
+                            _ccder_decode_seqii_strict,
+                            _ccder_encode_constructed_tl, _ccder_encode_integer,
+                            _ccder_sizeof, _ccder_sizeof_integer,
+                            _ccec_validate_pub, _ccec_x963_import_pub, _ccn_bitlen,
+                            _ccn_cmp, _ccn_sub, _ccspake_cp_256, _ccspake_sizeof_ctx,
+                            _ccspake_sizeof_w, _memcpy,
+                            _objc_autoreleaseReturnValue, _objc_msgSend,
+                            _objc_release, _objc_retain, _objc_retainAutorelease,
+                            _objc_retainAutoreleasedReturnValue,
+                            dyld_stub_binder ]
+    objc-classes:         [ _NSMutableData, _NSObject ]
+...

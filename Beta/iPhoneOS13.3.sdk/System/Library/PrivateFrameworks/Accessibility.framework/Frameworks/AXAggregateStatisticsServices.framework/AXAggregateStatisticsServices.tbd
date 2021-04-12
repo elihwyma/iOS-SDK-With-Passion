@@ -1,0 +1,19 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64e ]
+uuids:                 [ 'arm64e: BE5F3B67-D2DE-33B3-A87E-99384E016857' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/Accessibility.framework/Frameworks/AXAggregateStatisticsServices.framework/AXAggregateStatisticsServices
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64e ]
+    objc-classes:         [ _AXAggregateStatisticsServices ]
+undefineds:
+  - archs:                [ arm64e ]
+    symbols:              [ ___CFConstantStringClassReference,
+                            ___NSDictionary0__, __objc_empty_cache, _objc_alloc,
+                            _objc_msgSend, _objc_release, dyld_stub_binder ]
+    objc-classes:         [ _AXUIClient, _NSObject ]
+...

@@ -1,0 +1,31 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64e ]
+uuids:                 [ 'arm64e: 090BF75F-1394-327F-9A3A-6C66C08E989B' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/IOImageLoader.framework/IOImageLoader
+current-version:       1
+compatibility-version: 1
+exports:
+  - archs:                [ arm64e ]
+    symbols:              [ __ZN28IOImageLoaderImageDictionary12getAttributeEP14__CFDictionaryPK10__CFString,
+                            __ZN28IOImageLoaderImageDictionary12getAttributeEP14__CFDictionaryPKc,
+                            __ZN28IOImageLoaderImageDictionary13getAttributesEP14__CFDictionaryPK10__CFString,
+                            __ZN28IOImageLoaderImageDictionary13getAttributesEP14__CFDictionaryPKc,
+                            __ZN28IOImageLoaderImageDictionary22setAttributeWithNumberEP14__CFDictionaryPK10__CFStringPK10__CFNumber,
+                            __ZN28IOImageLoaderImageDictionary22setAttributeWithNumberEP14__CFDictionaryPK10__CFStringy,
+                            __ZN28IOImageLoaderImageDictionary22setAttributeWithNumberEP14__CFDictionaryPKcPK10__CFNumber,
+                            __ZN28IOImageLoaderImageDictionary22setAttributeWithNumberEP14__CFDictionaryPKcy,
+                            __ZN28IOImageLoaderImageDictionary22setAttributeWithObjectEP14__CFDictionaryPK10__CFStringPv,
+                            __ZN28IOImageLoaderImageDictionary22setAttributeWithObjectEP14__CFDictionaryPKcPv,
+                            __ZN28IOImageLoaderImageDictionary22setAttributeWithStringEP14__CFDictionaryPK10__CFStringS4_,
+                            __ZN28IOImageLoaderImageDictionary22setAttributeWithStringEP14__CFDictionaryPKcS3_ ]
+undefineds:
+  - archs:                [ arm64e ]
+    symbols:              [ _CFDictionaryGetCount, _CFDictionaryGetValue,
+                            _CFDictionarySetValue, _CFNumberCreate,
+                            _CFNumberGetValue, _CFRelease,
+                            _CFStringCreateWithCString, _CFStringGetCStringPtr,
+                            ___stack_chk_fail, ___stack_chk_guard,
+                            _kCFAllocatorDefault, _printf, dyld_stub_binder ]
+...
