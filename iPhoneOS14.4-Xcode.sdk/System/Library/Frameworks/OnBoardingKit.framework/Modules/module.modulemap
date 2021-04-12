@@ -1,7 +1,0 @@
-framework module OnBoardingKit {
-    umbrella header "OnBoardingKit.h"
-
-    export *
-    module * { export * }
-}
-

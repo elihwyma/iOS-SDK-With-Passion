@@ -1,5 +1,0 @@
-#import "HalogenLdcmCalc.h"
-#import "HalogenMeasurement.h"
-#import "HalogenWrapper.h"
-#import "IOAccessoryLdcmHealthClass.h"
-#import "IOAccessoryUserLdcmParamClass.h"
