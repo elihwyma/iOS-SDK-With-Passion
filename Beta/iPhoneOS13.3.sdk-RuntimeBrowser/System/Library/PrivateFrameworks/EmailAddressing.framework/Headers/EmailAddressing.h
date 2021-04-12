@@ -1,0 +1,6 @@
+#import "_EAEmailAddress.h"
+#import "_EAEmailAddressSetEnumerator.h"
+#import "EAEmailAddressGenerator.h"
+#import "EAEmailAddressLists.h"
+#import "EAEmailAddressParser.h"
+#import "EAEmailAddressSet.h"

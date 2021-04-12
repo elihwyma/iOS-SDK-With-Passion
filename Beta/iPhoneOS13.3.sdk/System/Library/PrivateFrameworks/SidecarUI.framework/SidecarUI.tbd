@@ -1,0 +1,29 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64e ]
+uuids:                 [ 'arm64e: D4E5B43E-0E39-3CD6-9FE7-C79CE0ADB498' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SidecarUI.framework/SidecarUI
+current-version:       209.20.1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64e ]
+    objc-classes:         [ _SidecarServiceViewController ]
+undefineds:
+  - archs:                [ arm64e ]
+    symbols:              [ _SidecarOptOutOfReconnect,
+                            _SidecarRegisterServiceProvider,
+                            _SidecarServiceProviderReady, _UIApp,
+                            __NSConcreteGlobalBlock, __NSConcreteStackBlock,
+                            ___CFConstantStringClassReference, ___stack_chk_fail,
+                            ___stack_chk_guard, __dispatch_main_q,
+                            __objc_empty_cache, __os_log_impl, _dispatch_async,
+                            _dispatch_once, _objc_msgSend, _objc_msgSendSuper2,
+                            _objc_release, _objc_retain,
+                            _objc_retainAutoreleaseReturnValue,
+                            _objc_retainAutoreleasedReturnValue,
+                            _objc_storeStrong, _os_log_create,
+                            _os_log_type_enabled, dyld_stub_binder ]
+    objc-classes:         [ _NSBundle, _NSObject, _NSXPCInterface, _UIViewController ]
+...

@@ -1,0 +1,25 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64e ]
+uuids:                 [ 'arm64e: 596B7198-119B-317C-8A35-7A18C39518F2' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/iWorkXPC.framework/iWorkXPC
+current-version:       11
+compatibility-version: 1
+exports:
+  - archs:                [ arm64e ]
+    symbols:              [ _iWorkXPCVersionNumber, _iWorkXPCVersionString ]
+undefineds:
+  - archs:                [ arm64e ]
+    symbols:              [ __Unwind_GetIP, __Unwind_GetLanguageSpecificData,
+                            __Unwind_GetRegionStart, __Unwind_SetGR,
+                            __Unwind_SetIP, ___assert_rtn, ___stack_chk_fail,
+                            ___stack_chk_guard, ___stderrp, _abort, _bzero,
+                            _dispatch_once_f, _dlsym, _fclose, _fflush, _fopen, _fprintf,
+                            _fread, _free, _fseek, _ftell, _logbl, _malloc, _memcpy,
+                            _mprotect, _pthread_getspecific, _pthread_key_create,
+                            _pthread_mutex_lock, _pthread_mutex_unlock,
+                            _pthread_once, _pthread_setspecific, _realloc, _rewind,
+                            _scalbn, _scalbnf, _scalbnl, _sscanf,
+                            _sys_icache_invalidate, dyld_stub_binder ]
+...

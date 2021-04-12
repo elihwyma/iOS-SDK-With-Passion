@@ -1,0 +1,69 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64e ]
+uuids:                 [ 'arm64e: F38F26B9-3710-3DF8-99B5-8C80A36B8B62' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/ARDisplayDevice.framework/ARDisplayDevice
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64e ]
+    symbols:              [ _ARDisplayDeviceHMEDetectionKey,
+                            _ARDisplayDeviceHMEEnrollmentKey,
+                            _ARDisplayDeviceHMEHeadlockedKey,
+                            _ARDisplayDeviceHMEOverdriveKey,
+                            _ARDisplayDeviceHMEStatusKey,
+                            _ARDisplayDeviceVersionNumber,
+                            _ARDisplayDeviceVersionString,
+                            _adc_packDistortVertexInput,
+                            _addc_MTLViewportToString, _addc_NSDataToString,
+                            _addc_matrixToString, _addc_matrix_make_translation,
+                            _addc_vector_float3ToString,
+                            _addc_vector_float4ToString, _toShort2N, _toUShort2N ]
+    objc-classes:         [ _ARDDLog, _ARDisplayConfiguration,
+                            _ARDisplayDeviceConfig, _ARDisplayDeviceConfigPOV,
+                            _ARDisplayDeviceExtensionService,
+                            _ARDisplayDeviceInterface, _ARDisplayDevicePrincipal,
+                            _ARDisplayDeviceRemoteExtensionContext,
+                            _ARDisplayDeviceUserDefaults,
+                            _ARDisplayExtensionPrincipal,
+                            _ARDisplayExtensionService,
+                            _ARDisplayHostExtensionContext,
+                            _ARDisplayPointOfView,
+                            _ARDisplayRemoteExtensionContext, _ARDisplayService ]
+undefineds:
+  - archs:                [ arm64e ]
+    symbols:              [ _NSExtensionPointName, _NSStringFromClass,
+                            _NSStringFromSelector, __Block_object_assign,
+                            __NSConcreteGlobalBlock, __NSConcreteStackBlock,
+                            ___CFConstantStringClassReference, ___invert_f4,
+                            ___stack_chk_fail, ___stack_chk_guard,
+                            __dispatch_main_q, __objc_empty_cache,
+                            __os_log_debug_impl, __os_log_error_impl, _atan2f,
+                            _dispatch_async, _dispatch_group_create,
+                            _dispatch_group_enter, _dispatch_group_leave,
+                            _dispatch_group_notify, _dispatch_once,
+                            _dispatch_queue_create, _dispatch_sync, _free, _malloc,
+                            _matrix_identity_float4x4, _objc_alloc,
+                            _objc_autoreleaseReturnValue, _objc_copyStruct,
+                            _objc_enumerationMutation, _objc_getProperty,
+                            _objc_msgSend, _objc_msgSendSuper2, _objc_opt_class,
+                            _objc_opt_isKindOfClass, _objc_opt_new,
+                            _objc_opt_respondsToSelector, _objc_release,
+                            _objc_retain, _objc_retainAutorelease,
+                            _objc_retainAutoreleaseReturnValue,
+                            _objc_retainAutoreleasedReturnValue,
+                            _objc_setProperty_atomic, _objc_storeStrong,
+                            _os_log_create, _os_log_type_enabled, _sinf,
+                            dyld_stub_binder ]
+    objc-classes:         [ _NSArray, _NSBundle, _NSCoder, _NSData, _NSDate,
+                            _NSDictionary, _NSError, _NSExtension,
+                            _NSExtensionContext, _NSKeyedArchiver,
+                            _NSKeyedUnarchiver, _NSLock, _NSMutableArray,
+                            _NSMutableCharacterSet, _NSMutableData,
+                            _NSMutableDictionary, _NSMutableString, _NSNumber,
+                            _NSNumberFormatter, _NSObject, _NSPredicate, _NSSet,
+                            _NSString, _NSThread, _NSUserDefaults, _NSXPCInterface ]
+    weak-def-symbols:     [ _MGGetSInt32Answer, _OBJC_CLASS_$_UIScreen ]
+...

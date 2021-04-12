@@ -1,0 +1,8 @@
+#import "IOBufferMutableData.h"
+#import "IOUSBHostDevice.h"
+#import "IOUSBHostInterestNotificationReference.h"
+#import "IOUSBHostInterface.h"
+#import "IOUSBHostIOSource.h"
+#import "IOUSBHostObject.h"
+#import "IOUSBHostPipe.h"
+#import "IOUSBHostStream.h"

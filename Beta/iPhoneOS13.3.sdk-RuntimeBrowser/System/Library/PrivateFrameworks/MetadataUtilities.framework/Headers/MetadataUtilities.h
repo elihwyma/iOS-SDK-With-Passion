@@ -1,0 +1,5 @@
+#import "_MDMutablePlistBytes.h"
+#import "_MDPlistBytes.h"
+#import "FilterElementDefinition.h"
+#import "MDPathFilter.h"
+#import "MDPathFilterGenerator.h"

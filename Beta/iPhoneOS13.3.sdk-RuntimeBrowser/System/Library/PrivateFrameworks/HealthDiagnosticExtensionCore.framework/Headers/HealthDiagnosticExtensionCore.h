@@ -1,0 +1,7 @@
+#import "HDCloudSyncDiagnosticOperation.h"
+#import "HDDaemonDiagnosticOperation.h"
+#import "HDDatabaseDiagnosticOperation.h"
+#import "HDDiagnosticExtension.h"
+#import "HDDiagnosticOperation.h"
+#import "HDNanoSyncDiagnosticOperation.h"
+#import "HDWorkoutCondenserDiagnosticOperation.h"

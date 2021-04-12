@@ -1,0 +1,79 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64e ]
+uuids:                 [ 'arm64e: ED1E9915-5EFA-3D72-88F8-A1E8C879553E' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/InAppMessages.framework/InAppMessages
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64e ]
+    symbols:              [ _IAMLogCategoryDefault,
+                            _IAMLogCategoryDefault_Oversize,
+                            _IAMWebMessageErrorDomain,
+                            _IAMWebProcessShouldDismissPresentationBeforeOpen,
+                            _InAppMessagesVersionNumber,
+                            _InAppMessagesVersionString ]
+    objc-classes:         [ _IAMAction, _IAMContent, _IAMCountableEvent,
+                            _IAMEvaluator, _IAMEvent, _IAMFigaroEvent, _IAMImage,
+                            _IAMMessage, _IAMMessageCoordinator,
+                            _IAMModalBackground, _IAMModalViewController,
+                            _IAMModalWebMessageViewController, _IAMPlayerView,
+                            _IAMPresentationPolicy,
+                            _IAMTeachableMomentModalViewController,
+                            _IAMTempTestMessages, _IAMValueEvent,
+                            _IAMWebMessageController,
+                            _IAMWebMessagePresentationCoordinator, _IAMWebView ]
+undefineds:
+  - archs:                [ arm64e ]
+    symbols:              [ _CGRectZero,
+                            _ICInAppMessageEntryResourceIdentifierWebArchive,
+                            _ICInAppMessagesDidChangeNotification,
+                            __Block_object_assign, __Block_object_dispose,
+                            __NSConcreteGlobalBlock, __NSConcreteStackBlock,
+                            __Unwind_Resume, ___CFConstantStringClassReference,
+                            ___NSArray0__, ___NSDictionary0__,
+                            ___objc_personality_v0, ___stack_chk_fail,
+                            ___stack_chk_guard, __dispatch_main_q,
+                            __objc_empty_cache, __os_log_impl, _class_addMethod,
+                            _class_getInstanceMethod, _class_replaceMethod,
+                            _dispatch_async, _dispatch_get_global_queue,
+                            _dispatch_once, _dispatch_queue_create, _dispatch_sync,
+                            _method_exchangeImplementations,
+                            _method_getImplementation, _method_getTypeEncoding,
+                            _objc_alloc, _objc_autorelease,
+                            _objc_autoreleaseReturnValue, _objc_destroyWeak,
+                            _objc_enumerationMutation, _objc_getProperty,
+                            _objc_loadWeakRetained, _objc_msgSend,
+                            _objc_msgSendSuper2, _objc_opt_class,
+                            _objc_opt_isKindOfClass, _objc_opt_new,
+                            _objc_opt_respondsToSelector, _objc_release,
+                            _objc_retain, _objc_retainAutorelease,
+                            _objc_retainAutoreleaseReturnValue,
+                            _objc_retainAutoreleasedReturnValue,
+                            _objc_setProperty_atomic,
+                            _objc_setProperty_nonatomic_copy, _objc_storeStrong,
+                            _objc_storeWeak,
+                            _objc_unsafeClaimAutoreleasedReturnValue,
+                            _os_log_create, _os_log_type_enabled, dyld_stub_binder ]
+    objc-classes:         [ _AVPlayerItem, _AVPlayerLayer, _AVPlayerLooper,
+                            _AVQueuePlayer, _CAGradientLayer,
+                            _ICEnvironmentMonitor, _ICIAMApplicationMessage,
+                            _ICIAMMessageAction, _ICIAMMessageContent,
+                            _ICIAMMessageRule, _ICIAMMetricEvent, _ICIAMParameter,
+                            _ICIAMTriggerCondition, _ICInAppMessageEntry,
+                            _ICInAppMessageManager, _ICInAppMessageMetadataEntry,
+                            _NSArray, _NSBundle, _NSDate, _NSDictionary, _NSError,
+                            _NSLayoutConstraint, _NSMutableArray,
+                            _NSMutableDictionary, _NSMutableOrderedSet,
+                            _NSMutableSet, _NSNotificationCenter, _NSNull, _NSNumber,
+                            _NSObject, _NSPredicate, _NSSet, _NSString, _NSURL,
+                            _UIApplication, _UIButton, _UIColor, _UIDevice, _UIFont,
+                            _UIImage, _UIImageView, _UILabel, _UIScreen, _UIStackView,
+                            _UIView, _UIViewController, _WKProcessPool, _WKWebView,
+                            _WKWebViewConfiguration,
+                            __UIFormSheetPresentationController, __UISheetDetent,
+                            __WKProcessPoolConfiguration,
+                            __WKRemoteObjectInterface ]
+...

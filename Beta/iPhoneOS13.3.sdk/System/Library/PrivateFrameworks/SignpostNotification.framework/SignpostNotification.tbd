@@ -1,0 +1,20 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64e ]
+uuids:                 [ 'arm64e: A0EADB3A-2680-3FBA-AB2F-D17B76464152' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/SignpostNotification.framework/SignpostNotification
+current-version:       42
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64e ]
+    symbols:              [ _EnableSignpostNotificationGeneration,
+                            _SignpostGetNewNotificationConnection,
+                            _SignpostNotificationSendNotificationSubscriptionRequestOnConnection,
+                            _SignpostNotificationVersionNumber,
+                            _SignpostNotificationVersionString ]
+undefineds:
+  - archs:                [ arm64e ]
+    symbols:              [ dyld_stub_binder ]
+...
