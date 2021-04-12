@@ -1,0 +1,6 @@
+#import "WCMClientProxy.h"
+#import "WCMSetting.h"
+#import "WRM_iRATInterface.h"
+#import "WRM_iRATProximityRecommendation.h"
+#import "WRM_iRATProximityRecommendationLogging.h"
+#import "WRMClientInterface.h"

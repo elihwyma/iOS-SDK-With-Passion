@@ -1,0 +1,8 @@
+#import "AITransactionLog.h"
+#import "MIBundleMetadata.h"
+#import "MIFileManager.h"
+#import "MIGlobalConfiguration.h"
+#import "MIInstallerClient.h"
+#import "MIInstallOptions.h"
+#import "MIStoreMetadata.h"
+#import "MIStoreMetadataSubGenre.h"
