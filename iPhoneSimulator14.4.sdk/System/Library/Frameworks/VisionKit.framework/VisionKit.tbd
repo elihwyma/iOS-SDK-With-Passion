@@ -1,0 +1,43 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           052F18CA-6A2D-3A7E-9AB2-C1BF00AAE05A
+  - target:          arm64-ios-simulator
+    value:           D7D799FD-45F5-3D40-BE28-9813DB6F1FE6
+install-name:    '/System/Library/Frameworks/VisionKit.framework/VisionKit'
+reexported-libraries:
+  - targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+    libraries:       [ '/System/Library/PrivateFrameworks/DocumentCamera.framework/DocumentCamera' ]
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           C518A8C7-3C0F-3F96-9D6F-A97407204707
+  - target:          arm64-ios-simulator
+    value:           93C6A1B2-843A-3826-82FF-1446C19D5954
+install-name:    '/System/Library/PrivateFrameworks/DocumentCamera.framework/DocumentCamera'
+current-version: 74
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _DCScanWasDeletedNotification, _DCTransformFromImageOrientation, 
+                       _dc_clockwiseRotationsFromUpToMatchOrientation, _dc_counterClockwiseRotationsFromUpToMatchOrientation, 
+                       _dc_nonLocalizedOrientationNameForType, _dc_orientationFromNonLocalizedName, 
+                       _kICDocCamImageQuadPerspectiveCorrectImageInset, _kMaximumPagePerScanSession ]
+    objc-classes:    [ DCDocumentCameraViewController, DCDocumentCameraViewServiceSession, 
+                       DCDocumentEditorViewController, DCNotesSPI, DCScannedDocument, 
+                       DCSettings, ICDocCamDocumentInfo, ICDocCamDocumentInfoCollection, 
+                       ICDocCamExtractedDocumentNavigationController, ICDocCamExtractedDocumentViewController, 
+                       ICDocCamFilterViewController, ICDocCamImageCache, ICDocCamImageFilters, 
+                       ICDocCamImageQuad, ICDocCamImageQuadEditImageView, ICDocCamImageQuadEditViewController, 
+                       ICDocCamNavigationController, ICDocCamRecropTransitionAnimator, 
+                       ICDocCamRenamePrompt, ICDocCamScanCache, ICDocCamScanCacheItem, 
+                       ICDocCamThumbnailContainerView, ICDocCamViewController, VNDocumentCameraScan, 
+                       VNDocumentCameraViewController ]
+...

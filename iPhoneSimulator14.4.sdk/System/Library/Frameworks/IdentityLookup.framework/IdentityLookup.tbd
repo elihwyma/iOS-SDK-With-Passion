@@ -1,0 +1,25 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           1621E53D-1141-3232-9702-CEBF2A9863B6
+  - target:          arm64-ios-simulator
+    value:           5F53F670-2DB0-33D2-82B3-C0B4076842DA
+install-name:    '/System/Library/Frameworks/IdentityLookup.framework/IdentityLookup'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _ILClassificationUIExtensionPointIdentifier, _ILDefaultLog, 
+                       _ILMessageFilterErrorDomain, _ILMessageFilterExtensionPointIdentifier, 
+                       _ILMessageFilterPrivateErrorDomain ]
+    objc-classes:    [ ILCallClassificationRequest, ILCallCommunication, ILClassification, 
+                       ILClassificationController, ILClassificationReportRequest, 
+                       ILClassificationRequest, ILClassificationResponse, ILCommunication, 
+                       ILMessageClassificationRequest, ILMessageCommunication, ILMessageFilter, 
+                       ILMessageFilterExtension, ILMessageFilterExtensionContext, 
+                       ILMessageFilterExtensionHostContext, ILMessageFilterQueryRequest, 
+                       ILMessageFilterQueryResponse, ILMessageFilterReportRequest, 
+                       ILNetworkResponse ]
+...

@@ -1,0 +1,32 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           4B1258D6-63B4-303C-9979-B76DD332DA43
+  - target:          x86_64-ios-simulator
+    value:           44D0FA3B-031F-3C6A-9090-4E66ADE16253
+  - target:          arm64-ios-simulator
+    value:           FD7B9373-2EEE-398C-8737-0030B8AFFAC5
+install-name:    '/usr/lib/swift/libswiftContacts.dylib'
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ '$ld$install_name$os10.0$@rpath/libswiftContacts.dylib', '$ld$install_name$os10.1$@rpath/libswiftContacts.dylib', 
+                       '$ld$install_name$os10.2$@rpath/libswiftContacts.dylib', '$ld$install_name$os10.3$@rpath/libswiftContacts.dylib', 
+                       '$ld$install_name$os11.0$@rpath/libswiftContacts.dylib', '$ld$install_name$os11.1$@rpath/libswiftContacts.dylib', 
+                       '$ld$install_name$os11.2$@rpath/libswiftContacts.dylib', '$ld$install_name$os11.3$@rpath/libswiftContacts.dylib', 
+                       '$ld$install_name$os11.4$@rpath/libswiftContacts.dylib', '$ld$install_name$os12.0$@rpath/libswiftContacts.dylib', 
+                       '$ld$install_name$os12.1$@rpath/libswiftContacts.dylib', '$ld$install_name$os7.0$@rpath/libswiftContacts.dylib', 
+                       '$ld$install_name$os7.1$@rpath/libswiftContacts.dylib', '$ld$install_name$os8.0$@rpath/libswiftContacts.dylib', 
+                       '$ld$install_name$os8.1$@rpath/libswiftContacts.dylib', '$ld$install_name$os8.2$@rpath/libswiftContacts.dylib', 
+                       '$ld$install_name$os8.3$@rpath/libswiftContacts.dylib', '$ld$install_name$os8.4$@rpath/libswiftContacts.dylib', 
+                       '$ld$install_name$os9.0$@rpath/libswiftContacts.dylib', '$ld$install_name$os9.1$@rpath/libswiftContacts.dylib', 
+                       '$ld$install_name$os9.2$@rpath/libswiftContacts.dylib', '$ld$install_name$os9.3$@rpath/libswiftContacts.dylib', 
+                       '_$sSC11CNErrorCodeLeV8ContactsE15affectedRecordsSayyXlGSgvg', 
+                       '_$sSC11CNErrorCodeLeV8ContactsE15affectedRecordsSayyXlGSgvpMV', 
+                       '_$sSC11CNErrorCodeLeV8ContactsE25affectedRecordIdentifiersSaySSGSgvg', 
+                       '_$sSC11CNErrorCodeLeV8ContactsE25affectedRecordIdentifiersSaySSGSgvpMV', 
+                       '_$sSC11CNErrorCodeLeV8ContactsE8keyPathsSaySSGSgvg', '_$sSC11CNErrorCodeLeV8ContactsE8keyPathsSaySSGSgvpMV', 
+                       '__swift_FORCE_LOAD_$_swiftContacts' ]
+...

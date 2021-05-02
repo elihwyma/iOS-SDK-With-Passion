@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           7BBC6353-31D3-3C06-9456-70CF083D4400
+  - target:          x86_64-ios-simulator
+    value:           2C5B3078-B288-325D-BE07-E5B2C3F3733D
+  - target:          arm64-ios-simulator
+    value:           53EC084C-04E3-32AA-8C8C-4079F3D889B7
+install-name:    '/usr/lib/libgermantok.dylib'
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ ___gt_mutex, _btrie_build, _btrie_close, _btrie_common_prefix_search, 
+                       _btrie_data, _btrie_exact_match_search, _btrie_open, _btrie_prefix_match_search, 
+                       _btrie_wildcard_match_search ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _germantok_tokenize ]
+...

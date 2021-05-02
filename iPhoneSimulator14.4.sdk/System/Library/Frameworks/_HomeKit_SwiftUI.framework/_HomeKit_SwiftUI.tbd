@@ -1,0 +1,20 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           0A24CAA6-4DB4-37D6-8062-BF5C6121BD3D
+  - target:          arm64-ios-simulator
+    value:           6804F556-88BD-3994-A7A7-2E27A7929E7B
+install-name:    '/System/Library/Frameworks/_HomeKit_SwiftUI.framework/_HomeKit_SwiftUI'
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ '_$s16_HomeKit_SwiftUI10CameraViewV0cD00F0AAMc', '_$s16_HomeKit_SwiftUI10CameraViewV4bodyQrvg', 
+                       '_$s16_HomeKit_SwiftUI10CameraViewV4bodyQrvpMV', '_$s16_HomeKit_SwiftUI10CameraViewV4bodyQrvpQOMQ', 
+                       '_$s16_HomeKit_SwiftUI10CameraViewV6sourceACSo14HMCameraSourceC_tcfC', 
+                       '_$s16_HomeKit_SwiftUI10CameraViewVMa', '_$s16_HomeKit_SwiftUI10CameraViewVMn', 
+                       '_$s16_HomeKit_SwiftUI10CameraViewVN' ]
+...

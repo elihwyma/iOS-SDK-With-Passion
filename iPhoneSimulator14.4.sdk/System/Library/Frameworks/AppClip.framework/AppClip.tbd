@@ -1,0 +1,17 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           5A366ED2-C7D8-3F07-ABFB-96CFD6F5AACE
+  - target:          arm64-ios-simulator
+    value:           38C75F54-2CE7-3D1B-850B-04EC860D6F89
+install-name:    '/System/Library/Frameworks/AppClip.framework/AppClip'
+current-version: 20.20
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _APActivationPayloadErrorDomain ]
+    objc-classes:    [ APActivationPayload ]
+...

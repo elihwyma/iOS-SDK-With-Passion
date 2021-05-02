@@ -1,0 +1,25 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           5AFA5DEE-9D76-3F4F-ADD9-D33B7623E59E
+  - target:          arm64-ios-simulator
+    value:           039123A2-B71C-3B86-B8AE-9586ED9EB3DC
+install-name:    '/System/Library/Frameworks/MetricKit.framework/MetricKit'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _MetricKitVersionNumber, _MetricKitVersionString ]
+    objc-classes:    [ MXAnimationMetric, MXAppExitMetric, MXAppLaunchMetric, MXAppResponsivenessMetric, 
+                       MXAppRunTimeMetric, MXAverage, MXBackgroundExitData, MXCPUExceptionDiagnostic, 
+                       MXCPUMetric, MXCallStackFrame, MXCallStackThread, MXCallStackTree, 
+                       MXCellularConditionMetric, MXCrashDiagnostic, MXDiagnostic, 
+                       MXDiagnosticPayload, MXDiskIOMetric, MXDiskWriteExceptionDiagnostic, 
+                       MXDisplayMetric, MXForegroundExitData, MXGPUMetric, MXHangDiagnostic, 
+                       MXHistogram, MXHistogramBucket, MXLocationActivityMetric, 
+                       MXMemoryMetric, MXMetaData, MXMetric, MXMetricManager, MXMetricPayload, 
+                       MXNetworkTransferMetric, MXSignpostIntervalData, MXSignpostMetric, 
+                       MXUnitAveragePixelLuminance, MXUnitSignalBars ]
+...

@@ -1,0 +1,22 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           375689B5-29B8-34D7-AC98-59ED5B1CEBA4
+  - target:          x86_64-ios-simulator
+    value:           06BD0179-D81B-30B9-9974-C421217CF35D
+  - target:          arm64-ios-simulator
+    value:           9A159DA5-C6C0-3247-BFAD-9B929824CB1C
+install-name:    '/System/Library/Frameworks/HealthKitUI.framework/HealthKitUI'
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ _HKRingPercentageValueNoRing, _HKScrollPerformanceOptionCategoryKey ]
+    objc-classes:    [ HKAnimatableObject, HKAnimatableObjectPropertyAnimation, HKCGPointPropertyAnimation, 
+                       HKFloatPropertyAnimation, HKMetricColors, HKRingGroupController, 
+                       HKRingsView, _HKAnimatableProperty, _HKIcon, _HKRing ]
+  - targets:         [ x86_64-ios-simulator, arm64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _HKGLViewSnapshottingDidEndNotification, _HKGLViewSnapshottingWillBeginNotification, 
+                       _HKHealthKitUIFrameworkBundle ]
+    objc-classes:    [ HKActivityRingView, HKGLView ]
+...

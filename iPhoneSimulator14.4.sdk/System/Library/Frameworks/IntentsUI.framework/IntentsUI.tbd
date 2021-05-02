@@ -1,0 +1,25 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           B1063DBA-B32F-3A50-807A-81060F5343DE
+  - target:          x86_64-ios-simulator
+    value:           3A538D42-1BB3-3CFE-B74C-276B4EDA57EB
+  - target:          arm64-ios-simulator
+    value:           0CF5A148-FDAF-3A4D-9F7B-38F5DD75802D
+install-name:    '/System/Library/Frameworks/IntentsUI.framework/IntentsUI'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _INUIRemoteViewControllerErrorDomain, _INUIVoiceShortcutExtensionItemBundleURLKey, 
+                       _INUIVoiceShortcutExtensionItemSandboxExtensionDataKey, _IntentsUIVersionNumber, 
+                       _IntentsUIVersionString, __INUIRemoteViewControllerErrorDomain, 
+                       __INUIUtilitiesBestFittingSizeForSizeBySystemVersionDictionary ]
+    objc-classes:    [ INUIAddVoiceShortcutButton, INUIAddVoiceShortcutViewController, 
+                       INUIAppIntentDeliverer, INUIAppIntentForwardingActionExecutor, 
+                       INUIEditVoiceShortcutViewController, INUIExtensionRequestInfo, 
+                       INUIExtensionViewControllerConfiguration, INUIImageLoader, 
+                       INUIImageServiceConnection, INUIImageSizeProvider, INUIInterfaceSection, 
+                       INUIPortableImageLoaderHelper, INUIRemoteViewController, INUISearchFoundationImageAdapter, 
+                       INUIVoiceShortcutXPCInterface, _INUIExtensionContextState ]
+...

@@ -1,0 +1,16 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           E9750E98-1BD6-391B-A7AF-093E5C32841C
+  - target:          x86_64-ios-simulator
+    value:           DA931778-0303-323E-BAA4-58ED27B30162
+  - target:          arm64-ios-simulator
+    value:           DBEBED52-E16C-3BA6-AF9F-D86B3DB8FCEA
+install-name:    '/System/Library/Frameworks/Twitter.framework/Twitter'
+current-version: 164
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    objc-classes:    [ TWRequest, TWTweetComposeViewController ]
+...

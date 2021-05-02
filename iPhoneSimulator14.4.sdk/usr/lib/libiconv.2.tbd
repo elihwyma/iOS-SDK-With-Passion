@@ -1,0 +1,26 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           9D20371C-9551-3A4F-8EB4-BA412A52B31E
+  - target:          x86_64-ios-simulator
+    value:           3778DAE0-8133-3381-98B9-81EB889EA0DA
+  - target:          arm64-ios-simulator
+    value:           7BDD7294-E7ED-3843-95BD-5F0BC0A4F70C
+install-name:    '/usr/lib/libiconv.2.dylib'
+current-version: 7
+compatibility-version: 7
+reexported-libraries:
+  - targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+    libraries:       [ '/usr/lib/libcharset.1.dylib' ]
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ ___iconv_2VersionNumber, ___iconv_2VersionString, _aliases2_lookup, 
+                       _aliases_lookup, _libiconv, _libiconv_close, _libiconv_open, 
+                       _libiconv_relocate, _libiconvctl, _libiconvlist, _locale_charset, 
+                       _utf8_decodestr, _utf8_encodestr, _utf_extrabytes ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ __libiconv_version, _iconv, _iconv_canonicalize, _iconv_close, 
+                       _iconv_open, _iconvctl, _iconvlist, _libiconv_set_relocation_prefix ]
+...

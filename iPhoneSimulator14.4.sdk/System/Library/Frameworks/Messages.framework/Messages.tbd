@@ -1,0 +1,39 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           D4F550E6-A665-3991-827E-C7D4B9B96FBD
+  - target:          x86_64-ios-simulator
+    value:           8D6F06A1-4045-37CE-8150-AD73642CC45D
+  - target:          arm64-ios-simulator
+    value:           B42B2075-2E63-32F5-8C81-480062DA90A8
+install-name:    '/System/Library/Frameworks/Messages.framework/Messages'
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ _MSCachedStickerThumbnailURLForStickerAtURL, _MSStickerBrowserStateRestorationInfo, 
+                       _MSStickerBrowserStateRestorationInfoPath, _MSStickerImageSizeMaximum, 
+                       _MSStickerImageSizeMinimum, _MSStickerLocalizedDecriptionsLengthMaximum, 
+                       _MSStickerPreviewCachePreviewDidChange, _MessagesVersionNumber, 
+                       _MessagesVersionString, __MSFileTransferAttributionInfoAdamIDKey, 
+                       __MSFileTransferAttributionInfoAppNameKey, __MSFileTransferAttributionInfoIconKey, 
+                       __MSFileTransferAttributionInfoURLKey, __kMSStickerCollectionViewCellReuseIdentifier ]
+    objc-classes:    [ MSBalloonTemplateLayout, MSMessagePayload, MSStickerBrowserViewLayoutSpec, 
+                       MSStickerBrowserViewLayoutSpecJ99, MSStickerBrowserViewLayoutSpeciPad, 
+                       MSStickerBrowserViewLayoutSpeciPhone, MSStickerBrowserViewLayoutSpeciPhoneMini, 
+                       MSStickerBrowserViewLayoutSpeciPhonePlus, _MSExtensionGlobalState, 
+                       _MSSticker, _MSStickerCollectionViewCell ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _MSMessagesErrorDomain, _MSStickersErrorDomain, _MSStickersErrorStickerInfoKey, 
+                       __MSExtensionContextIsPrimary, __MSExtensionItemConversationStateKey, 
+                       __MSExtensionItemHostViewBoundsKey, __MSExtensionItemWantsLiveViewKey, 
+                       _ms_defaultLog, _ms_traceLog ]
+    objc-classes:    [ MSConversation, MSMessage, MSMessageLayout, MSMessageLiveLayout, 
+                       MSMessageTemplateLayout, MSMessagesAppViewController, MSRichLink, 
+                       MSSession, MSSticker, MSStickerBrowserView, MSStickerBrowserViewController, 
+                       MSStickerView, _MSConversationState, _MSMessageAppBundleContext, 
+                       _MSMessageAppBundleHostContext, _MSMessageAppContext, _MSMessageAppExtensionContext, 
+                       _MSMessageAppExtensionHostContext, _MSMessageExtensionRemoteViewController, 
+                       _MSMessageMediaPayload, _MSPresentationState, _MSStickerPackCollectionViewDataSource, 
+                       _MSStickerSendManager, _MSTempFileManager, _MSTempURL ]
+...

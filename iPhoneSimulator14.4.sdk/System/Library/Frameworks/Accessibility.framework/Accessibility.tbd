@@ -1,0 +1,16 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           01F15163-6C0D-3A26-97D5-0C3A73FC1748
+  - target:          arm64-ios-simulator
+    value:           209DCCB8-71FA-35E3-BBC3-66E34B52A36B
+install-name:    '/System/Library/Frameworks/Accessibility.framework/Accessibility'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _AXNameFromColor ]
+    objc-classes:    [ AXCustomContent ]
+...

@@ -1,0 +1,24 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           E3466CF4-79DC-38C4-9CDD-0A174631C16F
+  - target:          x86_64-ios-simulator
+    value:           5A2B8EB5-F373-384C-85F0-DF609E039303
+  - target:          arm64-ios-simulator
+    value:           04620976-CC29-39CE-AF53-E6473220D48B
+install-name:    '/usr/lib/libChineseTokenizer.dylib'
+current-version: 37
+exports:
+  - targets:         [ i386-ios-simulator ]
+    weak-symbols:    [ __ZTINSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                       __ZTINSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                       __ZTSNSt3__115basic_stringbufIcNS_11char_traitsIcEENS_9allocatorIcEEEE, 
+                       __ZTSNSt3__118basic_stringstreamIcNS_11char_traitsIcEENS_9allocatorIcEEEE ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _ChineseTokenizerAdvanceToNextToken, _ChineseTokenizerCreate, 
+                       _ChineseTokenizerGetCurrentTokenRange, _ChineseTokenizerGoToTokenAtIndex, 
+                       _ChineseTokenizerRelease, _ChineseTokenizerSetCustomWordCheckBlock, 
+                       _ChineseTokenizerSetDynamicLexicon, _ChineseTokenizerSetString ]
+...

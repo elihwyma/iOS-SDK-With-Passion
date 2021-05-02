@@ -1,0 +1,29 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           E1EE0EAC-0786-3983-9834-161F13BD9E5B
+  - target:          x86_64-ios-simulator
+    value:           E545882E-33C9-3097-9496-7F4B6341002C
+  - target:          arm64-ios-simulator
+    value:           F271D245-774D-3BEA-B666-8969504DACEB
+install-name:    '/System/Library/Frameworks/AssetsLibrary.framework/AssetsLibrary'
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ _ALAssetPropertyExternalUsageIntent ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _ALAssetLibraryDeletedAssetGroupsKey, _ALAssetLibraryInsertedAssetGroupsKey, 
+                       _ALAssetLibraryUpdatedAssetGroupsKey, _ALAssetLibraryUpdatedAssetsKey, 
+                       _ALAssetPropertyAssetURL, _ALAssetPropertyDate, _ALAssetPropertyDuration, 
+                       _ALAssetPropertyEditorBundleID, _ALAssetPropertyLocation, 
+                       _ALAssetPropertyOrientation, _ALAssetPropertyRepresentations, 
+                       _ALAssetPropertyType, _ALAssetPropertyURLs, _ALAssetTypePhoto, 
+                       _ALAssetTypeUnknown, _ALAssetTypeVideo, _ALAssetsGroupPropertyName, 
+                       _ALAssetsGroupPropertyPersistentID, _ALAssetsGroupPropertyRepresentativeEndDate, 
+                       _ALAssetsGroupPropertyRepresentativeLocationNames, _ALAssetsGroupPropertyRepresentativeStartDate, 
+                       _ALAssetsGroupPropertyType, _ALAssetsGroupPropertyURL, _ALAssetsLibraryChangedNotification, 
+                       _ALAssetsLibraryErrorDomain, _ALErrorInvalidProperty ]
+    objc-classes:    [ ALAsset, ALAssetRepresentation, ALAssetsFilter, ALAssetsGroup, 
+                       ALAssetsLibrary ]
+...

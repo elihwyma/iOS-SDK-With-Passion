@@ -1,0 +1,26 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           31FD9391-2A04-38EF-B6C8-A6449214FDE9
+  - target:          x86_64-ios-simulator
+    value:           7856B48D-726D-3994-81B7-ED6AD1505B1F
+  - target:          arm64-ios-simulator
+    value:           DDBA89E0-87AA-3E82-B35E-61A70460CD9E
+install-name:    '/usr/lib/libcupolicy.dylib'
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ __ZN30cellular_usage_policy_client_sC1Ev, __ZN30cellular_usage_policy_client_sC2Ev, 
+                       _cellular_usage_policy_copy_datausage_blacklist, _cellular_usage_policy_copy_for_bundle, 
+                       _cellular_usage_policy_create_client, _cellular_usage_policy_destroy_client, 
+                       _cellular_usage_policy_get_bundle_from_policy, _cellular_usage_policy_get_data_allowed_from_policy, 
+                       _cellular_usage_policy_is_data_allowed_for_bundle, _cellular_usage_policy_set_changed_handler ]
+  - targets:         [ x86_64-ios-simulator, arm64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _network_usage_policy_create_client, _network_usage_policy_destroy_client, 
+                       _network_usage_policy_get_WiFi_data_allowed_from_policy, _network_usage_policy_get_bundle_from_policy, 
+                       _network_usage_policy_get_cell_data_allowed_from_policy, _network_usage_policy_get_datausage_policies, 
+                       _network_usage_policy_get_first_use_flow_performed_from_policy, 
+                       _network_usage_policy_get_for_bundle, _network_usage_policy_set_changed_handler, 
+                       _perform_first_network_use_flow ]
+...

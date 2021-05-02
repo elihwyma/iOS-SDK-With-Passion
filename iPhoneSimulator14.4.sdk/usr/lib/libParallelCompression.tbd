@@ -1,0 +1,50 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           3B286B35-05F0-3D9A-BF29-F96D7220CCD6
+  - target:          arm64-ios-simulator
+    value:           88B2526D-65B6-3E70-A4F1-BC9394BC0240
+install-name:    '/usr/lib/libParallelCompression.dylib'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _BXDiff5, _BXDiff5WithIndividualPatches, _BXPatch5, _BXPatch5InPlace, 
+                       _BXPatch5WithFlags, _BXPatchFile, _DirectoryDiff, _DirectoryPatch, 
+                       _ISparseArchiveStreamCreate, _ISparseArchiveStreamDestroy, 
+                       _ISparseArchiveStreamRead, _PCompressFilter, _PackagePatch, 
+                       _ParallelArchiveCheckAndFix, _ParallelArchiveCombine, _ParallelArchiveConvert, 
+                       _ParallelArchiveECCFixBuffer, _ParallelArchiveECCFixFileSegment, 
+                       _ParallelArchiveECCGenerateFromBuffer, _ParallelArchiveECCGenerateFromFileSegment, 
+                       _ParallelArchiveExtract, _ParallelArchiveExtractClones, _ParallelArchiveExtractSubtree, 
+                       _ParallelArchiveFilesystemCreate, _ParallelArchiveFilesystemDestroy, 
+                       _ParallelArchiveFilesystemEntryClose, _ParallelArchiveFilesystemEntryFirstChild, 
+                       _ParallelArchiveFilesystemEntryLink, _ParallelArchiveFilesystemEntryName, 
+                       _ParallelArchiveFilesystemEntryNextSibling, _ParallelArchiveFilesystemEntryOpen, 
+                       _ParallelArchiveFilesystemEntryPRead, _ParallelArchiveFilesystemEntryParent, 
+                       _ParallelArchiveFilesystemEntryPath, _ParallelArchiveFilesystemEntryStat, 
+                       _ParallelArchiveFilesystemEntryType, _ParallelArchiveGenerateBOM, 
+                       _ParallelArchiveGenerateMSUBOM, _ParallelArchiveGetPayloadSize, 
+                       _ParallelArchiveOLDWriterAddEntry, _ParallelArchiveOLDWriterCreate, 
+                       _ParallelArchiveOLDWriterDestroy, _ParallelArchiveRead, _ParallelArchiveReadMetadata, 
+                       _ParallelArchiveSearch, _ParallelArchiveSort, _ParallelArchiveVerifyDir, 
+                       _ParallelArchiveWriteDirContents, _ParallelArchiveWriteEntryData, 
+                       _ParallelArchiveWriteEntryHeader, _ParallelArchiveWriterCreate, 
+                       _ParallelArchiveWriterCreateLegacy, _ParallelArchiveWriterDestroy, 
+                       _ParallelCompressionAFSCCompress, _ParallelCompressionAFSCFixupMetadata, 
+                       _ParallelCompressionAFSCGetMetadata, _ParallelCompressionAFSCStreamClose, 
+                       _ParallelCompressionAFSCStreamOpen, _ParallelCompressionAFSCStreamWrite, 
+                       _ParallelCompressionAFSCUseMaxEmbeddedSize, _ParallelCompressionDecode, 
+                       _ParallelCompressionEncode, _ParallelCompressionEnterThreadErrorContext, 
+                       _ParallelCompressionFileClose, _ParallelCompressionFileOpen, 
+                       _ParallelCompressionFileRead, _ParallelCompressionFileSeek, 
+                       _ParallelCompressionFileWrite, _ParallelCompressionGetCompressedSize, 
+                       _ParallelCompressionIStreamAbort, _ParallelCompressionIStreamCreate, 
+                       _ParallelCompressionIStreamDestroy, _ParallelCompressionIStreamRead, 
+                       _ParallelCompressionLeaveThreadErrorContext, _ParallelCompressionOStreamAbort, 
+                       _ParallelCompressionOStreamCreate, _ParallelCompressionOStreamDestroy, 
+                       _ParallelCompressionOStreamWrite, _ParallelCompressionUpdateError, 
+                       _ParallelCompressionUpdateWarning ]
+...

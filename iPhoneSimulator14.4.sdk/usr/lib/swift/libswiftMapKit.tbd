@@ -1,0 +1,37 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           4C9D271D-EA92-312E-9028-EEC6C3C41C8E
+  - target:          x86_64-ios-simulator
+    value:           D1F61FC0-02C2-3C4E-8D9D-773052522876
+  - target:          arm64-ios-simulator
+    value:           DAE5E2F5-28A4-3E28-B758-6B1430139530
+install-name:    '/usr/lib/swift/libswiftMapKit.dylib'
+current-version: 2
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ '$ld$install_name$os10.0$@rpath/libswiftMapKit.dylib', '$ld$install_name$os10.1$@rpath/libswiftMapKit.dylib', 
+                       '$ld$install_name$os10.2$@rpath/libswiftMapKit.dylib', '$ld$install_name$os10.3$@rpath/libswiftMapKit.dylib', 
+                       '$ld$install_name$os11.0$@rpath/libswiftMapKit.dylib', '$ld$install_name$os11.1$@rpath/libswiftMapKit.dylib', 
+                       '$ld$install_name$os11.2$@rpath/libswiftMapKit.dylib', '$ld$install_name$os11.3$@rpath/libswiftMapKit.dylib', 
+                       '$ld$install_name$os11.4$@rpath/libswiftMapKit.dylib', '$ld$install_name$os12.0$@rpath/libswiftMapKit.dylib', 
+                       '$ld$install_name$os12.1$@rpath/libswiftMapKit.dylib', '$ld$install_name$os7.0$@rpath/libswiftMapKit.dylib', 
+                       '$ld$install_name$os7.1$@rpath/libswiftMapKit.dylib', '$ld$install_name$os8.0$@rpath/libswiftMapKit.dylib', 
+                       '$ld$install_name$os8.1$@rpath/libswiftMapKit.dylib', '$ld$install_name$os8.2$@rpath/libswiftMapKit.dylib', 
+                       '$ld$install_name$os8.3$@rpath/libswiftMapKit.dylib', '$ld$install_name$os8.4$@rpath/libswiftMapKit.dylib', 
+                       '$ld$install_name$os9.0$@rpath/libswiftMapKit.dylib', '$ld$install_name$os9.1$@rpath/libswiftMapKit.dylib', 
+                       '$ld$install_name$os9.2$@rpath/libswiftMapKit.dylib', '$ld$install_name$os9.3$@rpath/libswiftMapKit.dylib', 
+                       '_$sSo12MKMultiPointC6MapKitE9locations2atSay12CoreGraphics7CGFloatVG10Foundation8IndexSetV_tF', 
+                       '_$sSo16MKCoordinateSpana6MapKitE19_bridgeToObjectiveCSo7NSValueCyF', 
+                       '_$sSo16MKCoordinateSpana6MapKitE26_forceBridgeFromObjectiveC_6resultySo7NSValueC_ABSgztFZ', 
+                       '_$sSo16MKCoordinateSpana6MapKitE34_conditionallyBridgeFromObjectiveC_6resultSbSo7NSValueC_ABSgztFZ', 
+                       '_$sSo16MKCoordinateSpana6MapKitE36_unconditionallyBridgeFromObjectiveCyABSo7NSValueCSgFZ', 
+                       '_$sSo16MKCoordinateSpanas21_ObjectiveCBridgeable6MapKitMc', 
+                       '_$sSo26MKGradientPolylineRendererC6MapKitE9locationsSay12CoreGraphics7CGFloatVGvg', 
+                       '_$sSo26MKGradientPolylineRendererC6MapKitE9locationsSay12CoreGraphics7CGFloatVGvpMV', 
+                       '_$sSo26MKGradientPolylineRendererC6MapKitE9setColors_9locationsySaySo7UIColorCG_Say12CoreGraphics7CGFloatVGtF', 
+                       '__swift_FORCE_LOAD_$_swiftMapKit' ]
+...

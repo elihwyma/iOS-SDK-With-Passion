@@ -1,0 +1,50 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           F6A43A9B-8800-3194-8963-7CE2CCB5280E
+  - target:          arm64-ios-simulator
+    value:           B30B98D3-C4B8-369B-833C-C6EC06B17F98
+install-name:    '/System/Library/Frameworks/CarPlay.framework/CarPlay'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _CPButtonMaximumImageSize, _CPColorMeetsContrastRequirement, 
+                       _CPContrastRatioForColors, _CPContrastingColorForColor, _CPCurrentProcessHasAudioEntitlement, 
+                       _CPCurrentProcessHasChargingEntitlement, _CPCurrentProcessHasCommunicationEntitlement, 
+                       _CPCurrentProcessHasMapsEntitlement, _CPCurrentProcessHasParkingEntitlement, 
+                       _CPCurrentProcessHasPublicSafetyEntitlement, _CPCurrentProcessHasQuickOrderingEntitlement, 
+                       _CPCurrentProcessHasTemplateEntitlement, _CPGuidanceStyleForColor, 
+                       _CPLuminanceForColor, _CPMaximumMessageItemImageSize, _CPMaximumNumberOfGridImages, 
+                       _CPNowPlayingButtonMaximumImageSize, _CPSStringFromBOOL, _CPSanitizedBackgroundColor, 
+                       _CPTemplateApplicationDashboardSceneSessionRoleApplication, 
+                       _CPTemplateApplicationSceneSessionRoleApplication, _CarPlayErrorDomain, 
+                       _kCPControlEnabledKey, _kCPControlIdentifierKey, _kCPControlImageSetKey, 
+                       _kCPControlTitleKey, _kCPGridTemplateMaximumItems, _kCPSAudioEntitlementKey, 
+                       _kCPSChargingEntitlementKey, _kCPSCommunicationEntitlementKey, 
+                       _kCPSMapsEntitlementKey, _kCPSParkingEntitlementKey, _kCPSPublicSafetyEntitlementKey, 
+                       _kCPSQuickOrderingEntitlementKey ]
+    objc-classes:    [ CPActionSheetTemplate, CPAlertAction, CPAlertTemplate, CPBarButton, 
+                       CPButton, CPContact, CPContactCallButton, CPContactDirectionsButton, 
+                       CPContactEntity, CPContactMessageButton, CPContactTemplate, 
+                       CPDashboardButton, CPDashboardController, CPEndpointListenerWrapper, 
+                       CPEntity, CPGridButton, CPGridTemplate, CPImageSet, CPInformationItem, 
+                       CPInformationRatingItem, CPInformationTemplate, CPInterfaceController, 
+                       CPListImageRowItem, CPListItem, CPListSection, CPListTemplate, 
+                       CPManeuver, CPMapButton, CPMapTemplate, CPMessageComposeBarButton, 
+                       CPMessageListItem, CPMessageListItemLeadingConfiguration, 
+                       CPMessageListItemTrailingConfiguration, CPNavigationAlert, 
+                       CPNavigationSession, CPNowPlayingAddToLibraryButton, CPNowPlayingButton, 
+                       CPNowPlayingImageButton, CPNowPlayingMoreButton, CPNowPlayingPlaybackRateButton, 
+                       CPNowPlayingRepeatButton, CPNowPlayingShuffleButton, CPNowPlayingTemplate, 
+                       CPPointOfInterest, CPPointOfInterestTemplate, CPPointsOfInterestEntity, 
+                       CPRequestEndpointAction, CPRouteChoice, CPSearchTemplate, 
+                       CPSessionConfiguration, CPTabBarTemplate, CPTemplate, CPTemplateApplicationDashboardScene, 
+                       CPTemplateApplicationScene, CPTextButton, CPTravelEstimates, 
+                       CPTrip, CPTripPreviewTextConfiguration, CPUIMutableTemplateApplicationSceneSettings, 
+                       CPUITemplateApplicationSceneSettings, CPUITemplateApplicationSceneSpecification, 
+                       CPUITemplateDashboardSceneSpecification, CPVoiceControlState, 
+                       CPVoiceControlTemplate, CPWindow ]
+...

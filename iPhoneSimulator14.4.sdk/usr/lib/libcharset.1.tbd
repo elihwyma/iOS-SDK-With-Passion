@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           0E6FFB32-6C43-3021-BF14-1900BA8BBA9F
+  - target:          x86_64-ios-simulator
+    value:           76910C8F-3D08-3B2C-AE29-DF726DB297B4
+  - target:          arm64-ios-simulator
+    value:           E184454F-FFE9-3A63-AF2B-98F6F07B36BF
+install-name:    '/usr/lib/libcharset.1.dylib'
+current-version: 2
+compatibility-version: 2
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ ___charset_1VersionNumber, ___charset_1VersionString, _libcharset_relocate ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _libcharset_set_relocation_prefix, _locale_charset ]
+...

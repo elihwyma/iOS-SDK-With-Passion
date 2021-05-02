@@ -1,0 +1,30 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           EA0CD531-C0F0-3E84-BF9D-65D8A4A3F96E
+  - target:          x86_64-ios-simulator
+    value:           DB7D3E84-C136-32B5-8464-76381082F27E
+  - target:          arm64-ios-simulator
+    value:           F93DE271-58E8-334E-9A31-49538664FE99
+install-name:    '/usr/lib/swift/libswiftPhotos.dylib'
+current-version: 330.0.150
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ '$ld$install_name$os10.0$@rpath/libswiftPhotos.dylib', '$ld$install_name$os10.1$@rpath/libswiftPhotos.dylib', 
+                       '$ld$install_name$os10.2$@rpath/libswiftPhotos.dylib', '$ld$install_name$os10.3$@rpath/libswiftPhotos.dylib', 
+                       '$ld$install_name$os11.0$@rpath/libswiftPhotos.dylib', '$ld$install_name$os11.1$@rpath/libswiftPhotos.dylib', 
+                       '$ld$install_name$os11.2$@rpath/libswiftPhotos.dylib', '$ld$install_name$os11.3$@rpath/libswiftPhotos.dylib', 
+                       '$ld$install_name$os11.4$@rpath/libswiftPhotos.dylib', '$ld$install_name$os12.0$@rpath/libswiftPhotos.dylib', 
+                       '$ld$install_name$os12.1$@rpath/libswiftPhotos.dylib', '$ld$install_name$os7.0$@rpath/libswiftPhotos.dylib', 
+                       '$ld$install_name$os7.1$@rpath/libswiftPhotos.dylib', '$ld$install_name$os8.0$@rpath/libswiftPhotos.dylib', 
+                       '$ld$install_name$os8.1$@rpath/libswiftPhotos.dylib', '$ld$install_name$os8.2$@rpath/libswiftPhotos.dylib', 
+                       '$ld$install_name$os8.3$@rpath/libswiftPhotos.dylib', '$ld$install_name$os8.4$@rpath/libswiftPhotos.dylib', 
+                       '$ld$install_name$os9.0$@rpath/libswiftPhotos.dylib', '$ld$install_name$os9.1$@rpath/libswiftPhotos.dylib', 
+                       '$ld$install_name$os9.2$@rpath/libswiftPhotos.dylib', '$ld$install_name$os9.3$@rpath/libswiftPhotos.dylib', 
+                       '_$sSo8PHChangeC6PhotosE13changeDetails3forSo014PHObjectChangeD0CyxGSgx_tSo0F0CRbzlF', 
+                       '_$sSo8PHChangeC6PhotosE13changeDetails3forSo019PHFetchResultChangeD0CyxGSgSo0fG0CyxG_tSo8PHObjectCRbzlF', 
+                       '__swift_FORCE_LOAD_$_swiftPhotos' ]
+...

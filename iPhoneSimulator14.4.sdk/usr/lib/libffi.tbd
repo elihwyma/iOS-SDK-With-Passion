@@ -1,0 +1,27 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           14CE79AE-FFA3-3571-98F8-3A463B18A5E6
+  - target:          arm64-ios-simulator
+    value:           CE2D23D6-2BEE-3CED-9C51-AF16BDC69228
+install-name:    '/usr/lib/libffi.dylib'
+current-version: 27
+exports:
+  - targets:         [ x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _ffi_prep_closure, _ffi_type_complex_longdouble, _ffi_type_longdouble ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _ffi_call, _ffi_closure_alloc, _ffi_closure_free, _ffi_find_closure_for_code_np, 
+                       _ffi_get_struct_offsets, _ffi_java_ptrarray_to_raw, _ffi_java_raw_call, 
+                       _ffi_java_raw_size, _ffi_java_raw_to_ptrarray, _ffi_prep_cif, 
+                       _ffi_prep_cif_var, _ffi_prep_closure_loc, _ffi_prep_java_raw_closure, 
+                       _ffi_prep_java_raw_closure_loc, _ffi_prep_raw_closure, _ffi_prep_raw_closure_loc, 
+                       _ffi_ptrarray_to_raw, _ffi_raw_call, _ffi_raw_size, _ffi_raw_to_ptrarray, 
+                       _ffi_type_complex_double, _ffi_type_complex_float, _ffi_type_double, 
+                       _ffi_type_float, _ffi_type_pointer, _ffi_type_sint16, _ffi_type_sint32, 
+                       _ffi_type_sint64, _ffi_type_sint8, _ffi_type_uint16, _ffi_type_uint32, 
+                       _ffi_type_uint64, _ffi_type_uint8, _ffi_type_void ]
+...

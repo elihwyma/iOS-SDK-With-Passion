@@ -1,0 +1,31 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           3B2AB505-72C1-32DC-A3E7-59A06C3DFBD8
+  - target:          x86_64-ios-simulator
+    value:           C305D49F-9866-3BDD-AD59-65808625A25F
+  - target:          arm64-ios-simulator
+    value:           A83073D0-662D-38DD-8420-A6CD29AA9EAC
+install-name:    '/usr/lib/swift/libswiftMetalKit.dylib'
+current-version: 1.2
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ '$ld$install_name$os10.0$@rpath/libswiftMetalKit.dylib', '$ld$install_name$os10.1$@rpath/libswiftMetalKit.dylib', 
+                       '$ld$install_name$os10.2$@rpath/libswiftMetalKit.dylib', '$ld$install_name$os10.3$@rpath/libswiftMetalKit.dylib', 
+                       '$ld$install_name$os11.0$@rpath/libswiftMetalKit.dylib', '$ld$install_name$os11.1$@rpath/libswiftMetalKit.dylib', 
+                       '$ld$install_name$os11.2$@rpath/libswiftMetalKit.dylib', '$ld$install_name$os11.3$@rpath/libswiftMetalKit.dylib', 
+                       '$ld$install_name$os11.4$@rpath/libswiftMetalKit.dylib', '$ld$install_name$os12.0$@rpath/libswiftMetalKit.dylib', 
+                       '$ld$install_name$os12.1$@rpath/libswiftMetalKit.dylib', '$ld$install_name$os7.0$@rpath/libswiftMetalKit.dylib', 
+                       '$ld$install_name$os7.1$@rpath/libswiftMetalKit.dylib', '$ld$install_name$os8.0$@rpath/libswiftMetalKit.dylib', 
+                       '$ld$install_name$os8.1$@rpath/libswiftMetalKit.dylib', '$ld$install_name$os8.2$@rpath/libswiftMetalKit.dylib', 
+                       '$ld$install_name$os8.3$@rpath/libswiftMetalKit.dylib', '$ld$install_name$os8.4$@rpath/libswiftMetalKit.dylib', 
+                       '$ld$install_name$os9.0$@rpath/libswiftMetalKit.dylib', '$ld$install_name$os9.1$@rpath/libswiftMetalKit.dylib', 
+                       '$ld$install_name$os9.2$@rpath/libswiftMetalKit.dylib', '$ld$install_name$os9.3$@rpath/libswiftMetalKit.dylib', 
+                       '_$s8MetalKit030MTKModelIOVertexDescriptorFromA9WithErrorySo09MDLVertexE0CSo09MTLVertexE0CKF', 
+                       '_$s8MetalKit44MTKMetalVertexDescriptorFromModelIOWithErrorySo09MTLVertexE0CSgSo09MDLVertexE0CKF', 
+                       '_$sSo7MTKMeshC8MetalKitE9newMeshes5asset6deviceSaySo7MDLMeshCG13modelIOMeshes_SayABG05metalcE0tSo8MDLAssetC_So9MTLDevice_ptKFZ', 
+                       '__swift_FORCE_LOAD_$_swiftMetalKit' ]
+...

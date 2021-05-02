@@ -1,0 +1,32 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           756733B1-5F8D-3485-A944-B6E3904301AA
+  - target:          x86_64-ios-simulator
+    value:           DC3C5570-AB50-3354-8A15-1C0964CFC877
+  - target:          arm64-ios-simulator
+    value:           32939A03-5A67-3901-94B9-09C42C81B88C
+install-name:    '/usr/lib/swift/libswiftCallKit.dylib'
+current-version: 2
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ '$ld$install_name$os10.0$@rpath/libswiftCallKit.dylib', '$ld$install_name$os10.1$@rpath/libswiftCallKit.dylib', 
+                       '$ld$install_name$os10.2$@rpath/libswiftCallKit.dylib', '$ld$install_name$os10.3$@rpath/libswiftCallKit.dylib', 
+                       '$ld$install_name$os11.0$@rpath/libswiftCallKit.dylib', '$ld$install_name$os11.1$@rpath/libswiftCallKit.dylib', 
+                       '$ld$install_name$os11.2$@rpath/libswiftCallKit.dylib', '$ld$install_name$os11.3$@rpath/libswiftCallKit.dylib', 
+                       '$ld$install_name$os11.4$@rpath/libswiftCallKit.dylib', '$ld$install_name$os12.0$@rpath/libswiftCallKit.dylib', 
+                       '$ld$install_name$os12.1$@rpath/libswiftCallKit.dylib', '$ld$install_name$os7.0$@rpath/libswiftCallKit.dylib', 
+                       '$ld$install_name$os7.1$@rpath/libswiftCallKit.dylib', '$ld$install_name$os8.0$@rpath/libswiftCallKit.dylib', 
+                       '$ld$install_name$os8.1$@rpath/libswiftCallKit.dylib', '$ld$install_name$os8.2$@rpath/libswiftCallKit.dylib', 
+                       '$ld$install_name$os8.3$@rpath/libswiftCallKit.dylib', '$ld$install_name$os8.4$@rpath/libswiftCallKit.dylib', 
+                       '$ld$install_name$os9.0$@rpath/libswiftCallKit.dylib', '$ld$install_name$os9.1$@rpath/libswiftCallKit.dylib', 
+                       '$ld$install_name$os9.2$@rpath/libswiftCallKit.dylib', '$ld$install_name$os9.3$@rpath/libswiftCallKit.dylib', 
+                       '_$sSo23CXProviderConfigurationC7CallKitE20supportedHandleTypesShySo12CXHandleTypeVGvM', 
+                       '_$sSo23CXProviderConfigurationC7CallKitE20supportedHandleTypesShySo12CXHandleTypeVGvg', 
+                       '_$sSo23CXProviderConfigurationC7CallKitE20supportedHandleTypesShySo12CXHandleTypeVGvpMV', 
+                       '_$sSo23CXProviderConfigurationC7CallKitE20supportedHandleTypesShySo12CXHandleTypeVGvs', 
+                       '__swift_FORCE_LOAD_$_swiftCallKit' ]
+...

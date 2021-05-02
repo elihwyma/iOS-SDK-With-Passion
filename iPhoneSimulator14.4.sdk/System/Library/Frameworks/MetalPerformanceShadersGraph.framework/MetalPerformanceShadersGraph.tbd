@@ -1,0 +1,20 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           2CEAC78C-200D-353C-8BC8-AF30DFA4A52F
+  - target:          arm64-ios-simulator
+    value:           C3D75A52-E752-31A2-A894-3B20F2AE2E4B
+install-name:    '/System/Library/Frameworks/MetalPerformanceShadersGraph.framework/MetalPerformanceShadersGraph'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    objc-classes:    [ MPSGraph, MPSGraphAdamOptimizer, MPSGraphConvolution2DOpDescriptor, 
+                       MPSGraphDepthwiseConvolution2DOpDescriptor, MPSGraphDevice, 
+                       MPSGraphExecutable, MPSGraphExecutionDescriptor, MPSGraphOperation, 
+                       MPSGraphOptimizer, MPSGraphPooling2DOpDescriptor, MPSGraphShapedType, 
+                       MPSGraphStochasticGradientDescentOptimizer, MPSGraphTensor, 
+                       MPSGraphTensorData, MPSGraphVariableInitializer, MPSGraphVariableOp ]
+...

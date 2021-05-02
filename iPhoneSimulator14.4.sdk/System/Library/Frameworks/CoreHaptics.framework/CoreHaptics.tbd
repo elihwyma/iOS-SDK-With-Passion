@@ -1,0 +1,38 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           67F53F1F-5CF0-30F2-9271-2EB92C56A40B
+  - target:          arm64-ios-simulator
+    value:           F1352AF6-BBD8-334B-830B-FBB179C41FA2
+install-name:    '/System/Library/Frameworks/CoreHaptics.framework/CoreHaptics'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _CHHapticDynamicParameterIDAudioAttackTimeControl, _CHHapticDynamicParameterIDAudioBrightnessControl, 
+                       _CHHapticDynamicParameterIDAudioDecayTimeControl, _CHHapticDynamicParameterIDAudioPanControl, 
+                       _CHHapticDynamicParameterIDAudioPitchControl, _CHHapticDynamicParameterIDAudioReleaseTimeControl, 
+                       _CHHapticDynamicParameterIDAudioVolumeControl, _CHHapticDynamicParameterIDHapticAttackTimeControl, 
+                       _CHHapticDynamicParameterIDHapticDecayTimeControl, _CHHapticDynamicParameterIDHapticIntensityControl, 
+                       _CHHapticDynamicParameterIDHapticReleaseTimeControl, _CHHapticDynamicParameterIDHapticSharpnessControl, 
+                       _CHHapticEventParameterIDAttackTime, _CHHapticEventParameterIDAudioBrightness, 
+                       _CHHapticEventParameterIDAudioPan, _CHHapticEventParameterIDAudioPitch, 
+                       _CHHapticEventParameterIDAudioVolume, _CHHapticEventParameterIDDecayTime, 
+                       _CHHapticEventParameterIDHapticFullnessSelect, _CHHapticEventParameterIDHapticIntensity, 
+                       _CHHapticEventParameterIDHapticSharpness, _CHHapticEventParameterIDHapticSharpnessSelect, 
+                       _CHHapticEventParameterIDReleaseTime, _CHHapticEventParameterIDSustained, 
+                       _CHHapticEventTypeAudioClick, _CHHapticEventTypeAudioContinuous, 
+                       _CHHapticEventTypeAudioCustom, _CHHapticEventTypeHapticContinuous, 
+                       _CHHapticEventTypeHapticTransient, _CHHapticEventTypeWheelsOfTime, 
+                       _CHHapticPatternKeyEvent, _CHHapticPatternKeyEventDuration, 
+                       _CHHapticPatternKeyEventParameters, _CHHapticPatternKeyEventType, 
+                       _CHHapticPatternKeyEventWaveformPath, _CHHapticPatternKeyParameter, 
+                       _CHHapticPatternKeyParameterCurve, _CHHapticPatternKeyParameterCurveControlPoints, 
+                       _CHHapticPatternKeyParameterID, _CHHapticPatternKeyParameterValue, 
+                       _CHHapticPatternKeyPattern, _CHHapticPatternKeyTime, _CHHapticPatternKeyVersion ]
+    objc-classes:    [ CHHapticDynamicParameter, CHHapticEngine, CHHapticEvent, CHHapticEventParameter, 
+                       CHHapticParameterCurve, CHHapticParameterCurveControlPoint, 
+                       CHHapticPattern ]
+...

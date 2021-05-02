@@ -1,0 +1,20 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           A2F69256-3804-38B7-9102-E4CCB9C4182A
+  - target:          x86_64-ios-simulator
+    value:           6549B2E2-9232-34D6-A5A4-BBE4B54D964A
+  - target:          arm64-ios-simulator
+    value:           EBCE666E-B917-350A-83D0-D867F2F793EC
+install-name:    '/usr/lib/libutil.dylib'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _expand_number, _freemntopts, _getmnt_silent, _getmntoptnum, 
+                       _getmntopts, _getmntoptstr, _humanize_number, _pidfile_close, 
+                       _pidfile_open, _pidfile_remove, _pidfile_write, _realhostname, 
+                       _realhostname_sa, _reexec_to_match_kernel, _reexec_to_match_lp64ness, 
+                       _tzlink, _wipefs_alloc, _wipefs_except_blocks, _wipefs_free, 
+                       _wipefs_include_blocks, _wipefs_wipe ]
+...
