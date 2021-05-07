@@ -1,0 +1,15 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           974D3918-9888-3F25-8BDC-9F96B4F01999
+  - target:          x86_64-ios-simulator
+    value:           A8DF0CA2-FE90-3AB3-A032-201148EF5D9D
+  - target:          arm64-ios-simulator
+    value:           5C939E92-992D-362F-8FE7-3A36F4FE0C1E
+install-name:    '/System/Library/Frameworks/AdSupport.framework/AdSupport'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    objc-classes:    [ ASIdentifierManager ]
+...

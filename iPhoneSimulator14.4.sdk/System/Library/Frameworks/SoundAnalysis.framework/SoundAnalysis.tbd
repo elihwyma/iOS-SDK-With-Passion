@@ -1,0 +1,36 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           906DF32A-0BBE-32F0-89C7-26EB732E40AB
+  - target:          arm64-ios-simulator
+    value:           C6C70E22-3833-3F40-8A1B-EC141E47691C
+install-name:    '/System/Library/Frameworks/SoundAnalysis.framework/SoundAnalysis'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _SNErrorDomain, _SNSoundIdentifierApplause, _SNSoundIdentifierBabble, 
+                       _SNSoundIdentifierBeep, _SNSoundIdentifierBuzzer, _SNSoundIdentifierCatMeow, 
+                       _SNSoundIdentifierCheering, _SNSoundIdentifierDingBell, _SNSoundIdentifierDistressedBaby, 
+                       _SNSoundIdentifierDogBark, _SNSoundIdentifierDoorKnock, _SNSoundIdentifierDoorbell, 
+                       _SNSoundIdentifierFireAlarm, _SNSoundIdentifierLaughter, _SNSoundIdentifierMusic, 
+                       _SNSoundIdentifierShouting, _SNSoundIdentifierSmokeAlarm, 
+                       _SNSoundIdentifierSpeech, _SNVGGishFeatureEmbeddingCustomModelName, 
+                       _SNVGGishFrontEndProcessingCustomModelName ]
+    objc-classes:    [ SNAudioCorrelationResult, SNAudioFileAnalyzer, SNAudioOffsetResult, 
+                       SNAudioStreamAnalyzer, SNClassification, SNClassificationResult, 
+                       SNClassifySoundRequest, SNCopyFilesRequest, SNCorrelateAudioRequest, 
+                       SNCreateFeaturePrintRequest, SNDaemon, SNDeleteFilesRequest, 
+                       SNDetectSignalThresholdRequest, SNDetectSoundRequest, SNDetectSpeechUtteranceRequest, 
+                       SNDetectionResult, SNDirectionOfArrivalResult, SNDiscoverFileServerRequest, 
+                       SNEstimateAudioOffsetRequest, SNEstimateDirectionOfArrivalRequest, 
+                       SNEstimateSpeechDistanceRequest, SNEstimateSpeechEmotionRequest, 
+                       SNFeaturePrint, SNFileCopyingResult, SNFileDeletionResult, 
+                       SNFileListingResult, SNFileServerDiscoveryResult, SNFileServerInfo, 
+                       SNFileSystem, SNLKFSResult, SNListFilesRequest, SNMeasureLKFSRequest, 
+                       SNNullRequest, SNNullResult, SNResultsCollector, SNResultsPrinter, 
+                       SNSignalThresholdResult, SNSpeechDistanceResult, SNSpeechEmotionResult, 
+                       SNSpeechUtteranceResult, SNSystemAudioAnalyzer ]
+...

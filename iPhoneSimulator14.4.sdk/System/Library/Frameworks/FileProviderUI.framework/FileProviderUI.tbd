@@ -1,0 +1,26 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           7A05B334-1F7A-33D9-9A83-FB57B0A230F4
+  - target:          arm64-ios-simulator
+    value:           260A0D56-071F-3612-A288-8483FA05F43F
+install-name:    '/System/Library/Frameworks/FileProviderUI.framework/FileProviderUI'
+current-version: 35
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _FPUIActionIdentifierAuthenticate, _FPUIActionViewControllerErrorDomain, 
+                       _FPUIActionViewControllerNavigationBarDoneButtonIdentifier, 
+                       _FPUIActionViewControllerNavigationBarIdentifier, _FPUIAuthenticationProviderDomainIdentifier, 
+                       _FPUIErrorDomain, _FPUILoc, _FPUIPresentActionButtonIdentifier, 
+                       _FPUInternalActionCancelButtonIdentifier, _FPUInternalActionContentLabelIdentifier, 
+                       _FPUInternalActionFailButtonIdentifier, _FPUInternalActionSucceedButtonIdentifier, 
+                       _FPUInternalActionTypeLabelIdentifier ]
+    objc-classes:    [ FPUIAction, FPUIActionController, FPUIActionExtensionContext, 
+                       FPUIActionExtensionViewController, FPUIActionViewController, 
+                       FPUIAuthenticationCredentialDescriptor, FPUIAuthenticationCredentials, 
+                       FPUIAuthenticationViewController, FPUIManager ]
+...

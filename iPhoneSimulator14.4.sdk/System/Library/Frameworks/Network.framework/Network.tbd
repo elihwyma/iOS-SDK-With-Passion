@@ -1,0 +1,56 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           47B2B545-F10F-3FEA-BFB7-0A52EC1F9F5F
+  - target:          x86_64-ios-simulator
+    value:           F616ED09-316F-3087-90C8-FA2463712A58
+  - target:          arm64-ios-simulator
+    value:           9615F524-6057-38DD-86B0-563AFFB7544D
+install-name:    '/System/Library/Frameworks/Network.framework/Network'
+reexported-libraries:
+  - targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+    libraries:       [ '/usr/lib/libnetwork.dylib' ]
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ _NWUtilsCreateDispatchDataFromNSData, _NWUtilsCreateNSDataFromDispatchData, 
+                       ___nwlog_debug_objc, ___nwlog_default_objc, ___nwlog_err_objc, 
+                       ___nwlog_info_objc, ___nwlog_objc_attribute_check ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ '$ld$install_name$os10.0$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os10.1$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os10.2$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os10.3$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os11.0$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os11.1$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os11.2$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os11.3$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os11.4$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os11.5$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os9.0$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os9.1$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os9.2$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       '$ld$install_name$os9.3$/System/Library/PrivateFrameworks/Network.framework/Network', 
+                       _NWCreateDispatchDataFromNSData, _NWCreateNSDataFromDispatchData, 
+                       _NWMonitorStatusToString, _NWNetworkAgentStartOptionClientUUID, 
+                       _NWNetworkAgentStartOptionFromKernel, _NWNetworkAgentStartOptionFromUser, 
+                       _NWNetworkAgentStartOptionPID, _NWNetworkAgentStartOptionProcessUUID, 
+                       _NWPathEvaluatorErrorDomain, _NWPrivilegedHelperHandleEvent, 
+                       _NWPrivilegedHelperInitialize, _NWPrivilegedHelperStart, _NWUtilsCreateNSDictionaryFromXPCDictionary, 
+                       _NWUtilsCreateNSStringFromSockaddr, _NWUtilsCreateXPCDictionaryFromNSDictionary, 
+                       _NWUtilsStringMatchesPattern, __NWConnectionWriteCompletionIdempotent, 
+                       _updateOSLogPlistFromLevel ]
+    objc-classes:    [ NWAccumulator, NWActivityEmptyTrigger, NWActivityEpilogueStatistics, 
+                       NWActivityStatistics, NWAddressEndpoint, NWAdvertiseDescriptor, 
+                       NWBonjourBrowseDescriptor, NWBonjourServiceEndpoint, NWBrowseDescriptor, 
+                       NWBrowser, NWCandidatePathMonitor, NWConnection, NWConnectionStatistics, 
+                       NWDatagramConnection, NWDeviceReport, NWEndpoint, NWGenericNetworkAgent, 
+                       NWHostEndpoint, NWInboundMessage, NWInterface, NWL2Report, 
+                       NWMessage, NWMessageConnection, NWMonitor, NWNetworkAgentRegistration, 
+                       NWNetworkDescription, NWOutboundMessage, NWParameters, NWPath, 
+                       NWPathEvaluator, NWProtocolTransform, NWRemoteConnectionActor, 
+                       NWRemoteConnectionDirector, NWRemotePacketProxy, NWResolver, 
+                       NWStreamConnection, NWSystemPathMonitor, NWTCPConnection, 
+                       NWTCPListener, NWUDPListener, NWUDPSession ]
+...

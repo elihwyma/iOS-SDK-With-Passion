@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           E8FEE998-38C6-3536-A945-D15B953AF100
+  - target:          arm64-ios-simulator
+    value:           20503514-EC97-393A-8841-B87F36A683F5
+install-name:    '/System/Library/Frameworks/_QuickLook_SwiftUI.framework/_QuickLook_SwiftUI'
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ '_$s7SwiftUI4ViewP011_QuickLook_aB0E05quickE7Preview_2inQrAA7BindingVy10Foundation3URLVSgG_qd__tSkRd__AK7ElementRtd__lF', 
+                       '_$s7SwiftUI4ViewP011_QuickLook_aB0E05quickE7Preview_2inQrAA7BindingVy10Foundation3URLVSgG_qd__tSkRd__AK7ElementRtd__lFQOMQ', 
+                       '_$s7SwiftUI4ViewP011_QuickLook_aB0E05quickE7PreviewyQrAA7BindingVy10Foundation3URLVSgGF', 
+                       '_$s7SwiftUI4ViewP011_QuickLook_aB0E05quickE7PreviewyQrAA7BindingVy10Foundation3URLVSgGFQOMQ' ]
+...

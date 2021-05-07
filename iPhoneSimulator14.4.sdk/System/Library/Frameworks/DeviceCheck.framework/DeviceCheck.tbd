@@ -1,0 +1,17 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           7D82C495-3A58-370E-9A62-57D65E662440
+  - target:          arm64-ios-simulator
+    value:           543BD784-A20D-3269-9A94-FA7C89E1DE48
+install-name:    '/System/Library/Frameworks/DeviceCheck.framework/DeviceCheck'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _DCErrorDomain, __DCAALogSystem, __DCLogSystem ]
+    objc-classes:    [ DCAppAttestService, DCContext, DCDevice, DCDeviceMetadataDaemonConnection, 
+                       DCDeviceMetadataInterface ]
+...

@@ -1,0 +1,73 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           F8E6AA25-F7EC-38D8-B190-70386DF6E370
+  - target:          x86_64-ios-simulator
+    value:           7E506454-E860-3AB8-A5CB-8E4C295B9344
+  - target:          arm64-ios-simulator
+    value:           589E7866-32BB-3CAB-9B8F-0B13DCE1CA77
+install-name:    '/System/Library/Frameworks/QuickLook.framework/QuickLook'
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ _QLFrameworkBundle, _QLGetDefaultZoomForContentType, _QLGuessEncodingForTextFileAtURL, 
+                       _QLLocalizedErrorString, _QLPreviewCopyEmbeddedPDF, _QLPreviewItemContentTypeIsAudio, 
+                       _QLPreviewScheme, _QLPreviewSupportsContentType ]
+    objc-classes:    [ QLPreviewCollectionHostContext, QLPreviewCollectionServiceContext, 
+                       QLRemotePreviewHostContext, QLRemotePreviewServiceContext, 
+                       QLServiceViewController ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _NSStringFromQLNetworkState, _QLActionButtonIdentifier, _QLAudioItemViewControllerQuickTimeImageViewAccessibilityIdentifier, 
+                       _QLAudioScrubberViewContainerAccessibilityIdentifier, _QLCGSizeFromQLItemThumbnailSize, 
+                       _QLConvertPointFromAnchorPointToNewAnchorPoint, _QLCustomItemViewControllerErrorDomain, 
+                       _QLCustomToolBarAccessibilityIdentifier, _QLCustomToolBarModalAccessibilityIdentifier, 
+                       _QLDoneButtonIdentifier, _QLImageItemViewControllerImageViewAccessibilityIdentifier, 
+                       _QLListButtonIdentifier, _QLLivePhotoViewControllerLivePhotoBadgeAccessibilityIdentifier, 
+                       _QLLivePhotoViewControllerLivePhotoViewAccessibilityIdentifier, 
+                       _QLLocalizedDictionaryString, _QLLocalizedString, _QLLocalizedStringFromTable, 
+                       _QLLocalizedStringWithDefaultValue, _QLMarkupImageItemViewControllerMarkupImageViewAccessibilityIdentifier, 
+                       _QLMediaItemViewControllerBarPlayButtonPausedAccessibilityIdentifier, 
+                       _QLMediaItemViewControllerBarPlayButtonPlayingAccessibilityIdentifier, 
+                       _QLMediaItemViewControllerBarRotateRightButtonAccessibilityIdentifier, 
+                       _QLMediaItemViewControllerBarTrimButtonAccessibilityIdentifier, 
+                       _QLMovieScrubberViewContainerAccessibilityIdentifier, _QLNotify, 
+                       _QLNotifySelector, _QLOverlayCopyToButtonAccessibilityIdentifier, 
+                       _QLOverlayCustomActionButtonAccessibilityIdentifier, _QLOverlayDefaultActionButtonAccessibilityIdentifier, 
+                       _QLOverlayDoneButtonAccessibilityIdentifier, _QLOverlayListButtonAccessibilityIdentifier, 
+                       _QLOverlayMarkupButtonAccessibilityIdentifier, _QLOverlayOpenInButtonAccessibilityIdentifier, 
+                       _QLOverlayPlayButtonDefaultAccessibilityIdentifier, _QLPDFViewControllerViewAccessibilityIdentifier, 
+                       _QLPreviewControllerSupportsContentType, _QLPreviewGetSupportedMIMETypes, 
+                       _QLPreviewItemEditingModeCreateCopyAndDisplayDismissActions, 
+                       _QLPreviewItemEditingModeUpdateContentsAndDisplayDismissActions, 
+                       _QLPreviewNeedsHelpUnzippingURL, _QLPreviewRequestAppendDataToAttachment, 
+                       _QLPreviewRequestCreateAttachmentURL, _QLPreviewRequestGetDocumentObject, 
+                       _QLPreviewRequestIsCancelled, _QLPreviewRequestSetDataRepresentation, 
+                       _QLPreviewRequestSetDocumentObject, _QLPreviewRequestSetError, 
+                       _QLPreviewRequestStartDataRepresentation, _QLRemoteItemViewControllerHostViewAccessibilityIdentifier, 
+                       _QLRunInBackgroundThread, _QLRunInMainThread, _QLRunInMainThreadSync, 
+                       _QLSizeAspectRatioEqualToSizeAspectRatioWithTolerance, _QLToolbarButtonOptionCancelIdentifier, 
+                       _QLTypeCopyBestMimeTypeForFileNameAndMimeType, _QLTypeCopyBestMimeTypeForURLAndMimeType, 
+                       _QLTypeCopyUTIForURLAndMimeType, _QLWKWebViewControllerWkWebViewAccessibilityIdentifier, 
+                       __QLContentTypeConformsToContentTypeInSet, __QLContentTypeConformsToRawImage, 
+                       __QLContentTypeEqualsToContentTypeInSet, __QLCopyArchiveExtensionIfIsArchiveFileName, 
+                       __QLCopyPackageExtensionIfIsArchiveFileName, __QLTypeCopyUTIForFileNameAndMimeType, 
+                       _kQLPreviewContentIDScheme, _kQLPreviewOptionPasswordKey, 
+                       _kQLPreviewPropertyAllowJavascriptKey, _kQLPreviewPropertyAttachmentDataKey, 
+                       _kQLPreviewPropertyAttachmentsKey, _kQLPreviewPropertyHeightKey, 
+                       _kQLPreviewPropertyMIMETypeKey, _kQLPreviewPropertyTextEncodingNameKey, 
+                       _kQLPreviewPropertyWidthKey, _kQLTestingNotificationTimestampKey ]
+    objc-classes:    [ QLAnimatedImage, QLContactItemTransformer, QLCustomItemViewController, 
+                       QLDataFetcher, QLDataItemTransformer, QLDelegateProxy, QLDetailItemViewController, 
+                       QLDetailItemViewControllerState, QLDismissAction, QLEditedItem, 
+                       QLFileThumbnailRequest, QLImageItemContents, QLImageItemDataContents, 
+                       QLImageItemURLContents, QLImageItemViewController, QLItem, 
+                       QLItemAggregatedViewController, QLItemFetcher, QLItemFetcherFactory, 
+                       QLItemThumbnailGenerationOperation, QLItemThumbnailGenerator, 
+                       QLItemTransformer, QLItemViewController, QLNetworkStateObserver, 
+                       QLNotificationCenter, QLPreviewContext, QLPreviewController, 
+                       QLPreviewConverter, QLPreviewItemEditedCopy, QLPreviewMockScene, 
+                       QLScrollableContentItemViewController, QLThumbnail, QLThumbnailCreationOperation, 
+                       QLThumbnailDescriptor, QLThumbnailProvider, QLThumbnailReply, 
+                       QLToolbarButton, QLToolbarButtonOption, QLURLItemTransformer ]
+...

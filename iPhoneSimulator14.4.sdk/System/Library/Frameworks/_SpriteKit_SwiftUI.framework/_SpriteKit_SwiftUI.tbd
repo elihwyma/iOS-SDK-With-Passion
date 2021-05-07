@@ -1,0 +1,31 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           1E340A6C-2F52-3A83-9953-E3DADBAA6B53
+  - target:          arm64-ios-simulator
+    value:           C35C0167-BE1F-3A28-AA00-F54B9EC4865F
+install-name:    '/System/Library/Frameworks/_SpriteKit_SwiftUI.framework/_SpriteKit_SwiftUI'
+swift-abi-version: 7
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ '_$s18_SpriteKit_SwiftUI0A4ViewV0cD00E0AAMc', '_$s18_SpriteKit_SwiftUI0A4ViewV4bodyQrvg', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV4bodyQrvpMV', '_$s18_SpriteKit_SwiftUI0A4ViewV4bodyQrvpQOMQ', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV5scene10transition8isPaused24preferredFramesPerSecond7options12shouldRenderACSo7SKSceneC_So12SKTransitionCSgSbSiAC7OptionsVSbSdctcfC', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV5scene10transition8isPaused24preferredFramesPerSecondACSo7SKSceneC_So12SKTransitionCSgSbSitcfC', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsV18allowsTransparencyAEvgZ', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsV19ignoresSiblingOrderAEvgZ', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsV25shouldCullNonVisibleNodesAEvgZ', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsV8rawValueAESi_tcfC', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsV8rawValueSivg', '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsV8rawValueSivpMV', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsVMa', '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsVMn', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsVN', '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsVSQAAMc', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsVSYAAMc', '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsVs10SetAlgebraAAMc', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsVs25ExpressibleByArrayLiteralAAMc', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewV7OptionsVs9OptionSetAAMc', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewVMa', '_$s18_SpriteKit_SwiftUI0A4ViewVMn', 
+                       '_$s18_SpriteKit_SwiftUI0A4ViewVN' ]
+...

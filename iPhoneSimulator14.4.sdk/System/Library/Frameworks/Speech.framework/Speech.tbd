@@ -1,0 +1,21 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           B0084272-3A75-311F-8981-99DC1E781195
+  - target:          x86_64-ios-simulator
+    value:           BC1599F5-CBB9-390A-85EF-5CDD6A86CB05
+  - target:          arm64-ios-simulator
+    value:           0C7DE9AD-08E3-38F9-BB84-1830FC92BB05
+install-name:    '/System/Library/Frameworks/Speech.framework/Speech'
+exports:
+  - targets:         [ i386-ios-simulator ]
+    objc-classes:    [ SFSpeechRecordingRecognitionRequest ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    objc-classes:    [ SFAcousticFeature, SFSpeechAudioBufferRecognitionRequest, 
+                       SFSpeechRecognitionRequest, SFSpeechRecognitionResult, SFSpeechRecognitionTask, 
+                       SFSpeechRecognizer, SFSpeechURLRecognitionRequest, SFTranscription, 
+                       SFTranscriptionSegment, SFVoiceAnalytics, _SFSearchRequest, 
+                       _SFSearchResult ]
+...

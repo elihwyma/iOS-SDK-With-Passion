@@ -1,0 +1,23 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           BD290625-ECAD-37A7-8A8C-A1A11154153D
+  - target:          x86_64-ios-simulator
+    value:           8FE5FE7E-E1D7-3121-9945-119A05366D3F
+  - target:          arm64-ios-simulator
+    value:           B1D44F58-3F26-3CCF-88AF-15BAE6BB114E
+install-name:    '/usr/lib/libcoretls_cfhelpers.dylib'
+current-version: 169
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ _SSLAllocBuffer, _SSLAllocCopyBuffer, _SSLCopyBuffer, _SSLCopyBufferFromData, 
+                       _SSLCopyBufferTerm, _SSLFreeBuffer, _SSLReallocBuffer, _coretls_cfhelpersVersionNumber, 
+                       _coretls_cfhelpersVersionString, _sslAllocCopy, _sslFree, 
+                       _sslMalloc, _sslRealloc, _tls_copy_buffer_list, _tls_free_buffer_list ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _tls_helper_SSLProtocol_from_version, _tls_helper_create_peer_acceptable_dn_array, 
+                       _tls_helper_create_peer_trust, _tls_helper_set_identity_from_array, 
+                       _tls_helper_set_peer_pubkey, _tls_helper_version_from_SSLProtocol ]
+...

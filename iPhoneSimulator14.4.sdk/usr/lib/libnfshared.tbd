@@ -1,0 +1,44 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           8933C81A-E910-3E9A-94AB-4D1E744ED455
+  - target:          arm64-ios-simulator
+    value:           3B87D0D8-16A4-3CDF-8423-742A4D202E8C
+install-name:    '/usr/lib/libnfshared.dylib'
+exports:
+  - targets:         [ x86_64-ios-simulator, arm64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _GetElapsedTimeInMillisecondsFromMachTime, _NFAccessoryTagI2CBridgeErrorDomain, 
+                       _NFBuildVersion, _NFCreateRootQueue, _NFDataAppend, _NFDataAppendBytes, 
+                       _NFDataAsHexString, _NFDataCreateWithBytes, _NFDataCreateWithBytesNoCopy, 
+                       _NFDataCreateWithFile, _NFDataCreateWithHexString, _NFDataCreateWithLength, 
+                       _NFDataPrintAsHexString, _NFDataRelease, _NFDataRetain, _NFDataScannerCreateWithData, 
+                       _NFDataScannerEOF, _NFDataScannerRead, _NFDataScannerRead16, 
+                       _NFDataScannerRead32, _NFDataScannerRead8, _NFDataScannerReadData, 
+                       _NFDataScannerRelease, _NFDataScannerRetain, _NFGetProductType, 
+                       _NFGetRootQueue, _NFGetThreadPriority, _NFIsChinaSku, _NFIsGreenTea, 
+                       _NFIsInternalBuild, _NFIsProductType, _NFIsRestoreOS, _NFIsSimulator, 
+                       _NFIsUIBuild, _NFPlatformRequiresReaderModeAdjustmentOnAdapter, 
+                       _NFProductHasNFCRadio, _NFProductHasThermistor, _NFProductIsBridge, 
+                       _NFProductIsDevBoard, _NFProductIsMac, _NFProductIsPad, _NFProductIsPhone, 
+                       _NFProductIsWatch, _NFProductSupportsAC, _NFProductSupportsNFCReader, 
+                       _NFSetRootQueue, _NFSetThreadPriority, _NFSharedDumpTransport, 
+                       _NFSharedLogLock, _NFSharedLogOpen2, _NFSharedLogSetSynchronousLogging, 
+                       _NFSharedLogTransport, _NFSharedLogUnlock, _NFSharedLogv, 
+                       _NFSharedLogv_GreenTea, _NFSharedSignpostLog, _NFSimulateCrash, 
+                       _NF_isFeatureSupported, _TLVCreateWithData, _TLVCreateWithDataMixed, 
+                       _TLVCreateWithFirstChild, _TLVCreateWithValue, _TLVRelease, 
+                       _TLVRetain, __NFSharedLogClose, __NFSharedLogOpen, ___NFSharedLogv, 
+                       _gRootQueueMutex, _postAWDHardwareExceptionEvent, _postAWDLPCDStatistic, 
+                       _postAWDMainSERemovedEvent, _postAWDMiddlewareExceptionEvent, 
+                       _resetAWDLoadStackExceptionCount ]
+    objc-classes:    [ NFAWDLogger, NFAccessoryTag, NFAccessoryTagI2CBridge, NFCommandAPDU, 
+                       NFCurrency, NFJSONEncoder, NFMSEIParser, NFMemoryObserver, 
+                       NFNSCheckedDecoder, NFNdefMessageInternal, NFNdefRecordInternal, 
+                       NFPowerAssertion, NFPowerObserver, NFPreferenceObserver, NFReaderSessionConfig, 
+                       NFResponseAPDU, NFRunScriptParameters, NFSecureXPCEventPublisher, 
+                       NFTLV, NFTagInternal, NFTimer, NFVASPassConfig, NFXPCEventPublisher ]
+...

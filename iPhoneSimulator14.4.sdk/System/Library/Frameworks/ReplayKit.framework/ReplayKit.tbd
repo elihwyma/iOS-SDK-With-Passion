@@ -1,0 +1,40 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           A3C53C12-0C5E-32A8-B077-F7EE2946E309
+  - target:          x86_64-ios-simulator
+    value:           9CF0DBDE-187F-3498-9472-01D7EB08D7AB
+  - target:          arm64-ios-simulator
+    value:           EFB5D765-E253-3743-8BE3-C4D44554A291
+install-name:    '/System/Library/Frameworks/ReplayKit.framework/ReplayKit'
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ _RPScreenRecorderRequiredFreeSpace, _RPScreenRecorderTempDirectory, 
+                       _RPStoreInfoAppNameKey, _RPStoreInfoAuthorKey, _RPStoreInfoBundleIDKey, 
+                       _RPStoreInfoCategoriesKey, _RPStoreInfoItemURLKey, _RPVideoOverlayBackgroundMaskImageName, 
+                       _RPVideoOverlayDefaultGlyphAlpha, _RPVideoOverlayFlatBackgroundAlpha, 
+                       _RPVideoOverlayFlatBackgroundWhite, _RPVideoOverlayGlyphMaskImageName, 
+                       _RPVideoOverlayHighlightedGlyphAlpha ]
+    objc-classes:    [ RPPassThroughView, RPPictureInPictureController, RPPictureInPictureViewController, 
+                       RPPictureInPictureWindow, RPSharedConstants, RPSystemRecordingIndicatorWindow, 
+                       RPYouTubeActivityProgressOverlay ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _RPApplicationInfoBundleIdentifierKey, _RPLogSetLogLevel, 
+                       _RPRecordingErrorDomain, _RPVideoEditorExtensionAppNameKey, 
+                       _RPVideoEditorExtensionBundleIdentifierKey, _RPVideoEditorExtensionFileAttachmentKey, 
+                       _RPVideoEditorExtensionMoviePathKey, _RPVideoEditorExtensionOverrideShareMessageKey, 
+                       _RPVideoEditorExtensionOverrideTintColorKey, _RPVideoSampleOrientationKey, 
+                       _ReplayKitVersionNumber, _ReplayKitVersionString, ___RPLogLevel ]
+    objc-classes:    [ RPAudioMixUtility, RPBroadcastActivityExtensionHostContext, 
+                       RPBroadcastActivityHostViewController, RPBroadcastActivityViewController, 
+                       RPBroadcastConfiguration, RPBroadcastController, RPBroadcastExtensionHostContext, 
+                       RPBroadcastHandler, RPBroadcastHostViewController, RPBroadcastMP4ClipHandler, 
+                       RPBroadcastSampleHandler, RPDaemonProxy, RPExtensionContext, 
+                       RPExtensionHostContext, RPFlatVideoOverlayButton, RPHighFidelityVideoOverlayButton, 
+                       RPModalPresentationWindow, RPPipView, RPPipViewController, 
+                       RPPreviewViewController, RPScreenRecorder, RPStoreInfo, RPStoreManager, 
+                       RPSystemBroadcastPickerView, RPVideoEditorExtensionHostContext, 
+                       RPVideoEditorHostViewController ]
+...

@@ -1,0 +1,16 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           D7BCC9B4-9858-390F-80F6-1AAA51B114BE
+  - target:          arm64-ios-simulator
+    value:           A9528F81-96F3-33D4-A465-9088F69B99E5
+install-name:    '/System/Library/Frameworks/AppTrackingTransparency.framework/AppTrackingTransparency'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _AppTrackingTransparencyVersionNumber, _AppTrackingTransparencyVersionString ]
+    objc-classes:    [ ATTrackingManager ]
+...

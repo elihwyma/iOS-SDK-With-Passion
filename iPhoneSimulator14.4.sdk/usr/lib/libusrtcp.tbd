@@ -1,0 +1,16 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           3F5E5FAC-F093-32F7-85C7-048C166C5B6A
+  - target:          arm64-ios-simulator
+    value:           892D8BB9-8C99-3E7D-94BD-E6AEEAE7BE69
+install-name:    '/usr/lib/libusrtcp.dylib'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _nw_protocol_sfotcp_identifier, _nw_protocol_tcp_identifier, 
+                       _tcp_next_mtu ]
+...

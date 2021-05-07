@@ -1,0 +1,18 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           B2529A94-A3DC-3298-BAED-0AC0F940E5D9
+  - target:          x86_64-ios-simulator
+    value:           7157B039-47A9-3CD5-B23D-2C0B2306C0BE
+  - target:          arm64-ios-simulator
+    value:           5454D4C8-ACB0-3E96-A0E2-942FE2E424BD
+install-name:    '/usr/lib/libBacktraceRecording.dylib'
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ ___introspection_dispatch_get_queues, ___introspection_dispatch_item_info_data_offset, 
+                       ___introspection_dispatch_item_info_version, ___introspection_dispatch_queue_get_pending_items, 
+                       ___introspection_dispatch_queue_info_data_offset, ___introspection_dispatch_queue_info_version, 
+                       ___introspection_dispatch_queue_item_get_info, ___introspection_dispatch_thread_get_item_info ]
+...

@@ -1,0 +1,19 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           581F1994-5D2D-335D-A175-2B932EAC2243
+  - target:          arm64-ios-simulator
+    value:           CE59E980-851C-3673-83FA-842CB7F855C9
+install-name:    '/usr/lib/libffi-trampolines.dylib'
+current-version: 27
+allowable-clients:
+  - targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+    clients:         [ '!' ]
+exports:
+  - targets:         [ arm64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _ffi_closure_trampoline_table_page ]
+...

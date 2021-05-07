@@ -1,0 +1,30 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           A2AD5B8C-3C38-34CA-A118-51601F272AFF
+  - target:          x86_64-ios-simulator
+    value:           418E8CAA-E2E7-3EB3-9EF6-ED27F0E55FE9
+  - target:          arm64-ios-simulator
+    value:           05F31985-8580-3AC1-BD5A-1D9B42691708
+install-name:    '/usr/lib/libMobileGestalt.dylib'
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _MGCancelNotifications, _MGCopyAnswer, _MGCopyAnswerWithError, 
+                       _MGCopyMultipleAnswers, _MGGetBoolAnswer, _MGGetFloat32Answer, 
+                       _MGGetProductType, _MGGetSInt32Answer, _MGGetSInt64Answer, 
+                       _MGGetStringAnswer, _MGIsDeviceOfType, _MGIsDeviceOneOfType, 
+                       _MGIsQuestionValid, _MGRegisterForBulkUpdates, _MGRegisterForUpdates, 
+                       _MGSetAnswer, _MGSetLogHandler, __MGCacheCopyValueForKey, 
+                       __MGCacheValid, __MGClearInProcessCache, __MGCopyDeviceDescription, 
+                       __MGCopyIteratedDeviceDescription, __MGGetFastPathLog, __MGIterateDevices, 
+                       __MGLog, __MGPrintIteratedDeviceDescription, __MGRebuildCache, 
+                       __MGRebuildCache4PurpleRestore, __MGServerCopyAnswerWithError, 
+                       __MGServerQuestionIsPlatform, __MGSetServer, __MGWaitForDevices, 
+                       __MGWriteCache, __MGWriteCacheOnHelper, _is_restore_os, _kMGQDiskUsageAmountDataAvailable, 
+                       _kMGQDiskUsageAmountDataReserved, _kMGQDiskUsageAmountRestoreAvailable, 
+                       _kMGQDiskUsageTotalDataAvailable, _kMGQDiskUsageTotalDataCapacity, 
+                       _kMGQDiskUsageTotalDiskCapacity, _kMGQDiskUsageTotalSystemAvailable, 
+                       _kMGQDiskUsageTotalSystemCapacity ]
+...

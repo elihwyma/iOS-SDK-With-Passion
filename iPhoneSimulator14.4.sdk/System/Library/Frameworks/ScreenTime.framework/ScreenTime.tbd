@@ -1,0 +1,18 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           ABB57193-C31A-362D-9DC8-0AC806C93DED
+  - target:          arm64-ios-simulator
+    value:           CEC2342D-435B-392C-8521-C0E84F574340
+install-name:    '/System/Library/Frameworks/ScreenTime.framework/ScreenTime'
+current-version: 495
+exports:
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _STMachServiceNameScreenTime ]
+    objc-classes:    [ STScreenTimeAgentConnection, STScreenTimeConfiguration, STScreenTimeConfigurationObserver, 
+                       STWebHistory, STWebRemoteViewController, STWebService, STWebpageController ]
+...

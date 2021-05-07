@@ -1,0 +1,23 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           00000000-0000-0000-0000-000000000000
+  - target:          x86_64-ios-simulator
+    value:           D96EE007-B7B3-3FD4-A7B8-AC7E513E9BE8
+  - target:          arm64-ios-simulator
+    value:           280EF10D-6315-3BF0-B542-7CEE9C4013CE
+install-name:    '/usr/lib/libMTLCapture.dylib'
+current-version: 205.16
+compatibility-version: 1.1
+exports:
+  - targets:         [ x86_64-ios-simulator ]
+    weak-symbols:    [ __ZTISt11logic_error, __ZTISt12length_error, __ZTISt9exception, 
+                       __ZTSSt11logic_error, __ZTSSt12length_error, __ZTSSt9exception ]
+  - targets:         [ x86_64-ios-simulator, arm64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _DYMTLWrapDeviceWithDebugLayer, _GTMTLGuestAppClient_GetMTLCaptureScopes, 
+                       _GTMTLGuestAppClient_GetMTLCommandQueues, _GTMTLGuestAppClient_getUnsupportedFenumAndCategory, 
+                       _GTMTLGuestAppClient_initGlobalTransportWithHostURL, _GTMTLGuestAppClient_notifyUnsupportedFenum, 
+                       _GTMTLGuestAppClient_unsupportedFenumDetected ]
+...

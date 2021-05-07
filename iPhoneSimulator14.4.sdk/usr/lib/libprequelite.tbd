@@ -1,0 +1,21 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           71B69633-2CA6-35FD-A173-581370443B7D
+  - target:          x86_64-ios-simulator
+    value:           C282F4A5-1F11-33DA-A268-220D7747CA3A
+  - target:          arm64-ios-simulator
+    value:           0149C469-42C6-3EB7-82AB-4E6D7B7B0832
+install-name:    '/usr/lib/libprequelite.dylib'
+current-version: 103
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ _pql_set_log_handler ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ _PQLSqliteErrorDomain, _pql_sqlite3_bind_pointer, _pql_sqlite3_value_object, 
+                       _pql_sqlite3_value_pointer ]
+    objc-classes:    [ PQLConnection, PQLFormatInjection, PQLNameInjection, PQLNameInjectionBase, 
+                       PQLQueryBuilder, PQLRawInjection, PQLResultSet ]
+...

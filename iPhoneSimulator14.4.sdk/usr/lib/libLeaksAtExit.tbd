@@ -1,0 +1,12 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           44E2AEA4-A257-33EC-8604-C1260C92178C
+  - target:          x86_64-ios-simulator
+    value:           55F5C6AB-7FA0-3BFB-AD1E-FCB6018FAFC4
+  - target:          arm64-ios-simulator
+    value:           0FDA3069-3CF2-3CB1-9FA4-D9793C6C2FD8
+install-name:    '/usr/lib/libLeaksAtExit.dylib'
+...

@@ -1,0 +1,17 @@
+--- !tapi-tbd
+tbd-version:     4
+targets:         [ i386-ios-simulator, x86_64-ios-simulator, arm64-ios-simulator ]
+uuids:
+  - target:          i386-ios-simulator
+    value:           4713FDB8-17CE-3DBE-B82B-EDAA947620B1
+  - target:          x86_64-ios-simulator
+    value:           223C3458-9A46-3DFA-B897-625166BCF318
+  - target:          arm64-ios-simulator
+    value:           9D90B37B-EB64-3185-A349-FD24EF91A94A
+install-name:    '/usr/lib/libMobileGestaltExtensions.dylib'
+exports:
+  - targets:         [ i386-ios-simulator ]
+    symbols:         [ __MGSSetLazyFuncs ]
+  - targets:         [ arm64-ios-simulator, x86_64-ios-simulator, i386-ios-simulator ]
+    symbols:         [ __MGSCopyLocalizedString ]
+...
