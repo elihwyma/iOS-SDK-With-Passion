@@ -1,0 +1,50 @@
+/*
+ Image: /System/Library/PrivateFrameworks/WebContentAnalysis.framework/WebContentAnalysis
+ */
+
+#import <WebContentAnalysis/WebContentAnalysis-Structures.h>
+
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/(null).h>
+#import <WebContentAnalysis/NSCoding-Protocol.h>
+#import <WebContentAnalysis/NSMutableArray-WFStack.h>
+#import <WebContentAnalysis/NSNumber-WFApproximation.h>
+#import <WebContentAnalysis/NSSecureCoding-Protocol.h>
+#import <WebContentAnalysis/NSString-WFExtension.h>
+#import <WebContentAnalysis/NSURL-WFAdditions.h>
+#import <WebContentAnalysis/Swift-Protocol.h>
+#import <WebContentAnalysis/WebFilterEvaluator.h>
+#import <WebContentAnalysis/WFCategoryJudgement.h>
+#import <WebContentAnalysis/WFContentSniffer.h>
+#import <WebContentAnalysis/WFDocumentStructureTag.h>
+#import <WebContentAnalysis/WFImg.h>
+#import <WebContentAnalysis/WFImgArrayCache.h>
+#import <WebContentAnalysis/WFJavascriptStripper.h>
+#import <WebContentAnalysis/WFLink.h>
+#import <WebContentAnalysis/WFLSMMap.h>
+#import <WebContentAnalysis/WFLSMResult.h>
+#import <WebContentAnalysis/WFLSMScoreNormalizedMap.h>
+#import <WebContentAnalysis/WFNodeWrapper.h>
+#import <WebContentAnalysis/WFPINEntryViewControllerProtocol-Protocol.h>
+#import <WebContentAnalysis/WFPostprocessor.h>
+#import <WebContentAnalysis/WFRemotePINEntryViewController.h>
+#import <WebContentAnalysis/WFServicePINEntryControllerProtocol-Protocol.h>
+#import <WebContentAnalysis/WFSlangTag.h>
+#import <WebContentAnalysis/WFTagFactory.h>
+#import <WebContentAnalysis/WFTagFlyweight.h>
+#import <WebContentAnalysis/WFTreeHTMLStripper.h>
+#import <WebContentAnalysis/WFTreeXMLDocumentStripper.h>
+#import <WebContentAnalysis/WFUSC2257Tag.h>
+#import <WebContentAnalysis/WFUserSettings.h>
+#import <WebContentAnalysis/WFVerdict.h>
+#import <WebContentAnalysis/WFWebPageProtocol-Protocol.h>

@@ -1,0 +1,20 @@
+/*
+ Image: /System/Library/Frameworks/CoreData.framework/CoreData
+ */
+
+#import <CoreData/NSPersistentContainer.h>
+
+@interface NSPersistentCloudKitContainer : NSPersistentContainer
+
++ (id)discoverDefaultContainerIdentifier;
+
+- (id)initWithName:(id)arg1 managedObjectModel:(id)arg2;
+- (void)setPersistentStoreDescriptions:(id)arg1;
+- (void)_loadStoreDescriptons:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (id)recordForManagedObjectID:(id)arg1;
+- (id)recordsForManagedObjectIDs:(id)arg1;
+- (_Bool)initializeCloudKitSchemaWithOptions:(unsigned long long)arg1 error:(id *)arg2;
+- (id)recordIDForManagedObjectID:(id)arg1;
+- (id)recordIDsForManagedObjectIDs:(id)arg1;
+
+@end

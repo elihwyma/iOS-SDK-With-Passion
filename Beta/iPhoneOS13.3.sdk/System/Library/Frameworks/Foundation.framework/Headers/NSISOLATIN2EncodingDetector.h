@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/Frameworks/Foundation.framework/Foundation
+ */
+
+#import <Foundation/NSSingleByteEncodingDetector.h>
+
+__attribute__((visibility("hidden")))
+@interface NSISOLATIN2EncodingDetector : NSSingleByteEncodingDetector
+
+- (unsigned long long)recognizeString:(const char *)arg1 withDataLength:(unsigned long long)arg2 intoBuffer:(id)arg3;
+
+@end

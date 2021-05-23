@@ -1,0 +1,24 @@
+/*
+ Image: /System/Library/PrivateFrameworks/Trial.framework/Trial
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSString;
+
+@interface TRILogTreatmentReader : NSObject
+
+{
+    NSString *_path;
+}
+
+@property (readonly) NSString *path;
+
++ (id)readerWithProjectId:(int)arg1;
++ (id)legacyReader;
+
+- (id)initWithPath:(id)arg1;
+- (id)initWithProjectId:(int)arg1;
+- (id)treatments;
+
+@end

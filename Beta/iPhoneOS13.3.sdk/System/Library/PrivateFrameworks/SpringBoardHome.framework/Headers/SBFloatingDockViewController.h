@@ -1,0 +1,196 @@
+/*
+ Image: /System/Library/PrivateFrameworks/SpringBoardHome.framework/SpringBoardHome
+ */
+
+#import <SpringBoardFoundation/SBFTouchPassThroughViewController.h>
+
+#import <SpringBoardHome/Swift-Protocol.h>
+
+@class NSArray, NSHashTable, NSMutableArray, NSSet, NSString, SBFTouchPassThroughView, SBFloatingDockView, SBFolderController, SBFolderPresentingViewController, SBHFloatingDockStyleConfiguration, SBHIconManager, SBHIconModel, SBHomeScreenIconTransitionAnimator, SBIconListModel, SBIconListView, UIView, UIViewController, UIWindow, _UILegibilitySettings;
+
+@protocol SBFloatingDockSuggestionsViewProviding, SBFloatingDockViewControllerDelegate, SBIconViewProviding;
+
+@interface SBFloatingDockViewController : SBFTouchPassThroughViewController <Swift>
+
+{
+    SBFloatingDockView *_dockView;
+    _UILegibilitySettings *_legibilitySettings;
+    NSHashTable *_bouncedDropSessions;
+    struct __CFRunLoopObserver *_resizeRunLoopObserver;
+    _Bool _wantsFastIconReordering;
+    _Bool _shouldIndicateImpossibleDrop;
+    _Bool _transitioningUnderlyingPresentationStyleConfiguration;
+    id <SBFloatingDockViewControllerDelegate> _delegate;
+    UIViewController<SBFloatingDockSuggestionsViewProviding> *_suggestionsViewController;
+    double _dockOffscreenProgress;
+    SBHIconManager *_iconManager;
+    id <SBIconViewProviding> _iconViewProvider;
+    SBIconListModel *_dockListModel;
+    SBFolderPresentingViewController *_folderPresentingViewController;
+    SBHomeScreenIconTransitionAnimator *_currentFolderAnimator;
+    NSMutableArray *_currentExpandCompletions;
+    NSMutableArray *_currentCollapseCompletions;
+    SBFTouchPassThroughView *_scalingView;
+    double _lastDockHeight;
+    SBHFloatingDockStyleConfiguration *_underlyingPresentationStyleConfiguration;
+    SBHFloatingDockStyleConfiguration *_transitionTargetUnderlyingPresentationStyleConfiguration;
+}
+
+@property (nonatomic, readonly) SBHIconManager *iconManager;
+@property (weak, nonatomic, readonly) id <SBIconViewProviding> iconViewProvider;
+@property (retain, nonatomic) SBIconListModel *dockListModel;
+@property (retain, nonatomic) SBFloatingDockView *dockView;
+@property (retain, nonatomic) SBFolderPresentingViewController *folderPresentingViewController;
+@property (retain, nonatomic) SBHomeScreenIconTransitionAnimator *currentFolderAnimator;
+@property (retain, nonatomic) NSMutableArray *currentExpandCompletions;
+@property (retain, nonatomic) NSMutableArray *currentCollapseCompletions;
+@property (retain, nonatomic) SBFTouchPassThroughView *scalingView;
+@property (nonatomic) double lastDockHeight;
+@property (copy, nonatomic) SBHFloatingDockStyleConfiguration *underlyingPresentationStyleConfiguration;
+@property (nonatomic, getter=isTransitioningUnderlyingBackgroundStyle) _Bool transitioningUnderlyingPresentationStyleConfiguration;
+@property (copy, nonatomic) SBHFloatingDockStyleConfiguration *transitionTargetUnderlyingPresentationStyleConfiguration;
+@property (weak, nonatomic) id <SBFloatingDockViewControllerDelegate> delegate;
+@property (retain, nonatomic) UIViewController<SBFloatingDockSuggestionsViewProviding> *suggestionsViewController;
+@property (nonatomic, readonly) double contentHeight;
+@property (nonatomic, readonly) double maximumContentHeight;
+@property (nonatomic, readonly) struct CGRect floatingDockScreenFrame;
+@property (nonatomic, readonly) struct CGRect floatingDockScreenPresentationFrame;
+@property (nonatomic, readonly) double preferredVerticalMargin;
+@property (nonatomic) double requestedVerticalMargin;
+@property (nonatomic, readonly) double translationFromFullyPresentedFrame;
+@property (nonatomic, readonly) double maximumDockContinuousCornerRadius;
+@property (nonatomic) double dockOffscreenProgress;
+@property (nonatomic) _Bool wantsFastIconReordering;
+@property (nonatomic) _Bool shouldIndicateImpossibleDrop;
+@property (nonatomic, readonly, getter=isPresentingFolder) _Bool presentingFolder;
+@property (nonatomic, readonly) SBFolderController *presentedFolderController;
+@property (retain, nonatomic) _UILegibilitySettings *legibilitySettings;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (nonatomic, readonly) UIView *containerView;
+@property (nonatomic, readonly) UIWindow *animationWindow;
+@property (nonatomic, readonly) UIView *fallbackIconContainerView;
+@property (nonatomic, readonly) UIView *extraViewsContainer;
+@property (copy, nonatomic, readonly) NSArray *extraViews;
+@property (nonatomic, readonly) _Bool shouldAnimateLastTwoViewsAsOne;
+@property (nonatomic, readonly) _Bool shouldAnimateFirstTwoViewsAsOne;
+@property (nonatomic, readonly) SBHIconModel *iconModel;
+@property (nonatomic, readonly) SBIconListView *currentIconListView;
+@property (nonatomic, readonly) SBIconListView *dockIconListView;
+@property (copy, nonatomic, readonly) NSSet *presentedIconLocations;
+
+- (void)dealloc;
+- (id)succinctDescription;
+- (id)descriptionWithMultilinePrefix:(id)arg1;
+- (id)succinctDescriptionBuilder;
+- (id)descriptionBuilderWithMultilinePrefix:(id)arg1;
+- (void)viewDidLoad;
+- (void)viewDidLayoutSubviews;
+- (id)targetIconContainerView;
+- (id)borrowScalingView;
+- (void)returnScalingView;
+- (void)_rebuildUserIconListView;
+- (void)iconManagerDidChangeIconModel:(id)arg1;
+- (void)iconModelDidLayout:(id)arg1;
+- (void)iconEditingDidChange:(id)arg1;
+- (void)iconDraggingDidChange:(id)arg1;
+- (void)reduceTransparencyEnabledStateDidChange:(id)arg1;
+- (void)_sizeCategoryDidChange:(id)arg1;
+- (double)contentHeightForFrame:(struct CGRect)arg1;
+- (id)userIconListView;
+- (id)recentIconListView;
+- (double)minimumVerticalMarginForFrame:(struct CGRect)arg1;
+- (void)enumerateIconListViewsUsingBlock:(CDUnknownBlockType)arg1;
+- (void)enumerateVisibleIconViewsUsingBlock:(CDUnknownBlockType)arg1;
+- (void)dockViewWillBecomeVisible;
+- (void)dockViewWillResignVisible;
+- (void)dockViewDidResignVisible;
+- (void)dockViewDidBecomeVisible;
+- (id)userIconLocation;
+- (_Bool)isDisplayingIcon:(id)arg1 inLocation:(id)arg2;
+- (id)suggestionsIconLocation;
+- (_Bool)isDisplayingIconView:(id)arg1;
+- (void)_updateDockForStyleConfiguration:(id)arg1;
+- (id)iconViewForIcon:(id)arg1 location:(id)arg2;
+- (id)firstIconViewForIcon:(id)arg1 inLocations:(id)arg2;
+- (id)dockViewIfExists;
+- (void)_resizeDockForChangedNumberOfIconsAnimated:(_Bool)arg1;
+- (void)_updateFolderIconBackgroundsForStyleConfiguration:(id)arg1;
+- (void)_updatePresentedFolderBackgroundForStyleConfiguration:(id)arg1;
+- (void)_updatePlatterShadowForStyleConfiguration:(id)arg1;
+- (unsigned long long)_backgroundEffectForPresentedFolder;
+- (void)_rebuildAfterIconModelChange;
+- (unsigned long long)_platterEffectForPresentedFolder;
+- (id)iconListView:(id)arg1 previewForDroppingIconDragItem:(id)arg2 proposedPreview:(id)arg3;
+- (void)iconListView:(id)arg1 iconDragItem:(id)arg2 willAnimateDropWithAnimator:(id)arg3;
+- (void)_coalesceRequestsToResizeDockForChangedNumberOfIcons;
+- (_Bool)isPresentingIconLocation:(id)arg1;
+- (id)dequeueReusableIconViewOfClass:(Class)arg1;
+- (void)recycleIconView:(id)arg1;
+- (_Bool)isIconViewRecycled:(id)arg1;
+- (void)configureIconView:(id)arg1 forIcon:(id)arg2;
+- (unsigned long long)_currentFolderIconBackgroundStyle;
+- (void)_presentFolderForIcon:(id)arg1 location:(id)arg2 animated:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+- (_Bool)_shouldOpenFolderIcon:(id)arg1;
+- (_Bool)_isInAppToAppTransition;
+- (id)firstIconViewForIcon:(id)arg1;
+- (void)dismissPresentedFolderAnimated:(_Bool)arg1 completion:(CDUnknownBlockType)arg2;
+- (_Bool)iconListView:(id)arg1 canHandleIconDropSession:(id)arg2;
+- (void)iconListView:(id)arg1 iconDropSessionDidEnter:(id)arg2;
+- (id)iconListView:(id)arg1 iconDropSessionDidUpdate:(id)arg2;
+- (void)iconListView:(id)arg1 iconDropSession:(id)arg2 didPauseAtLocation:(struct CGPoint)arg3;
+- (void)iconListView:(id)arg1 iconDropSessionDidExit:(id)arg2;
+- (void)iconListView:(id)arg1 performIconDrop:(id)arg2;
+- (_Bool)iconListView:(id)arg1 shouldAllowSpringLoadedInteractionForIconDropSession:(id)arg2 onIconView:(id)arg3;
+- (void)iconListView:(id)arg1 springLoadedInteractionForIconDragDidCompleteOnIconView:(id)arg2;
+- (void)iconList:(id)arg1 didAddIcon:(id)arg2;
+- (void)iconList:(id)arg1 didReplaceIcon:(id)arg2 withIcon:(id)arg3;
+- (void)iconList:(id)arg1 didRemoveIcon:(id)arg2;
+- (void)iconList:(id)arg1 didMoveIcon:(id)arg2;
+- (Class)controllerClassForFolder:(id)arg1;
+- (_Bool)folderController:(id)arg1 canChangeCurrentPageIndexToIndex:(long long)arg2;
+- (void)folderController:(id)arg1 draggedIconShouldDropFromListView:(id)arg2;
+- (_Bool)folderControllerShouldClose:(id)arg1 withPinchGesture:(id)arg2;
+- (void)folderControllerShouldBeginEditing:(id)arg1;
+- (void)folderControllerShouldEndEditing:(id)arg1;
+- (void)folderControllerWillBeginScrolling:(id)arg1;
+- (void)folderControllerDidEndScrolling:(id)arg1;
+- (_Bool)folderController:(id)arg1 iconListView:(id)arg2 canHandleIconDropSession:(id)arg3;
+- (void)folderController:(id)arg1 iconListView:(id)arg2 iconDropSessionDidEnter:(id)arg3;
+- (id)folderController:(id)arg1 iconListView:(id)arg2 iconDropSessionDidUpdate:(id)arg3;
+- (void)folderController:(id)arg1 iconListView:(id)arg2 iconDropSession:(id)arg3 didPauseAtLocation:(struct CGPoint)arg4;
+- (void)folderController:(id)arg1 iconListView:(id)arg2 iconDropSessionDidExit:(id)arg3;
+- (void)folderController:(id)arg1 iconListView:(id)arg2 performIconDrop:(id)arg3;
+- (id)folderController:(id)arg1 iconListView:(id)arg2 previewForDroppingIconDragItem:(id)arg3 proposedPreview:(id)arg4;
+- (void)folderController:(id)arg1 iconListView:(id)arg2 iconDragItem:(id)arg3 willAnimateDropWithAnimator:(id)arg4;
+- (_Bool)folderController:(id)arg1 iconListView:(id)arg2 shouldAllowSpringLoadedInteractionForIconDropSession:(id)arg3 onIconView:(id)arg4;
+- (void)folderController:(id)arg1 iconListView:(id)arg2 springLoadedInteractionForIconDragDidCompleteOnIconView:(id)arg3;
+- (void)folderControllerWillOpen:(id)arg1;
+- (void)folderControllerDidOpen:(id)arg1;
+- (void)folderControllerWillClose:(id)arg1;
+- (void)folderControllerDidClose:(id)arg1;
+- (id)folderController:(id)arg1 accessibilityTintColorForScreenRect:(struct CGRect)arg2;
+- (id)folderPresentationController:(id)arg1 animationControllerForTransitionWithFolder:(id)arg2 presenting:(_Bool)arg3 animated:(_Bool)arg4;
+- (void)folderPresentationController:(id)arg1 willPerformTransitionWithFolder:(id)arg2 presenting:(_Bool)arg3 withTransitionCoordinator:(id)arg4;
+- (double)statusBarHeightForFolderPresentationController:(id)arg1;
+- (double)minimumHomeScreenScaleForFolderPresentationController:(id)arg1;
+- (id)folderPresentationController:(id)arg1 sourceViewForPresentingViewController:(id)arg2;
+- (id)firstIconViewForIcon:(id)arg1 excludingLocations:(id)arg2;
+- (_Bool)isDisplayingIcon:(id)arg1 inLocations:(id)arg2;
+- (_Bool)isDisplayingIcon:(id)arg1;
+- (_Bool)isDisplayingIconView:(id)arg1 inLocation:(id)arg2;
+- (void)enumerateDisplayedIconViewsForIcon:(id)arg1 usingBlock:(CDUnknownBlockType)arg2;
+- (void)enumerateDisplayedIconViewsUsingBlock:(CDUnknownBlockType)arg1;
+- (id)initWithIconManager:(id)arg1 iconViewProvider:(id)arg2;
+- (void)layoutUserControlledIconLists:(double)arg1 animationType:(long long)arg2 forceRelayout:(_Bool)arg3;
+- (void)enumerateIconListsUsingBlock:(CDUnknownBlockType)arg1;
+- (void)prepareForTransitionToStyleConfiguration:(id)arg1 fromDockVisible:(_Bool)arg2 toDockVisible:(_Bool)arg3;
+- (void)cleanUpAfterUnderlyingBackgroundStyleTransition;
+- (void)_addDockGestureRecognizer:(id)arg1;
+- (void)_setPaddingEdgeInsets:(struct UIEdgeInsets)arg1;
+- (void)floatingDockSuggestionsViewControllerDidChangeNumberOfVisibleSuggestions:(id)arg1;
+- (void)presentFolderForIcon:(id)arg1 location:(id)arg2 animated:(_Bool)arg3 completion:(CDUnknownBlockType)arg4;
+
+@end

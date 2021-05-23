@@ -1,0 +1,178 @@
+/*
+ Image: /System/Library/PrivateFrameworks/NewsCore.framework/NewsCore
+ */
+
+#import <NewsCore/FCHeadline.h>
+
+@class FCAssetManager, FCCoverArt, FCHeadlineThumbnail, FCTopStoriesStyleConfiguration, NSArray, NSData, NSDate, NSDictionary, NSString, NSURL;
+
+@protocol FCChannelProviding;
+
+@interface FCNotificationArticleHeadline : FCHeadline
+
+{
+    _Bool _hasThumbnail;
+    _Bool _sponsored;
+    _Bool _deleted;
+    _Bool _isDraft;
+    _Bool _isLocalDraft;
+    _Bool _featureCandidate;
+    _Bool _needsRapidUpdates;
+    _Bool _showMinimalChrome;
+    _Bool _boundToContext;
+    _Bool _hiddenFromFeeds;
+    _Bool _pressRelease;
+    _Bool _hiddenFromAutoFavorites;
+    _Bool _paid;
+    _Bool _webEmbedsEnabled;
+    _Bool _bundlePaid;
+    _Bool _issueOnly;
+    _Bool _showBundleSoftPaywall;
+    _Bool _useTransparentNavigationBar;
+    NSString *_versionIdentifier;
+    NSString *_identifier;
+    NSString *_articleID;
+    NSString *_referencedArticleID;
+    NSString *_clusterID;
+    unsigned long long _contentType;
+    NSString *_title;
+    NSString *_primaryAudience;
+    NSDate *_publishDate;
+    long long _publisherArticleVersion;
+    long long _backendArticleVersion;
+    id <FCChannelProviding> _sourceChannel;
+    NSString *_sourceName;
+    FCHeadlineThumbnail *_thumbnailLQ;
+    FCHeadlineThumbnail *_thumbnail;
+    FCHeadlineThumbnail *_thumbnailMedium;
+    FCHeadlineThumbnail *_thumbnailHQ;
+    FCHeadlineThumbnail *_thumbnailUltraHQ;
+    NSString *_shortExcerpt;
+    NSString *_accessoryText;
+    NSURL *_contentURL;
+    NSDate *_lastModifiedDate;
+    NSDate *_lastFetchedDate;
+    NSArray *_topics;
+    NSArray *_topicIDs;
+    NSURL *_videoURL;
+    double _videoDuration;
+    NSArray *_iAdCategories;
+    NSArray *_iAdKeywords;
+    NSArray *_iAdSectionIDs;
+    NSArray *_blockedStorefrontIDs;
+    NSArray *_allowedStorefrontIDs;
+    NSArray *_relatedArticleIDs;
+    NSArray *_moreFromPublisherArticleIDs;
+    unsigned long long _storyType;
+    FCTopStoriesStyleConfiguration *_storyStyle;
+    long long _minimumNewsVersion;
+    FCCoverArt *_coverArt;
+    unsigned long long _role;
+    long long _bodyTextLength;
+    FCAssetManager *_assetManager;
+    NSDictionary *_articlePayload;
+    NSString *_flintDocumentUrlString;
+    NSData *_flintDocumentPrefetchedData;
+    NSArray *_flintFontResourceIDs;
+    NSString *_changeEtag;
+    struct CGRect _thumbnailFocalFrame;
+}
+
+@property (retain, nonatomic) FCAssetManager *assetManager;
+@property (retain, nonatomic) NSDictionary *articlePayload;
+@property (retain, nonatomic) NSString *flintDocumentUrlString;
+@property (retain, nonatomic) NSData *flintDocumentPrefetchedData;
+@property (retain, nonatomic) NSArray *flintFontResourceIDs;
+@property (retain, nonatomic) NSString *changeEtag;
+
+- (_Bool)isValid;
+- (unsigned long long)role;
+- (id)identifier;
+- (void)setIdentifier:(id)arg1;
+- (id)title;
+- (void)setTitle:(id)arg1;
+- (unsigned long long)contentType;
+- (void)setContentType:(unsigned long long)arg1;
+- (_Bool)hasThumbnail;
+- (id)contentURL;
+- (void)setHasThumbnail:(_Bool)arg1;
+- (id)versionIdentifier;
+- (_Bool)isDeleted;
+- (void)setRole:(unsigned long long)arg1;
+- (id)thumbnail;
+- (void)setThumbnail:(id)arg1;
+- (id)lastModifiedDate;
+- (id)sourceName;
+- (void)setSourceName:(id)arg1;
+- (void)setDeleted:(_Bool)arg1;
+- (id)topics;
+- (id)publishDate;
+- (void)setPublishDate:(id)arg1;
+- (id)videoURL;
+- (double)videoDuration;
+- (_Bool)isDraft;
+- (_Bool)isPaid;
+- (id)accessoryText;
+- (void)setClusterID:(id)arg1;
+- (id)clusterID;
+- (id)lastFetchedDate;
+- (id)sourceChannel;
+- (_Bool)isBundlePaid;
+- (id)articleID;
+- (void)setArticleID:(id)arg1;
+- (id)contentManifestWithContext:(id)arg1;
+- (id)primaryAudience;
+- (id)shortExcerpt;
+- (id)topicIDs;
+- (_Bool)isFeatureCandidate;
+- (_Bool)isSponsored;
+- (id)iAdCategories;
+- (id)iAdKeywords;
+- (id)iAdSectionIDs;
+- (id)blockedStorefrontIDs;
+- (id)allowedStorefrontIDs;
+- (_Bool)isLocalDraft;
+- (_Bool)useTransparentNavigationBar;
+- (_Bool)webEmbedsEnabled;
+- (unsigned long long)storyType;
+- (_Bool)isHiddenFromFeeds;
+- (_Bool)isHiddenFromAutoFavorites;
+- (long long)bodyTextLength;
+- (id)generateThumbnailAssetHandleForUrlString:(id)arg1 withAssetManager:(id)arg2;
+- (id)generateFlintDocumentAssetHandleForUrlString:(id)arg1 prefetchedData:(id)arg2 withAssetManager:(id)arg3;
+- (id)initWithArticlePayload:(id)arg1 sourceChannel:(id)arg2 assetManager:(id)arg3;
+- (id)referencedArticleID;
+- (long long)publisherArticleVersion;
+- (long long)backendArticleVersion;
+- (void)setSourceChannel:(id)arg1;
+- (struct CGRect)thumbnailFocalFrame;
+- (void)setThumbnailFocalFrame:(struct CGRect)arg1;
+- (id)thumbnailLQ;
+- (void)setThumbnailLQ:(id)arg1;
+- (id)thumbnailMedium;
+- (void)setThumbnailMedium:(id)arg1;
+- (id)thumbnailHQ;
+- (void)setThumbnailHQ:(id)arg1;
+- (id)thumbnailUltraHQ;
+- (void)setThumbnailUltraHQ:(id)arg1;
+- (void)setShortExcerpt:(id)arg1;
+- (void)setAccessoryText:(id)arg1;
+- (void)setTopicIDs:(id)arg1;
+- (void)setSponsored:(_Bool)arg1;
+- (id)relatedArticleIDs;
+- (id)moreFromPublisherArticleIDs;
+- (void)setStoryType:(unsigned long long)arg1;
+- (id)storyStyle;
+- (void)setStoryStyle:(id)arg1;
+- (_Bool)needsRapidUpdates;
+- (_Bool)showMinimalChrome;
+- (_Bool)isBoundToContext;
+- (_Bool)isPressRelease;
+- (long long)minimumNewsVersion;
+- (void)setPaid:(_Bool)arg1;
+- (id)coverArt;
+- (void)setBundlePaid:(_Bool)arg1;
+- (_Bool)isIssueOnly;
+- (_Bool)showBundleSoftPaywall;
+
+@end

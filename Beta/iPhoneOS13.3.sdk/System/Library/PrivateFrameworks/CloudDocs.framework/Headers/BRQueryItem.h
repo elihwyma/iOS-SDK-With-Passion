@@ -1,0 +1,200 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CloudDocs.framework/CloudDocs
+ */
+
+#import <Foundation/NSObject.h>
+
+@class BRFileObjectID, NSArray, NSData, NSDate, NSDictionary, NSError, NSFileProviderItemVersion, NSMutableDictionary, NSNumber, NSPersonNameComponents, NSSet, NSString, NSURL;
+
+@protocol NSFileProviderItemFlags;
+
+@interface BRQueryItem : NSObject
+
+{
+    NSString *_appLibraryID;
+    NSString *_parentPath;
+    NSString *_logicalName;
+    NSString *_physicalName;
+    NSString *_bookmarkData;
+    BRFileObjectID *_fileObjectID;
+    BRFileObjectID *_parentFileObjectID;
+    BRFileObjectID *_shareRootFileObjectID;
+    NSNumber *_size;
+    NSNumber *_mtime;
+    NSNumber *_btime;
+    NSNumber *_lastUsedTime;
+    NSNumber *_favoriteRank;
+    NSNumber *_childItemCount;
+    NSURL *_url;
+    NSURL *_localRepresentationURL;
+    NSNumber *_parentZoneRowID;
+    NSNumber *_zoneRowID;
+    NSMutableDictionary *_attrs;
+    id _replacement;
+    union {
+        struct {
+            unsigned int downloadStatus:2;
+            unsigned int uploadStatus:2;
+            unsigned int itemStatus:2;
+            unsigned int conflicted:1;
+            unsigned int preCrashMarker:1;
+            unsigned int isUploadActive:1;
+            unsigned int isDownloadActive:1;
+            unsigned int isDownloadRequested:1;
+            unsigned int shareOptions:3;
+            unsigned int isHiddenExt:1;
+            unsigned int isBRAlias:1;
+            unsigned int isTrashed:1;
+            unsigned int itemMode:3;
+            unsigned int fromReadOnlyDB:1;
+            unsigned int isSharedFolderSubItem:1;
+            unsigned int possiblyContainsSharedToMeItem:1;
+            unsigned int possiblyContainsSharedByMeItem:1;
+            unsigned int editedSinceShared:1;
+            unsigned char BRQueryItemKind;
+            unsigned char kind;
+        } ;
+        unsigned long long value;
+    } _flags;
+    long long _logicalHandle;
+    long long _physicalHandle;
+    unsigned long long _parentFileID;
+    unsigned short _diffs;
+    _Bool _isNetworkOffline;
+}
+
+@property (nonatomic, readonly) unsigned short diffs;
+@property (nonatomic, readonly) unsigned int br_downloadStatus;
+@property (nonatomic, readonly) unsigned int br_uploadStatus;
+@property (nonatomic, readonly) unsigned int br_shareOptions;
+@property (nonatomic, readonly) _Bool isInTransfer;
+@property (nonatomic, readonly) _Bool isConflicted;
+@property (nonatomic, readonly) _Bool isLive;
+@property (nonatomic, readonly) _Bool isDead;
+@property (nonatomic, readonly) _Bool isDocument;
+@property (nonatomic, readonly) _Bool isDirectory;
+@property (nonatomic, readonly) _Bool isSymlink;
+@property (nonatomic, readonly) _Bool isFinderBookmark;
+@property (nonatomic) _Bool isPreCrash;
+@property (nonatomic, readonly) _Bool isUploadActive;
+@property (nonatomic, readonly) _Bool isDownloadActive;
+@property (nonatomic, readonly) NSNumber *isDownloadRequested;
+@property (nonatomic, readonly) _Bool editedSinceShared;
+@property (nonatomic, readonly) _Bool isBRAlias;
+@property (nonatomic, readonly) _Bool isTrashed;
+@property (nonatomic, readonly) NSString *appLibraryID;
+@property (nonatomic, readonly) NSString *parentPath;
+@property (nonatomic, readonly) NSString *logicalName;
+@property (nonatomic, readonly) NSString *physicalName;
+@property (nonatomic, readonly) BRFileObjectID *fileObjectID;
+@property (nonatomic, readonly) NSNumber *size;
+@property (nonatomic, readonly) NSNumber *mtime;
+@property (nonatomic, readonly) NSNumber *btime;
+@property (nonatomic, readonly) NSNumber *lastUsedTime;
+@property (nonatomic, readonly) NSNumber *favoriteRank;
+@property (nonatomic, readonly) NSURL *url;
+@property (nonatomic, readonly) NSURL *localRepresentationURL;
+@property (nonatomic, readonly) NSString *path;
+@property (nonatomic) _Bool isNetworkOffline;
+@property (nonatomic) id replacement;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (copy, nonatomic, readonly) NSString *itemIdentifier;
+@property (copy, nonatomic, readonly) NSString *parentItemIdentifier;
+@property (copy, nonatomic, readonly) NSString *filename;
+@property (copy, nonatomic, readonly) NSString *typeIdentifier;
+@property (nonatomic, readonly) unsigned long long capabilities;
+@property (nonatomic, readonly) id <NSFileProviderItemFlags> flags;
+@property (copy, nonatomic, readonly) NSNumber *documentSize;
+@property (copy, nonatomic, readonly) NSNumber *childItemCount;
+@property (copy, nonatomic, readonly) NSDate *creationDate;
+@property (copy, nonatomic, readonly) NSDate *contentModificationDate;
+@property (nonatomic, readonly) NSDictionary *extendedAttributes;
+@property (copy, nonatomic, readonly) NSDate *lastUsedDate;
+@property (copy, nonatomic, readonly) NSData *tagData;
+@property (nonatomic, readonly, getter=isTrashed) _Bool trashed;
+@property (nonatomic, readonly, getter=isUploaded) _Bool uploaded;
+@property (nonatomic, readonly, getter=isUploading) _Bool uploading;
+@property (copy, nonatomic, readonly) NSError *uploadingError;
+@property (nonatomic, readonly, getter=isDownloaded) _Bool downloaded;
+@property (nonatomic, readonly, getter=isDownloading) _Bool downloading;
+@property (copy, nonatomic, readonly) NSError *downloadingError;
+@property (nonatomic, readonly, getter=isExcludedFromSync) _Bool excludedFromSync;
+@property (nonatomic, readonly, getter=isMostRecentVersionDownloaded) _Bool mostRecentVersionDownloaded;
+@property (nonatomic, readonly, getter=isShared) _Bool shared;
+@property (nonatomic, readonly, getter=isSharedByCurrentUser) _Bool sharedByCurrentUser;
+@property (nonatomic, readonly) NSPersonNameComponents *ownerNameComponents;
+@property (nonatomic, readonly) NSPersonNameComponents *mostRecentEditorNameComponents;
+@property (nonatomic, readonly) NSData *versionIdentifier;
+@property (nonatomic, readonly) NSFileProviderItemVersion *itemVersion;
+@property (nonatomic, readonly) NSDictionary *userInfo;
+@property (copy, readonly) NSURL *fileURL;
+@property (copy, readonly) NSNumber *hasUnresolvedConflicts;
+@property (copy, readonly) NSString *containerDisplayName;
+@property (copy, readonly, getter=isDownloadRequested) NSNumber *downloadRequested;
+@property (readonly, getter=isHidden) _Bool hidden;
+@property (copy, readonly) NSString *providerIdentifier;
+@property (copy, readonly) NSString *sharingPermissions;
+@property (copy, readonly) NSString *fp_spotlightDomainIdentifier;
+@property (copy, readonly) NSString *fp_domainIdentifier;
+@property (copy, readonly) NSString *fp_parentDomainIdentifier;
+@property (readonly, getter=fp_isUbiquitous) _Bool fp_ubiquitous;
+@property (readonly) _Bool fp_isContainer;
+@property (readonly) _Bool fp_isContainerPristine;
+@property (copy, readonly) NSString *fp_cloudContainerIdentifier;
+@property (copy, readonly) NSSet *fp_cloudContainerClientBundleIdentifiers;
+@property (copy, nonatomic, readonly) NSString *displayName;
+@property (nonatomic, readonly, getter=isTopLevelSharedItem) _Bool topLevelSharedItem;
+@property (copy, readonly) NSString *fileSystemFilename;
+@property (nonatomic, readonly, getter=fp_isLastModifiedByCurrentUser) _Bool fp_lastModifiedByCurrentUser;
+@property (nonatomic, readonly, getter=fp_isAddedByCurrentUser) _Bool fp_addedByCurrentUser;
+@property (nonatomic, readonly) NSPersonNameComponents *fp_addedByNameComponents;
+@property (nonatomic, readonly) NSString *preformattedOwnerName;
+@property (nonatomic, readonly) NSString *preformattedMostRecentEditorName;
+@property (nonatomic, readonly) NSArray *decorations;
+
++ (void)initialize;
++ (_Bool)supportsSecureCoding;
++ (id)askDaemonQueryItemForURL:(id)arg1 andFakeFSEvent:(_Bool)arg2 error:(id *)arg3;
++ (id)containerItemForContainer:(id)arg1 withDocumentsItem:(id)arg2 zoneRowID:(id)arg3;
++ (id)askDaemonQueryItemForURL:(id)arg1 error:(id *)arg2;
++ (id)containerItemForContainer:(id)arg1 withDocumentsItem:(id)arg2;
++ (id)containerItemForContainer:(id)arg1 forceScan:(_Bool)arg2;
+
+- (void)dealloc;
+- (_Bool)isEqual:(id)arg1;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (void)encodeWithCoder:(id)arg1;
+- (id)initWithCoder:(id)arg1;
+- (id)valueForKey:(id)arg1;
+- (id)attributeForName:(id)arg1;
+- (id)attributesForNames:(id)arg1;
+- (id)attributeNames;
+- (id)fileSize;
+- (id)owner;
+- (void)merge:(id)arg1;
+- (id)filePath;
+- (_Bool)canMerge:(id)arg1;
+- (void)attachLogicalExtension:(id)arg1 physicalExtension:(id)arg2;
+- (void)mergeProgressUpdate:(id)arg1;
+- (id)sharedItemRole;
+- (id)parentFileID;
+- (id)containerIDIfDesktopOrDocuments;
+- (id)localizedFileNameIfDesktopOrDocuments;
+- (_Bool)_isInSharedZone;
+- (id)attributeForKey:(id)arg1;
+- (_Bool)_isSharedFolderSubItem;
+- (id)initWithQueryItem:(id)arg1;
+- (id)subclassDescription;
+- (_Bool)isEqualToQueryItem:(id)arg1;
+- (void)_mergeURL:(id)arg1;
+- (void)_mergeAttrs:(id)arg1;
+- (void)setAttribute:(id)arg1 forKey:(id)arg2;
+- (id)downloadingStatus;
+- (void)markDead;
+- (void)clearDiffs;
+- (_Bool)isHiddenExt;
+
+@end

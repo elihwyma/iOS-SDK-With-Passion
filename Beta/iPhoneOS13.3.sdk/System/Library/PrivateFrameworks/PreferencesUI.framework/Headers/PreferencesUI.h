@@ -1,0 +1,50 @@
+/*
+ Image: /System/Library/PrivateFrameworks/PreferencesUI.framework/PreferencesUI
+ */
+
+#import <PreferencesUI/PreferencesUI-Structures.h>
+
+#import <PreferencesUI/AAUISignInControllerDelegate-Protocol.h>
+#import <PreferencesUI/BFFPasscodeViewControllerDelegate-Protocol.h>
+#import <PreferencesUI/BiometricKitDelegate-Protocol.h>
+#import <PreferencesUI/BiometricKitUIEnrollResultDelegate-Protocol.h>
+#import <PreferencesUI/BKUIPearlEnrollControllerDelegate-Protocol.h>
+#import <PreferencesUI/CoreTelephonyClientSubscriberDelegate-Protocol.h>
+#import <PreferencesUI/DevicePINControllerDelegate-Protocol.h>
+#import <PreferencesUI/HMHomeManagerDelegate-Protocol.h>
+#import <PreferencesUI/LAUIDelegate-Protocol.h>
+#import <PreferencesUI/NSDictionary-ThirdPartyApplicationAdditions.h>
+#import <PreferencesUI/NSObject-Protocol.h>
+#import <PreferencesUI/PearlIDAboutController.h>
+#import <PreferencesUI/PSBiometricPINController.h>
+#import <PreferencesUI/PSController-Protocol.h>
+#import <PreferencesUI/PSEnrollContainerViewController.h>
+#import <PreferencesUI/PSEnrollmentNavigationController.h>
+#import <PreferencesUI/PSPearlPINController.h>
+#import <PreferencesUI/PSSpecifierGroup-Protocol.h>
+#import <PreferencesUI/PSStateRestoration-Protocol.h>
+#import <PreferencesUI/PSTopLevelController-Protocol.h>
+#import <PreferencesUI/PSTouchIDPINController.h>
+#import <PreferencesUI/PSUIAppleAccountCell.h>
+#import <PreferencesUI/PSUIAppleAccountLoginCell.h>
+#import <PreferencesUI/PSUIBiometricController.h>
+#import <PreferencesUI/PSUIClassKitVisibilityArbitrator.h>
+#import <PreferencesUI/PSUIClassroomVisibilityArbitrator.h>
+#import <PreferencesUI/PSUIFingerprintController.h>
+#import <PreferencesUI/PSUIPasscodeLockController.h>
+#import <PreferencesUI/PSUIPearlAttentionGroupController.h>
+#import <PreferencesUI/PSUIPearlInterlockHeaderView.h>
+#import <PreferencesUI/PSUIPearlPasscodeController.h>
+#import <PreferencesUI/PSUIPrefsListController.h>
+#import <PreferencesUI/PSUIPrefsRootController.h>
+#import <PreferencesUI/PSUITouchIDPasscodeController.h>
+#import <PreferencesUI/RadiosPreferencesDelegate-Protocol.h>
+#import <PreferencesUI/SUIKSearchResultsCollectionViewControllerDelegate-Protocol.h>
+#import <PreferencesUI/Swift-Protocol.h>
+#import <PreferencesUI/UIBarPositioningDelegate-Protocol.h>
+#import <PreferencesUI/UIImage-PSCPBitmap.h>
+#import <PreferencesUI/UINavigationControllerDelegate-Protocol.h>
+#import <PreferencesUI/UIPopoverControllerDelegate-Protocol.h>
+#import <PreferencesUI/UISearchBarDelegate-Protocol.h>
+#import <PreferencesUI/UISearchControllerDelegate-Protocol.h>
+#import <PreferencesUI/UISearchResultsUpdating-Protocol.h>

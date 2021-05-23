@@ -1,0 +1,41 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/ConfigurationEngineModel
+ */
+
+#import <ConfigurationEngineModel/CEMConfigurationBase.h>
+
+@class NSNumber, NSString;
+
+@interface CEMSystemAirPlaySettingsDeclaration : CEMConfigurationBase
+
+{
+    NSNumber *_payloadForceAirPlayOutgoingRequestsPairingPassword;
+    NSNumber *_payloadForceAirPlayIncomingRequestsPairingPassword;
+    NSNumber *_payloadAllowAirPlayIncomingRequests;
+}
+
+@property (copy, nonatomic) NSNumber *payloadForceAirPlayOutgoingRequestsPairingPassword;
+@property (copy, nonatomic) NSNumber *payloadForceAirPlayIncomingRequestsPairingPassword;
+@property (copy, nonatomic) NSNumber *payloadAllowAirPlayIncomingRequests;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
++ (id)buildRequiredOnlyWithIdentifier:(id)arg1;
++ (id)profileType;
++ (id)allowedPayloadKeys;
++ (id)registeredClassName;
++ (id)registeredIdentifier;
++ (id)restrictionPayloadKeys;
++ (id)buildWithIdentifier:(id)arg1 withForceAirPlayOutgoingRequestsPairingPassword:(id)arg2 withForceAirPlayIncomingRequestsPairingPassword:(id)arg3 withAllowAirPlayIncomingRequests:(id)arg4;
+
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (_Bool)multipleAllowed;
+- (_Bool)mustBeSupervised;
+- (int)activationLevel;
+- (id)assetReferences;
+- (_Bool)loadPayload:(id)arg1 error:(id *)arg2;
+- (id)serializePayloadWithAssetProviders:(id)arg1;
+
+@end

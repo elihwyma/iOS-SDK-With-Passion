@@ -1,0 +1,32 @@
+/*
+ Image: /System/Library/PrivateFrameworks/TSUtility.framework/TSUtility
+ */
+
+#import <Foundation/NSMutableString.h>
+
+@interface TSUChunkedString : NSMutableString
+
+{
+    unsigned long long _length;
+    struct vector<std::__1::shared_ptr<TSUStringChunk>, std::__1::allocator<std::__1::shared_ptr<TSUStringChunk>>> _chunks;
+    unsigned long long _chunkLength;
+}
+
+- (id)init;
+- (void)dealloc;
+- (unsigned long long)length;
+- (void)replaceCharactersInRange:(struct _NSRange)arg1 withString:(id)arg2;
+- (unsigned short)characterAtIndex:(unsigned long long)arg1;
+- (void)getCharacters:(unsigned short *)arg1 range:(struct _NSRange)arg2;
+- (void)insertString:(id)arg1 atIndex:(unsigned long long)arg2;
+- (void)appendString:(id)arg1;
+- (void)deleteCharactersInRange:(struct _NSRange)arg1;
+- (void)compact;
+- (id).cxx_construct;
+- (id)initWithChunkLength:(unsigned long long)arg1;
+- (void)p_appendRange:(struct _NSRange)arg1 fromString:(id)arg2;
+- (void)p_insertCharactersInRange:(struct _NSRange)arg1 fromString:(id)arg2 atIndex:(unsigned long long)arg3 chunkIndex:(unsigned long long)arg4;
+- (void)p_deleteCharactersInRange:(struct _NSRange)arg1 chunkIndex:(unsigned long long)arg2;
+- (void)p_compactChunksInRange:(struct _NSRange)arg1;
+
+@end

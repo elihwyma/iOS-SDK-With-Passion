@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/PrivateFrameworks/VoiceTriggerUI.framework/VoiceTriggerUI
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface VTUISigmoid : NSObject
+
++ (float)sigmoid:(float)arg1;
++ (float)sigmoid_norm:(float)arg1;
+
+@end

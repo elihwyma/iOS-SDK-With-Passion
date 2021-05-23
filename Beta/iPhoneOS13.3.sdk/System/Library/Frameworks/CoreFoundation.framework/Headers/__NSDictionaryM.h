@@ -1,0 +1,45 @@
+/*
+ Image: /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+ */
+
+#import <Foundation/NSMutableDictionary.h>
+
+__attribute__((visibility("hidden")))
+@interface __NSDictionaryM : NSMutableDictionary
+
+{
+    CDStruct_bc24fd1e storage;
+    _Atomic struct __cow_state_t *cow;
+}
+
++ (id)allocWithZone:(struct _NSZone *)arg1;
++ (_Bool)automaticallyNotifiesObserversForKey:(id)arg1;
+
+- (void)dealloc;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)mutableCopyWithZone:(struct _NSZone *)arg1;
+- (id)copy;
+- (id)mutableCopy;
+- (unsigned long long)count;
+- (unsigned long long)countByEnumeratingWithState:(CDStruct_58648341 *)arg1 objects:(id *)arg2 count:(unsigned long long)arg3;
+- (void)removeAllObjects;
+- (id)_cfMutableCopy;
+- (id)objectForKey:(id)arg1;
+- (void)__apply:(CDUnknownFunctionPointerType)arg1 context:(void *)arg2;
+- (void)enumerateKeysAndObjectsWithOptions:(unsigned long long)arg1 usingBlock:(CDUnknownBlockType)arg2;
+- (void)__setObject:(id)arg1 forKey:(id)arg2;
+- (void)removeObjectForKey:(id)arg1;
+- (void)_mutate;
+- (id)keyEnumerator;
+- (void)getObjects:(id *)arg1 andKeys:(id *)arg2 count:(unsigned long long)arg3;
+- (id)keyOfEntryWithOptions:(unsigned long long)arg1 passingTest:(CDUnknownBlockType)arg2;
+- (id)keysOfEntriesWithOptions:(unsigned long long)arg1 passingTest:(CDUnknownBlockType)arg2;
+- (id)objectForKeyedSubscript:(id)arg1;
+- (void)setObservationInfo:(void *)arg1;
+- (void)setObject:(id)arg1 forKey:(id)arg2;
+- (double)_clumpingFactor;
+- (double)_clumpingInterestingThreshold;
+- (void)removeEntriesWithOptions:(unsigned long long)arg1 passingTest:(CDUnknownBlockType)arg2;
+- (void)setObject:(id)arg1 forKeyedSubscript:(id)arg2;
+
+@end

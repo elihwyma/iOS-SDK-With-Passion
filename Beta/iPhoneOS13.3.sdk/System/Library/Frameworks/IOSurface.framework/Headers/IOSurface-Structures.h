@@ -1,0 +1,37 @@
+/*
+ Image: /System/Library/Frameworks/IOSurface.framework/IOSurface
+ */
+
+typedef void (^CDUnknownBlockType)(void);
+
+typedef struct {
+    unsigned int offset;
+    unsigned int width;
+    unsigned int height;
+    unsigned int bytesPerRow;
+    unsigned int bytesPerElement;
+    unsigned int elementWidth;
+    unsigned int elementHeight;
+} CDStruct_6c6f70a4;
+
+typedef struct {
+    unsigned long long clientAddress;
+    unsigned int surfaceID;
+    unsigned int pixelFormat;
+    unsigned int retainCount;
+    unsigned int yCbCrMatrix;
+    unsigned int cacheMode;
+    unsigned int mapCacheAttribute;
+    unsigned int purgeableState;
+    unsigned int purgeableStateAPI;
+    unsigned int allocOffset;
+    unsigned int allocSize;
+    unsigned char isGlobal;
+    unsigned char isAllocated;
+    unsigned char isWired;
+    unsigned char pad;
+    unsigned int morePad;
+    unsigned long long detachModeCode;
+    unsigned long long initDetachModeCodeTime;
+    unsigned long long protectionOptions;
+} CDStruct_0bcbbf48;

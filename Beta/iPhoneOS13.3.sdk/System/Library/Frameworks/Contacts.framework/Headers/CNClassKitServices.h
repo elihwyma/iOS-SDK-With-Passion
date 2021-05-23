@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/Frameworks/Contacts.framework/Contacts
+ */
+
+#import <Foundation/NSObject.h>
+
+__attribute__((visibility("hidden")))
+@interface CNClassKitServices : NSObject
+
++ (id)objectsMatching:(id)arg1 fromStore:(id)arg2;
+
+@end

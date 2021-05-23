@@ -1,0 +1,30 @@
+/*
+ Image: /System/Library/Frameworks/ModelIO.framework/ModelIO
+ */
+
+#import <ModelIO/MDLAnimatedValue.h>
+
+@interface MDLAnimatedQuaternionArray : MDLAnimatedValue
+
+{
+    unsigned long long _elementCount;
+}
+
+@property (nonatomic) unsigned long long elementCount;
+
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (unsigned long long)precision;
+- (id)initWithElementCount:(unsigned long long)arg1;
+- (void)resetWithUsdAttribute:(const struct UsdAttribute *)arg1 timeScale:(double)arg2;
+- (void)resetWithUsdAttribute:(const struct UsdAttribute *)arg1 timeScale:(double)arg2 time:(double)arg3;
+- (struct VtValue)defaultVtValue;
+- (void)setFloatQuaternionArray:(const struct *)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setDoubleQuaternionArray:(const struct *)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (unsigned long long)getFloatQuaternionArray:(struct *)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (unsigned long long)getDoubleQuaternionArray:(struct *)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)resetWithFloatQuaternionArray:(const struct *)arg1 count:(unsigned long long)arg2 atTimes:(const double *)arg3 count:(unsigned long long)arg4;
+- (void)resetWithDoubleQuaternionArray:(const struct *)arg1 count:(unsigned long long)arg2 atTimes:(const double *)arg3 count:(unsigned long long)arg4;
+- (unsigned long long)getFloatQuaternionArray:(struct *)arg1 maxCount:(unsigned long long)arg2;
+- (unsigned long long)getDoubleQuaternionArray:(struct *)arg1 maxCount:(unsigned long long)arg2;
+
+@end

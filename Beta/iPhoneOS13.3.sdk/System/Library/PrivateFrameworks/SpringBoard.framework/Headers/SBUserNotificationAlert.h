@@ -1,0 +1,171 @@
+/*
+ Image: /System/Library/PrivateFrameworks/SpringBoard.framework/SpringBoard
+ */
+
+#import <SpringBoardUI/SBAlertItem.h>
+
+@class BKSProcessAssertion, BSAuditToken, NSArray, NSDictionary, NSObject, NSString, NSTimer, NSURL, SBUISound, UIViewController, _SBLegacyRemoteAlertContentHostViewController, _SBSUICFUserNotificationContentHostViewController, _SBUserNotificationImageDescriptor;
+
+@protocol BSInvalidatable, OS_dispatch_source;
+
+@interface SBUserNotificationAlert : SBAlertItem
+
+{
+    NSString *_alertSource;
+    BSAuditToken *_auditToken;
+    unsigned int _replyPort;
+    NSObject<OS_dispatch_source> *_portWatcher;
+    NSObject<OS_dispatch_source> *_expirationTimer;
+    _Bool _sentResponse;
+    _Bool _cleanedUp;
+    int _token;
+    int _timeout;
+    unsigned long long _requestFlags;
+    NSString *_alertHeader;
+    id _alertMessage;
+    NSString *_alertMessageDelimiter;
+    NSString *_lockScreenAlertHeader;
+    id _lockScreenAlertMessage;
+    NSString *_lockScreenAlertMessageDelimiter;
+    NSString *_defaultButtonTitle;
+    NSString *_alternateButtonTitle;
+    NSString *_otherButtonTitle;
+    NSString *_soundPath;
+    unsigned int _soundID;
+    unsigned int _soundIDBehavior;
+    NSDictionary *_vibrationPattern;
+    long long _soundAlertType;
+    NSString *_soundAlertTopic;
+    double _soundRepeatDuration;
+    NSTimer *_soundStopTimer;
+    id _keyboardTypes;
+    id _autocapitalizationTypes;
+    id _autocorrectionTypes;
+    id _textFieldTitles;
+    id _textFieldValues;
+    double _creationTime;
+    int _defaultButtonTag;
+    int _unlockActionButtonTag;
+    unsigned int _replyFlags;
+    NSString *_defaultResponseLaunchBundleID;
+    NSURL *_defaultResponseLaunchURL;
+    NSString *_remoteViewControllerClassName;
+    NSString *_remoteServiceBundleIdentifier;
+    _SBSUICFUserNotificationContentHostViewController *_extensionContentViewController;
+    _SBLegacyRemoteAlertContentHostViewController *_viewServiceContentViewController;
+    NSArray *_textFieldDefinitions;
+    NSArray *_customButtonDefinitions;
+    long long _defaultButtonActionStyle;
+    long long _alternateButtonActionStyle;
+    long long _otherButtonActionStyle;
+    unsigned int _allowedInLoginWindow:1;
+    unsigned int _canceled:1;
+    unsigned int _isActivated:1;
+    unsigned int _aboveLock:1;
+    unsigned int _displayActionButtonOnLockScreen:1;
+    unsigned int _dismissOnLock:1;
+    unsigned int _dontDismissOnUnlock:1;
+    unsigned int _behavesSuperModally:1;
+    unsigned int _allowMenuButtonDismissal:1;
+    unsigned int _wakeDisplay:1;
+    unsigned int _forcesModalAlertAppearance:1;
+    unsigned int _dismissesOverlaysOnLockScreen:1;
+    unsigned int _disableIdleSleepWhileVisible:1;
+    unsigned int _hideOnClonedDisplay:1;
+    unsigned int _configuredLocked:1;
+    unsigned int _configuredNeedsPasscode:1;
+    unsigned int _defaultResponseAppLaunchWaitingForPasscode:1;
+    unsigned int _deactivatingForPresentationUpdate:1;
+    SBUISound *_sound;
+    BKSProcessAssertion *_processAssertion;
+    unsigned int _allowLockscreenDismissal:1;
+    id <BSInvalidatable> _idleTimerDisableAssertion;
+    _SBUserNotificationImageDescriptor *_headerImageDescriptor;
+    _SBUserNotificationImageDescriptor *_iconImageDescriptor;
+    _SBUserNotificationImageDescriptor *_attachmentImageDescriptor;
+    NSString *_extensionIdentifier;
+    UIViewController *_contentViewControllerForAlertController;
+}
+
+@property (retain) id keyboardTypes;
+@property (retain) id autocapitalizationTypes;
+@property (retain) id autocorrectionTypes;
+@property (retain) id textFieldTitles;
+@property (retain) id textFieldValues;
+@property (retain) NSString *soundPath;
+@property unsigned int soundID;
+@property unsigned int soundIDBehavior;
+@property (retain) NSDictionary *vibrationPattern;
+@property long long soundAlertType;
+@property (retain) NSString *soundAlertTopic;
+@property (retain) NSString *alertHeader;
+@property (retain) NSString *alertMessage;
+@property (retain) NSString *alertMessageDelimiter;
+@property (retain) NSString *lockScreenAlertHeader;
+@property (retain) NSString *lockScreenAlertMessage;
+@property (retain) NSString *lockScreenAlertMessageDelimiter;
+@property (retain) NSString *defaultButtonTitle;
+@property (retain) NSString *alternateButtonTitle;
+@property (retain) NSString *otherButtonTitle;
+@property (retain) NSString *defaultResponseLaunchBundleID;
+@property (retain) NSURL *defaultResponseLaunchURL;
+@property (retain) NSString *remoteViewControllerClassName;
+@property (retain) NSString *remoteServiceBundleIdentifier;
+@property (retain) NSString *extensionIdentifier;
+@property (retain) UIViewController *contentViewControllerForAlertController;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
+- (void)dealloc;
+- (int)token;
+- (void)cancel;
+- (_Bool)dismissOnLock;
+- (void)_cleanup;
+- (id)sound;
+- (_Bool)textField:(id)arg1 shouldChangeCharactersInRange:(struct _NSRange)arg2 replacementString:(id)arg3;
+- (id)iconImage;
+- (void)willActivate;
+- (id)_headerImage;
+- (void)_setActivated:(_Bool)arg1;
+- (void)presentationStateDidChangeFromState:(unsigned long long)arg1 toState:(unsigned long long)arg2;
+- (_Bool)hideOnClonedDisplay;
+- (void)configure:(_Bool)arg1 requirePasscodeForActions:(_Bool)arg2;
+- (void)performUnlockAction;
+- (_Bool)allowMenuButtonDismissal;
+- (_Bool)allowLockScreenDismissal;
+- (_Bool)shouldShowInLockScreen;
+- (_Bool)wakeDisplay;
+- (_Bool)reappearsAfterLock;
+- (_Bool)reappearsAfterUnlock;
+- (void)didFailToActivate;
+- (void)willDeactivateForReason:(int)arg1;
+- (void)didDeactivateForReason:(int)arg1;
+- (_Bool)forcesModalAlertAppearance;
+- (_Bool)behavesSuperModally;
+- (_Bool)allowInLoginWindow;
+- (_Bool)dismissesOverlaysOnLockScreen;
+- (void)doCleanupAfterDeactivationAnimation;
+- (id)_prepareNewAlertControllerWithLockedState:(_Bool)arg1 requirePasscodeForActions:(_Bool)arg2;
+- (void)_noteVolumeOrLockPressed;
+- (_Bool)_displayActionButtonOnLockScreen;
+- (id)_publicDescription;
+- (id)_attachmentImage;
+- (void)updateWithMessage:(id)arg1 requestFlags:(int)arg2;
+- (id)initWithMessage:(id)arg1 replyPort:(unsigned int)arg2 requestFlags:(int)arg3 auditToken:(CDStruct_6ad76789)arg4;
+- (id)_imageDescriptorForPath:(id)arg1 catalogPath:(id)arg2 catalogImageKey:(id)arg3;
+- (id)_safeLocalizedValue:(id)arg1 withBundle:(id)arg2;
+- (id)_parseTextFieldDefinitions:(id)arg1 locBundle:(id)arg2;
+- (id)_parseLegacyTextFieldDefinitions:(id)arg1 locBundle:(id)arg2;
+- (id)_parseCustomButtonDefinitions:(id)arg1 locBundle:(id)arg2;
+- (long long)_uiAlertActionStyleFromSBUserNotificationButtonPresentationStyle:(int)arg1;
+- (void)_cleanupCustomContentViewControllers;
+- (void)dismissIfNecessaryWithResponse:(int)arg1 customButtonResponse:(int)arg2;
+- (void)dismissIfNecessaryWithResponse:(int)arg1;
+- (void)_clearRemoteViewControllerIfPresent;
+- (void)_sendResponseAndCleanUp:(int)arg1;
+- (void)_sendResponseAndCleanUp:(int)arg1 customButtonResponse:(int)arg2;
+- (void)_activateApplication:(id)arg1 withURL:(id)arg2;
+
+@end

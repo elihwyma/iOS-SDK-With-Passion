@@ -1,0 +1,54 @@
+/*
+ Image: /System/Library/Frameworks/MessageUI.framework/MessageUI
+ */
+
+typedef void (*CDUnknownFunctionPointerType)(void);
+typedef void (^CDUnknownBlockType)(void);
+
+struct CGPoint {
+    double x;
+    double y;
+};
+
+struct CGRect {
+    struct CGPoint origin;
+    struct CGSize size;
+};
+
+struct CGSize {
+    double width;
+    double height;
+};
+
+struct NSDirectionalEdgeInsets {
+    double top;
+    double leading;
+    double bottom;
+    double trailing;
+};
+
+struct UIEdgeInsets {
+    double top;
+    double left;
+    double bottom;
+    double right;
+};
+
+struct _NSRange {
+    unsigned long long location;
+    unsigned long long length;
+};
+
+struct os_unfair_lock_s {
+    unsigned int _os_unfair_lock_opaque;
+};
+
+typedef struct {
+    _Bool _field1;
+    _Bool _field2;
+    _Bool _field3;
+    _Bool _field4;
+    _Bool _field5;
+    double _field6;
+    int _field7;
+} CDStruct_e950349b;

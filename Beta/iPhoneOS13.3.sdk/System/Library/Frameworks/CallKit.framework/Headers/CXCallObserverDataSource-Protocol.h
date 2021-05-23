@@ -1,0 +1,18 @@
+/*
+ Image: /System/Library/Frameworks/CallKit.framework/CallKit
+ */
+
+#import <CallKit/Swift-Protocol.h>
+
+@class NSDictionary;
+
+@protocol CXCallObserverDataSource <Swift>
+
+@property (copy, nonatomic, readonly) NSDictionary *callUUIDToCallMap;
+
+- (unsigned short)invalidate;
+- (unsigned short)addDelegate: /* Error: Ran out of types for this method. */;
+- (unsigned short)removeDelegate: /* Error: Ran out of types for this method. */;
+- (unsigned short)requestTransaction:completion: /* Error: Ran out of types for this method. */;
+
+@end

@@ -1,0 +1,38 @@
+/*
+ Image: /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+ */
+
+#import <Foundation/NSDictionary.h>
+
+__attribute__((visibility("hidden")))
+@interface __NSDictionaryI : NSDictionary
+
+{
+    unsigned int _used:58;
+    unsigned int _szidx:6;
+    id _list[0];
+}
+
++ (id)allocWithZone:(struct _NSZone *)arg1;
++ (_Bool)automaticallyNotifiesObserversForKey:(id)arg1;
+
+- (void)dealloc;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)mutableCopyWithZone:(struct _NSZone *)arg1;
+- (id)copy;
+- (id)mutableCopy;
+- (unsigned long long)count;
+- (unsigned long long)countByEnumeratingWithState:(CDStruct_58648341 *)arg1 objects:(id *)arg2 count:(unsigned long long)arg3;
+- (id)_cfMutableCopy;
+- (id)objectForKey:(id)arg1;
+- (void)__apply:(CDUnknownFunctionPointerType)arg1 context:(void *)arg2;
+- (void)enumerateKeysAndObjectsWithOptions:(unsigned long long)arg1 usingBlock:(CDUnknownBlockType)arg2;
+- (id)keyEnumerator;
+- (void)getObjects:(id *)arg1 andKeys:(id *)arg2 count:(unsigned long long)arg3;
+- (id)keyOfEntryWithOptions:(unsigned long long)arg1 passingTest:(CDUnknownBlockType)arg2;
+- (id)keysOfEntriesWithOptions:(unsigned long long)arg1 passingTest:(CDUnknownBlockType)arg2;
+- (id)objectForKeyedSubscript:(id)arg1;
+- (double)_clumpingFactor;
+- (double)_clumpingInterestingThreshold;
+
+@end

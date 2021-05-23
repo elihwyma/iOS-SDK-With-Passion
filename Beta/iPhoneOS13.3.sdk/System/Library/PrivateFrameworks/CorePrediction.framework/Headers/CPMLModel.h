@@ -1,0 +1,44 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CorePrediction.framework/CorePrediction
+ */
+
+#import <Foundation/NSObject.h>
+
+@class CPMLModelEvaluate, NSString;
+
+@protocol OS_dispatch_queue;
+
+@interface CPMLModel : NSObject
+
+{
+    NSString *_savedPlistPath;
+    NSString *_modelPath;
+    NSObject<OS_dispatch_queue> *_dispatch_queue;
+    void *_mData;
+    unsigned long long _totalBytesIntSection;
+    unsigned long long _totalBytesRealSection;
+    double *_realBase;
+    CPMLModelEvaluate *cpModelEvaluate;
+}
+
+@property (retain) CPMLModelEvaluate *cpModelEvaluate;
+
++ (id)initCPModelPath:(id)arg1 withConfiguration:(id)arg2;
+
+- (_Bool)reset;
+- (void)setDispatchQueue:(id)arg1;
+- (id)initWithModelPath:(id)arg1 withPropertyListPath:(id)arg2;
+- (void)initializeModel:(id)arg1 withConfiguration:(id)arg2;
+- (id)getPropertyList;
+- (id)initWithModelPath:(id)arg1 withConfiguration:(id)arg2;
+- (id)evalString:(id)arg1;
+- (id)evalNSObjectV:(id)arg1;
+- (id)evalArray:(id)arg1;
+- (id)evalDict:(id)arg1;
+- (void)boundResult:(id)arg1;
+- (void)setCPMLAlgorithm:(id)arg1;
+- (void)setCPMLAlgorithmEngine:(id)arg1;
+- (_Bool)updateModelWithDB:(id)arg1;
+- (_Bool)updateModelWithCPDB:(id)arg1;
+
+@end

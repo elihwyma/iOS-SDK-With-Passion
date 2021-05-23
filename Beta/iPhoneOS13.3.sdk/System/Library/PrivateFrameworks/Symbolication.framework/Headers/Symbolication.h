@@ -1,0 +1,55 @@
+/*
+ Image: /System/Library/PrivateFrameworks/Symbolication.framework/Symbolication
+ */
+
+#import <Symbolication/Symbolication-Structures.h>
+
+#import <Symbolication/__VMULeaksMarkerObject.h>
+#import <Symbolication/NSCoding-Protocol.h>
+#import <Symbolication/NSCopying-Protocol.h>
+#import <Symbolication/NSObject-Protocol.h>
+#import <Symbolication/NSSecureCoding-Protocol.h>
+#import <Symbolication/Swift-Protocol.h>
+#import <Symbolication/VMUAbstractSerializer.h>
+#import <Symbolication/VMUArchitecture.h>
+#import <Symbolication/VMUBacktrace.h>
+#import <Symbolication/VMUCallTreeLeafNode.h>
+#import <Symbolication/VMUCallTreeNode.h>
+#import <Symbolication/VMUCallTreePseudoNode.h>
+#import <Symbolication/VMUCallTreeRoot.h>
+#import <Symbolication/VMUClassInfo.h>
+#import <Symbolication/VMUClassInfoMap.h>
+#import <Symbolication/VMUCommonGraphInterface-Protocol.h>
+#import <Symbolication/VMUDebugTimer.h>
+#import <Symbolication/VMUDirectedGraph.h>
+#import <Symbolication/VMUFieldInfo.h>
+#import <Symbolication/VMUFieldValue.h>
+#import <Symbolication/VMUGraphStackLogReader.h>
+#import <Symbolication/VMUMutableClassInfo.h>
+#import <Symbolication/VMUMutableFieldInfo.h>
+#import <Symbolication/VMUNodeToStringMap.h>
+#import <Symbolication/VMUNonOverlappingRangeArray.h>
+#import <Symbolication/VMUObjectGraph.h>
+#import <Symbolication/VMUObjectIdentifier.h>
+#import <Symbolication/VMUObjectLabelHandlerInfo.h>
+#import <Symbolication/VMUProcessDescription.h>
+#import <Symbolication/VMUProcessObjectGraph.h>
+#import <Symbolication/VMUProcInfo.h>
+#import <Symbolication/VMUProcList.h>
+#import <Symbolication/VMURangeArray.h>
+#import <Symbolication/VMURangeToStringMap.h>
+#import <Symbolication/VMUSampler.h>
+#import <Symbolication/VMUScanOverlay.h>
+#import <Symbolication/VMUSimpleDeserializer.h>
+#import <Symbolication/VMUSimpleSerializer.h>
+#import <Symbolication/VMUStackLogConsolidator.h>
+#import <Symbolication/VMUStackLogReader-Protocol.h>
+#import <Symbolication/VMUStackLogReaderBase.h>
+#import <Symbolication/VMUSwiftRuntimeInfo.h>
+#import <Symbolication/VMUTaskMemoryCache.h>
+#import <Symbolication/VMUTaskMemoryScanner.h>
+#import <Symbolication/VMUTaskStackLogReader.h>
+#import <Symbolication/VMUVMRegion.h>
+#import <Symbolication/VMUVMRegionIdentifier.h>
+#import <Symbolication/VMUVMRegionRangeInfo.h>
+#import <Symbolication/VMUVMRegionTracker.h>

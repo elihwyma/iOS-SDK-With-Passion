@@ -1,0 +1,9 @@
+/*
+ Image: /System/Library/PrivateFrameworks/MobileContainerManager.framework/MobileContainerManager
+ */
+
+@interface MCMVPNPluginContainer
+
++ (long long)typeContainerClass;
+
+@end

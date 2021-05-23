@@ -1,0 +1,36 @@
+/*
+ Image: /System/Library/PrivateFrameworks/HealthUI.framework/HealthUI
+ */
+
+#import <UIKit/UITableViewCell.h>
+
+@class NSLayoutConstraint, NSMutableArray, NSString, UILabel;
+
+@interface HKElectrocardiogramBulletedTextTableViewCell : UITableViewCell
+
+{
+    UILabel *_titleLabel;
+    UILabel *_detailLabel;
+    NSMutableArray *_bodyFirstBaselineConstraints;
+    NSLayoutConstraint *_detailLabelLastBaselineConstraint;
+}
+
+@property (retain, nonatomic) UILabel *titleLabel;
+@property (retain, nonatomic) UILabel *detailLabel;
+@property (retain, nonatomic) NSMutableArray *bodyFirstBaselineConstraints;
+@property (retain, nonatomic) NSLayoutConstraint *detailLabelLastBaselineConstraint;
+@property (retain, nonatomic) NSString *titleText;
+@property (nonatomic, readonly) NSString *detailText;
+
++ (id)defaultReuseIdentifier;
+
+- (void)prepareForReuse;
+- (void)traitCollectionDidChange:(id)arg1;
+- (void)updateConstraints;
+- (id)initWithReuseIdentifier:(id)arg1;
+- (void)_setupConstraints;
+- (void)_setUpUI;
+- (void)_updateLeadingDetailAttributedTextSize;
+- (void)setDetailTextWithBullets:(id)arg1;
+
+@end

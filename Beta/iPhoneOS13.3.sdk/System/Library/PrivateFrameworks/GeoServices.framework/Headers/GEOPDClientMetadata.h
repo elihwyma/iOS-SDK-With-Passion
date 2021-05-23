@@ -1,0 +1,195 @@
+/*
+ Image: /System/Library/PrivateFrameworks/GeoServices.framework/GeoServices
+ */
+
+#import <PBCodable.h>
+
+@class GEOABSecondPartyPlaceRequestClientMetaData, GEOAdditionalEnabledMarkets, GEOLocalizationCapabilities, GEOLocation, NSMutableArray, NSString, PBDataReader, PBUnknownFields;
+
+__attribute__((visibility("hidden")))
+@interface GEOPDClientMetadata : PBCodable
+
+{
+    PBDataReader *_reader;
+    PBUnknownFields *_unknownFields;
+    CDStruct_95bda58d _knownClientResolvedTypeDeprecateds;
+    CDStruct_95bda58d _knownClientResolvedTypes;
+    GEOABSecondPartyPlaceRequestClientMetaData *_abClientMetadata;
+    GEOAdditionalEnabledMarkets *_additionalEnabledMarkets;
+    NSMutableArray *_businessChatPreflightIdentifiers;
+    NSString *_debugApiKey;
+    NSString *_deviceCountryCode;
+    NSString *_deviceDisplayLanguage;
+    GEOLocation *_deviceExtendedLocation;
+    NSMutableArray *_deviceHistoricalLocations;
+    NSString *_deviceKeyboardLanguage;
+    NSString *_deviceSku;
+    NSString *_deviceSpokenLanguage;
+    GEOLocalizationCapabilities *_localizationCapabilities;
+    unsigned int _readerMarkPos;
+    unsigned int _readerMarkLength;
+    struct os_unfair_lock_s _readerLock;
+    int _clientRevision;
+    unsigned int _dayOfWeek;
+    unsigned int _hourOfDay;
+    int _requiredVersion;
+    int _resultListAttributionSupport;
+    unsigned int _timeSinceMapEnteredForeground;
+    _Bool _enablePreflightVenues;
+    struct {
+        unsigned int has_clientRevision:1;
+        unsigned int has_dayOfWeek:1;
+        unsigned int has_hourOfDay:1;
+        unsigned int has_requiredVersion:1;
+        unsigned int has_resultListAttributionSupport:1;
+        unsigned int has_timeSinceMapEnteredForeground:1;
+        unsigned int has_enablePreflightVenues:1;
+        unsigned int read_unknownFields:1;
+        unsigned int read_knownClientResolvedTypeDeprecateds:1;
+        unsigned int read_knownClientResolvedTypes:1;
+        unsigned int read_abClientMetadata:1;
+        unsigned int read_additionalEnabledMarkets:1;
+        unsigned int read_businessChatPreflightIdentifiers:1;
+        unsigned int read_debugApiKey:1;
+        unsigned int read_deviceCountryCode:1;
+        unsigned int read_deviceDisplayLanguage:1;
+        unsigned int read_deviceExtendedLocation:1;
+        unsigned int read_deviceHistoricalLocations:1;
+        unsigned int read_deviceKeyboardLanguage:1;
+        unsigned int read_deviceSku:1;
+        unsigned int read_deviceSpokenLanguage:1;
+        unsigned int read_localizationCapabilities:1;
+        unsigned int wrote_unknownFields:1;
+        unsigned int wrote_knownClientResolvedTypeDeprecateds:1;
+        unsigned int wrote_knownClientResolvedTypes:1;
+        unsigned int wrote_abClientMetadata:1;
+        unsigned int wrote_additionalEnabledMarkets:1;
+        unsigned int wrote_businessChatPreflightIdentifiers:1;
+        unsigned int wrote_debugApiKey:1;
+        unsigned int wrote_deviceCountryCode:1;
+        unsigned int wrote_deviceDisplayLanguage:1;
+        unsigned int wrote_deviceExtendedLocation:1;
+        unsigned int wrote_deviceHistoricalLocations:1;
+        unsigned int wrote_deviceKeyboardLanguage:1;
+        unsigned int wrote_deviceSku:1;
+        unsigned int wrote_deviceSpokenLanguage:1;
+        unsigned int wrote_localizationCapabilities:1;
+        unsigned int wrote_clientRevision:1;
+        unsigned int wrote_dayOfWeek:1;
+        unsigned int wrote_hourOfDay:1;
+        unsigned int wrote_requiredVersion:1;
+        unsigned int wrote_resultListAttributionSupport:1;
+        unsigned int wrote_timeSinceMapEnteredForeground:1;
+        unsigned int wrote_enablePreflightVenues:1;
+    } _flags;
+}
+
+@property (nonatomic, readonly) _Bool hasAbClientMetadata;
+@property (retain, nonatomic) GEOABSecondPartyPlaceRequestClientMetaData *abClientMetadata;
+@property (nonatomic, readonly) _Bool hasDeviceCountryCode;
+@property (retain, nonatomic) NSString *deviceCountryCode;
+@property (nonatomic, readonly) _Bool hasDeviceDisplayLanguage;
+@property (retain, nonatomic) NSString *deviceDisplayLanguage;
+@property (nonatomic, readonly) _Bool hasDeviceKeyboardLanguage;
+@property (retain, nonatomic) NSString *deviceKeyboardLanguage;
+@property (nonatomic, readonly) _Bool hasDeviceSpokenLanguage;
+@property (retain, nonatomic) NSString *deviceSpokenLanguage;
+@property (nonatomic) _Bool hasTimeSinceMapEnteredForeground;
+@property (nonatomic) unsigned int timeSinceMapEnteredForeground;
+@property (nonatomic, readonly) _Bool hasAdditionalEnabledMarkets;
+@property (retain, nonatomic) GEOAdditionalEnabledMarkets *additionalEnabledMarkets;
+@property (nonatomic) _Bool hasResultListAttributionSupport;
+@property (nonatomic) int resultListAttributionSupport;
+@property (nonatomic) _Bool hasHourOfDay;
+@property (nonatomic) unsigned int hourOfDay;
+@property (nonatomic) _Bool hasDayOfWeek;
+@property (nonatomic) unsigned int dayOfWeek;
+@property (nonatomic, readonly) _Bool hasDeviceExtendedLocation;
+@property (retain, nonatomic) GEOLocation *deviceExtendedLocation;
+@property (retain, nonatomic) NSMutableArray *deviceHistoricalLocations;
+@property (nonatomic) _Bool hasRequiredVersion;
+@property (nonatomic) int requiredVersion;
+@property (nonatomic, readonly) _Bool hasDebugApiKey;
+@property (retain, nonatomic) NSString *debugApiKey;
+@property (nonatomic, readonly) unsigned long long knownClientResolvedTypeDeprecatedsCount;
+@property (nonatomic, readonly) int *knownClientResolvedTypeDeprecateds;
+@property (nonatomic) _Bool hasEnablePreflightVenues;
+@property (nonatomic) _Bool enablePreflightVenues;
+@property (nonatomic, readonly) unsigned long long knownClientResolvedTypesCount;
+@property (nonatomic, readonly) int *knownClientResolvedTypes;
+@property (retain, nonatomic) NSMutableArray *businessChatPreflightIdentifiers;
+@property (nonatomic) _Bool hasClientRevision;
+@property (nonatomic) int clientRevision;
+@property (nonatomic, readonly) _Bool hasLocalizationCapabilities;
+@property (retain, nonatomic) GEOLocalizationCapabilities *localizationCapabilities;
+@property (nonatomic, readonly) _Bool hasDeviceSku;
+@property (retain, nonatomic) NSString *deviceSku;
+@property (nonatomic, readonly) PBUnknownFields *unknownFields;
+
++ (_Bool)isValid:(id)arg1;
++ (Class)deviceHistoricalLocationType;
++ (Class)businessChatPreflightIdentifierType;
+
+- (id)init;
+- (void)dealloc;
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)initWithData:(id)arg1;
+- (id)dictionaryRepresentation;
+- (void)writeTo:(id)arg1;
+- (void)mergeFrom:(id)arg1;
+- (_Bool)readFrom:(id)arg1;
+- (void)copyTo:(id)arg1;
+- (id)initWithTraits:(id)arg1;
+- (void)readAll:(_Bool)arg1;
+- (void)clearUnknownFields:(_Bool)arg1;
+- (void)clearSensitiveFields;
+- (unsigned long long)deviceHistoricalLocationsCount;
+- (void)_readAdditionalEnabledMarkets;
+- (void)_readAbClientMetadata;
+- (void)_readDeviceHistoricalLocations;
+- (void)_addNoFlagsDeviceHistoricalLocation:(id)arg1;
+- (void)clearDeviceHistoricalLocations;
+- (id)deviceHistoricalLocationAtIndex:(unsigned long long)arg1;
+- (void)addDeviceHistoricalLocation:(id)arg1;
+- (void)_readDeviceCountryCode;
+- (void)_readDeviceDisplayLanguage;
+- (void)_readDeviceKeyboardLanguage;
+- (void)_readDeviceSpokenLanguage;
+- (void)_readDeviceExtendedLocation;
+- (void)_readDebugApiKey;
+- (void)_readKnownClientResolvedTypeDeprecateds;
+- (void)_addNoFlagsKnownClientResolvedTypeDeprecated:(int)arg1;
+- (void)_readKnownClientResolvedTypes;
+- (void)_addNoFlagsKnownClientResolvedType:(int)arg1;
+- (void)_readBusinessChatPreflightIdentifiers;
+- (void)_addNoFlagsBusinessChatPreflightIdentifier:(id)arg1;
+- (void)_readLocalizationCapabilities;
+- (void)_readDeviceSku;
+- (void)clearKnownClientResolvedTypeDeprecateds;
+- (int)knownClientResolvedTypeDeprecatedAtIndex:(unsigned long long)arg1;
+- (void)addKnownClientResolvedTypeDeprecated:(int)arg1;
+- (void)clearKnownClientResolvedTypes;
+- (int)knownClientResolvedTypeAtIndex:(unsigned long long)arg1;
+- (void)addKnownClientResolvedType:(int)arg1;
+- (unsigned long long)businessChatPreflightIdentifiersCount;
+- (void)clearBusinessChatPreflightIdentifiers;
+- (id)businessChatPreflightIdentifierAtIndex:(unsigned long long)arg1;
+- (void)addBusinessChatPreflightIdentifier:(id)arg1;
+- (id)resultListAttributionSupportAsString:(int)arg1;
+- (int)StringAsResultListAttributionSupport:(id)arg1;
+- (id)requiredVersionAsString:(int)arg1;
+- (int)StringAsRequiredVersion:(id)arg1;
+- (void)setKnownClientResolvedTypeDeprecateds:(int *)arg1 count:(unsigned long long)arg2;
+- (id)knownClientResolvedTypeDeprecatedsAsString:(int)arg1;
+- (int)StringAsKnownClientResolvedTypeDeprecateds:(id)arg1;
+- (void)setKnownClientResolvedTypes:(int *)arg1 count:(unsigned long long)arg2;
+- (id)knownClientResolvedTypesAsString:(int)arg1;
+- (int)StringAsKnownClientResolvedTypes:(id)arg1;
+- (id)clientRevisionAsString:(int)arg1;
+- (int)StringAsClientRevision:(id)arg1;
+- (void)clearLocations;
+
+@end

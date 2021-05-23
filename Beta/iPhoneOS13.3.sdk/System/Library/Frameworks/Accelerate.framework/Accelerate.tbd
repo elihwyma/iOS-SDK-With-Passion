@@ -1,0 +1,16 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: 7FBF97BA-921E-3534-9DCE-AFC6F2E83085' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/Accelerate.framework/Accelerate
+current-version:       4
+compatibility-version: 1
+exports:
+  - archs:                [ arm64 ]
+    re-exports:           [ /System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/vImage,
+                            /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/vecLib ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ dyld_stub_binder ]
+...

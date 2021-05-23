@@ -1,0 +1,163 @@
+/*
+ Image: /System/Library/PrivateFrameworks/TSReading.framework/TSReading
+ */
+
+#import <Foundation/NSObject.h>
+
+@class CAAnimation, CALayer, NSDictionary;
+
+@interface TSDCAAnimationCache : NSObject
+
+{
+    NSDictionary *_overrideInitialValuesDict;
+    double _animationDuration;
+    long long _cacheValuesCount;
+    struct CGPoint *_anchorPointCache;
+    double *_anchorPointZCache;
+    double *_borderWidthCache;
+    struct CGRect *_boundsCache;
+    _Bool *_doubleSidedCache;
+    _Bool *_hiddenCache;
+    double *_opacityCache;
+    struct CGPoint *_positionCache;
+    struct CATransform3D *_transformCache;
+    double *_transformRotationCache;
+    double *_transformRotationXCache;
+    double *_transformRotationYCache;
+    double *_transformRotationZCache;
+    double *_transformScaleXCache;
+    double *_transformScaleYCache;
+    double *_transformScaleXYCache;
+    struct CGPoint *_transformTranslationCache;
+    double *_transformTranslationXCache;
+    double *_transformTranslationYCache;
+    double *_transformTranslationZCache;
+    double *_zPositionCache;
+    _Bool _anchorPointAnimationExists;
+    _Bool _anchorPointZAnimationExists;
+    _Bool _borderColorAnimationExists;
+    _Bool _borderWidthAnimationExists;
+    _Bool _boundsAnimationExists;
+    _Bool _contentsAnimationExists;
+    _Bool _doubleSidedAnimationExists;
+    _Bool _doubleSidedInitialValue;
+    _Bool _hiddenAnimationExists;
+    _Bool _hiddenInitialValue;
+    _Bool _opacityAnimationExists;
+    _Bool _positionAnimationExists;
+    _Bool _transformAnimationExists;
+    _Bool _transformRotationAnimationExists;
+    _Bool _transformRotationXAnimationExists;
+    _Bool _transformRotationYAnimationExists;
+    _Bool _transformRotationZAnimationExists;
+    _Bool _transformScaleXAnimationExists;
+    _Bool _transformScaleYAnimationExists;
+    _Bool _transformScaleXYAnimationExists;
+    _Bool _transformTranslationAnimationExists;
+    _Bool _transformTranslationXAnimationExists;
+    _Bool _transformTranslationYAnimationExists;
+    _Bool _transformTranslationZAnimationExists;
+    _Bool _zPositionAnimationExists;
+    CALayer *_layer;
+    CAAnimation *_animation;
+    double _anchorPointZInitialValue;
+    struct CGColor *_borderColorInitialValue;
+    double _borderWidthInitialValue;
+    struct CGImage *_contentsInitialValue;
+    double _opacityInitialValue;
+    double _transformRotationInitialValue;
+    double _transformRotationXInitialValue;
+    double _transformRotationYInitialValue;
+    double _transformRotationZInitialValue;
+    double _transformScaleXInitialValue;
+    double _transformScaleYInitialValue;
+    double _transformScaleXYInitialValue;
+    double _transformTranslationXInitialValue;
+    double _transformTranslationYInitialValue;
+    double _transformTranslationZInitialValue;
+    double _zPositionInitialValue;
+    NSDictionary *_initialValues;
+    struct CGPoint _anchorPointInitialValue;
+    struct CGPoint _positionInitialValue;
+    struct CGPoint _transformTranslationInitialValue;
+    struct CGRect _boundsInitialValue;
+    struct CATransform3D _transformInitialValue;
+}
+
+@property (nonatomic, readonly) CALayer *layer;
+@property (nonatomic, readonly) CAAnimation *animation;
+@property (nonatomic, readonly) _Bool anchorPointAnimationExists;
+@property (nonatomic, readonly) struct CGPoint anchorPointInitialValue;
+@property (nonatomic, readonly) _Bool anchorPointZAnimationExists;
+@property (nonatomic, readonly) double anchorPointZInitialValue;
+@property (nonatomic, readonly) _Bool borderColorAnimationExists;
+@property (nonatomic, readonly) struct CGColor *borderColorInitialValue;
+@property (nonatomic, readonly) _Bool borderWidthAnimationExists;
+@property (nonatomic, readonly) double borderWidthInitialValue;
+@property (nonatomic, readonly) _Bool boundsAnimationExists;
+@property (nonatomic, readonly) struct CGRect boundsInitialValue;
+@property (nonatomic, readonly) _Bool contentsAnimationExists;
+@property (nonatomic, readonly) struct CGImage *contentsInitialValue;
+@property (nonatomic, readonly) _Bool doubleSidedAnimationExists;
+@property (nonatomic, readonly) _Bool doubleSidedInitialValue;
+@property (nonatomic, readonly) _Bool hiddenAnimationExists;
+@property (nonatomic, readonly) _Bool hiddenInitialValue;
+@property (nonatomic, readonly) _Bool opacityAnimationExists;
+@property (nonatomic, readonly) double opacityInitialValue;
+@property (nonatomic, readonly) _Bool positionAnimationExists;
+@property (nonatomic, readonly) struct CGPoint positionInitialValue;
+@property (nonatomic, readonly) _Bool transformAnimationExists;
+@property (nonatomic, readonly) struct CATransform3D transformInitialValue;
+@property (nonatomic, readonly) _Bool transformRotationAnimationExists;
+@property (nonatomic, readonly) double transformRotationInitialValue;
+@property (nonatomic, readonly) _Bool transformRotationXAnimationExists;
+@property (nonatomic, readonly) double transformRotationXInitialValue;
+@property (nonatomic, readonly) _Bool transformRotationYAnimationExists;
+@property (nonatomic, readonly) double transformRotationYInitialValue;
+@property (nonatomic, readonly) _Bool transformRotationZAnimationExists;
+@property (nonatomic, readonly) double transformRotationZInitialValue;
+@property (nonatomic, readonly) _Bool transformScaleXAnimationExists;
+@property (nonatomic, readonly) double transformScaleXInitialValue;
+@property (nonatomic, readonly) _Bool transformScaleYAnimationExists;
+@property (nonatomic, readonly) double transformScaleYInitialValue;
+@property (nonatomic, readonly) _Bool transformScaleXYAnimationExists;
+@property (nonatomic, readonly) double transformScaleXYInitialValue;
+@property (nonatomic, readonly) _Bool transformTranslationAnimationExists;
+@property (nonatomic, readonly) struct CGPoint transformTranslationInitialValue;
+@property (nonatomic, readonly) _Bool transformTranslationXAnimationExists;
+@property (nonatomic, readonly) double transformTranslationXInitialValue;
+@property (nonatomic, readonly) _Bool transformTranslationYAnimationExists;
+@property (nonatomic, readonly) double transformTranslationYInitialValue;
+@property (nonatomic, readonly) _Bool transformTranslationZAnimationExists;
+@property (nonatomic, readonly) double transformTranslationZInitialValue;
+@property (nonatomic, readonly) _Bool zPositionAnimationExists;
+@property (nonatomic, readonly) double zPositionInitialValue;
+@property (nonatomic, readonly) NSDictionary *initialValues;
+
+- (void)dealloc;
+- (double)transformRotationXCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)transformRotationYCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)transformRotationZCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)transformRotationCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)anchorPointZCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (struct CGRect)boundsCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)transformScaleXYCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)transformScaleXCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)transformScaleYCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (struct CGPoint)positionCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)zPositionCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (struct CGPoint)transformTranslationCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)transformTranslationXCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)transformTranslationYCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)transformTranslationZCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (struct CATransform3D)transformCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)opacityCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (_Bool)p_setupAndCacheAnimationValues:(_Bool)arg1 verifyOnly:(_Bool)arg2;
+- (_Bool)verifyCache;
+- (id)initWithLayer:(id)arg1 animation:(id)arg2 overrideInitialValues:(id)arg3 cacheAnimationValues:(_Bool)arg4;
+- (struct CGPoint)anchorPointCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (double)borderWidthCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (_Bool)doubleSidedCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+- (_Bool)hiddenCachedValueAtTime:(double)arg1 layer:(id)arg2 animation:(id)arg3;
+
+@end

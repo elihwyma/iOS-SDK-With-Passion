@@ -1,0 +1,30 @@
+/*
+ Image: /System/Library/PrivateFrameworks/NanoTimeKitCompanion.framework/NanoTimeKitCompanion
+ */
+
+#import <UIKit/UIView.h>
+
+@class CALayer, CLKDevice, NSArray, UIColor;
+
+@interface NTKColorAnalogBackgroundView : UIView
+
+{
+    CALayer *_tickContainerLayer;
+    NSArray *_tickLayers;
+    CALayer *_circleLayer;
+    CALayer *_fullscreenLayer;
+    CLKDevice *_device;
+    UIColor *_color;
+    unsigned long long _style;
+}
+
+- (void)applyStyle:(unsigned long long)arg1;
+- (id)initWithFrame:(struct CGRect)arg1 device:(id)arg2;
+- (void)applyColor:(id)arg1;
+- (void)applyTransitionFraction:(double)arg1 fromStyle:(unsigned long long)arg2 toStyle:(unsigned long long)arg3;
+- (void)cleanupAfterZoom;
+- (void)applyTransitionFraction:(double)arg1 fromScheme:(id)arg2 toScheme:(id)arg3;
+- (void)applyZoomFraction:(double)arg1;
+- (void)updateLayerVisibilityForStyles:(id)arg1;
+
+@end

@@ -1,0 +1,26 @@
+/*
+ Image: /System/Library/PrivateFrameworks/SAObjects.framework/SAObjects
+ */
+
+#import <SAObjects/SACFPEXItem.h>
+
+@class NSArray, NSDate, NSString;
+
+@interface SACFPEXQuickTypeItem : SACFPEXItem
+
+@property (copy, nonatomic) NSArray *fields;
+@property (copy, nonatomic) NSArray *itemFlags;
+@property (copy, nonatomic) NSString *label;
+@property (copy, nonatomic) NSString *name;
+@property (copy, nonatomic) NSString *originatingBundleId;
+@property (copy, nonatomic) NSString *originatingWebsiteURL;
+@property (copy, nonatomic) NSDate *startDate;
+@property (copy, nonatomic) NSString *value;
+
++ (id)quickTypeItem;
++ (id)quickTypeItemWithDictionary:(id)arg1 context:(id)arg2;
+
+- (id)groupIdentifier;
+- (id)encodedClassName;
+
+@end

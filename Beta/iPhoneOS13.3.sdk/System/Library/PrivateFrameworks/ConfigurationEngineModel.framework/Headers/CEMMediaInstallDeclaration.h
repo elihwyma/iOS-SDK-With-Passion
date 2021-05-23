@@ -1,0 +1,43 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/ConfigurationEngineModel
+ */
+
+#import <ConfigurationEngineModel/CEMConfigurationBase.h>
+
+@class NSNumber, NSString;
+
+@interface CEMMediaInstallDeclaration : CEMConfigurationBase
+
+{
+    NSString *_payloadMedia;
+    NSNumber *_payloadMandatory;
+    NSNumber *_payloadInstallWhenActivated;
+    NSNumber *_payloadRemoveWhenDeactivated;
+}
+
+@property (copy, nonatomic) NSString *payloadMedia;
+@property (copy, nonatomic) NSNumber *payloadMandatory;
+@property (copy, nonatomic) NSNumber *payloadInstallWhenActivated;
+@property (copy, nonatomic) NSNumber *payloadRemoveWhenDeactivated;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
++ (id)profileType;
++ (id)allowedPayloadKeys;
++ (id)registeredClassName;
++ (id)registeredIdentifier;
++ (id)restrictionPayloadKeys;
++ (id)buildWithIdentifier:(id)arg1 withMedia:(id)arg2 withMandatory:(id)arg3 withInstallWhenActivated:(id)arg4 withRemoveWhenDeactivated:(id)arg5;
++ (id)buildRequiredOnlyWithIdentifier:(id)arg1 withMedia:(id)arg2 withMandatory:(id)arg3;
+
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (_Bool)multipleAllowed;
+- (_Bool)mustBeSupervised;
+- (int)activationLevel;
+- (id)assetReferences;
+- (_Bool)loadPayload:(id)arg1 error:(id *)arg2;
+- (id)serializePayloadWithAssetProviders:(id)arg1;
+
+@end

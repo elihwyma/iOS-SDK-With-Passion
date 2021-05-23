@@ -1,0 +1,22 @@
+/*
+ Image: /System/Library/PrivateFrameworks/HomeSharing.framework/HomeSharing
+ */
+
+#import <HomeSharing/HSRequest.h>
+
+@interface HSPlayStatusUpdateRequest : HSRequest
+
+{
+    unsigned int _interfaceID;
+    unsigned int _revisionID;
+}
+
+@property (nonatomic, readonly) unsigned int interfaceID;
+@property (nonatomic, readonly) unsigned int revisionID;
+
+- (_Bool)isConcurrent;
+- (double)timeoutInterval;
+- (id)canonicalResponseForResponse:(id)arg1;
+- (id)initWithInterfaceID:(unsigned int)arg1 revisionID:(unsigned int)arg2;
+
+@end

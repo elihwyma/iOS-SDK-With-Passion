@@ -1,0 +1,146 @@
+/*
+ Image: /System/Library/PrivateFrameworks/UIFoundation.framework/UIFoundation
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSString, UIFontDescriptor;
+
+@interface UIFont : NSObject
+
+@property (nonatomic, readonly) NSString *textStyleForScaling;
+@property (nonatomic, readonly) double pointSizeForScaling;
+@property (nonatomic, readonly) double maximumPointSizeAfterScaling;
+@property (nonatomic, readonly) NSString *familyName;
+@property (nonatomic, readonly) NSString *fontName;
+@property (nonatomic, readonly) double pointSize;
+@property (nonatomic, readonly) double ascender;
+@property (nonatomic, readonly) double descender;
+@property (nonatomic, readonly) double capHeight;
+@property (nonatomic, readonly) double xHeight;
+@property (nonatomic, readonly) double lineHeight;
+@property (nonatomic, readonly) double leading;
+@property (nonatomic, readonly) UIFontDescriptor *fontDescriptor;
+
++ (void)initialize;
++ (_Bool)supportsSecureCoding;
++ (id)classFallbacksForKeyedArchiver;
++ (id)familyNames;
++ (id)userFontOfSize:(double)arg1;
++ (id)fontWithDescriptor:(id)arg1 size:(double)arg2;
++ (id)fontWithName:(id)arg1 size:(double)arg2;
++ (id)systemFontOfSize:(double)arg1;
++ (id)systemFontOfSize:(double)arg1 weight:(double)arg2;
++ (id)_fontWithName:(id)arg1 size:(double)arg2;
++ (id)_sharedFontCache;
++ (id)fontWithName:(id)arg1 size:(double)arg2 traits:(int)arg3;
++ (_Bool)_isSupportedDynamicFontTextStyle:(id)arg1;
++ (id)_systemFontsOfSize:(double)arg1 traits:(int)arg2;
++ (id)_preferredFontForTextStyle:(id)arg1 maximumContentSizeCategory:(id)arg2 compatibleWithTraitCollection:(id)arg3;
++ (id)preferredFontForTextStyle:(id)arg1 compatibleWithTraitCollection:(id)arg2;
++ (id)_preferredFontForTextStyle:(id)arg1 maximumPointSize:(double)arg2 compatibleWithTraitCollection:(id)arg3;
++ (id)_preferredFontForTextStyle:(id)arg1 design:(id)arg2 variant:(long long)arg3 maximumContentSizeCategory:(id)arg4 compatibleWithTraitCollection:(id)arg5;
++ (id)_preferredFontForTextStyle:(id)arg1 design:(id)arg2 variant:(long long)arg3 maximumContentSizeCategory:(id)arg4 compatibleWithTraitCollection:(id)arg5 pointSize:(double)arg6 pointSizeForScaling:(double)arg7;
++ (id)_preferredFontForTextStyle:(id)arg1 design:(id)arg2 weight:(id)arg3 symbolicTraits:(unsigned int)arg4 maximumContentSizeCategory:(id)arg5 compatibleWithTraitCollection:(id)arg6 pointSize:(double)arg7 pointSizeForScaling:(double)arg8;
++ (id)_fontWithDescriptor:(id)arg1 size:(double)arg2 textStyleForScaling:(id)arg3 pointSizeForScaling:(double)arg4 maximumPointSizeAfterScaling:(double)arg5 forIB:(_Bool)arg6 legibilityWeight:(long long)arg7;
++ (id)_supportedDynamicFontStyles;
++ (double)_pointSize:(double)arg1 scaledLikeTextStyle:(id)arg2 maximumPointSize:(double)arg3 compatibleWithTraitCollection:(id)arg4 roundSize:(_Bool)arg5;
++ (double)_pointSize:(double)arg1 scaledLikeTextStyle:(id)arg2 maximumPointSize:(double)arg3 compatibleWithTraitCollection:(id)arg4;
++ (id)preferredFontForTextStyle:(id)arg1;
++ (id)systemFontOfSize:(double)arg1 traits:(int)arg2;
++ (id)systemFontOfSize:(double)arg1 weight:(double)arg2 design:(id)arg3;
++ (id)ib_preferredFontForTextStyle:(id)arg1;
++ (id)_sharedZeroPointFont;
++ (void)_evictAllItemsFromFontAndFontDescriptorCaches;
++ (id)fontWithFamilyName:(id)arg1 traits:(int)arg2 size:(double)arg3;
++ (id)fontWithMarkupDescription:(id)arg1;
++ (id)fontNamesForFamilyName:(id)arg1;
++ (id)preferredFontForUsage:(id)arg1;
++ (id)preferredFontForUsage:(id)arg1 contentSizeCategoryName:(id)arg2;
++ (id)_preferredFontForTextStyle:(id)arg1 maximumContentSizeCategory:(id)arg2;
++ (id)_preferredFontForTextStyle:(id)arg1 variant:(long long)arg2;
++ (id)_preferredFontForTextStyle:(id)arg1 variant:(long long)arg2 maximumContentSizeCategory:(id)arg3;
++ (id)_preferredFontForTextStyle:(id)arg1 design:(id)arg2 variant:(long long)arg3;
++ (id)_preferredFontForTextStyle:(id)arg1 design:(id)arg2 variant:(long long)arg3 compatibleWithTraitCollection:(id)arg4;
++ (double)_readableWidth;
++ (id)defaultFontForTextStyle:(id)arg1;
++ (id)_opticalSystemFontOfSize:(double)arg1;
++ (id)_opticalBoldSystemFontOfSize:(double)arg1;
++ (id)boldSystemFontOfSize:(double)arg1;
++ (id)italicSystemFontOfSize:(double)arg1;
++ (id)_thinSystemFontOfSize:(double)arg1;
++ (id)_lightSystemFontOfSize:(double)arg1;
++ (id)_ultraLightSystemFontOfSize:(double)arg1;
++ (id)monospacedSystemFontOfSize:(double)arg1 weight:(double)arg2;
++ (id)monospacedDigitSystemFontOfSize:(double)arg1 weight:(double)arg2;
++ (double)labelFontSize;
++ (double)buttonFontSize;
++ (double)smallSystemFontSize;
++ (double)systemFontSize;
+
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (void)encodeWithCoder:(id)arg1;
+- (id)initWithCoder:(id)arg1;
+- (Class)classForCoder;
+- (id)_familyName;
+- (id)initWithName:(id)arg1 size:(double)arg2;
+- (struct CGRect)boundingRectForFont;
+- (id)verticalFont;
+- (struct CGSize)advancementForGlyph:(unsigned short)arg1;
+- (struct CGFont *)_backingCGSFont;
+- (_Bool)isVertical;
+- (double)_leading;
+- (double)underlineThickness;
+- (struct CGAffineTransform)_textMatrixTransformForContext:(id)arg1;
+- (void)getAdvancements:(struct CGSize *)arg1 forCGGlyphs:(const unsigned short *)arg2 count:(unsigned long long)arg3;
+- (void)getVerticalOriginTranslations:(struct CGSize *)arg1 forCGGlyphs:(const unsigned short *)arg2 count:(unsigned long long)arg3;
+- (void)applyToGraphicsContext:(id)arg1;
+- (unsigned long long)getCaretPositions:(double *)arg1 forGlyph:(unsigned int)arg2 maximumLength:(unsigned long long)arg3;
+- (double)_totalAdvancementForNativeGlyphs:(const unsigned short *)arg1 count:(long long)arg2;
+- (unsigned long long)numberOfGlyphs;
+- (_Bool)_isDefaultFace;
+- (unsigned long long)renderingMode;
+- (id)_kernOverride;
+- (unsigned int)hyphenGlyphForLocale:(id)arg1;
+- (void)getBoundingRects:(struct CGRect *)arg1 forCGGlyphs:(const unsigned short *)arg2 count:(unsigned long long)arg3;
+- (id)screenFontWithRenderingMode:(unsigned long long)arg1;
+- (double)_defaultLineHeightForUILayout;
+- (unsigned short)glyphWithName:(id)arg1;
+- (id)fontWithSize:(double)arg1;
+- (id)coveredCharacterSet;
+- (id)bestMatchingFontForCharacters:(const unsigned short *)arg1 length:(unsigned long long)arg2 attributes:(id)arg3 actualCoveredLength:(unsigned long long *)arg4;
+- (_Bool)_hasColorGlyphs;
+- (id)lastResortFont;
+- (int)traits;
+- (_Bool)_getLatin1Glyphs:(const unsigned short **)arg1 advanceWidths:(const double **)arg2;
+- (id)initWithMarkupDescription:(id)arg1;
+- (_Bool)__isSystemFont;
+- (id)_fontAdjustedForContentSizeCategoryCompatibleWithTraitCollection:(id)arg1;
+- (double)_scaledValueForValue:(double)arg1;
+- (double)readableWidth;
+- (double)_bodyLeading;
+- (id)initWithFamilyName:(id)arg1 traits:(int)arg2 size:(double)arg3;
+- (id)familyNameForCSSFontFamilyValueForWebKit:(_Bool)arg1;
+- (id)markupDescriptionForWebKit:(_Bool)arg1 pointSize:(float)arg2 sizeUnit:(id)arg3;
+- (id)markupDescription;
+- (_Bool)isIBTextStyleFont;
+- (_Bool)isIBFontMetricsScaledFont;
+- (id)_alternateSystemFonts;
+- (id)_fontAdjustedForCurrentContentSizeCategory;
+- (id)_fontScaledLikeTextStyle:(id)arg1 maximumPointSize:(double)arg2 compatibleWithTraitCollection:(id)arg3 forIB:(_Bool)arg4;
+- (id)htmlMarkupDescription;
+- (id)_fontScaledByScaleFactor:(double)arg1;
+- (_Bool)_isUIFont;
+- (unsigned long long)mostCompatibleStringEncoding;
+- (_Bool)_isHiraginoFont;
+- (double)_baseLineHeightForFont:(_Bool)arg1;
+- (double)_ascenderDeltaForBehavior:(long long)arg1;
+- (_Bool)isSystemFont;
+- (_Bool)isFixedPitch;
+- (struct __CTFont *)CTFont;
+- (void)setInContext:(struct CGContext *)arg1;
+- (double)underlinePosition;
+- (unsigned int)_defaultGlyphForChar:(unsigned short)arg1;
+
+@end

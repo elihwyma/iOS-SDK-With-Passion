@@ -1,0 +1,35 @@
+/*
+ Image: /System/Library/PrivateFrameworks/SpringBoard.framework/SpringBoard
+ */
+
+#import <PrototypeTools/PTSettings.h>
+
+@class SBEntityRemovalDosidoDefaultAnimationSettings, SBEntityRemovalDosidoSlideOutDownwardAnimationSettings, SBEntityRemovalDosidoSlideOutUpwardAnimationSettings, SBEntityRemovalFloatingDefaultAnimationSettings, SBEntityRemovalFloatingSlideOutDownwardAnimationSettings, SBEntityRemovalFloatingSlideOutUpwardAnimationSettings, SBEntityRemovalMedusaDefaultAnimationSettings, SBEntityRemovalMedusaSlideOutDownwardAnimationSettings, SBEntityRemovalMedusaSlideOutUpwardAnimationSettings;
+
+@interface SBEntityRemovalAnimationSettings : PTSettings
+
+{
+    SBEntityRemovalMedusaDefaultAnimationSettings *_medusaDeleteIntentAnimationSettings;
+    SBEntityRemovalMedusaSlideOutUpwardAnimationSettings *_medusaCommitIntentAnimationSettings;
+    SBEntityRemovalMedusaSlideOutDownwardAnimationSettings *_medusaDeclineIntentAnimationSettings;
+    SBEntityRemovalFloatingDefaultAnimationSettings *_floatingDeleteIntentAnimationSettings;
+    SBEntityRemovalFloatingSlideOutUpwardAnimationSettings *_floatingCommitIntentAnimationSettings;
+    SBEntityRemovalFloatingSlideOutDownwardAnimationSettings *_floatingDeclineIntentAnimationSettings;
+    SBEntityRemovalDosidoDefaultAnimationSettings *_dosidoDeleteIntentAnimationSettings;
+    SBEntityRemovalDosidoSlideOutUpwardAnimationSettings *_dosidoCommitIntentAnimationSettings;
+    SBEntityRemovalDosidoSlideOutDownwardAnimationSettings *_dosidoDeclineIntentAnimationSettings;
+}
+
+@property (retain, nonatomic) SBEntityRemovalMedusaDefaultAnimationSettings *medusaDeleteIntentAnimationSettings;
+@property (retain, nonatomic) SBEntityRemovalMedusaSlideOutUpwardAnimationSettings *medusaCommitIntentAnimationSettings;
+@property (retain, nonatomic) SBEntityRemovalMedusaSlideOutDownwardAnimationSettings *medusaDeclineIntentAnimationSettings;
+@property (retain, nonatomic) SBEntityRemovalFloatingDefaultAnimationSettings *floatingDeleteIntentAnimationSettings;
+@property (retain, nonatomic) SBEntityRemovalFloatingSlideOutUpwardAnimationSettings *floatingCommitIntentAnimationSettings;
+@property (retain, nonatomic) SBEntityRemovalFloatingSlideOutDownwardAnimationSettings *floatingDeclineIntentAnimationSettings;
+@property (retain, nonatomic) SBEntityRemovalDosidoDefaultAnimationSettings *dosidoDeleteIntentAnimationSettings;
+@property (retain, nonatomic) SBEntityRemovalDosidoSlideOutUpwardAnimationSettings *dosidoCommitIntentAnimationSettings;
+@property (retain, nonatomic) SBEntityRemovalDosidoSlideOutDownwardAnimationSettings *dosidoDeclineIntentAnimationSettings;
+
++ (id)settingsControllerModule;
+
+@end

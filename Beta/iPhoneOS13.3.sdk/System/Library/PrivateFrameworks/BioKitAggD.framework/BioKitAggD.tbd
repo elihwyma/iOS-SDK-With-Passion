@@ -1,0 +1,15 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: B608066A-753A-31F3-BEA4-7F305800BAB3' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/BioKitAggD.framework/BioKitAggD
+current-version:       1
+compatibility-version: 1
+exports:
+  - archs:                [ arm64 ]
+    symbols:              [ _BioKitAggDVersionNumber, _BioKitAggDVersionString ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ dyld_stub_binder ]
+...

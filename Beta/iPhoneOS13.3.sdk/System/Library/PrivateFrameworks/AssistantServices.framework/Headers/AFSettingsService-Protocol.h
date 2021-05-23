@@ -1,0 +1,115 @@
+/*
+ Image: /System/Library/PrivateFrameworks/AssistantServices.framework/AssistantServices
+ */
+
+#import <AssistantServices/Swift-Protocol.h>
+
+@protocol AFSettingsService <Swift>
+
+- (unsigned short)setSiriDataSharingOptInStatus:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setOutputVoice:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSiriDataSharingOptInStatusWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)homeOnboardingFlowInvoked:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setAssistantEnabled: /* Error: Ran out of types for this method. */;
+- (unsigned short)stopAudioPlaybackRequest:immediately: /* Error: Ran out of types for this method. */;
+- (unsigned short)stopAllAudioPlaybackRequests: /* Error: Ran out of types for this method. */;
+- (unsigned short)startUIRequestWithText:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)startRemoteRequest:onPeer:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)fetchSupportedLanguagesWithReply: /* Error: Ran out of types for this method. */;
+- (unsigned short)retrieveAccountMessageDictionariesWithReply: /* Error: Ran out of types for this method. */;
+- (unsigned short)saveAccountWithMessageDictionary:setActive: /* Error: Ran out of types for this method. */;
+- (unsigned short)deleteAccountWithIdentifier: /* Error: Ran out of types for this method. */;
+- (unsigned short)setActiveAccountIdentifier: /* Error: Ran out of types for this method. */;
+- (unsigned short)setDictationEnabled: /* Error: Ran out of types for this method. */;
+- (unsigned short)_shutdownSessionIfIdle;
+- (unsigned short)_killDaemon;
+- (unsigned short)barrierWithReply: /* Error: Ran out of types for this method. */;
+- (unsigned short)_setSyncNeededForReason: /* Error: Ran out of types for this method. */;
+- (unsigned short)_clearSyncNeededForKey: /* Error: Ran out of types for this method. */;
+- (unsigned short)_syncDataWithAnchorKeys:forceReset:reason:reply: /* Error: Ran out of types for this method. */;
+- (unsigned short)_fetchPeerData: /* Error: Ran out of types for this method. */;
+- (unsigned short)_setSyncVerificationNeededAndFullReportNeeded:shouldPostNotification:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_startDeepSyncVerificationForKeys: /* Error: Ran out of types for this method. */;
+- (unsigned short)_runServiceMaintenance;
+- (unsigned short)getAvailableVoicesIncludingAssetInfo:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setLanguage:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setLanguage:outputVoice:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getOfflineDictationStatusWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)updateOfflineSpeechProfileWithLanguage:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)createOfflineSpeechProfileWithLanguage:JSONData:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setOfflineDictationProfileOverridePath:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)startUIRequestWithSpeechAudioFileURL: /* Error: Ran out of types for this method. */;
+- (unsigned short)dismissUI;
+- (unsigned short)startUIMockServerRequestWithReplayFileURL:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getPeerIdentifiers: /* Error: Ran out of types for this method. */;
+- (unsigned short)startAudioPlaybackRequest:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setEnableAssistantLogging: /* Error: Ran out of types for this method. */;
+- (unsigned short)setSupplementalLanguageDictionary:forProduct:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setSupplementalLanguages:forProduct:forBuildVersion:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSupplementalLanguagesDictionary: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSupplementalLanguagesModificationDate: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSupplementalLanguageDictionaryForProduct:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSupplementalLanguagesForProduct:forBuildVersion:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)fetchEventRecordsFromAnalyticsStoreAtPath:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)purgeAnalyticsStoreWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)resetAnalyticsStoreWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)sendMetricsToServerWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)fetchExperimentConfigurationsWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)fetchExperimentContextWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)disableAndDeleteCloudSyncWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getDevicesWithAvailablePHSAssetsForLanguage:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getDevicesWithAvailablePHSAssetsOnDeviceCheck: /* Error: Ran out of types for this method. */;
+- (unsigned short)getMeCard: /* Error: Ran out of types for this method. */;
+- (unsigned short)getStereoPartnerLastMyriadWinDate: /* Error: Ran out of types for this method. */;
+- (unsigned short)getStereoPairState: /* Error: Ran out of types for this method. */;
+- (unsigned short)setConfigOverrides:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)configOverrides: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSharedCompanionInfo: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSiriOutputVolumeForAudioRoute:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setSiriOutputVolume:forAudioRoute:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getBluetoothDeviceInfoWithAddress:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getBluetoothDeviceInfoWithUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getConnectedBluetoothDeviceInfoArrayWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getPairedBluetoothDeviceInfoArrayWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getBluetoothWirelessSplitterSessionInfoWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)startObservingBluetoothWirelessSplitterSession;
+- (unsigned short)stopObservingBluetoothWirelessSplitterSession;
+- (unsigned short)addMultiUserUser:sharedId:loggableSharedId:enrollmentName:isPrimary:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)removeMultiUserUser:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)removeMultiUserUserWithSharedUserId:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)showMultiUsers: /* Error: Ran out of types for this method. */;
+- (unsigned short)updateVoiceIdScoreToUser:score:reset:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)forceMultiUserSync:download:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getHomeUserIdForSharedUserId:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSharedUserIdForHomeUserId:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)updateMultiUserWithSharedUserId:companionId:companionSpeechId:idsIdentifier:productPrefix:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSharedUserID: /* Error: Ran out of types for this method. */;
+- (unsigned short)fetchMultiUserVoiceIdentificationSetting: /* Error: Ran out of types for this method. */;
+- (unsigned short)setNanoAssistantEnabled:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setNanoDictationEnabled:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setNanoPhraseSpotterEnabled:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setNanoRaiseToSpeakEnabled:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setNanoUseDeviceSpeakerForTTS:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setNanoTTSSpeakerVolume:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setNanoOutputVoice:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setNanoLanguage:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setNanoCrownActivationEnabled:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setNanoSiriDataSharingOptInStatus:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSpokenNotificationTemporarilyDisabledEndDateWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setSpokenNotificationTemporarilyDisabledUntil: /* Error: Ran out of types for this method. */;
+- (unsigned short)clearSpokenNotificationTemporarilyDisabledStatus;
+- (unsigned short)getSpokenNotificationTemporarilyDisabledEndDateForApp:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setSpokenNotificationTemporarilyDisabledForApp:until: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSpokenNotificationShouldAlwaysSpeakNotificationsWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setSpokenNotificationShouldAlwaysSpeakNotifications: /* Error: Ran out of types for this method. */;
+- (unsigned short)getSpokenNotificationShouldSkipTriggerlessRepliesWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setSpokenNotificationShouldSkipTriggerlessReplies: /* Error: Ran out of types for this method. */;
+- (unsigned short)setOpportuneSpeakingEdgeDetectorSignalOverride: /* Error: Ran out of types for this method. */;
+- (unsigned short)clearOpportuneSpeakingEdgeDetectorSignalOverride;
+- (unsigned short)setSiriDataSharingOptInAlertPresented:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)shouldSuppressSiriDataSharingOptInAlertWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)deleteSiriHistoryWithContext:withCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setSiriDesignModeEnabled:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)siriDesignModeIsEnabled: /* Error: Ran out of types for this method. */;
+
+@end

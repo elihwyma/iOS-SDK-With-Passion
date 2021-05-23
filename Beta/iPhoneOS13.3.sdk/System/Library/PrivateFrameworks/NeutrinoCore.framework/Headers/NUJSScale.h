@@ -1,0 +1,17 @@
+/*
+ Image: /System/Library/PrivateFrameworks/NeutrinoCore.framework/NeutrinoCore
+ */
+
+#import <NeutrinoCore/NUJSRational.h>
+
+@class NSValue;
+
+@interface NUJSScale : NUJSRational
+
+@property (readonly) CDStruct_912cb5d2 scale;
+@property (readonly) NSValue *value;
+
+- (id)initWithScale:(CDStruct_912cb5d2)arg1;
+- (id)nu_unwrapJSValue;
+
+@end

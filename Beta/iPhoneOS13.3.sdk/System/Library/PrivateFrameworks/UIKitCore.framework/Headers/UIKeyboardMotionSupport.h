@@ -1,0 +1,40 @@
+/*
+ Image: /System/Library/PrivateFrameworks/UIKitCore.framework/UIKitCore
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSDictionary, NSString, UIScreen, UIWindowScene;
+
+@protocol UISplitKeyboardSource;
+
+__attribute__((visibility("hidden")))
+@interface UIKeyboardMotionSupport : NSObject
+
+{
+    UIScreen *_screen;
+    UIWindowScene *_canvas;
+    id <UISplitKeyboardSource> _controller;
+}
+
+@property (nonatomic) id <UISplitKeyboardSource> masterController;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (readonly) UIScreen *_intendedScreen;
+@property (readonly) NSDictionary *_options;
+
++ (id)supportForScreen:(id)arg1;
++ (id)supportForUIScene:(id)arg1;
+
+- (void)dealloc;
+- (id)_initWithScreen:(id)arg1 options:(id)arg2;
+- (_Bool)_matchingOptions:(id)arg1;
+- (void)_updatedController;
+- (void)_disconnectingController:(id)arg1;
+- (void)_connectController:(id)arg1;
+- (id)_initWithCanvas:(id)arg1 options:(id)arg2;
+- (id)_intendedCanvas;
+
+@end

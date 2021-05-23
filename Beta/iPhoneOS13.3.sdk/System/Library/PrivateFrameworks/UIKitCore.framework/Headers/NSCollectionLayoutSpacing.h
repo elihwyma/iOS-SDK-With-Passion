@@ -1,0 +1,30 @@
+/*
+ Image: /System/Library/PrivateFrameworks/UIKitCore.framework/UIKitCore
+ */
+
+#import <Foundation/NSObject.h>
+
+#import <UIKitCore/Swift-Protocol.h>
+
+@interface NSCollectionLayoutSpacing : NSObject <Swift>
+
+{
+    double _spacing;
+    _Bool _isFlexible;
+}
+
+@property (nonatomic, readonly) double spacing;
+@property (nonatomic, readonly) _Bool isFlexibleSpacing;
+@property (nonatomic, readonly) _Bool isFixedSpacing;
+
++ (id)defaultSpacing;
++ (id)flexibleSpacing:(double)arg1;
++ (id)fixedSpacing:(double)arg1;
+
+- (_Bool)isEqual:(id)arg1;
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)initWithSpacing:(double)arg1 isFlexible:(_Bool)arg2;
+- (_Bool)_hasSpacing;
+
+@end

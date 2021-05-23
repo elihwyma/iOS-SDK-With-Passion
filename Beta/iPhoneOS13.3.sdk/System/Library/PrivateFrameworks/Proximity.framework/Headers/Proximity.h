@@ -1,0 +1,53 @@
+/*
+ Image: /System/Library/PrivateFrameworks/Proximity.framework/Proximity
+ */
+
+#import <Proximity/Proximity-Structures.h>
+
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/(null).h>
+#import <Proximity/NSCoding-Protocol.h>
+#import <Proximity/NSCopying-Protocol.h>
+#import <Proximity/NSObject-Protocol.h>
+#import <Proximity/NSSecureCoding-Protocol.h>
+#import <Proximity/PRAidedRangingClientProtocol-Protocol.h>
+#import <Proximity/PRAidedRangingServerProtocol-Protocol.h>
+#import <Proximity/PRBeaconDelegate-Protocol.h>
+#import <Proximity/PRBeaconDescriptor.h>
+#import <Proximity/PRBeaconListenerDelegate-Protocol.h>
+#import <Proximity/PRBeaconRangingProtocol-Protocol.h>
+#import <Proximity/PRChipInfo.h>
+#import <Proximity/PRCompanionRangingServerProtocol-Protocol.h>
+#import <Proximity/PRDiagnosticsServerProtocol-Protocol.h>
+#import <Proximity/PRGetPowerStatsResponse.h>
+#import <Proximity/PRHelloResponse.h>
+#import <Proximity/PRProximityDeviceProtocol-Protocol.h>
+#import <Proximity/PRProximityEstimatorDelegate-Protocol.h>
+#import <Proximity/PRRangingClientProtocol-Protocol.h>
+#import <Proximity/PRRangingServerProtocol-Protocol.h>
+#import <Proximity/PRRangingSession.h>
+#import <Proximity/PRServerProtocol-Protocol.h>
+#import <Proximity/Swift-Protocol.h>

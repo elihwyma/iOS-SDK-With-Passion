@@ -1,0 +1,168 @@
+/*
+ Image: /System/Library/Frameworks/ImageCaptureCore.framework/ImageCaptureCore
+ */
+
+#import <ImageCaptureCore/ICCameraItem.h>
+
+@class NSData, NSDate, NSDictionary, NSMutableArray, NSMutableDictionary, NSNumber, NSProgress, NSString;
+
+@interface ICCameraFile : ICCameraItem
+
+{
+    struct CGImage *_originalThumbnail;
+    struct CGImage *_thumbnail;
+    NSMutableDictionary *_metadata;
+    NSString *_debugType;
+    NSString *_debugBadge;
+    NSNumber *_fileIsJPEG;
+    NSNumber *_fileIsHEIC;
+    _Bool _highFramerate;
+    _Bool _timeLapse;
+    _Bool _firstPicked;
+    _Bool _burstFavorite;
+    _Bool _burstPicked;
+    _Bool _imgHasThumbnail;
+    _Bool _imgHasMetadata;
+    _Bool _useExtensionIcon;
+    _Bool _fetchingThumbnail;
+    _Bool _fetchingMetadata;
+    _Bool _orientationOverridden;
+    _Bool _retrievedMetadata;
+    _Bool _retrievedThumbnail;
+    unsigned int _objectHandle;
+    long long _width;
+    long long _height;
+    NSString *_originalFilename;
+    NSString *_createdFilename;
+    long long _fileSize;
+    double _duration;
+    NSString *_originatingAssetID;
+    NSString *_groupUUID;
+    NSString *_gpsString;
+    NSString *_relatedUUID;
+    NSString *_burstUUID;
+    ICCameraFile *_pairedRawImage;
+    NSDate *_fileCreationDate;
+    NSDate *_fileModificationDate;
+    NSDate *_exifCreationDate;
+    NSDate *_exifModificationDate;
+    unsigned long long _imgOrientation;
+    NSString *_imgSpatialOverCaptureGroupID;
+    NSMutableArray *_sidecarFiles;
+    unsigned long long _mediaMetadata;
+    NSString *_devMediaBase;
+    NSDictionary *_mediaData;
+    NSMutableDictionary *_subImages;
+    unsigned long long _oUUID;
+    unsigned long long _uTime;
+    NSData *_thumbnailData;
+    NSProgress *_progress;
+}
+
+@property (nonatomic) _Bool imgHasThumbnail;
+@property (nonatomic) _Bool imgHasMetadata;
+@property (nonatomic) unsigned long long imgOrientation;
+@property (copy, nonatomic) NSString *imgSpatialOverCaptureGroupID;
+@property struct CGImage *originalThumbnail;
+@property (retain, nonatomic) NSMutableArray *sidecarFiles;
+@property (nonatomic) unsigned long long mediaMetadata;
+@property (copy, nonatomic) NSString *devMediaBase;
+@property (retain, nonatomic) NSDictionary *mediaData;
+@property (retain, nonatomic) NSMutableDictionary *subImages;
+@property (nonatomic) _Bool useExtensionIcon;
+@property (copy, nonatomic) NSString *originalFilename;
+@property (copy, nonatomic) NSString *createdFilename;
+@property (retain, nonatomic) ICCameraFile *pairedRawImage;
+@property _Bool fetchingThumbnail;
+@property _Bool fetchingMetadata;
+@property (copy, nonatomic) NSDate *fileCreationDate;
+@property (copy, nonatomic) NSDate *fileModificationDate;
+@property (copy, nonatomic) NSDate *exifCreationDate;
+@property (copy, nonatomic) NSDate *exifModificationDate;
+@property (nonatomic) long long fileSize;
+@property (nonatomic) long long width;
+@property (nonatomic) long long height;
+@property (nonatomic) double duration;
+@property (nonatomic) _Bool orientationOverridden;
+@property (nonatomic) _Bool burstFavorite;
+@property (nonatomic) _Bool burstPicked;
+@property (nonatomic) _Bool firstPicked;
+@property (nonatomic) _Bool highFramerate;
+@property (nonatomic) _Bool timeLapse;
+@property (copy, nonatomic) NSString *gpsString;
+@property (copy, nonatomic) NSString *burstUUID;
+@property (copy, nonatomic) NSString *groupUUID;
+@property (copy, nonatomic) NSString *relatedUUID;
+@property (copy, nonatomic) NSString *originatingAssetID;
+@property unsigned long long oUUID;
+@property unsigned long long uTime;
+@property (nonatomic, readonly) NSString *spatialOverCaptureGroupID;
+@property (nonatomic) _Bool retrievedMetadata;
+@property (nonatomic) _Bool retrievedThumbnail;
+@property (nonatomic, readonly) unsigned int objectHandle;
+@property (copy, nonatomic) NSData *thumbnailData;
+@property (retain, nonatomic) NSProgress *progress;
+@property (readonly) NSString *mediaBase;
+@property (nonatomic) unsigned long long orientation;
+
+- (void)dealloc;
+- (id)description;
+- (_Bool)hasThumbnail;
+- (id)modificationDate;
+- (_Bool)isLegacy;
+- (id)creationDate;
+- (_Bool)setMetadata:(id)arg1;
+- (id)metadata;
+- (_Bool)hasMetadata;
+- (id)base;
+- (void)setHasThumbnail:(_Bool)arg1;
+- (struct CGImage *)thumbnail;
+- (_Bool)isImage;
+- (_Bool)isMovie;
+- (void)addSidecarFile:(id)arg1;
+- (void)flagAsSidecar;
+- (_Bool)isDataUniversal;
+- (_Bool)isOriginal;
+- (_Bool)isConverted;
+- (_Bool)isNonRawImage;
+- (_Bool)isAudio;
+- (_Bool)originalFamily;
+- (_Bool)convertedFamily;
+- (_Bool)universalFamily;
+- (_Bool)isSidecar;
+- (id)debugIdentity;
+- (id)requestDownloadWithOptions:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)handleCommandCompletionNotification:(id)arg1;
+- (_Bool)isJPEG;
+- (_Bool)isHEIC;
+- (_Bool)isEditedOriginal;
+- (_Bool)isEditedConverted;
+- (id)debugType;
+- (id)debugBadge;
+- (_Bool)isUntouched:(unsigned long long)arg1;
+- (_Bool)isEdited:(unsigned long long)arg1;
+- (_Bool)partOfFamily:(unsigned long long)arg1;
+- (void)setSpatialOverCaptureGroupID:(id)arg1;
+- (id)initWithName:(id)arg1 parentFolder:(id)arg2 device:(id)arg3;
+- (void)setHasMetadata:(_Bool)arg1;
+- (void)setUTI:(id)arg1;
+- (void)requestThumbnailDataWithOptions:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (id)thumbnailDataUsingOrientation:(id)arg1 andSourceThumbnailData:(id)arg2;
+- (void)cacheThumbnailData:(id)arg1;
+- (void)requestMetadataDictionaryWithOptions:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)requestReadDataAtOffset:(long long)arg1 length:(long long)arg2 completion:(CDUnknownBlockType)arg3;
+- (long long)compareUUID:(id)arg1;
+- (long long)compareDate:(id)arg1;
+- (void)flushMetadataCache;
+- (void)flushThumbnailCache;
+- (_Bool)isUniversal;
+- (_Bool)isEditedUniversal;
+- (_Bool)isData;
+- (void)setKeywordPropertiesFromDict:(id)arg1;
+- (void)flagMediaMetadata:(unsigned long long)arg1;
+- (void)requestThumbnail;
+- (void)requestThumbnailWithOptions:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)requestMetadata;
+- (void)requestMetadataWithOptions:(id)arg1 completion:(CDUnknownBlockType)arg2;
+
+@end

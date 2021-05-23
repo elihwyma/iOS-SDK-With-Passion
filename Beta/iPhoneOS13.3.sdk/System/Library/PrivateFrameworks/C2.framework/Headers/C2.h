@@ -1,0 +1,51 @@
+/*
+ Image: /System/Library/PrivateFrameworks/C2.framework/C2
+ */
+
+#import <C2/C2-Structures.h>
+
+#import <C2/C2DeviceInfo.h>
+#import <C2/C2Logging.h>
+#import <C2/C2Metric.h>
+#import <C2/C2MetricOperationGroupOptions.h>
+#import <C2/C2MetricOperationOptions.h>
+#import <C2/C2MetricOptions.h>
+#import <C2/C2MetricRequestOptions.h>
+#import <C2/C2MPCloudKitInfo.h>
+#import <C2/C2MPCloudKitOperationGroupInfo.h>
+#import <C2/C2MPCloudKitOperationInfo.h>
+#import <C2/C2MPDeviceInfo.h>
+#import <C2/C2MPError.h>
+#import <C2/C2MPGenericEvent.h>
+#import <C2/C2MPGenericEventMetric.h>
+#import <C2/C2MPGenericEventMetricValue.h>
+#import <C2/C2MPInternalTestConfig.h>
+#import <C2/C2MPMetric.h>
+#import <C2/C2MPNetworkEvent.h>
+#import <C2/C2MPServerInfo.h>
+#import <C2/C2ReportMetrics.h>
+#import <C2/C2RequestDelegate-Protocol.h>
+#import <C2/C2RequestManager.h>
+#import <C2/C2RequestOptions.h>
+#import <C2/C2Route.h>
+#import <C2/C2RoutingTable.h>
+#import <C2/C2Session.h>
+#import <C2/C2SessionDelegate-Protocol.h>
+#import <C2/C2SessionGroup.h>
+#import <C2/C2SessionPool.h>
+#import <C2/C2SessionTask.h>
+#import <C2/C2SessionTaskDelegate-Protocol.h>
+#import <C2/C2SessionTLSCache.h>
+#import <C2/C2Time.h>
+#import <C2/NSCoding-Protocol.h>
+#import <C2/NSCopying-Protocol.h>
+#import <C2/NSObject-Protocol.h>
+#import <C2/NSSecureCoding-Protocol.h>
+#import <C2/NSString-C2MetricOptionsPrivateNSStringExtension.h>
+#import <C2/NSURLSessionDataDelegate-Protocol.h>
+#import <C2/NSURLSessionDataDelegatePrivate-Protocol.h>
+#import <C2/NSURLSessionDelegate-Protocol.h>
+#import <C2/NSURLSessionTaskDelegate-Protocol.h>
+#import <C2/NSURLSessionTaskDelegatePrivate-Protocol.h>
+#import <C2/NSUserDefaults-C2Defaults.h>
+#import <C2/Swift-Protocol.h>

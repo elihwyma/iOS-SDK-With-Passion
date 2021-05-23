@@ -1,0 +1,13 @@
+/*
+ Image: /System/Library/PrivateFrameworks/AppPredictionInternal.framework/AppPredictionInternal
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface ATXStatsImpl : NSObject
+
++ (double)meanOfNumbers:(const double *)arg1 count:(unsigned long long)arg2;
++ (double)medianOfNumbers:(const double *)arg1 count:(unsigned long long)arg2;
++ (double)percentile:(double)arg1 numbers:(const double *)arg2 count:(unsigned long long)arg3;
+
+@end

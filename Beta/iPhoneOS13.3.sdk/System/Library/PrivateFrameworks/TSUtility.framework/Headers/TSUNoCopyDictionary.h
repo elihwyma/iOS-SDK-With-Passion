@@ -1,0 +1,32 @@
+/*
+ Image: /System/Library/PrivateFrameworks/TSUtility.framework/TSUtility
+ */
+
+#import <Foundation/NSMutableDictionary.h>
+
+@interface TSUNoCopyDictionary : NSMutableDictionary
+
+{
+    struct __CFDictionary *mDictionary;
+}
+
+- (id)init;
+- (void)dealloc;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)mutableCopyWithZone:(struct _NSZone *)arg1;
+- (id)initWithCapacity:(unsigned long long)arg1;
+- (unsigned long long)count;
+- (id)objectEnumerator;
+- (id)allKeys;
+- (unsigned long long)countByEnumeratingWithState:(CDStruct_70511ce9 *)arg1 objects:(id *)arg2 count:(unsigned long long)arg3;
+- (void)removeAllObjects;
+- (id)objectForKey:(id)arg1;
+- (void)getObjects:(id *)arg1 andKeys:(id *)arg2;
+- (void)removeObjectForKey:(id)arg1;
+- (id)keyEnumerator;
+- (id)allValues;
+- (void)setObject:(id)arg1 forKey:(id)arg2;
+- (void)setObject:(id)arg1 forUncopiedKey:(id)arg2;
+- (id)initWithCFDictionary:(struct __CFDictionary *)arg1;
+
+@end

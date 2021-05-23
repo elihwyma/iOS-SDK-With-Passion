@@ -1,0 +1,43 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CloudServices.framework/CloudServices
+ */
+
+typedef void (^CDUnknownBlockType)(void);
+
+struct ccdh_gp;
+
+struct ccdigest_info;
+
+struct ccmode_cbc;
+
+struct ccmode_ecb;
+
+struct ccrng_state;
+
+struct ccses_crypto_t {
+    struct ccdigest_info *_field1;
+    struct ccdh_gp *_field2;
+    struct ccmode_ecb *_field3;
+    struct ccmode_ecb *_field4;
+    struct ccmode_cbc *_field5;
+    struct ccmode_cbc *_field6;
+    struct ccrng_state *_field7;
+    unsigned long long _field8;
+    unsigned long long _field9;
+    unsigned long long _field10;
+    unsigned long long _field11;
+};
+
+struct ccsrp_ctx {
+    struct ccdigest_info *_field1;
+    struct ccdh_gp *_field2;
+    struct ccrng_state *_field3;
+    struct {
+        unsigned int :1;
+        unsigned int :1;
+        unsigned int :1;
+        unsigned int :16;
+    } _field4;
+    unsigned char _field5[7];
+    unsigned long long _field6[1];
+};

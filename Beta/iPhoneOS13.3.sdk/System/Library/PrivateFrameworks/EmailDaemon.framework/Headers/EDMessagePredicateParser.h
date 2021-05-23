@@ -1,0 +1,22 @@
+/*
+ Image: /System/Library/PrivateFrameworks/EmailDaemon.framework/EmailDaemon
+ */
+
+#import <Foundation/NSObject.h>
+
+@class EDMessageQueryParser;
+
+@interface EDMessagePredicateParser : NSObject
+
+{
+    EDMessageQueryParser *_queryParser;
+}
+
+@property (nonatomic, readonly) EDMessageQueryParser *queryParser;
+
++ (id)parserForPredicate:(id)arg1 queryParser:(id)arg2;
+
+- (id)initWithQueryParser:(id)arg1;
+- (id)parseResultsFromPredicate:(id)arg1;
+
+@end

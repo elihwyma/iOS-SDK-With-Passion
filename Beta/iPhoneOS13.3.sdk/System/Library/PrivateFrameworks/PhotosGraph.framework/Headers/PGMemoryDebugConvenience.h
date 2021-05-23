@@ -1,0 +1,11 @@
+/*
+ Image: /System/Library/PrivateFrameworks/PhotosGraph.framework/PhotosGraph
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface PGMemoryDebugConvenience : NSObject
+
++ (id)memoryDebugInformationWithMomentNodes:(id)arg1 meaningLabels:(id)arg2;
+
+@end

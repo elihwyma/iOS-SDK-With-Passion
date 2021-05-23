@@ -1,0 +1,20 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ActionKit.framework/ActionKit
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface MMHTMLParser : NSObject
+
+- (id)parseBlockTagWithScanner:(id)arg1;
+- (id)parseCommentWithScanner:(id)arg1;
+- (id)parseInlineTagWithScanner:(id)arg1;
+- (id)_parseStrictBlockTagWithScanner:(id)arg1;
+- (_Bool)_parseEndTag:(id)arg1 withScanner:(id)arg2;
+- (id)_parseLenientBlockTagWithScanner:(id)arg1;
+- (struct _NSRange)_parseNameWithScanner:(id)arg1;
+- (_Bool)_parseStringWithScanner:(id)arg1;
+- (_Bool)_parseAttributeValueWithScanner:(id)arg1;
+- (void)_parseAttributesWithScanner:(id)arg1;
+
+@end

@@ -1,0 +1,197 @@
+/*
+ Image: /System/Library/PrivateFrameworks/SpringBoard.framework/SpringBoard
+ */
+
+#import <SpringBoard/SBSceneLayoutViewController.h>
+
+#import <SpringBoard/Swift-Protocol.h>
+
+@class FBScene, NSArray, NSLayoutConstraint, NSMutableSet, NSObject, NSString, SBFHomeGrabberSettings, SBHomeGrabberRotationView, SBHomeGrabberView, SBKeyboardHomeAffordanceAssertion, SBMainDisplayLayoutState, SBMainDisplaySceneLayoutGestureManager, SBMainDisplaySceneLayoutStatusBarView, SBOrientationTransformWrapperView, SBSceneHandleBlockObserver, SBSeparatorView, UIApplicationSceneClientSettingsDiffInspector, UIView;
+
+@protocol BSInvalidatable, OS_dispatch_queue;
+
+@interface SBMainDisplaySceneLayoutViewController : SBSceneLayoutViewController <Swift>
+
+{
+    SBMainDisplaySceneLayoutGestureManager *_gestureManager;
+    NSMutableSet *_pushPopTransformReasons;
+    NSMutableSet *_pushPopWallpaperReasons;
+    _Bool _showsPushInWallpaper;
+    SBOrientationTransformWrapperView *_contentWrapperView;
+    SBMainDisplaySceneLayoutStatusBarView *_statusBarView;
+    UIView *_contentView;
+    SBSeparatorView *_separatorView;
+    id _keyboardWillChangeFrameObserver;
+    double _separatorViewKeyboardMargin;
+    SBFHomeGrabberSettings *_homeGrabberSettings;
+    SBSceneHandleBlockObserver *_sceneHandleObserver;
+    UIApplicationSceneClientSettingsDiffInspector *_clientSettingsInspector;
+    _Bool _isKeyboardShowing;
+    FBScene *_medusaKeyboardScene;
+    SBKeyboardHomeAffordanceAssertion *_keyboardHomeAffordanceAssertion;
+    NSMutableSet *_activeBetaLaunchHandles;
+    NSObject<OS_dispatch_queue> *_betaLaunchUIActivationQueue;
+    NSLayoutConstraint *_homeGrabberTopConstraint;
+    NSLayoutConstraint *_homeGrabberBottomConstraint;
+    NSLayoutConstraint *_homeGrabberLeftConstraint;
+    NSLayoutConstraint *_homeGrabberRightConstraint;
+    _Bool __preventsCornerRadiusUpdate;
+    double _separatorViewAlpha;
+    unsigned long long _nubStyle;
+    id <BSInvalidatable> _pushPopWallpaperRequireAssertion;
+    SBHomeGrabberRotationView *_homeGrabberRotationView;
+    NSString *_keyboardFocusSceneID;
+}
+
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (retain, nonatomic) id <BSInvalidatable> pushPopWallpaperRequireAssertion;
+@property (nonatomic, readonly) SBHomeGrabberRotationView *homeGrabberRotationView;
+@property (nonatomic, readonly) SBMainDisplayLayoutState *_transitioningFromLayoutState;
+@property (nonatomic, readonly) SBMainDisplayLayoutState *_transitioningToLayoutState;
+@property (nonatomic, readonly) NSArray *appViewControllers;
+@property (copy, nonatomic, readonly) NSArray *_transitioningAppViewControllers;
+@property (nonatomic, readonly) UIView *_separatorView;
+@property (nonatomic, setter=_setPreventsCornerRadiusUpdate:) _Bool _preventsCornerRadiusUpdate;
+@property (nonatomic, setter=_setSeparatorViewAlpha:) double _separatorViewAlpha;
+@property (nonatomic, readonly) double _separatorViewWidth;
+@property (nonatomic, readonly) struct CGRect _separatorViewHitTestFrame;
+@property (nonatomic, setter=_setNubStyle:) unsigned long long _nubStyle;
+@property (nonatomic, readonly) SBHomeGrabberView *_activeHomeGrabberView;
+@property (copy, nonatomic, getter=_keyboardFocusSceneID, setter=_setKeyboardFocusSceneID:) NSString *keyboardFocusSceneID;
+@property (nonatomic, readonly) SBMainDisplayLayoutState *layoutState;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
+- (void)dealloc;
+- (void)viewDidLoad;
+- (_Bool)_shouldReverseLayoutDirection;
+- (struct CGRect)statusBarAvoidanceFrame;
+- (void)_keyboardWillShow:(id)arg1;
+- (void)_keyboardWillHide:(id)arg1;
+- (long long)_overrideInterfaceOrientationMechanics;
+- (id)_displayConfiguration;
+- (void)settings:(id)arg1 changedValueForKey:(id)arg2;
+- (long long)statusBarOrientation;
+- (void)sceneHandle:(id)arg1 didUpdateSettingsWithDiff:(id)arg2 previousSettings:(id)arg3;
+- (void)betaLaunchHandle:(id)arg1 activateIfNeededEndedWithResult:(_Bool)arg2;
+- (id)animationControllerForTransitionRequest:(id)arg1;
+- (id)animationWrapperViewForLayoutState:(id)arg1 roleMask:(unsigned long long)arg2 interfaceOrientation:(long long)arg3 maskDisplayCorners:(_Bool)arg4;
+- (id)initWithSceneManager:(id)arg1;
+- (void)layoutStateTransitionCoordinator:(id)arg1 transitionDidBeginWithTransitionContext:(id)arg2;
+- (void)layoutStateTransitionCoordinator:(id)arg1 transitionWillEndWithTransitionContext:(id)arg2;
+- (void)layoutStateTransitionCoordinator:(id)arg1 transitionDidEndWithTransitionContext:(id)arg2;
+- (void)statusBarBreadcrumbProviderDidUpdateDisplayProperties:(id)arg1;
+- (_Bool)_shouldDrawHomeGrabber;
+- (struct CGRect)_separatorViewReferenceFrameForSpaceConfiguration:(long long)arg1 interfaceOrientation:(long long)arg2 frameOptions:(unsigned long long)arg3;
+- (id)_createStatusBarWithFrame:(struct CGRect)arg1 interfaceOrientation:(long long)arg2 reason:(id)arg3;
+- (id)_animationWrapperViewForElement:(id)arg1 entity:(id)arg2 layoutState:(id)arg3;
+- (_Bool)_shouldNubViewBeVisibleForLayoutRole:(long long)arg1 inLayoutState:(id)arg2;
+- (_Bool)_isCurrentlyRotating;
+- (id)_jiggleAppAnimationControllerForTransitionRequest:(id)arg1;
+- (id)animationControllerForRotatingWithTransitionRequest:(id)arg1;
+- (id)_resizeAppsAnimationControllerWithTransitionRequest:(id)arg1;
+- (id)_removeAppAnimationControllerWithTransitionRequest:(id)arg1;
+- (id)_replaceSingleAppAnimationControllerWithTransitionRequest:(id)arg1;
+- (id)_createSplitAnimationControllerWithTransitionRequest:(id)arg1;
+- (id)_createSlideOverAndFadeElementOffscreenWithTransitionRequest:(id)arg1;
+- (id)_createFadeOutInlineOverlayWithTransitionRequest:(id)arg1;
+- (id)_rotateAppsAnimationControllerWithTransitionRequest:(id)arg1;
+- (void)_performJiggleHintAnimationForApplicationSceneHandle:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_resizeAppViewsWithAnimationSettings:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_rotateAppViewsWithAnimationSettings:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_removeAppForTransitionRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_replaceSingleSceneForTransitionRequest:(id)arg1 animationSettings:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)_addSingleSceneForTransitionRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_slideOverAndFadeElementOffscreenForTransitionRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_fadeOutInlineOverlayForTransitionRequest:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (struct CGRect)_convertRectFromReferenceCoordinateSpaceToContentViewCoordinateSpace:(struct CGRect)arg1;
+- (void)_beginRequiringPushedInWallpaperForReason:(id)arg1 animationFactory:(id)arg2;
+- (void)_orderFrontLayoutElementViewController:(id)arg1;
+- (struct CGRect)_referenceFrameForLayoutRole:(long long)arg1 spaceConfiguration:(long long)arg2 interfaceOrientation:(long long)arg3 frameOptions:(unsigned long long)arg4;
+- (void)_endRequiringPushedInWallpaperForReason:(id)arg1 animationFactory:(id)arg2;
+- (void)_orderFrontLayoutElementViewControllerForLayoutRole:(long long)arg1;
+- (id)_inlineAppExposeOverlayForLayoutRole:(long long)arg1;
+- (struct CGRect)referenceFrameForUniqueIdentifier:(id)arg1 inLayoutState:(id)arg2;
+- (void)_orderFrontOverlayViews;
+- (void)_updateAuxiliaryViewsWhichWantToAnimateDuringRotation;
+- (id)statusBarDescribers;
+- (id)statusBarDescriberAtPoint:(struct CGPoint)arg1 inView:(id)arg2 pointInSceneLayoutSpace:(struct CGPoint *)arg3;
+- (id)statusBarDescriberForStatusBarPart:(id)arg1;
+- (_Bool)allowsConfiguringIndividualStatusBarParts;
+- (struct CGRect)frameForSceneIdentifier:(id)arg1 inView:(id)arg2;
+- (id)statusBarPartsForSceneWithIdentifier:(id)arg1;
+- (id)currentlyValidStatusBarPartIdentifiers;
+- (struct CGRect)referenceFrameForEntity:(id)arg1 inLayoutState:(id)arg2;
+- (void)_addLayoutElementViewController:(id)arg1 forLayoutElement:(id)arg2 entity:(id)arg3;
+- (_Bool)_isLayoutElementViewControllerOccluded:(id)arg1;
+- (void)_updateAuxiliaryViews;
+- (_Bool)_shouldConsiderHomeScreenAsActive;
+- (void)_doCommonCleanupUponEndingLayoutTransitionWithInterruption:(_Bool)arg1;
+- (_Bool)_shouldRepositionViewAfterTransition;
+- (void)_beginLayoutStateTransitionWithTransitionContext:(id)arg1;
+- (_Bool)_shouldAdjustViewAffordancesAfterTransition;
+- (_Bool)_shouldRotateToLayoutOrientation:(long long)arg1;
+- (void)setUserResizing:(_Bool)arg1;
+- (_Bool)_isStatusBarHidden;
+- (id)_leadingStatusBarStyleRequest;
+- (id)_trailingStatusBarStyleRequest;
+- (struct CGRect)_statusBarAvoidanceFrameForLayoutState:(id)arg1 layoutRole:(long long)arg2;
+- (struct UIEdgeInsets)_statusBarEdgeInsetsForLayoutState:(id)arg1;
+- (void)_pushInForReason:(id)arg1 animationFactory:(id)arg2;
+- (void)_popOutForReason:(id)arg1 animationFactory:(id)arg2;
+- (double)normalizedDismissLeftLocation;
+- (double)normalizedNarrowWideLocation;
+- (double)normalizedHalfHalfLocation;
+- (double)normalizedWideNarrowLocation;
+- (double)normalizedDismissRightLocation;
+- (double)_layoutWidthForLayoutRole:(long long)arg1 inSpaceConfiguration:(long long)arg2 interfaceOrientation:(long long)arg3;
+- (struct CGSize)_layoutSizeForLayoutRole:(long long)arg1 spaceConfiguration:(long long)arg2 layoutState:(id)arg3;
+- (struct CGRect)_layoutFrameForSize:(struct CGSize)arg1 withRole:(long long)arg2 inInterfaceOrientation:(long long)arg3 frameOptions:(unsigned long long)arg4;
+- (unsigned int)_layoutSpaceAnchorEdgeForLayoutRole:(long long)arg1;
+- (struct CGRect)_referenceFrameForLayoutElement:(id)arg1 inLayoutState:(id)arg2;
+- (void)_noteKeyboardIsForMedusaWithOwningScene:(id)arg1;
+- (void)_noteKeyboardIsNotForMedusa;
+- (struct CGRect)_separatorViewFrame;
+- (void)_createOrDestroyHomeGrabberRotationViewIfNecessary;
+- (unsigned int)_anchorEdgeForLayoutRole:(long long)arg1;
+- (unsigned int)_convertAnchorEdge:(unsigned int)arg1 toLayoutOrientation:(long long)arg2;
+- (struct CGRect)_layoutFrameForLayoutRole:(long long)arg1 inLayoutState:(id)arg2;
+- (id)_sceneHandleForLayoutRole:(long long)arg1;
+- (id)_medusaKeyboardSceneHandle;
+- (void)_updateKeyboardHomeAffordanceAssertion;
+- (void)_updateSuppressingHomeAffordanceBounce;
+- (_Bool)_keyboardIsSuppressedForMedusaKeyboardScene;
+- (_Bool)_shouldTakeKeyboardHomeAffordanceAssertion;
+- (void)_updateViewControllerNubViewHighlightState:(id)arg1 forKeyboardFocusSceneID:(id)arg2;
+- (unsigned int)_anchorEdgeForLayoutRole:(long long)arg1 inInterfaceOrientation:(long long)arg2;
+- (struct CGSize)_layoutSizeForLayoutRole:(long long)arg1 spaceConfiguration:(long long)arg2 interfaceOrientation:(long long)arg3 frameOptions:(unsigned long long)arg4;
+- (struct CGRect)_convertRectFromContentViewCoordinateSpaceToReferenceCoordinateSpace:(struct CGRect)arg1;
+- (void)_setMaskDisplayCorners:(_Bool)arg1 forReason:(id)arg2;
+- (struct CGAffineTransform)_pushedInTransform;
+- (void)_updateWallpaperStyleAndBackgroundColorWithAnimationFactory:(id)arg1;
+- (struct CGPoint)_convertPointFromReferenceCoordinateSpaceToContentViewCoordinateSpace:(struct CGPoint)arg1;
+- (struct CGPoint)_convertPointFromContentViewCoordinateSpaceToReferenceCoordinateSpace:(struct CGPoint)arg1;
+- (void)_setUpObservationWithCurrentEntities:(id)arg1 previousEntities:(id)arg2;
+- (void)_configureHomeGrabberForLayoutStateTransition;
+- (_Bool)_isTransitioningNoninteractivelyFromAppToApp;
+- (id)_applicationSceneLayoutElementControllerForLayoutRole:(long long)arg1;
+- (id)_sceneHandleForBottomEdgeLocation:(double)arg1;
+- (void)_configureHomeGrabberForSettingsChangeWithDiff:(id)arg1 transitionContext:(id)arg2;
+- (void)_updateHomeGrabberEdgeProtectAndAutoHideWithResetDelay:(double)arg1 unhideDelay:(double)arg2;
+- (void)_updateHomeGrabberEdgeProtectAndAutoHideForAppRequest;
+- (id)_sceneHandlesIntersectingHomeGrabber;
+- (struct CGRect)_statusBarAvoidanceFrameForLayoutState:(id)arg1;
+- (struct CGAffineTransform)_convertTransformFromReferenceCoordinateSpaceToContentViewCoordinateSpace:(struct CGAffineTransform)arg1;
+- (struct CGAffineTransform)_convertTransformFromContentViewCoordinateSpaceToReferenceCoordinateSpace:(struct CGAffineTransform)arg1;
+- (struct CGPoint)_updatePointInReferenceCoordinateSpace:(struct CGPoint)arg1 withBlock:(CDUnknownBlockType)arg2;
+- (struct CGRect)_updateRectInReferenceCoordinateSpace:(struct CGRect)arg1 withBlock:(CDUnknownBlockType)arg2;
+- (_Bool)_isEdgeProtectedForHomeGestureAtEdgeLocation:(double)arg1;
+- (long long)_layoutRoleForSceneWithIdentifier:(id)arg1;
+- (id)_layoutElementForSceneWithIdentifier:(id)arg1;
+
+@end

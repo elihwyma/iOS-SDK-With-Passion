@@ -1,0 +1,14 @@
+/*
+ Image: /System/Library/PrivateFrameworks/OfficeImport.framework/OfficeImport
+ */
+
+#import <Foundation/NSObject.h>
+
+__attribute__((visibility("hidden")))
+@interface WBAnnotation : NSObject
+
++ (unsigned long long)findStartFrom:(id)arg1 annotation:(const struct WrdAnnotation *)arg2;
++ (void)readFrom:(id)arg1 at:(int)arg2 paragraph:(id)arg3;
++ (id)readRangedFrom:(id)arg1 index:(unsigned int)arg2 type:(int)arg3 paragraph:(id)arg4;
+
+@end

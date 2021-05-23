@@ -1,0 +1,106 @@
+/*
+ Image: /System/Library/Frameworks/Foundation.framework/Foundation
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface NSObject (NSArchiverCallBack)
+
+@property void *observationInfo;
+@property (readonly) Class classForKeyedArchiver;
+@property (retain, readonly) id autoContentAccessingProxy;
+
++ (_Bool)automaticallyNotifiesObserversForKey:(id)arg1;
++ (id)replacementObjectForPortCoder:(id)arg1;
++ (id)keyPathsForValuesAffectingValueForKey:(id)arg1;
++ (id)_createMutableArrayValueGetterWithContainerClassID:(id)arg1 key:(id)arg2;
++ (id)_createValueGetterWithContainerClassID:(id)arg1 key:(id)arg2;
++ (id)_createValueSetterWithContainerClassID:(id)arg1 key:(id)arg2;
++ (id)_createMutableOrderedSetValueGetterWithContainerClassID:(id)arg1 key:(id)arg2;
++ (id)_createMutableSetValueGetterWithContainerClassID:(id)arg1 key:(id)arg2;
++ (_Bool)accessInstanceVariablesDirectly;
++ (id)_createValuePrimitiveGetterWithContainerClassID:(id)arg1 key:(id)arg2;
++ (id)_createValuePrimitiveSetterWithContainerClassID:(id)arg1 key:(id)arg2;
++ (id)_createOtherValueGetterWithContainerClassID:(id)arg1 key:(id)arg2;
++ (id)_createOtherValueSetterWithContainerClassID:(id)arg1 key:(id)arg2;
++ (id)_keysForValuesAffectingValueForKey:(id)arg1;
++ (void)setKeys:(id)arg1 triggerChangeNotificationsForDependentKey:(id)arg2;
++ (_Bool)_shouldAddObservationForwardersForKey:(id)arg1;
++ (id)classFallbacksForKeyedArchiver;
++ (Class)classForKeyedUnarchiver;
++ (void)cancelPreviousPerformRequestsWithTarget:(id)arg1 selector:(SEL)arg2 object:(id)arg3;
++ (void)cancelPreviousPerformRequestsWithTarget:(id)arg1;
+
+- (void)setValue:(id)arg1 forKey:(id)arg2;
+- (void)_notifyObserversOfChangeFromValuesForKeys:(id)arg1 toValuesForKeys:(id)arg2;
+- (id)replacementObjectForPortCoder:(id)arg1;
+- (void)_willChangeValuesForKeys:(id)arg1;
+- (void)_didChangeValuesForKeys:(id)arg1;
+- (void)willChangeValueForKey:(id)arg1;
+- (void)didChangeValueForKey:(id)arg1;
+- (id)_pendingChangeNotificationsArrayForKey:(id)arg1 create:(_Bool)arg2;
+- (void)removeObserver:(id)arg1 forKeyPath:(id)arg2;
+- (id)valueForKey:(id)arg1;
+- (id)replacementObjectForArchiver:(id)arg1;
+- (Class)classForArchiver;
+- (id)replacementObjectForKeyedArchiver:(id)arg1;
+- (id)valueForKeyPath:(id)arg1;
+- (id)valueForUndefinedKey:(id)arg1;
+- (void)setValue:(id)arg1 forUndefinedKey:(id)arg2;
+- (void)setNilValueForKey:(id)arg1;
+- (void)setValue:(id)arg1 forKeyPath:(id)arg2;
+- (_Bool)validateValue:(inout id *)arg1 forKeyPath:(id)arg2 error:(out id *)arg3;
+- (_Bool)validateValue:(inout id *)arg1 forKey:(id)arg2 error:(out id *)arg3;
+- (id)mutableArrayValueForKeyPath:(id)arg1;
+- (id)mutableArrayValueForKey:(id)arg1;
+- (id)mutableOrderedSetValueForKeyPath:(id)arg1;
+- (id)mutableOrderedSetValueForKey:(id)arg1;
+- (id)mutableSetValueForKeyPath:(id)arg1;
+- (id)mutableSetValueForKey:(id)arg1;
+- (id)dictionaryWithValuesForKeys:(id)arg1;
+- (void)setValuesForKeysWithDictionary:(id)arg1;
+- (void)willChange:(unsigned long long)arg1 valuesAtIndexes:(id)arg2 forKey:(id)arg3;
+- (void)didChange:(unsigned long long)arg1 valuesAtIndexes:(id)arg2 forKey:(id)arg3;
+- (_Bool)_isToManyChangeInformation;
+- (id)addObserverBlock:(CDUnknownBlockType)arg1;
+- (id)addObserver:(id)arg1;
+- (void)receiveObservedValue:(id)arg1;
+- (_Bool)_overrideUseFastBlockObservers;
+- (void)willChangeValueForKey:(id)arg1 withSetMutation:(unsigned long long)arg2 usingObjects:(id)arg3;
+- (void)didChangeValueForKey:(id)arg1 withSetMutation:(unsigned long long)arg2 usingObjects:(id)arg3;
+- (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
+- (_Bool)_isKVOA;
+- (void)_changeValueForKey:(id)arg1 key:(id)arg2 key:(id)arg3 usingBlock:(CDUnknownBlockType)arg4;
+- (void)_willBeginKeyValueObserving;
+- (void)_didEndKeyValueObserving;
+- (void)_addObserver:(id)arg1 forProperty:(id)arg2 options:(unsigned long long)arg3 context:(void *)arg4;
+- (void)_removeObserver:(id)arg1 forProperty:(id)arg2;
+- (void)addObserver:(id)arg1 forKeyPath:(id)arg2 options:(unsigned long long)arg3 context:(void *)arg4;
+- (void)removeObserver:(id)arg1 forKeyPath:(id)arg2 context:(void *)arg3;
+- (void)_changeValueForKeys:(id *)arg1 count:(unsigned long long)arg2 maybeOldValuesDict:(id)arg3 maybeNewValuesDict:(id)arg4 usingBlock:(CDUnknownBlockType)arg5;
+- (id)_implicitObservationInfo;
+- (void)_notifyObserversForKeyPath:(id)arg1 change:(id)arg2;
+- (void)_changeValueForKey:(id)arg1 usingBlock:(CDUnknownBlockType)arg2;
+- (void)_receiveBox:(id)arg1;
+- (Class)classForPortCoder;
+- (void)performSelector:(SEL)arg1 withObject:(id)arg2 afterDelay:(double)arg3 inModes:(id)arg4;
+- (void)performSelector:(SEL)arg1 withObject:(id)arg2 afterDelay:(double)arg3;
+- (void)performSelector:(SEL)arg1 object:(id)arg2 afterDelay:(double)arg3;
+- (void)performSelector:(SEL)arg1 onThread:(id)arg2 withObject:(id)arg3 waitUntilDone:(_Bool)arg4 modes:(id)arg5;
+- (void)performSelectorOnMainThread:(SEL)arg1 withObject:(id)arg2 waitUntilDone:(_Bool)arg3 modes:(id)arg4;
+- (void)performSelectorOnMainThread:(SEL)arg1 withObject:(id)arg2 waitUntilDone:(_Bool)arg3;
+- (void)performSelector:(SEL)arg1 onThread:(id)arg2 withObject:(id)arg3 waitUntilDone:(_Bool)arg4;
+- (void)performSelectorInBackground:(SEL)arg1 withObject:(id)arg2;
+- (void)removeObservation:(id)arg1;
+- (void)receiveObservedError:(id)arg1;
+- (void)finishObserving;
+- (id)addObserver:(id)arg1 forObservableKeyPath:(id)arg2;
+- (void)setObservation:(id)arg1 forObservingKeyPath:(id)arg2;
+- (void)removeObservation:(id)arg1 forObservableKeyPath:(id)arg2;
+- (void)_destroyObserverList;
+- (void *)_observerStorageOfSize:(unsigned long long)arg1;
+- (id *)_observerStorage;
+- (id)addChainedObservers:(id)arg1;
+- (id)addObservationTransformer:(CDUnknownBlockType)arg1;
+
+@end

@@ -1,0 +1,112 @@
+/*
+ Image: /System/Library/PrivateFrameworks/InstallCoordination.framework/InstallCoordination
+ */
+
+#import <InstallCoordination/Swift-Protocol.h>
+
+@protocol IXClientProtocol <Swift>
+
+- (unsigned short)_remote_displayUserPresentableErrorForApp:code: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_displayUserPresentableErrorForApps:code: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_displayUserPresentableErrorForAppWithLocalizedName:code: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_createAppInstallCoordinatorWithSeed:createIfNotExisting:requireMatchingIntent:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_fetchSeedsForCoordinatorsWithIntent:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_cancelCoordinatorForAppWithBundleID:reason:client:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_cancelCoordinatorsForAppsWithBundleIDs:reason:client:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_setIsPaused:forCoordinatorForAppWithBundleID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_prioritizeCoordinatorForAppWithBundleID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_uninstallAppWithBundleID:requestUserConfirmation:waitForDeletion:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_removabilityForAppWithBundleID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_setRemovability:forAppWithBundleID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:cancelForReason:client:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:setPlaceholderPromiseUUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getPlaceholderPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:hasPlaceholderPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:setAppAssetPromiseUUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getAppAssetPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:hasAppAssetPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:appAssetPromiseHasBegunFulfillment: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:setAppAssetPromiseDRI:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getAppAssetPromiseDRI: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:setInstallOptionsPromiseUUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:hasInstallOptions: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:setImportance:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:importanceWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:setInitialODRAssetPromiseUUIDs:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getInitialODRAssetPromises: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:hasInitialODRAssetPromises: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:setUserDataPromiseUUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getUserDataPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:hasUserDataPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getUserDataRestoreShouldBegin: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getPreparationPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:setPreparationPromiseUUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:setDeviceSecurityPromiseUUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getDeviceSecurityPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getErrorInfo: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getIsComplete: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:fireObserversWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:setIsPaused:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getIsPausedWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:prioritizeWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:getCoordinationState: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_purgeRegisteredCoordinatorsAndPromisesForCreator:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_pingDaemonWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_killDaemonForTestingWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_postNSCurrentLocaleDidChangeNotification: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_setTestingEnabled:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_setTestModeForIdentifierPrefix:testMode:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:setTargetGizmoPairingID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSCoordinatedAppInstall:targetGizmoPairingIDWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_createTransferToPathDataPromiseWithSeed:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPromisedTransferToPath:setTransferPath: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPromisedTransferToPath:setShouldCopy: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPromisedTransferToPath:setTryDeltaCopy: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_registerObserverMachServiceName:forClientIdentifiers:respondingToSelectors: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_registerTransientObserver:forClientIdentifiers:respondingToSelectors: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_createPlaceholderDataPromiseWithSeed:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:setIconPromiseUUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:getIconPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:hasIconPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:setLocalizationPromiseUUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:getLocalizationDictionary: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:setEntitlementsPromiseUUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:getEntitlementsPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:hasEntitlementsPromise: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:setPlugInPlaceholderPromiseUUIDs:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:getPlugInPlaceholderPromises: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:hasPlugInPlaceholderPromises: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:setConfigurationCompleteWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:setMetadataPromiseUUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:getMetadataWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:setSinfPromiseUUID:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:getSinfDataWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:setLaunchProhibited:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:getLaunchProhibitedWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:setAttributes:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPlaceholder:getAttributesWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_createInMemoryDataPromiseWithSeed:data:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSOwnedDataPromise:getStagedPath: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSOwnedDataPromise:setStagedPath: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_createStreamingZipTransferDataPromiseWithSeed:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPromisedStreamingZipTransfer:consumeExtractedBytesAtPath:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPromisedStreamingZipTransfer:setArchiveBytesConsumed: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_createOutOfBandTransferPromiseWithSeed:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_createOutOfBandStreamingZipTransferDataPromiseWithSeed:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSPromisedOutOfBandStreamingZipTransfer:setArchiveBytesConsumed: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSDataPromise:getErrorInfo: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSDataPromise:getIsComplete: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSDataPromise:setIsComplete:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSDataPromise:getPercentComplete: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSDataPromise:setPercentComplete: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSDataPromise:cancelForReason:client:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSDataPromise:resetWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_IXSDataPromise:preflightWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_fetchRegisteredDataPromiseInfoForCreator:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_addObserversForDataPromisesWithUUIDs: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_addObserversForCoordinatorsWithUUIDs:fireObserverMethods: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_removeObserverForCoordinatorWithUUID: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_removeObserverForDataPromiseWithUUID: /* Error: Ran out of types for this method. */;
+- (unsigned short)_remote_createInMemoryDictionaryPromiseWithSeed:dictionary:completion: /* Error: Ran out of types for this method. */;
+
+@end

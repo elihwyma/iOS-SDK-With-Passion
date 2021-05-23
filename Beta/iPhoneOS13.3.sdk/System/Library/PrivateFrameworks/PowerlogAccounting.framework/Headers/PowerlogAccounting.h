@@ -1,0 +1,55 @@
+/*
+ Image: /System/Library/PrivateFrameworks/PowerlogAccounting.framework/PowerlogAccounting
+ */
+
+#import <PowerlogAccounting/PowerlogAccounting-Structures.h>
+
+#import <PowerlogAccounting/NSObject-Protocol.h>
+#import <PowerlogAccounting/PLAccountingCorrectionDependency.h>
+#import <PowerlogAccounting/PLAccountingCorrectionManager.h>
+#import <PowerlogAccounting/PLAccountingCorrectionManagerDelegate-Protocol.h>
+#import <PowerlogAccounting/PLAccountingCorrectionOwner.h>
+#import <PowerlogAccounting/PLAccountingCorrectionOwnerManager-Protocol.h>
+#import <PowerlogAccounting/PLAccountingDependency.h>
+#import <PowerlogAccounting/PLAccountingDependencyManager-Protocol.h>
+#import <PowerlogAccounting/PLAccountingDependencyOwner-Protocol.h>
+#import <PowerlogAccounting/PLAccountingDistributionDependency.h>
+#import <PowerlogAccounting/PLAccountingDistributionEventBackwardEntry.h>
+#import <PowerlogAccounting/PLAccountingDistributionEventEntry.h>
+#import <PowerlogAccounting/PLAccountingDistributionEventForwardEntry.h>
+#import <PowerlogAccounting/PLAccountingDistributionEventIntervalEntry.h>
+#import <PowerlogAccounting/PLAccountingDistributionEventPointEntry.h>
+#import <PowerlogAccounting/PLAccountingDistributionManager.h>
+#import <PowerlogAccounting/PLAccountingDistributionManagerDelegate-Protocol.h>
+#import <PowerlogAccounting/PLAccountingDistributionOwner.h>
+#import <PowerlogAccounting/PLAccountingDistributionOwnerManager-Protocol.h>
+#import <PowerlogAccounting/PLAccountingDistributionRuleEntry.h>
+#import <PowerlogAccounting/PLAccountingDistributionRuleManager.h>
+#import <PowerlogAccounting/PLAccountingEnergyEstimateEventEntry.h>
+#import <PowerlogAccounting/PLAccountingEnergyEventEntry.h>
+#import <PowerlogAccounting/PLAccountingEngine.h>
+#import <PowerlogAccounting/PLAccountingEventEntry.h>
+#import <PowerlogAccounting/PLAccountingNodeEntry.h>
+#import <PowerlogAccounting/PLAccountingNodeManager.h>
+#import <PowerlogAccounting/PLAccountingOwner.h>
+#import <PowerlogAccounting/PLAccountingOwnerDependencyManager.h>
+#import <PowerlogAccounting/PLAccountingOwnerManager-Protocol.h>
+#import <PowerlogAccounting/PLAccountingPowerEventBackwardEntry.h>
+#import <PowerlogAccounting/PLAccountingPowerEventEntry.h>
+#import <PowerlogAccounting/PLAccountingPowerEventForwardEntry.h>
+#import <PowerlogAccounting/PLAccountingPowerEventIntervalEntry.h>
+#import <PowerlogAccounting/PLAccountingQualificationDependency.h>
+#import <PowerlogAccounting/PLAccountingQualificationEventBackwardEntry.h>
+#import <PowerlogAccounting/PLAccountingQualificationEventEntry.h>
+#import <PowerlogAccounting/PLAccountingQualificationEventForwardEntry.h>
+#import <PowerlogAccounting/PLAccountingQualificationEventIntervalEntry.h>
+#import <PowerlogAccounting/PLAccountingQualificationEventPointEntry.h>
+#import <PowerlogAccounting/PLAccountingQualificationManager.h>
+#import <PowerlogAccounting/PLAccountingQualificationManagerDelegate-Protocol.h>
+#import <PowerlogAccounting/PLAccountingQualificationOwner.h>
+#import <PowerlogAccounting/PLAccountingQualificationRuleEntry.h>
+#import <PowerlogAccounting/PLAccountingQualificationRuleManager.h>
+#import <PowerlogAccounting/PLAccountingRange.h>
+#import <PowerlogAccounting/PLAccountingRuleEntry.h>
+#import <PowerlogAccounting/PLAccountingRuleManager.h>
+#import <PowerlogAccounting/Swift-Protocol.h>

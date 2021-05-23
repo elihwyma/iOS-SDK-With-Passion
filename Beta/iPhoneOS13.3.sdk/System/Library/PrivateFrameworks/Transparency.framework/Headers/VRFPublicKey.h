@@ -1,0 +1,15 @@
+/*
+ Image: /System/Library/PrivateFrameworks/Transparency.framework/Transparency
+ */
+
+@class NSData;
+
+@interface VRFPublicKey
+
+@property _Bool needsRefresh;
+@property (copy, nonatomic) NSData *vrfKey;
+@property (nonatomic) int type;
+
++ (id)descriptor;
+
+@end

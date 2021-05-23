@@ -1,0 +1,11 @@
+/*
+ Image: /System/Library/PrivateFrameworks/PhotoFoundation.framework/PhotoFoundation
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface PFNotification : NSObject
+
++ (void)postUserNotificationWithIdentifier:(id)arg1 title:(id)arg2 subtitle:(id)arg3 body:(id)arg4 category:(id)arg5 attachments:(id)arg6 userInfo:(id)arg7 caller:(const char *)arg8;
+
+@end

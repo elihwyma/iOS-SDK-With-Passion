@@ -1,0 +1,177 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CommunicationsSetupUI.framework/CommunicationsSetupUI
+ */
+
+#import <CommunicationsSetupUI/CNFRegListController.h>
+
+@class CKBlackholeConversationListViewController, CKFilteringListController, CKMultipleCTSubscriptionsController, CKNSExtension, CKOnboardingController, IMCTXPCServiceSubscriptionInfo, NSString;
+
+@interface CKSettingsMessagesController : CNFRegListController
+
+{
+    _Bool _showingChildViewController;
+    int _profileToken;
+    CKFilteringListController *_filteringController;
+    id _beginMappingID;
+    CKMultipleCTSubscriptionsController *_mmsMessagingController;
+    CKMultipleCTSubscriptionsController *_mmsAllowsGroupMessagingController;
+    IMCTXPCServiceSubscriptionInfo *_ctSubscriptionInfo;
+    CKOnboardingController *_onboardingController;
+    CKBlackholeConversationListViewController *_blackholeConversationListViewController;
+    CKNSExtension *_ckExtension;
+}
+
+@property (retain, nonatomic) CKMultipleCTSubscriptionsController *mmsMessagingController;
+@property (retain, nonatomic) CKMultipleCTSubscriptionsController *mmsAllowsGroupMessagingController;
+@property (retain, nonatomic) IMCTXPCServiceSubscriptionInfo *ctSubscriptionInfo;
+@property (retain, nonatomic) CKOnboardingController *onboardingController;
+@property (retain, nonatomic) CKBlackholeConversationListViewController *blackholeConversationListViewController;
+@property (retain, nonatomic) CKNSExtension *ckExtension;
+@property (retain, nonatomic) CKFilteringListController *filteringController;
+@property (retain) id beginMappingID;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
++ (id)removeFirstPartyExtensionFromArray:(id)arg1;
++ (_Bool)currentMessageAutoKeepForType:(int)arg1;
++ (id)currentKeepMessages;
++ (int)currentMessageAutoKeepOptionForType:(int)arg1;
+
+- (id)init;
+- (void)dealloc;
+- (id)bundle;
+- (void)viewWillAppear:(_Bool)arg1;
+- (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewDidAppear:(_Bool)arg1;
+- (void)viewDidDisappear:(_Bool)arg1;
+- (void)applicationDidResume;
+- (void)applicationWillSuspend;
+- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
+- (id)isDeliveryReportsEnabled:(id)arg1;
+- (void)systemApplicationDidEnterBackground;
+- (void)systemApplicationWillEnterForeground;
+- (id)specifiers;
+- (id)controllerForSpecifier:(id)arg1;
+- (_Bool)shouldReloadSpecifiersOnResume;
+- (void)sharingSettingsViewController:(id)arg1 didUpdateSharingState:(_Bool)arg2;
+- (void)sharingSettingsViewControllerDidUpdateContact:(id)arg1;
+- (void)sharingSettingsViewController:(id)arg1 didSelectSharingAudience:(unsigned long long)arg2;
+- (void)sharingSettingsViewController:(id)arg1 didUpdateWithSharingResult:(id)arg2;
+- (_Bool)authenticationController:(id)arg1 shouldContinueWithAuthenticationResults:(id)arg2 error:(id)arg3 forContext:(id)arg4;
+- (_Bool)shouldShowCharacterCount;
+- (id)presentingViewControllerForOnboardingController:(id)arg1;
+- (void)onboardingControllerDidFinish:(id)arg1;
+- (void)showMeCardViewControllerWithNickname:(id)arg1;
+- (_Bool)_meCardSharingEnabled;
+- (unsigned long long)_meCardSharingAudience;
+- (_Bool)_imageForkedFromMeCard;
+- (id)_syncManager;
+- (id)logName;
+- (void)endMatchingExtensions;
+- (_Bool)wantsWiFiChooser;
+- (_Bool)shouldShowBlacklistSettings;
+- (void)_showAuthKitSignInIfNecessary;
+- (void)_setupAccountHandlers;
+- (void)_updateSwitch;
+- (void)_setupAccountHandlersForDisabling;
+- (void)_showSignInController;
+- (_Bool)_allAccountsAreDeactivated;
+- (void)_updateSwitchDelayed;
+- (void)firstRunControllerDidFinish:(id)arg1 finished:(_Bool)arg2;
+- (void)findSpamExtensions;
+- (void)setConversationListFilteringEnabled:(id)arg1 specifier:(id)arg2;
+- (id)isConversationListFilteringEnabled:(id)arg1;
+- (_Bool)shouldShowSMSRelaySettings;
+- (void)newCarrierNotification;
+- (void)_startListeningForProfileChanges;
+- (void)_stopListeningForProfileChanges;
+- (_Bool)shouldShowMadridSwitch;
+- (id)madridSwitchSpecifierIdentifiers;
+- (id)_switchFooterText:(_Bool *)arg1;
+- (void)_showPrivacySheetForiMessageFaceTime:(id)arg1;
+- (_Bool)shouldShowDeliveryReceipts;
+- (id)deliveryReceiptSpecifierIdentifiers;
+- (_Bool)shouldShowReadReceipts;
+- (id)readReceiptSpecifierIdentifiers;
+- (_Bool)shouldShowContactPhotoSettings;
+- (id)contactPhotoSettingsSpecifierIdentifiers;
+- (_Bool)shouldShowMadridAccounts;
+- (id)madridAccountsSpecifierIdentifiers;
+- (id)characterCountSpecifierIdentifiers;
+- (id)blacklistSettingsSpecifierIdentifiers;
+- (_Bool)shouldShowSendAsSMS;
+- (id)sendAsSMSIdentifiers;
+- (_Bool)shouldShowAudioMessageSettings;
+- (id)audioMessageSettingsSpecifierIdentifiers;
+- (_Bool)shouldShowRaiseToListenSwitch;
+- (id)raiseToListenSpecifierIdentifiers;
+- (_Bool)shouldShowiMessageFilteringSettings:(id)arg1;
+- (id)iMessageFilteringSpecifierIdentifiers;
+- (id)spamFilteringSpecifierIdentifiers;
+- (_Bool)shouldShowJunkConversationsRow;
+- (id)junkConversationsRowIdentifier;
+- (_Bool)shouldShowJunkFilteringReceipts;
+- (id)junkFilterReceiptsRowIdentifier;
+- (_Bool)shouldShowSiriSettings;
+- (id)siriSettingsIdentifiers;
+- (id)smsRelaySettingsSpecifierIdentifiers;
+- (_Bool)shouldShowGenericSettings;
+- (id)genericSettingsSpecifierIdentifiers;
+- (_Bool)shouldShowMadridSignin;
+- (id)madridSigninSpecifiers;
+- (_Bool)shouldShowNicknames;
+- (id)nameAndPhotoSharingSpecifiers;
+- (id)getNameAndPhotoSharingFooterText;
+- (void)_setUpBusinessChatGroupSpecifiers:(id)arg1;
+- (void)_setupMultipleSubscriptionsMMSGroupSpecifiers:(id)arg1 wantsMMSBasicGroup:(_Bool)arg2;
+- (void)_setupMMSGroupSpecifiers:(id)arg1 wantsMMSBasicGroup:(_Bool)arg2;
+- (_Bool)_isSMSDevice;
+- (_Bool)_isMadridAccountOperational;
+- (_Bool)_isRaiseGestureSupported;
+- (_Bool)_isMadridSwitchOn;
+- (void)_clearMessagesAppExtensionSalt;
+- (void)_showMadridSetupIfNecessary:(_Bool)arg1;
+- (void)notifyThatConversationFilteringChanged;
+- (void)showAccountsMismatchedAlertForNicknames;
+- (void)showMultiplePhoneNumbersAlerForNicknames;
+- (void)showNicknameOnboardingController;
+- (void)_showPrivacySheetForBusinessChat:(id)arg1;
+- (void)_showMadridSetupIfNecessary;
+- (void)_updateUIWithError:(id)arg1;
+- (id)_madridSettingsController;
+- (id)_smsRelayDevicesController;
+- (void)setSpecifierLoading:(id)arg1 loading:(_Bool)arg2 animated:(_Bool)arg3;
+- (void)setDeliveryReportsEnabled:(id)arg1 specifier:(id)arg2;
+- (id)isMMSEnabled:(id)arg1;
+- (void)setMMSEnabled:(id)arg1 specifier:(id)arg2;
+- (id)willSendGroupMMS:(id)arg1;
+- (void)setWillSendGroupMMS:(id)arg1 specifier:(id)arg2;
+- (id)getRaiseToListenEnabled:(id)arg1;
+- (void)setRaiseToListenEnabled:(id)arg1 specifier:(id)arg2;
+- (id)getAudioMessageAutoKeep:(id)arg1;
+- (void)setAudioMessageAutoKeep:(id)arg1 specifier:(id)arg2;
+- (id)isMadridEnabled:(id)arg1;
+- (void)setMadridEnabled:(id)arg1 specifier:(id)arg2;
+- (void)messageFilteringTapped:(id)arg1;
+- (_Bool)isPersonalCompanionEnabled;
+- (id)isSiriToneNotificationEnabled:(id)arg1;
+- (void)setSiriToneNotificationEnabled:(id)arg1 specifier:(id)arg2;
+- (void)nameAndPhotoSharingForSpecifier:(id)arg1;
+- (id)getNameAndPhotoSharingSpecifierSummary:(id)arg1;
+- (void)_showSetupMeCardAlert;
+- (id)areReadReceiptsEnabled:(id)arg1;
+- (void)setReadReceiptsEnabled:(id)arg1 specifier:(id)arg2;
+- (id)areJunkFilteringReceiptsEnabled:(id)arg1;
+- (void)setJunkFilteringReceiptsEnabled:(id)arg1 specifier:(id)arg2;
+- (id)getAccountSummaryForSpecifier:(id)arg1;
+- (void)madridSigninTappedWithSpecifier:(id)arg1;
+- (id)madridSigninButtonTextForSpecifier:(id)arg1;
+- (id)getPreviewTranscodingEnabled:(id)arg1;
+- (void)setPreviewTranscodingEnabled:(id)arg1 specifier:(id)arg2;
+- (id)getSMSRelayDevicesSummary:(id)arg1;
+- (id)getKeepMessages:(id)arg1;
+- (void)setKeepMessages:(id)arg1 specifier:(id)arg2;
+
+@end

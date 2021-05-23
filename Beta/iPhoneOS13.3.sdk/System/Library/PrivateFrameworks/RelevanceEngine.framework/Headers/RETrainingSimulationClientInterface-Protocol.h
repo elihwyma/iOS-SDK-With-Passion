@@ -1,0 +1,11 @@
+/*
+ Image: /System/Library/PrivateFrameworks/RelevanceEngine.framework/RelevanceEngine
+ */
+
+#import <RelevanceEngine/Swift-Protocol.h>
+
+@protocol RETrainingSimulationClientInterface <Swift>
+
+- (unsigned short)availableRelevanceEnginesDidChange;
+
+@end

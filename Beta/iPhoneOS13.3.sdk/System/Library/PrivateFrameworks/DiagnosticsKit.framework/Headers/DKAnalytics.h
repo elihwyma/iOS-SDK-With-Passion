@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/PrivateFrameworks/DiagnosticsKit.framework/DiagnosticsKit
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface DKAnalytics : NSObject
+
++ (void)sendAnalyticsWithEvent:(unsigned long long)arg1 error:(id)arg2;
++ (void)sendAnalyticsWithEvent:(unsigned long long)arg1 payloadDict:(id)arg2;
+
+@end

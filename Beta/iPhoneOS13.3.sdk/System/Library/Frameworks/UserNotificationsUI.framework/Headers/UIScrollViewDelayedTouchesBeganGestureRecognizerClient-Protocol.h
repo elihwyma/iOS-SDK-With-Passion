@@ -1,0 +1,17 @@
+/*
+ Image: /System/Library/Frameworks/UserNotificationsUI.framework/UserNotificationsUI
+ */
+
+#import <UserNotificationsUI/Swift-Protocol.h>
+
+@protocol UIScrollViewDelayedTouchesBeganGestureRecognizerClient <Swift>
+
+@property (nonatomic, readonly) _Bool delaysContentTouches;
+@property (nonatomic, readonly, getter=_touchDelayForScrollDetection) double touchDelayForScrollDetection;
+@property (nonatomic, readonly, getter=_scrollHysteresis) double scrollHysteresis;
+@property (nonatomic, readonly, getter=_canScrollX) _Bool canScrollX;
+@property (nonatomic, readonly, getter=_canScrollY) _Bool canScrollY;
+
+- (unsigned short)touchesShouldBegin:withEvent:inContentView: /* Error: Ran out of types for this method. */;
+
+@end

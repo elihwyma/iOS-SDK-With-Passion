@@ -1,0 +1,14 @@
+/*
+ Image: /System/Library/PrivateFrameworks/HealthUI.framework/HealthUI
+ */
+
+#import <HealthUI/HKLineSeries.h>
+
+@interface _HKAudioVisibleRangeOverlaySeries : HKLineSeries
+
+- (long long)overlayType;
+- (void)drawSeriesWithBlockCoordinates:(id)arg1 axisRect:(struct CGRect)arg2 zoomLevelConfiguration:(id)arg3 pointTransform:(struct CGAffineTransform)arg4 renderContext:(struct CGContext *)arg5 secondaryRenderContext:(id)arg6;
+- (void)drawOverlayInContext:(struct CGContext *)arg1 seriesOverlayData:(id)arg2;
+- (id)_leqDataFromBlockCoordinates:(id)arg1 pointTransform:(struct CGAffineTransform)arg2 screenRect:(struct CGRect)arg3;
+
+@end

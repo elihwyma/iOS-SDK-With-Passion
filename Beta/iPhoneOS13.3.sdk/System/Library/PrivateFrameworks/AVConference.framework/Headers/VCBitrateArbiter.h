@@ -1,0 +1,55 @@
+/*
+ Image: /System/Library/PrivateFrameworks/AVConference.framework/AVConference
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSMutableArray;
+
+__attribute__((visibility("hidden")))
+@interface VCBitrateArbiter : NSObject
+
+{
+    unsigned int _maxAllowedBitrate;
+    unsigned int _maxAllowedBitrate2G;
+    unsigned int _maxAllowedBitrate3G;
+    unsigned int _maxAllowedBitrateLTE;
+    unsigned int _maxAllowedBitrateWifi;
+    unsigned int _maxAllowedScreenShareBitrate2G;
+    unsigned int _maxAllowedScreenShareBitrate3G;
+    unsigned int _maxAllowedScreenShareBitrateLTE;
+    unsigned int _maxAllowedScreenShareBitrateWifi;
+    unsigned int _maxAllowedAudioOnlyBitrate2G;
+    unsigned int _maxAllowedAudioOnlyBitrate3G;
+    unsigned int _maxAllowedAudioOnlyBitrateLTE;
+    unsigned int _maxAllowedAudioOnlyBitrateWifi;
+    unsigned int _maxiBitrateIPadCompanionP2P;
+    unsigned int _maxAllowedBitrateIPadCompanionUSB;
+    NSMutableArray *supportedBitrateRules;
+    unsigned int _maxAllowedBitrateP2P;
+    unsigned int _maxAllowedBitrateUSB;
+}
+
+@property (readonly) unsigned int maxAllowedBitrate;
+@property (readonly) unsigned int maxAllowedBitrate2G;
+@property (readonly) unsigned int maxAllowedBitrate3G;
+@property (readonly) unsigned int maxAllowedBitrateLTE;
+@property (readonly) unsigned int maxAllowedBitrateWifi;
+@property (readonly) unsigned int maxAllowedBitrateP2P;
+@property (readonly) unsigned int maxAllowedBitrateUSB;
+
+- (void)dealloc;
+- (unsigned int)maxAllowedBitrateForConnection:(int)arg1 operatingMode:(int)arg2;
+- (unsigned int)maxAllowedAudioOnlyBitrateForConnection:(int)arg1;
+- (unsigned int)maxAllowedScreenShareCellularBitrate;
+- (id)maxAllowedBitrateRuleForConnection:(int)arg1;
+- (id)initWithDeviceRole:(int)arg1 callLogFile:(void *)arg2;
+- (unsigned int)maxAllowedCellularBitrate;
+- (void)readHardwareValues;
+- (void)readStoreBagValues:(void *)arg1;
+- (void)readCarrierBundleValues;
+- (void)createSupportedBitrateRuleSets;
+- (unsigned int)maxAllowedScreenShareBitrateForConnection:(int)arg1;
+- (unsigned int)maxAllowedBitrateForConnection:(int)arg1;
+
+@end

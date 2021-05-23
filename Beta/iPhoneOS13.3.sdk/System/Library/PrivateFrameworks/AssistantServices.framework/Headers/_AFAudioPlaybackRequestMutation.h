@@ -1,0 +1,48 @@
+/*
+ Image: /System/Library/PrivateFrameworks/AssistantServices.framework/AssistantServices
+ */
+
+#import <Foundation/NSObject.h>
+
+@class AFAudioPlaybackRequest, NSData, NSDictionary, NSString, NSURL;
+
+@interface _AFAudioPlaybackRequestMutation : NSObject
+
+{
+    AFAudioPlaybackRequest *_baseModel;
+    NSURL *_itemURL;
+    NSData *_itemData;
+    long long _numberOfLoops;
+    float _volume;
+    double _fadeInDuration;
+    double _fadeOutDuration;
+    NSDictionary *_userInfo;
+    struct _mutationFlags {
+        unsigned int isDirty:1;
+        unsigned int hasItemURL:1;
+        unsigned int hasItemData:1;
+        unsigned int hasNumberOfLoops:1;
+        unsigned int hasVolume:1;
+        unsigned int hasFadeInDuration:1;
+        unsigned int hasFadeOutDuration:1;
+        unsigned int hasUserInfo:1;
+    } _mutationFlags;
+}
+
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
+- (id)init;
+- (void)setUserInfo:(id)arg1;
+- (void)setVolume:(float)arg1;
+- (void)setFadeInDuration:(double)arg1;
+- (void)setFadeOutDuration:(double)arg1;
+- (void)setNumberOfLoops:(long long)arg1;
+- (id)initWithBaseModel:(id)arg1;
+- (id)generate;
+- (void)setItemURL:(id)arg1;
+- (void)setItemData:(id)arg1;
+
+@end

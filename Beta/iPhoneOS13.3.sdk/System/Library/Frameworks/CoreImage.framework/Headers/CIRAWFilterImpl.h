@@ -1,0 +1,186 @@
+/*
+ Image: /System/Library/Frameworks/CoreImage.framework/CoreImage
+ */
+
+#import <CoreImage/CIFilter.h>
+
+@class CIImage, CIVector, NSArray, NSDictionary, NSNumber, NSObject, NSString;
+
+__attribute__((visibility("hidden")))
+@interface CIRAWFilterImpl : CIFilter
+
+{
+    struct CGImageSource *_inputImageSource;
+    NSArray *_inputImageAndProperties;
+    CIImage *_inputImage;
+    struct CGSize _nativeSize;
+    _Bool _isRawSource;
+    _Bool _calledDealloc;
+    NSDictionary *_baseImageProperties;
+    NSDictionary *_rawDictionary;
+    NSDictionary *_rawReconstructionDefaultsDictionary;
+    NSArray *_supportedSushiModes;
+    NSArray *_supportedDecoderVersions;
+    NSArray *_filters;
+    NSObject *_typeIdentifierHint;
+    NSNumber *_defaultOrientation;
+    NSString *inputRequestedSushiMode;
+    NSNumber *inputNeutralChromaticityX;
+    NSNumber *inputNeutralChromaticityY;
+    NSNumber *inputNeutralTemperature;
+    NSNumber *inputNeutralTint;
+    CIVector *inputNeutralLocation;
+    NSNumber *inputEV;
+    NSNumber *inputBoost;
+    NSNumber *inputDraftMode;
+    NSNumber *inputScaleFactor;
+    NSNumber *inputIgnoreOrientation;
+    NSNumber *inputImageOrientation;
+    NSNumber *inputEnableSharpening;
+    NSNumber *inputEnableNoiseTracking;
+    NSNumber *inputEnableVendorLensCorrection;
+    NSNumber *inputNoiseReductionAmount;
+    NSNumber *inputLuminanceNoiseReductionAmount;
+    NSNumber *inputColorNoiseReductionAmount;
+    NSNumber *inputNoiseReductionSharpnessAmount;
+    NSNumber *inputNoiseReductionContrastAmount;
+    NSNumber *inputNoiseReductionDetailAmount;
+    NSNumber *inputMoireAmount;
+    NSString *inputDecoderVersion;
+    NSNumber *inputBoostShadowAmount;
+    NSNumber *inputBias;
+    NSNumber *inputBaselineExposure;
+    NSNumber *inputDisableGamutMap;
+    NSNumber *inputHueMagMR;
+    NSNumber *inputHueMagRY;
+    NSNumber *inputHueMagYG;
+    NSNumber *inputHueMagGC;
+    NSNumber *inputHueMagCB;
+    NSNumber *inputHueMagBM;
+    CIFilter *inputLinearSpaceFilter;
+    NSNumber *inputEnableEDRMode;
+}
+
+@property (retain, readonly) NSDictionary *rawDictionary;
+@property (retain, readonly) NSDictionary *rawReconstructionDefaultsDictionary;
+@property (retain, readonly) NSNumber *sushiMode;
+@property (readonly) int rawMajorVersion;
+@property (retain, readonly) NSArray *filters;
+@property (readonly) int subsampling;
+@property (readonly) struct CGSize nativeSize;
+
++ (_Bool)automaticallyNotifiesObserversForKey:(id)arg1;
++ (id)keyPathsForValuesAffectingValueForKey:(id)arg1;
++ (id)customAttributes;
++ (id)filterWithImageURL:(id)arg1 options:(id)arg2;
++ (id)filterWithImageData:(id)arg1 options:(id)arg2;
++ (id)filterWithCVPixelBuffer:(struct __CVBuffer *)arg1 properties:(id)arg2 options:(id)arg3;
++ (id)supportedRawCameraModels;
++ (id)optionKeys;
++ (id)applyMatrix:(const double *)arg1 toCIImage:(id)arg2;
++ (void)convertNeutralX:(id)arg1 y:(id)arg2 toTemperature:(id *)arg3 tint:(id *)arg4;
++ (void)convertNeutralTemperature:(id)arg1 tint:(id)arg2 toX:(id *)arg3 y:(id *)arg4;
+
+- (id)init;
+- (void)dealloc;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)outputImage;
+- (id)inputImage;
+- (void)setInputImage:(id)arg1;
+- (void)setDefaults;
+- (id)inputBias;
+- (void)setInputBias:(id)arg1;
+- (void)setInputEV:(id)arg1;
+- (id)outputKeys;
+- (void)setInputDraftMode:(id)arg1;
+- (id)initWithImageSource:(struct CGImageSource *)arg1 options:(id)arg2;
+- (id)initWithCVPixelBuffer:(struct __CVBuffer *)arg1 properties:(id)arg2 options:(id)arg3;
+- (id)defaultInputLuminanceNoiseReductionAmount;
+- (void)setInputLuminanceNoiseReductionAmount:(id)arg1;
+- (id)defaultInputColorNoiseReductionAmount;
+- (void)setInputColorNoiseReductionAmount:(id)arg1;
+- (id)defaultInputNoiseReductionContrastAmount;
+- (void)setInputNoiseReductionContrastAmount:(id)arg1;
+- (id)defaultInputNoiseReductionDetailAmount;
+- (void)setInputNoiseReductionDetailAmount:(id)arg1;
+- (id)defaultInputNoiseReductionSharpnessAmount;
+- (void)setInputNoiseReductionSharpnessAmount:(id)arg1;
+- (id)defaultInputMoireAmount;
+- (void)setInputMoireAmount:(id)arg1;
+- (id)defaultInputEnableVendorLensCorrection;
+- (void)setInputEnableVendorLensCorrection:(id)arg1;
+- (void)setInputIgnoreOrientation:(id)arg1;
+- (void)setInputEnableNoiseTracking:(id)arg1;
+- (void)setInputNoiseReductionAmount:(id)arg1;
+- (void)setInputEnableSharpening:(id)arg1;
+- (void)setInputScaleFactor:(id)arg1;
+- (void)setInputBoost:(id)arg1;
+- (id)defaultBoostShadowAmount;
+- (void)setInputBoostShadowAmount:(id)arg1;
+- (id)defaultImageOrientation;
+- (void)setInputImageOrientation:(id)arg1;
+- (id)defaultDecoderVersion;
+- (void)setInputDecoderVersion:(id)arg1;
+- (id)defaultInputBaselineExposureAmount;
+- (void)setInputBaselineExposure:(id)arg1;
+- (id)defaultInputBiasAmount;
+- (id)defaultInputHueMagMRAmount;
+- (void)setInputHueMagMR:(id)arg1;
+- (id)defaultInputHueMagRYAmount;
+- (void)setInputHueMagRY:(id)arg1;
+- (id)defaultInputHueMagYGAmount;
+- (void)setInputHueMagYG:(id)arg1;
+- (id)defaultInputHueMagGCAmount;
+- (void)setInputHueMagGC:(id)arg1;
+- (id)defaultInputHueMagCBAmount;
+- (void)setInputHueMagCB:(id)arg1;
+- (id)defaultInputHueMagBMAmount;
+- (void)setInputHueMagBM:(id)arg1;
+- (void)setInputDisableGamutMap:(id)arg1;
+- (id)defaultNeutralTemperature;
+- (void)setInputNeutralTemperature:(id)arg1;
+- (id)defaultNeutralTint;
+- (void)setInputNeutralTint:(id)arg1;
+- (id)defaultNeutralChromaticityX;
+- (void)setInputNeutralChromaticityX:(id)arg1;
+- (id)defaultNeutralChromaticityY;
+- (void)setInputNeutralChromaticityY:(id)arg1;
+- (id)defaultInputEnableEDRMode;
+- (void)setInputEnableEDRMode:(id)arg1;
+- (id)inputNeutralChromaticityX;
+- (id)inputNeutralChromaticityY;
+- (id)inputNeutralTemperature;
+- (id)inputNeutralTint;
+- (id)inputNeutralLocation;
+- (id)inputBaselineExposure;
+- (id)inputDisableGamutMap;
+- (id)inputHueMagMR;
+- (id)inputHueMagRY;
+- (id)inputHueMagYG;
+- (id)inputHueMagGC;
+- (id)inputHueMagCB;
+- (id)inputHueMagBM;
+- (id)inputLinearSpaceFilter;
+- (id)rawOptions;
+- (id)whitePointArray;
+- (id)whitePoint;
+- (void)getWhitePointVectorsR:(id *)arg1 g:(id *)arg2 b:(id *)arg3;
+- (void)invalidateFilters;
+- (id)rawOptionsWithSubsampling:(_Bool)arg1;
+- (id)transformedImageIgnoringOrientation:(_Bool)arg1;
+- (struct CGAffineTransform)getScaleTransform:(id)arg1;
+- (struct CGAffineTransform)getOrientationTransform:(id)arg1;
+- (void)invalidateInputImage;
+- (void)setTempTintAtPoint:(struct CGPoint)arg1;
+- (id)supportedDecoderVersions;
+- (id)RAWFiltersValueForKeyPath:(id)arg1;
+- (void)setInputNeutralLocation:(id)arg1;
+- (id)supportedSushiModes;
+- (void)setInputLinearSpaceFilter:(id)arg1;
+- (id)activeKeys;
+- (id)outputNativeSize;
+- (void)updateTemperatureAndTint;
+- (void)updateChomaticityXAndY;
+- (void)setInputRequestedSushiMode:(id)arg1;
+
+@end

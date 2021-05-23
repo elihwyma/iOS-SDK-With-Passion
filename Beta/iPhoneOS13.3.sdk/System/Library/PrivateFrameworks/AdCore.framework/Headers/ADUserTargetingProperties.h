@@ -1,0 +1,181 @@
+/*
+ Image: /System/Library/PrivateFrameworks/AdCore.framework/AdCore
+ */
+
+#import <ProtocolBuffer/PBCodable.h>
+
+@class NSMutableArray, NSString;
+
+@interface ADUserTargetingProperties : PBCodable
+
+{
+    CDStruct_95bda58d _accountStates;
+    CDStruct_95bda58d _accountTypes;
+    CDStruct_95bda58d _deviceModes;
+    double _clientClockTime;
+    NSString *_administrativeArea;
+    int _advertisingIdentifierMonthResetCount;
+    NSString *_algoId;
+    NSString *_appID;
+    NSString *_appVersion;
+    int _appsRank;
+    NSString *_carrierMCC;
+    NSString *_carrierMNC;
+    int _connectionType;
+    NSString *_currentCarrierMCC;
+    NSString *_currentCarrierMNC;
+    NSString *_dPIDString;
+    NSString *_deviceModel;
+    NSString *_deviceRequestID;
+    float _horizontalAccuracy;
+    NSString *_iAdIDString;
+    NSString *_iTunesStore;
+    NSString *_isoCountryCode;
+    float _latitude;
+    NSString *_localeIdentifier;
+    NSString *_locality;
+    float _longitude;
+    NSString *_osVersionAndBuild;
+    NSString *_postalCode;
+    int _runState;
+    NSString *_storeFrontLanguageLocaleIdentifier;
+    NSString *_subAdministrativeArea;
+    NSMutableArray *_targetings;
+    float _timezone;
+    NSString *_toroIDString;
+    NSMutableArray *_userKeyboards;
+    _Bool _isOnInternationalDataRoaming;
+    _Bool _limitAdTracking;
+    struct {
+        unsigned int clientClockTime:1;
+        unsigned int advertisingIdentifierMonthResetCount:1;
+        unsigned int appsRank:1;
+        unsigned int connectionType:1;
+        unsigned int horizontalAccuracy:1;
+        unsigned int latitude:1;
+        unsigned int longitude:1;
+        unsigned int runState:1;
+        unsigned int timezone:1;
+        unsigned int isOnInternationalDataRoaming:1;
+        unsigned int limitAdTracking:1;
+    } _has;
+}
+
+@property (nonatomic) _Bool hasClientClockTime;
+@property (nonatomic) double clientClockTime;
+@property (nonatomic, readonly) _Bool hasAppID;
+@property (retain, nonatomic) NSString *appID;
+@property (nonatomic, readonly) _Bool hasDeviceModel;
+@property (retain, nonatomic) NSString *deviceModel;
+@property (nonatomic) _Bool hasTimezone;
+@property (nonatomic) float timezone;
+@property (nonatomic) _Bool hasRunState;
+@property (nonatomic) int runState;
+@property (nonatomic, readonly) _Bool hasAppVersion;
+@property (retain, nonatomic) NSString *appVersion;
+@property (nonatomic, readonly) _Bool hasOsVersionAndBuild;
+@property (retain, nonatomic) NSString *osVersionAndBuild;
+@property (nonatomic, readonly) _Bool hasITunesStore;
+@property (retain, nonatomic) NSString *iTunesStore;
+@property (nonatomic, readonly) _Bool hasLocaleIdentifier;
+@property (retain, nonatomic) NSString *localeIdentifier;
+@property (retain, nonatomic) NSMutableArray *userKeyboards;
+@property (nonatomic) _Bool hasAppsRank;
+@property (nonatomic) int appsRank;
+@property (nonatomic, readonly) unsigned long long deviceModesCount;
+@property (nonatomic, readonly) int *deviceModes;
+@property (nonatomic, readonly) unsigned long long accountTypesCount;
+@property (nonatomic, readonly) int *accountTypes;
+@property (nonatomic) _Bool hasLatitude;
+@property (nonatomic) float latitude;
+@property (nonatomic) _Bool hasLongitude;
+@property (nonatomic) float longitude;
+@property (nonatomic) _Bool hasHorizontalAccuracy;
+@property (nonatomic) float horizontalAccuracy;
+@property (nonatomic, readonly) _Bool hasIsoCountryCode;
+@property (retain, nonatomic) NSString *isoCountryCode;
+@property (retain, nonatomic) NSMutableArray *targetings;
+@property (nonatomic) _Bool hasLimitAdTracking;
+@property (nonatomic) _Bool limitAdTracking;
+@property (nonatomic, readonly) _Bool hasToroIDString;
+@property (retain, nonatomic) NSString *toroIDString;
+@property (nonatomic, readonly) _Bool hasIAdIDString;
+@property (retain, nonatomic) NSString *iAdIDString;
+@property (nonatomic, readonly) _Bool hasAlgoId;
+@property (retain, nonatomic) NSString *algoId;
+@property (nonatomic, readonly) _Bool hasDPIDString;
+@property (retain, nonatomic) NSString *dPIDString;
+@property (nonatomic, readonly) _Bool hasPostalCode;
+@property (retain, nonatomic) NSString *postalCode;
+@property (nonatomic, readonly) _Bool hasAdministrativeArea;
+@property (retain, nonatomic) NSString *administrativeArea;
+@property (nonatomic, readonly) _Bool hasLocality;
+@property (retain, nonatomic) NSString *locality;
+@property (nonatomic, readonly) _Bool hasSubAdministrativeArea;
+@property (retain, nonatomic) NSString *subAdministrativeArea;
+@property (nonatomic) _Bool hasAdvertisingIdentifierMonthResetCount;
+@property (nonatomic) int advertisingIdentifierMonthResetCount;
+@property (nonatomic, readonly) _Bool hasDeviceRequestID;
+@property (retain, nonatomic) NSString *deviceRequestID;
+@property (nonatomic, readonly) _Bool hasCarrierMNC;
+@property (retain, nonatomic) NSString *carrierMNC;
+@property (nonatomic, readonly) _Bool hasCarrierMCC;
+@property (retain, nonatomic) NSString *carrierMCC;
+@property (nonatomic, readonly) _Bool hasCurrentCarrierMNC;
+@property (retain, nonatomic) NSString *currentCarrierMNC;
+@property (nonatomic, readonly) _Bool hasCurrentCarrierMCC;
+@property (retain, nonatomic) NSString *currentCarrierMCC;
+@property (nonatomic) _Bool hasIsOnInternationalDataRoaming;
+@property (nonatomic) _Bool isOnInternationalDataRoaming;
+@property (nonatomic) _Bool hasConnectionType;
+@property (nonatomic) int connectionType;
+@property (nonatomic, readonly) _Bool hasStoreFrontLanguageLocaleIdentifier;
+@property (retain, nonatomic) NSString *storeFrontLanguageLocaleIdentifier;
+@property (nonatomic, readonly) unsigned long long accountStatesCount;
+@property (nonatomic, readonly) int *accountStates;
+
++ (Class)userKeyboardType;
++ (Class)targetingType;
+
+- (void)dealloc;
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)dictionaryRepresentation;
+- (void)writeTo:(id)arg1;
+- (void)mergeFrom:(id)arg1;
+- (_Bool)readFrom:(id)arg1;
+- (void)copyTo:(id)arg1;
+- (id)connectionTypeAsString:(int)arg1;
+- (int)StringAsConnectionType:(id)arg1;
+- (void)addAccountType:(int)arg1;
+- (void)addDeviceMode:(int)arg1;
+- (void)addAccountState:(int)arg1;
+- (id)runStateAsString:(int)arg1;
+- (int)StringAsRunState:(id)arg1;
+- (void)clearDeviceModes;
+- (int)deviceModeAtIndex:(unsigned long long)arg1;
+- (void)clearAccountTypes;
+- (int)accountTypeAtIndex:(unsigned long long)arg1;
+- (void)clearAccountStates;
+- (int)accountStateAtIndex:(unsigned long long)arg1;
+- (void)setDeviceModes:(int *)arg1 count:(unsigned long long)arg2;
+- (id)deviceModesAsString:(int)arg1;
+- (int)StringAsDeviceModes:(id)arg1;
+- (void)setAccountTypes:(int *)arg1 count:(unsigned long long)arg2;
+- (id)accountTypesAsString:(int)arg1;
+- (int)StringAsAccountTypes:(id)arg1;
+- (void)setAccountStates:(int *)arg1 count:(unsigned long long)arg2;
+- (id)accountStatesAsString:(int)arg1;
+- (int)StringAsAccountStates:(id)arg1;
+- (void)addUserKeyboard:(id)arg1;
+- (void)addTargeting:(id)arg1;
+- (unsigned long long)userKeyboardsCount;
+- (void)clearUserKeyboards;
+- (id)userKeyboardAtIndex:(unsigned long long)arg1;
+- (unsigned long long)targetingsCount;
+- (void)clearTargetings;
+- (id)targetingAtIndex:(unsigned long long)arg1;
+
+@end

@@ -1,0 +1,186 @@
+/*
+ Image: /System/Library/Frameworks/EventKit.framework/EventKit
+ */
+
+#import <Foundation/NSObject.h>
+
+@class EKChangeSet, EKEventStore, EKObjectValidationContext, EKPersistentObject, NSDictionary, NSMutableDictionary, NSString;
+
+__attribute__((visibility("hidden")))
+@interface EKObject : NSObject
+
+{
+    EKPersistentObject *_persistentObject;
+    EKChangeSet *_changeSet;
+    NSMutableDictionary *__cachedMeltedObjects;
+    NSDictionary *_additionalFrozenProperties;
+    NSMutableDictionary *__cachedValues;
+    EKObjectValidationContext *__validationContext;
+}
+
+@property (retain, nonatomic) EKEventStore *eventStore;
+@property (retain, nonatomic) EKChangeSet *changeSet;
+@property (retain, nonatomic) NSMutableDictionary *_cachedMeltedObjects;
+@property (retain, nonatomic) NSDictionary *additionalFrozenProperties;
+@property (retain, nonatomic) NSMutableDictionary *_cachedValues;
+@property (retain, nonatomic) EKObjectValidationContext *_validationContext;
+@property (retain, nonatomic) EKPersistentObject *backingObject;
+@property (nonatomic, readonly) _Bool hasChanges;
+@property (nonatomic, readonly, getter=isNew) _Bool new;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (nonatomic, readonly) _Bool isFrozen;
+@property (nonatomic, readonly) _Bool isPartialObject;
+@property (nonatomic, readonly) NSString *uniqueIdentifier;
+@property (nonatomic, readonly) NSString *semanticIdentifier;
+@property (nonatomic, readonly) _Bool canBeConvertedToFullObject;
+@property (nonatomic, readonly) NSDictionary *preFrozenRelationshipObjects;
+
++ (Class)frozenClass;
++ (Class)meltedClass;
++ (id)knownRelationshipSingleValueKeys;
++ (_Bool)isMeltedAndNotWeakRelationshipObject:(id)arg1 forKey:(id)arg2;
++ (id)knownRelationshipMultiValueKeys;
++ (id)propertiesUnavailableForPartialObjects;
++ (id)knownRelationshipWeakKeys;
++ (_Bool)isWeakRelationship;
++ (id)knownDerivedRelationshipKeys;
++ (_Bool)_isWeakRelationMeltedObject:(id)arg1 forKey:(id)arg2;
++ (id)knownImmutableKeys;
++ (unsigned long long)_numberOfSharedLocksForUnitTesting;
++ (_Bool)isDerivedRelationship;
++ (id)knownDerivedAndSingleValueRelationshipKeys;
+
+- (id)init;
+- (void)dealloc;
+- (_Bool)isEqual:(id)arg1;
+- (id)initWithObject:(id)arg1;
+- (void)addChanges:(id)arg1;
+- (void)reset;
+- (_Bool)_reset;
+- (void)setCachedValue:(id)arg1 forKey:(id)arg2;
+- (id)cachedValueForKey:(id)arg1;
+- (id)objectID;
+- (void)rollback;
+- (void)refetch;
+- (_Bool)validate:(id *)arg1;
+- (_Bool)refresh;
+- (_Bool)_hasChanges;
+- (_Bool)hasUnsavedChanges;
+- (void)applyChanges:(id)arg1;
+- (_Bool)isDeleted;
+- (id)changedKeys;
+- (id)_readWriteLock;
+- (_Bool)revert;
+- (void)_sharedInit;
+- (_Bool)_hasChangesForKey:(id)arg1;
+- (int)rowID;
+- (id)committedValueForKey:(id)arg1;
+- (_Bool)isSaved;
+- (id)singleChangedValueForKey:(id)arg1;
+- (void)setSingleChangedValue:(id)arg1 forKey:(id)arg2;
+- (id)cachedValueForKey:(id)arg1 populateBlock:(CDUnknownBlockType)arg2;
+- (void)clearCachedValueForKey:(id)arg1;
+- (Class)frozenClass;
+- (id)initWithPersistentObject:(id)arg1;
+- (id)meltedObjectInStore:(id)arg1;
+- (id)prepareReminderKitObjectForSaveWithUpdatedBackingObjectProvider:(id)arg1;
+- (id)cachedMeltedChildIdentifierToParentMap;
+- (void)markAsNew;
+- (id)persistentObject;
+- (_Bool)_isNew;
+- (_Bool)_isPropertyUnavailable:(id)arg1 convertToFullObjectIfUnavailable:(_Bool)arg2;
+- (void)rebaseSkippingRelationProperties:(id)arg1;
+- (void)_initChangeSetIfNone;
+- (void)rebase;
+- (EKPersistentObject_556b3b22 *)frozenObject;
+- (void)addMultiChangedObjectValue:(id)arg1 forKey:(id)arg2;
+- (void)setPersistentObject:(id)arg1;
+- (_Bool)existsInStore;
+- (void)_rollbackCommon;
+- (_Bool)_resetCommon;
+- (_Bool)_refreshCommon;
+- (id)_previousValueForKey:(id)arg1;
+- (void)_markAsNewCommon;
+- (void)_markAsNotNewCommon;
+- (void)_markAsDeletedCommon;
+- (void)_markAsUndeletedCommon;
+- (void)_markAsSavedCommon;
+- (void)_markAsCommittedCommon;
+- (void)markAsCommitted;
+- (void)_performBlockOnOwnedCachedRelatedObjects:(CDUnknownBlockType)arg1;
+- (id)cachedMeltedObjectForSingleValueKey:(id)arg1;
+- (id)cachedMeltedObjectsForMultiValueKey:(id)arg1;
+- (void)_updatePersistentValueForKey:(id)arg1;
+- (id)_propertyValueForKey:(id)arg1;
+- (void)updatePersistentObject;
+- (id)meltedAndCachedSingleRelationObjectForKey:(id)arg1;
+- (id)meltedAndCachedMultiRelationObjectsForKey:(id)arg1;
+- (void)markAsSaved;
+- (void)updatePersistentObjectSkippingProperties:(id)arg1;
+- (id)existingMeltedObject;
+- (_Bool)isPropertyUnavailable:(id)arg1;
+- (_Bool)isCompletelyEqual:(id)arg1;
+- (_Bool)isEqual:(id)arg1 ignoringProperties:(id)arg2;
+- (void)markAsNotNew;
+- (void)markAsDeleted;
+- (void)markAsUndeleted;
+- (void)updatePersistentValueForKeyIfNeeded:(id)arg1;
+- (void)didCommit;
+- (void)insertPersistentObjectIfNeeded;
+- (void)deletePersistentObject;
+- (void)updateMeltedAndCachedSingleRelationObject:(id)arg1 forKey:(id)arg2 frozenClass:(Class)arg3;
+- (void)updateMeltedAndCachedMultiRelationObjects:(id)arg1 forKey:(id)arg2;
+- (void)addCachedMeltedObject:(id)arg1 forMultiValueKey:(id)arg2;
+- (void)removeCachedMeltedObject:(id)arg1 forMultiValueKey:(id)arg2;
+- (_Bool)_isOnlyChangedKey:(id)arg1;
+- (void)emptyMeltedCacheForKey:(id)arg1;
+- (_Bool)isUndeleted;
+- (_Bool)_resetIfBackingObjectIsOfClass:(Class)arg1 fetchResetFrozenObjectBlock:(CDUnknownBlockType)arg2;
+- (id)privacyDescription;
+- (id)frozenOrMeltedCachedSingleRelationObjectForKey:(id)arg1;
+- (void)addChangesFromObject:(id)arg1 except:(id)arg2;
+- (void)addChangesFromObject:(id)arg1 keep:(id)arg2;
+- (void)emptyMeltedCacheForKeys:(id)arg1;
+- (void)_resetMeltedCache;
+- (void)_performWithReadLock:(CDUnknownBlockType)arg1;
+- (void)_performWithWriteLock:(CDUnknownBlockType)arg1;
+- (_Bool)validateWithOwner:(id)arg1 error:(id *)arg2;
+- (void)_resetWithFrozenObject:(EKPersistentObject_556b3b22 *)arg1;
+- (unsigned long long)_cachedMeltedObjectsCount;
+- (_Bool)_hasChangeHelperInKeys:(id)arg1 ignoreKeys:(id)arg2 checkUnsaved:(_Bool)arg3;
+- (_Bool)hasUnsavedChangesIgnoreKeys:(id)arg1;
+- (_Bool)_hasUnsavedChangesInKeys:(id)arg1 ignoreKeys:(id)arg2;
+- (_Bool)_hasChangesForKey:(id)arg1 checkUnsaved:(_Bool)arg2;
+- (id)_singleRelationshipKeysToCheckForChanges;
+- (id)_multiRelationshipKeysToCheckForChanges;
+- (_Bool)_areOnlyChangedKeys:(id)arg1;
+- (void)_addChangesFromObject:(id)arg1 except:(id)arg2 keep:(id)arg3;
+- (void)addChangesFromObject:(id)arg1;
+- (void)updatedMeltedCacheForChangeSet:(id)arg1;
+- (void)addMultiChangedObjectValues:(id)arg1 forKey:(id)arg2;
+- (void)removeMultiChangedObjectValues:(id)arg1 forKey:(id)arg2;
+- (id)multiChangedObjectValuesForKey:(id)arg1;
+- (void)_addCachedMeltedObject:(id)arg1 forMultiValueKey:(id)arg2;
+- (void)updateMultiValueCacheForChangeSet:(id)arg1 preservingExistingAdds:(_Bool)arg2;
+- (void)_applyDefinedAfterFirstSaveFrom:(id)arg1;
+- (void)_applyKnownImmutableValuesFrom:(id)arg1;
+- (void)setCachedMeltedObjects:(id)arg1 forMultiValueKey:(id)arg2;
+- (void)_updateCachedMeltedObjectSetForMultiValueKey:(id)arg1 usingBlock:(CDUnknownBlockType)arg2;
+- (void)_removeCachedMeltedObject:(id)arg1 forMultiValueKey:(id)arg2;
+- (void)removeMultiChangedObjectValue:(id)arg1 forKey:(id)arg2;
+- (void)setCachedMeltedObject:(id)arg1 forSingleValueKey:(id)arg2;
+- (void)replaceMultiChangedObjectValuesWithObjectValues:(id)arg1 forKey:(id)arg2;
+- (id)_convertBackingObjectsWithPath:(id)arg1 updateBackingObjects:(_Bool)arg2 allChangedBackingObjects:(id)arg3 eventStore:(id)arg4 updatedBackingObjectProvider:(id)arg5;
+- (EKPersistentObject_556b3b22 *)backingObjectOfChildObject:(id)arg1 withRelationshipKey:(id)arg2;
+- (void)_cachedMeltedChildIdentifierToParentMap:(id)arg1;
+- (void)clearCachedValuesForKeys:(id)arg1;
+- (id)cachedValueForKey:(id)arg1 expectingCachedValue:(id)arg2 forMasterKey:(id)arg3 relatedKeys:(id)arg4 populateBlock:(CDUnknownBlockType)arg5;
+- (_Bool)hasUnsavedChangesInKeys:(id)arg1;
+- (_Bool)_refreshable;
+- (unsigned long long)meltedAndCachedMultiRelationCountForKey:(id)arg1;
+- (void)emptyMeltedCache;
+
+@end

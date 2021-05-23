@@ -1,0 +1,14 @@
+/*
+ Image: /System/Library/PrivateFrameworks/UIKitCore.framework/UIKitCore
+ */
+
+#import <UIKitCore/UIView.h>
+
+__attribute__((visibility("hidden")))
+@interface _UIInterfaceActionVibrantBorderView : UIView
+
++ (id)newWithRoundedCornerPosition:(unsigned long long)arg1 continuousCornerRadius:(double)arg2;
+
+- (void)_setupEffectViewWithRoundedCornerPosition:(unsigned long long)arg1 continuousCornerRadius:(double)arg2;
+
+@end

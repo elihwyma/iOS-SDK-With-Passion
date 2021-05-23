@@ -1,0 +1,21 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: 886DCDFA-38BE-39D9-AFAB-45715A06712D' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/AVConference.framework/Frameworks/snatmap.framework/snatmap
+current-version:       1
+compatibility-version: 1
+exports:
+  - archs:                [ arm64 ]
+    symbols:              [ _GetSNATMAPServer, _ProcessSNATMAPResponse,
+                            _SNATMAP_GetNonceValue, _SNATMAP_IsEqualNonce,
+                            _SNATMAP_MakeRequest ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ _VRTraceErrorLogLevelToCSTR,
+                            _VRTraceGetErrorLogLevelForModule, ___stack_chk_fail,
+                            ___stack_chk_guard, __os_log_error_impl, _arc4random,
+                            _free, _gVRTraceOSLog, _objc_getClass, _objc_msgSend,
+                            _os_log_type_enabled, _sel_getUid, dyld_stub_binder ]
+...

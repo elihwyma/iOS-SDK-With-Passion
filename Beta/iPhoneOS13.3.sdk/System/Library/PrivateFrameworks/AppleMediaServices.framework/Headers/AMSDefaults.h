@@ -1,0 +1,112 @@
+/*
+ Image: /System/Library/PrivateFrameworks/AppleMediaServices.framework/AppleMediaServices
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface AMSDefaults : NSObject
+
++ (void)_setValue:(id)arg1 forKey:(id)arg2;
++ (_Bool)_boolForKey:(id)arg1 defaultValue:(_Bool)arg2;
++ (id)_valueForKey:(id)arg1;
++ (id)primaryBiometricACLVersion;
++ (id)extendedBiometricACLVersion;
++ (_Bool)disableHARLogging;
++ (id)deviceOfferEligibility;
++ (void)setDeviceOfferEligibility:(id)arg1;
++ (void)setDidRetrieveDeviceOffers:(_Bool)arg1;
++ (_Bool)didRetrieveDeviceOffers;
++ (id)deviceOffersSerialNumber;
++ (_Bool)includeFullResponseInHARLogging;
++ (_Bool)QAMode;
++ (_Bool)includeFullRequestInHARLogging;
++ (id)metricsCanaryIdentifier;
++ (long long)cardEnrollmentSilent;
++ (_Bool)shouldSampleWithPercentage:(double)arg1 sessionDuration:(double)arg2 identifier:(id)arg3;
++ (void)setMescalCertExpiration:(id)arg1;
++ (id)mescalCertExpiration;
++ (_Bool)migratedDeviceOffers;
++ (void)setMigratedDeviceOffers:(_Bool)arg1;
++ (_Bool)ignoreServerTrustEvaluation;
++ (_Bool)ss_ignoreServerTrustEvaluation;
++ (_Bool)disablePrivacyAcknowledgement;
++ (long long)_integerForKey:(id)arg1 defaultValue:(long long)arg2;
++ (id)_valueForKey:(id)arg1 domain:(struct __CFString *)arg2;
++ (_Bool)_boolForKey:(id)arg1 defaultValue:(_Bool)arg2 domain:(struct __CFString *)arg3;
++ (void)_setBool:(_Bool)arg1 forKey:(id)arg2;
++ (void)_setInteger:(long long)arg1 forKey:(id)arg2;
++ (void)_setValue:(id)arg1 forKey:(id)arg2 domain:(struct __CFString *)arg3;
++ (void)_setBool:(_Bool)arg1 forKey:(id)arg2 domain:(struct __CFString *)arg3;
++ (double)_randomDouble;
++ (long long)_integerForKey:(id)arg1 defaultValue:(long long)arg2 domain:(struct __CFString *)arg3;
++ (_Bool)allowDuplicateAccounts;
++ (_Bool)allowUpsellEnrollmentForAppliedAccounts;
++ (_Bool)alwaysSendCacheBuster;
++ (_Bool)alwaysSendGUID;
++ (long long)applePayClassic;
++ (id)authenticationStarted;
++ (id)bagOverrides;
++ (id)bagURLCookies;
++ (long long)cardEnrollmentAutomatic;
++ (long long)cardEnrollmentManual;
++ (long long)cardEnrollmentUpsell;
++ (id)defaultPaymentPassIdentifier;
++ (long long)deviceBiometricsState;
++ (_Bool)enableCameraRedeem;
++ (_Bool)enablePurchaseQueue;
++ (long long)forceLoadUrlMetrics;
++ (id)mediaTokenOverride;
++ (id)metricsTimingWindowStartTime;
++ (_Bool)migratedToNewCookieStorage;
++ (id)multiUserContainerID;
++ (id)multiUserSilentPreferredFailureTimes;
++ (_Bool)perfomedDeviceOfferSetup;
++ (long long)pushEnvironment;
++ (long long)reversePushEnabled;
++ (id)sharedDatabaseChangeToken;
++ (_Bool)showSandboxAccountUI;
++ (_Bool)showSpyglassPurchases;
++ (id)storefrontSuffixes;
++ (_Bool)useNewAccountStore;
++ (void)setAllowDuplicateAccounts:(_Bool)arg1;
++ (void)setAllowUpsellEnrollmentForAppliedAccounts:(_Bool)arg1;
++ (void)setAlwaysSendCacheBuster:(_Bool)arg1;
++ (void)setAlwaysSendGUID:(_Bool)arg1;
++ (void)setApplePayClassic:(long long)arg1;
++ (void)setAuthenticationStarted:(id)arg1;
++ (void)setBagOverrides:(id)arg1;
++ (void)setBagURLCookies:(id)arg1;
++ (void)setCardEnrollmentAutomatic:(long long)arg1;
++ (void)setCardEnrollmentManual:(long long)arg1;
++ (void)setCardEnrollmentSilent:(long long)arg1;
++ (void)setCardEnrollmentUpsell:(long long)arg1;
++ (void)setDefaultPaymentPassIdentifier:(id)arg1;
++ (void)setDeviceBiometricsState:(long long)arg1;
++ (void)setDisableHARLogging:(_Bool)arg1;
++ (void)setDisablePrivacyAcknowledgement:(_Bool)arg1;
++ (void)setEnableCameraRedeem:(_Bool)arg1;
++ (void)setEnablePurchaseQueue:(_Bool)arg1;
++ (void)setForceLoadUrlMetrics:(long long)arg1;
++ (void)setIgnoreServerTrustEvaluation:(_Bool)arg1;
++ (void)setIncludeFullRequestInHARLogging:(_Bool)arg1;
++ (void)setIncludeFullResponseInHARLogging:(_Bool)arg1;
++ (void)setMediaTokenOverride:(id)arg1;
++ (void)setMetricsCanaryIdentifier:(id)arg1;
++ (void)setMetricsTimingWindowStartTime:(id)arg1;
++ (void)setMigratedToNewCookieStorage:(_Bool)arg1;
++ (void)setMultiUserSilentPreferredFailureTimes:(id)arg1;
++ (void)setPerfomedDeviceOfferSetup:(_Bool)arg1;
++ (void)setPushEnvironment:(long long)arg1;
++ (void)setQAMode:(_Bool)arg1;
++ (void)setReversePushEnabled:(long long)arg1;
++ (void)setSharedDatabaseChangeToken:(id)arg1;
++ (void)setShowSandboxAccountUI:(_Bool)arg1;
++ (void)setStorefrontSuffixes:(id)arg1;
++ (void)cleanupSampleSessions;
++ (_Bool)shouldSampleWithPercentageValue:(id)arg1 sessionDurationValue:(id)arg2 identifier:(id)arg3;
++ (void)syncWithBlock:(CDUnknownBlockType)arg1;
++ (void)setExtendedBiometricACLVersion:(id)arg1;
++ (void)setPrimaryBiometricACLVersion:(id)arg1;
++ (_Bool)useNewCookieStorage;
+
+@end

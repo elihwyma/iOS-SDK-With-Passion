@@ -1,0 +1,51 @@
+/*
+ Image: /System/Library/PrivateFrameworks/LocationSupport.framework/LocationSupport
+ */
+
+#import <LocationSupport/LocationSupport-Structures.h>
+
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/(null).h>
+#import <LocationSupport/CLIntersiloClientProtocol-Protocol.h>
+#import <LocationSupport/CLIntersiloInterface.h>
+#import <LocationSupport/CLIntersiloInterfaceSelectorInfo.h>
+#import <LocationSupport/CLIntersiloProxyDelegateProtocol-Protocol.h>
+#import <LocationSupport/CLIntersiloServiceMockProtocol-Protocol.h>
+#import <LocationSupport/CLIntersiloServiceProtocol-Protocol.h>
+#import <LocationSupport/CLIntersiloUniverse-Protocol.h>
+#import <LocationSupport/CLRunLoopTimerScheduler.h>
+#import <LocationSupport/CLSettingsManagerClientProtocol-Protocol.h>
+#import <LocationSupport/CLSettingsManagerMockProtocol-Protocol.h>
+#import <LocationSupport/CLSettingsManagerProtocol-Protocol.h>
+#import <LocationSupport/CLSettingsMirror.h>
+#import <LocationSupport/CLSilo.h>
+#import <LocationSupport/CLTimerScheduler-Protocol.h>
+#import <LocationSupport/NSCoding-Protocol.h>
+#import <LocationSupport/NSCopying-Protocol.h>
+#import <LocationSupport/NSObject-Protocol.h>
+#import <LocationSupport/NSSecureCoding-Protocol.h>
+#import <LocationSupport/NSString-CLExtensions.h>
+#import <LocationSupport/Swift-Protocol.h>

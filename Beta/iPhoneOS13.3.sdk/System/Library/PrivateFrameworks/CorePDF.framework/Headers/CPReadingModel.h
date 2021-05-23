@@ -1,0 +1,86 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CorePDF.framework/CorePDF
+ */
+
+#import <Foundation/NSObject.h>
+
+@class CPRMList, NSAttributedString, NSMutableArray, NSString;
+
+@interface CPReadingModel : NSObject
+
+{
+    long long _count;
+    CDStruct_627e0f85 *_textLineRanges;
+    CDStruct_627e0f85 *_stringLineRanges;
+    long long *_pageNumbers;
+    CDStruct_627e0f85 _pageRange;
+    struct CGPDFDocument *_document;
+    long long _numberOfLines;
+    long long _numberOfParagraphs;
+    long long _numberOfColumns;
+    long long _numberOfLayoutAreas;
+    NSString *_cachedString;
+    NSAttributedString *_cachedAttributedString;
+    long long _pageNumber;
+    long long _pos;
+    NSMutableArray *_tables;
+    NSMutableArray *_lists;
+    NSMutableArray *_headings;
+    long long _pageNumberMemo;
+    CDStruct_627e0f85 _textRangeMemo;
+    struct _NSRange _rangeMemo;
+    CPRMList *_currentList;
+}
+
+- (id)string;
+- (void)dealloc;
+- (void)clearCache;
+- (id)headings;
+- (id)attributedString;
+- (id)initWithDocument:(struct CGPDFDocument *)arg1;
+- (id)stringForRange:(struct _NSRange)arg1;
+- (id)attributedStringForRange:(struct _NSRange)arg1;
+- (unsigned long long)lineCount;
+- (void)buildModel:(struct CGPDFDocument *)arg1;
+- (void)buildModel:(struct CGPDFDocument *)arg1 pageRange:(struct _NSRange)arg2;
+- (void)addTable:(struct CGPDFNode *)arg1 layout:(struct CGPDFLayout *)arg2;
+- (void)tables:(struct CGPDFNode *)arg1 layout:(struct CGPDFLayout *)arg2;
+- (struct CGPDFNode *)firstParagraphInList:(id)arg1;
+- (long long)findParagraph:(struct CGPDFNode *)arg1 inListArray:(id)arg2;
+- (void)addListsInColumn:(struct CGPDFNode *)arg1;
+- (void)lists:(struct CGPDFNode *)arg1 layout:(struct CGPDFLayout *)arg2;
+- (void)headings:(struct CGPDFNode *)arg1 layout:(struct CGPDFLayout *)arg2;
+- (void)visitLayoutAreas:(struct CGPDFNode *)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)stringLineRanges;
+- (id)stringForLine:(unsigned long long)arg1;
+- (id)attributedStringForLine:(unsigned long long)arg1;
+- (struct _NSRange)stringRangeForLine:(unsigned long long)arg1;
+- (struct CGRect)pdfBoundsForCursor:(struct _NSRange)arg1;
+- (unsigned long long)lineForIndex:(unsigned long long)arg1;
+- (struct CGRect)pdfBoundsForNewLine:(CDStruct_627e0f85)arg1;
+- (CDStruct_627e0f85)mapStringRange:(struct _NSRange)arg1;
+- (struct _NSRange)linesForPage:(unsigned long long)arg1;
+- (unsigned long long)pageNumberForLine:(unsigned long long)arg1;
+- (id)initWithDocument:(struct CGPDFDocument *)arg1 withPageRange:(struct _NSRange)arg2;
+- (id)tables;
+- (id)lists;
+- (long long)indexOfFirstLineOnPage:(unsigned long long)arg1;
+- (struct _NSRange)textRangeForLine:(unsigned long long)arg1;
+- (struct CGRect)pdfBoundsForLine:(unsigned long long)arg1;
+- (struct _NSRange)rangeForLine:(unsigned long long)arg1;
+- (struct CGRect)pdfBoundsForRange:(struct _NSRange)arg1;
+- (CDStruct_627e0f85)textRangeForStringRange:(struct _NSRange)arg1;
+- (struct _NSRange)stringRangeForTextRange:(CDStruct_627e0f85)arg1 onPageNumber:(unsigned long long)arg2;
+- (struct _NSRange)pageRangeForStringRange:(CDStruct_627e0f85)arg1;
+- (long long)lineIndexForPoint:(struct CGPoint)arg1 onPage:(unsigned long long)arg2;
+- (void)visitTextLines:(struct CGPDFNode *)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)visitParagraphs:(struct CGPDFNode *)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)visitColumns:(struct CGPDFNode *)arg1 completion:(CDUnknownBlockType)arg2;
+- (unsigned long long)addRangeForLine:(unsigned long long)arg1 from:(unsigned long long)arg2;
+- (void)incrementLineCount;
+- (void)incrementParagraphCount;
+- (void)incrementColumnCount;
+- (void)increamentLayoutAreaCount;
+- (void)addRange:(CDStruct_627e0f85)arg1;
+
+@end

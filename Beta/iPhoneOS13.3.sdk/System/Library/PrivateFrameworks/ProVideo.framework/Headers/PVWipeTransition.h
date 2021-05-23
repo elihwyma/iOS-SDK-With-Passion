@@ -1,0 +1,19 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ProVideo.framework/ProVideo
+ */
+
+#import <ProVideo/PVHeliumEffect.h>
+
+@interface PVWipeTransition : PVHeliumEffect
+
+{
+    int _transitionDirection;
+}
+
+@property (nonatomic) int transitionDirection;
+
++ (void)registerEffectWithID:(id)arg1 displayName:(id)arg2;
+
+- (HGRef_265f9e4c)hgNodeForTime:(CDStruct_1b6d18a9)arg1 inputs:(const PVInputHGNodeMap_d4d649d7 *)arg2 renderer:(const HGRef_5aef67ae *)arg3 igContext:(HGRef_6bae45d3)arg4;
+
+@end

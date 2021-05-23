@@ -1,0 +1,56 @@
+/*
+ Image: /System/Library/PrivateFrameworks/AudioServerDriver.framework/AudioServerDriver
+ */
+
+#import <AudioServerDriver/AudioServerDriver-Structures.h>
+
+#import <AudioServerDriver/(null).h>
+#import <AudioServerDriver/(null).h>
+#import <AudioServerDriver/(null).h>
+#import <AudioServerDriver/(null).h>
+#import <AudioServerDriver/(null).h>
+#import <AudioServerDriver/(null).h>
+#import <AudioServerDriver/(null).h>
+#import <AudioServerDriver/(null).h>
+#import <AudioServerDriver/ASDAudioDeviceDSPConfiguration.h>
+#import <AudioServerDriver/ASDAudioDeviceDSPDatabase.h>
+#import <AudioServerDriver/ASDAUStripInfo.h>
+#import <AudioServerDriver/ASDBooleanControl.h>
+#import <AudioServerDriver/ASDBox.h>
+#import <AudioServerDriver/ASDControl.h>
+#import <AudioServerDriver/ASDDevice.h>
+#import <AudioServerDriver/ASDDeviceConfigurationChangeDelegate-Protocol.h>
+#import <AudioServerDriver/ASDDSPAudioDevice.h>
+#import <AudioServerDriver/ASDDSPConfiguration.h>
+#import <AudioServerDriver/ASDDSPDevice.h>
+#import <AudioServerDriver/ASDDSPGraph.h>
+#import <AudioServerDriver/ASDDSPGraphBox.h>
+#import <AudioServerDriver/ASDDSPGraphInfo.h>
+#import <AudioServerDriver/ASDDSPGraphInterpreter.h>
+#import <AudioServerDriver/ASDDSPGraphLoader.h>
+#import <AudioServerDriver/ASDDSPGraphUtilities.h>
+#import <AudioServerDriver/ASDDSPItemInfo.h>
+#import <AudioServerDriver/ASDDSPStream.h>
+#import <AudioServerDriver/ASDLevelControl.h>
+#import <AudioServerDriver/ASDManagedRingBuffer-Protocol.h>
+#import <AudioServerDriver/ASDManagedRingBuffer.h>
+#import <AudioServerDriver/ASDNullStream.h>
+#import <AudioServerDriver/ASDPluginDSPDatabase.h>
+#import <AudioServerDriver/ASDProperty.h>
+#import <AudioServerDriver/ASDPropertyChangedDelegate-Protocol.h>
+#import <AudioServerDriver/ASDPropertyStripInfo.h>
+#import <AudioServerDriver/ASDRingBuffer-Protocol.h>
+#import <AudioServerDriver/ASDRingBuffer.h>
+#import <AudioServerDriver/ASDRingBufferInputStream.h>
+#import <AudioServerDriver/ASDRingBufferOutputStream.h>
+#import <AudioServerDriver/ASDRingBufferStreamPair.h>
+#import <AudioServerDriver/ASDSelectorControl.h>
+#import <AudioServerDriver/ASDSelectorValue.h>
+#import <AudioServerDriver/ASDSRCAudioDevice.h>
+#import <AudioServerDriver/ASDSRCStream.h>
+#import <AudioServerDriver/ASDStereoPanControl.h>
+#import <AudioServerDriver/ASDStreamDSPConfiguration.h>
+#import <AudioServerDriver/NSCopying-Protocol.h>
+#import <AudioServerDriver/NSDictionary-FourCharCode.h>
+#import <AudioServerDriver/NSObject-Protocol.h>
+#import <AudioServerDriver/Swift-Protocol.h>

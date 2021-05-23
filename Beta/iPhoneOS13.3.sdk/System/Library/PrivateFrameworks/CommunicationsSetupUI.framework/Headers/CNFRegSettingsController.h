@@ -1,0 +1,186 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CommunicationsSetupUI.framework/CommunicationsSetupUI
+ */
+
+#import <CommunicationsSetupUI/CNFRegListController.h>
+
+@class NSArray, NSMutableArray, NSNumber, NSString, PSSpecifier;
+
+@interface CNFRegSettingsController : CNFRegListController
+
+{
+    PSSpecifier *_faceTimeEnabledGroupSpecifier;
+    PSSpecifier *_faceTimeEnabledSpecifier;
+    NSArray *_accountGroupSpecifiers;
+    NSArray *_aliasGroupSpecifiers;
+    NSArray *_callerIdGroupSpecifiers;
+    NSArray *_replyWithMessageGroupSpecifiers;
+    NSArray *_blacklistGroupSpecifiers;
+    NSArray *_receiveRelayCallsGroupSpecifiers;
+    NSArray *_faceTimePhotosGroupSpecifiers;
+    NSMutableArray *_addresses;
+    NSNumber *_delayedRefreshAnimatedFlag;
+    struct {
+        unsigned int listeningForFinishedEditingEvents:1;
+        unsigned int appeared:1;
+        unsigned int ignoringTextFieldChanges:1;
+        unsigned int showEnableSwitch:1;
+        unsigned int refreshingCallerIdValues:1;
+    } _settingsFlags;
+    _Bool _showDeviceAliases;
+    _Bool _hideAppleIDLogin;
+    _Bool _showReceiveRelayCalls;
+}
+
+@property (nonatomic) _Bool showEnableSwitch;
+@property (nonatomic) _Bool showDeviceAliases;
+@property (nonatomic) _Bool hideAppleIDLogin;
+@property (nonatomic, readonly) _Bool showReceiveRelayCalls;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
++ (_Bool)_shouldForwardViewWillTransitionToSize;
+
+- (void)dealloc;
+- (id)bundle;
+- (id)initWithNibName:(id)arg1 bundle:(id)arg2;
+- (void)viewWillAppear:(_Bool)arg1;
+- (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewDidLoad;
+- (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
+- (void)viewDidAppear:(_Bool)arg1;
+- (void)viewDidDisappear:(_Bool)arg1;
+- (id)tableView:(id)arg1 cellForRowAtIndexPath:(id)arg2;
+- (void)systemApplicationDidEnterBackground;
+- (void)systemApplicationWillEnterForeground;
+- (void)systemApplicationDidSuspend;
+- (void)systemApplicationDidResume;
+- (id)loadSpecifiersFromPlistName:(id)arg1 target:(id)arg2 bundle:(id)arg3;
+- (void)formSheetViewWillDisappear;
+- (_Bool)shouldReloadSpecifiersOnResume;
+- (void)formSheetViewDidDisappear;
+- (_Bool)authenticationController:(id)arg1 shouldContinueWithAuthenticationResults:(id)arg2 error:(id)arg3 forContext:(id)arg4;
+- (void)doneButtonTapped:(id)arg1;
+- (id)logName;
+- (id)customTitle;
+- (void)setCallerId:(id)arg1;
+- (id)specifierList;
+- (void)handleCallStatusChanged;
+- (void)_handleFaceTimeCTRegistrationStatusChanged;
+- (void)_handleFaceTimeEntitlementStatusChanged;
+- (void)_handleDeactivation:(id)arg1;
+- (void)_handleRelayCapabilitiesChanged;
+- (void)_handleThumperCapabilitiesChanged;
+- (void)_handleOutgoingRelayCallerIDChanged;
+- (void)_handleAccountRegistrarChanged;
+- (_Bool)_hasActiveFaceTimeCall;
+- (id)_switchFooterText;
+- (void)_showPrivacySheet:(id)arg1;
+- (_Bool)shouldShowSiriSpecifiers;
+- (_Bool)shouldShowCallDirectorySettingsBundleSpecifiers;
+- (_Bool)shouldShowICSSettingsBundleSpecifiers;
+- (id)_appleIDAccounts;
+- (id)createSpecifierForAccount:(id)arg1;
+- (id)possibleCallerIdAliases;
+- (id)createSpecifierForCallerIdAlias:(id)arg1;
+- (void)configureCallerIDGroupSpecifier:(id)arg1;
+- (void)_buildSpecifierCache:(id)arg1;
+- (_Bool)shouldShowReplyWithMessage;
+- (id)_useableAccounts;
+- (_Bool)shouldShowBlacklistSettings;
+- (_Bool)shouldShowReceiveThumperCalls;
+- (_Bool)shouldShowReceiveRelayCalls;
+- (_Bool)shouldShowFaceTimePhotosSpecifiers;
+- (void)refreshFaceTimeSettingsAnimated:(_Bool)arg1;
+- (void)refreshAllAliasSpecifiers;
+- (void)refreshAllCallerIdAliasSpecifiers;
+- (void)_showAuthKitSignInIfNecessary;
+- (void)_setupAllListeners;
+- (void)_setupAccountHandlers;
+- (void)_cacheSpecifierGroup:(id)arg1 withSpecifiers:(id)arg2;
+- (void)_updateSwitch;
+- (_Bool)popToFirstRunControllerAnimated:(_Bool)arg1;
+- (_Bool)_shouldDisableAccountConfigurationUI;
+- (void)_setupAccountHandlersForDisabling;
+- (void)setFaceTimeEnabled:(id)arg1 specifier:(id)arg2 animated:(_Bool)arg3;
+- (void)_refreshFaceTimeSettingsDelayed:(id)arg1;
+- (id)_operationalAccounts;
+- (void)refreshAccountsAnimated:(_Bool)arg1;
+- (_Bool)showAccounts:(_Bool)arg1 animated:(_Bool)arg2;
+- (void)refreshAliasesAnimated:(_Bool)arg1;
+- (_Bool)showAliases:(_Bool)arg1 animated:(_Bool)arg2;
+- (_Bool)showCallerId:(_Bool)arg1 animated:(_Bool)arg2;
+- (void)showBlacklistSettings:(_Bool)arg1 animated:(_Bool)arg2;
+- (void)showReceiveRelayCallsSettings:(_Bool)arg1 animated:(_Bool)arg2;
+- (void)showFaceTimePhotosSettings:(_Bool)arg1 animated:(_Bool)arg2;
+- (void)refreshCallerIdAliasesAnimated:(_Bool)arg1;
+- (void)refreshFaceTimePhotosSettingsAnimated:(_Bool)arg1;
+- (void)refreshBlacklistSettingsAnimated:(_Bool)arg1;
+- (void)refreshReceiveRelayCallsSettingsAnimated:(_Bool)arg1;
+- (void)refreshEnabledStateAnimated:(_Bool)arg1;
+- (_Bool)_popFromSettingsAnimated:(_Bool)arg1;
+- (_Bool)_canDeselectAlias:(id)arg1;
+- (_Bool)isiMessageCallerIDNonDefault;
+- (_Bool)shouldShowExtraTextForiMessageCallerID;
+- (id)callerIDWithURLFooterText;
+- (id)callerIDFooterText;
+- (void)showSpecifiers:(id)arg1 afterGroupId:(id)arg2 animated:(_Bool)arg3;
+- (void)_showLocaleChooserWithAccount:(id)arg1;
+- (void)_showAccountAlertForAccount:(id)arg1;
+- (void)_showSignInController;
+- (id)getAccountNameForSpecifier:(id)arg1;
+- (void)accountTappedWithSpecifier:(id)arg1;
+- (id)_specifierIdentifierForAccount:(id)arg1;
+- (void)_reloadSpecifier:(id)arg1 withBlock:(CDUnknownBlockType)arg2;
+- (id)accountSpecifiers;
+- (void)updateSpecifier:(id)arg1 withAccount:(id)arg2;
+- (void)setFaceTimeEnabled:(id)arg1 specifier:(id)arg2;
+- (void)_tearDownAllListeners;
+- (id)_localeChooserForAccount:(id)arg1;
+- (void)_updateControllerStateAnimated:(_Bool)arg1;
+- (void)_hideLocaleChooser;
+- (_Bool)_shouldShowAliasInfo;
+- (id)aliasSpecifiers;
+- (void)updateSpecifier:(id)arg1 withAlias:(id)arg2;
+- (id)createSpecifierForAlias:(id)arg1;
+- (void)setAliasSelected:(id)arg1;
+- (id)statusForSpecifier:(id)arg1;
+- (void)refreshAliasSpecifier:(id)arg1;
+- (id)statusForAlias:(id)arg1;
+- (void)_showRemoveAlertForAlias:(id)arg1 specifier:(id)arg2;
+- (id)callerIdAliasSpecifiers;
+- (void)updateSpecifier:(id)arg1 withCallerIdAlias:(id)arg2;
+- (void)refreshiMessageCallerIDExtraText:(_Bool)arg1;
+- (void)refreshCallerIdSpecifier:(id)arg1;
+- (id)_operationalAccountsForService:(long long)arg1;
+- (long long)groupIdForSpecifier:(id)arg1;
+- (long long)indexOfLastSpecifierInGroup:(id)arg1;
+- (_Bool)_shouldUseDisabledHandlers;
+- (void)_setupAccountHandlersForDisabledOperation;
+- (void)_setupAccountHandlersForNormalOperation;
+- (_Bool)_allAccountsAreDeactivated;
+- (void)_updateSwitchDelayed;
+- (void)_handleSuccessfulAccountReactivation:(id)arg1;
+- (void)_handleFailedAccountReactivation:(id)arg1 error:(id)arg2;
+- (void)refreshFaceTimeSettingsWithDelayAnimated:(_Bool)arg1;
+- (void)_showAliasValidationError:(id)arg1;
+- (void)firstRunControllerDidFinish:(id)arg1 finished:(_Bool)arg2;
+- (void)viewAccountControllerDidFinish:(id)arg1 withAppleId:(id)arg2;
+- (void)firstRunController:(id)arg1 finishedWithState:(unsigned long long)arg2;
+- (id)getFaceTimeEnabledForSpecifier:(id)arg1;
+- (void)setReceiveRelayedCallsEnabled:(id)arg1 specifier:(id)arg2;
+- (id)getReceiveRelayedCallsEnabledForSpecifier:(id)arg1;
+- (void)showAllSettings:(_Bool)arg1 animated:(_Bool)arg2;
+- (void)_showViewAccountControllerForAccount:(id)arg1;
+- (void)clearAccountCache;
+- (_Bool)additionalAliasesAvailable;
+- (id)aliasForSpecifier:(id)arg1;
+- (id)aliasWithIdentifier:(id)arg1;
+- (id)getFaceTimePhotosEnabledForSpecifier:(id)arg1;
+- (void)setFaceTimePhotosEnabled:(id)arg1 specifier:(id)arg2;
+- (void)showReplyWithMessage:(_Bool)arg1 animated:(_Bool)arg2;
+- (long long)groupIdForSpecifierId:(id)arg1;
+
+@end

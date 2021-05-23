@@ -1,0 +1,172 @@
+/*
+ Image: /System/Library/PrivateFrameworks/MediaRemote.framework/MediaRemote
+ */
+
+#import <ProtocolBuffer/PBCodable.h>
+
+@class NSData, NSString, _MRAVOutputDeviceSourceInfoProtobuf;
+
+@interface _MRAVOutputDeviceDescriptorProtobuf : PBCodable
+
+{
+    float _batteryLevel;
+    NSString *_bluetoothID;
+    int _deviceSubType;
+    int _deviceType;
+    NSString *_firmwareVersion;
+    NSString *_groupID;
+    NSString *_logicalDeviceID;
+    NSData *_macAddress;
+    NSString *_modelID;
+    NSData *_modelSpecificInfoData;
+    NSString *_name;
+    NSString *_parentGroupIdentifier;
+    _MRAVOutputDeviceSourceInfoProtobuf *_sourceInfo;
+    NSString *_uniqueIdentifier;
+    float _volume;
+    int _volumeCapabilities;
+    _Bool _canAccessAppleMusic;
+    _Bool _canAccessRemoteAssets;
+    _Bool _canAccessiCloudMusicLibrary;
+    _Bool _canFetchMediaDataFromSender;
+    _Bool _canPlayEncryptedProgressiveDownloadAssets;
+    _Bool _canRelayCommunicationChannel;
+    _Bool _groupContainsGroupLeader;
+    _Bool _isAddedToHomeKit;
+    _Bool _isAirPlayReceiverSessionActive;
+    _Bool _isDeviceGroupable;
+    _Bool _isGroupLeader;
+    _Bool _isGroupable;
+    _Bool _isLocalDevice;
+    _Bool _isProxyGroupPlayer;
+    _Bool _isRemoteControllable;
+    _Bool _isVolumeControlAvailable;
+    _Bool _parentGroupContainsDiscoverableLeader;
+    _Bool _presentsOptimizedUserInterfaceWhenPlayingFetchedAudioOnlyAssets;
+    _Bool _requiresAuthorization;
+    _Bool _shouldForceRemoteControlabillity;
+    _Bool _supportsBufferedAirPlay;
+    _Bool _supportsExternalScreen;
+    struct {
+        unsigned int batteryLevel:1;
+        unsigned int deviceSubType:1;
+        unsigned int deviceType:1;
+        unsigned int volume:1;
+        unsigned int volumeCapabilities:1;
+        unsigned int canAccessAppleMusic:1;
+        unsigned int canAccessRemoteAssets:1;
+        unsigned int canAccessiCloudMusicLibrary:1;
+        unsigned int canFetchMediaDataFromSender:1;
+        unsigned int canPlayEncryptedProgressiveDownloadAssets:1;
+        unsigned int canRelayCommunicationChannel:1;
+        unsigned int groupContainsGroupLeader:1;
+        unsigned int isAddedToHomeKit:1;
+        unsigned int isAirPlayReceiverSessionActive:1;
+        unsigned int isDeviceGroupable:1;
+        unsigned int isGroupLeader:1;
+        unsigned int isGroupable:1;
+        unsigned int isLocalDevice:1;
+        unsigned int isProxyGroupPlayer:1;
+        unsigned int isRemoteControllable:1;
+        unsigned int isVolumeControlAvailable:1;
+        unsigned int parentGroupContainsDiscoverableLeader:1;
+        unsigned int presentsOptimizedUserInterfaceWhenPlayingFetchedAudioOnlyAssets:1;
+        unsigned int requiresAuthorization:1;
+        unsigned int shouldForceRemoteControlabillity:1;
+        unsigned int supportsBufferedAirPlay:1;
+        unsigned int supportsExternalScreen:1;
+    } _has;
+}
+
+@property (nonatomic, readonly) _Bool hasName;
+@property (retain, nonatomic) NSString *name;
+@property (nonatomic, readonly) _Bool hasUniqueIdentifier;
+@property (retain, nonatomic) NSString *uniqueIdentifier;
+@property (nonatomic, readonly) _Bool hasGroupID;
+@property (retain, nonatomic) NSString *groupID;
+@property (nonatomic, readonly) _Bool hasModelID;
+@property (retain, nonatomic) NSString *modelID;
+@property (nonatomic, readonly) _Bool hasMacAddress;
+@property (retain, nonatomic) NSData *macAddress;
+@property (nonatomic) _Bool hasCanAccessRemoteAssets;
+@property (nonatomic) _Bool canAccessRemoteAssets;
+@property (nonatomic) _Bool hasIsRemoteControllable;
+@property (nonatomic) _Bool isRemoteControllable;
+@property (nonatomic) _Bool hasIsGroupLeader;
+@property (nonatomic) _Bool isGroupLeader;
+@property (nonatomic) _Bool hasIsGroupable;
+@property (nonatomic) _Bool isGroupable;
+@property (nonatomic) _Bool hasDeviceType;
+@property (nonatomic) int deviceType;
+@property (nonatomic) _Bool hasDeviceSubType;
+@property (nonatomic) int deviceSubType;
+@property (nonatomic, readonly) _Bool hasModelSpecificInfoData;
+@property (retain, nonatomic) NSData *modelSpecificInfoData;
+@property (nonatomic) _Bool hasBatteryLevel;
+@property (nonatomic) float batteryLevel;
+@property (nonatomic) _Bool hasIsLocalDevice;
+@property (nonatomic) _Bool isLocalDevice;
+@property (nonatomic) _Bool hasSupportsExternalScreen;
+@property (nonatomic) _Bool supportsExternalScreen;
+@property (nonatomic) _Bool hasRequiresAuthorization;
+@property (nonatomic) _Bool requiresAuthorization;
+@property (nonatomic) _Bool hasShouldForceRemoteControlabillity;
+@property (nonatomic) _Bool shouldForceRemoteControlabillity;
+@property (nonatomic, readonly) _Bool hasSourceInfo;
+@property (retain, nonatomic) _MRAVOutputDeviceSourceInfoProtobuf *sourceInfo;
+@property (nonatomic) _Bool hasIsDeviceGroupable;
+@property (nonatomic) _Bool isDeviceGroupable;
+@property (nonatomic) _Bool hasCanRelayCommunicationChannel;
+@property (nonatomic) _Bool canRelayCommunicationChannel;
+@property (nonatomic, readonly) _Bool hasLogicalDeviceID;
+@property (retain, nonatomic) NSString *logicalDeviceID;
+@property (nonatomic) _Bool hasIsProxyGroupPlayer;
+@property (nonatomic) _Bool isProxyGroupPlayer;
+@property (nonatomic, readonly) _Bool hasFirmwareVersion;
+@property (retain, nonatomic) NSString *firmwareVersion;
+@property (nonatomic) _Bool hasVolume;
+@property (nonatomic) float volume;
+@property (nonatomic) _Bool hasIsVolumeControlAvailable;
+@property (nonatomic) _Bool isVolumeControlAvailable;
+@property (nonatomic) _Bool hasCanAccessAppleMusic;
+@property (nonatomic) _Bool canAccessAppleMusic;
+@property (nonatomic) _Bool hasCanAccessiCloudMusicLibrary;
+@property (nonatomic) _Bool canAccessiCloudMusicLibrary;
+@property (nonatomic) _Bool hasGroupContainsGroupLeader;
+@property (nonatomic) _Bool groupContainsGroupLeader;
+@property (nonatomic) _Bool hasSupportsBufferedAirPlay;
+@property (nonatomic) _Bool supportsBufferedAirPlay;
+@property (nonatomic) _Bool hasCanPlayEncryptedProgressiveDownloadAssets;
+@property (nonatomic) _Bool canPlayEncryptedProgressiveDownloadAssets;
+@property (nonatomic) _Bool hasCanFetchMediaDataFromSender;
+@property (nonatomic) _Bool canFetchMediaDataFromSender;
+@property (nonatomic) _Bool hasPresentsOptimizedUserInterfaceWhenPlayingFetchedAudioOnlyAssets;
+@property (nonatomic) _Bool presentsOptimizedUserInterfaceWhenPlayingFetchedAudioOnlyAssets;
+@property (nonatomic) _Bool hasIsAirPlayReceiverSessionActive;
+@property (nonatomic) _Bool isAirPlayReceiverSessionActive;
+@property (nonatomic, readonly) _Bool hasParentGroupIdentifier;
+@property (retain, nonatomic) NSString *parentGroupIdentifier;
+@property (nonatomic) _Bool hasParentGroupContainsDiscoverableLeader;
+@property (nonatomic) _Bool parentGroupContainsDiscoverableLeader;
+@property (nonatomic) _Bool hasIsAddedToHomeKit;
+@property (nonatomic) _Bool isAddedToHomeKit;
+@property (nonatomic) _Bool hasVolumeCapabilities;
+@property (nonatomic) int volumeCapabilities;
+@property (nonatomic, readonly) _Bool hasBluetoothID;
+@property (retain, nonatomic) NSString *bluetoothID;
+
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)dictionaryRepresentation;
+- (void)writeTo:(id)arg1;
+- (void)mergeFrom:(id)arg1;
+- (_Bool)readFrom:(id)arg1;
+- (void)copyTo:(id)arg1;
+- (id)deviceTypeAsString:(int)arg1;
+- (int)StringAsDeviceType:(id)arg1;
+- (id)deviceSubTypeAsString:(int)arg1;
+- (int)StringAsDeviceSubType:(id)arg1;
+
+@end

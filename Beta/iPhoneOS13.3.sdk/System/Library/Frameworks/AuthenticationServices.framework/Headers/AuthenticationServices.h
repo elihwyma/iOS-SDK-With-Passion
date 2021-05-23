@@ -1,0 +1,54 @@
+/*
+ Image: /System/Library/Frameworks/AuthenticationServices.framework/AuthenticationServices
+ */
+
+#import <AuthenticationServices/AuthenticationServices-Structures.h>
+
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/(null).h>
+#import <AuthenticationServices/_ASCredentialProviderExtensionContextProtocol-Protocol.h>
+#import <AuthenticationServices/_ASCredentialProviderExtensionHostContextDelegate-Protocol.h>
+#import <AuthenticationServices/_ASCredentialProviderExtensionHostContextProtocol-Protocol.h>
+#import <AuthenticationServices/AKAdaptiveServiceInterface-Protocol.h>
+#import <AuthenticationServices/AKAuthorizationCredential-AuthenticationServicesExtras.h>
+#import <AuthenticationServices/AKAuthorizationNotificationHandler-Protocol.h>
+#import <AuthenticationServices/ASAuthorizationCredential-Protocol.h>
+#import <AuthenticationServices/ASAuthorizationProvider-Protocol.h>
+#import <AuthenticationServices/CXCallObserverDelegate-Protocol.h>
+#import <AuthenticationServices/NSCoding-Protocol.h>
+#import <AuthenticationServices/NSCopying-Protocol.h>
+#import <AuthenticationServices/NSObject-Protocol.h>
+#import <AuthenticationServices/NSSecureCoding-Protocol.h>
+#import <AuthenticationServices/NSXPCInterface-AuthenticationServicesExtras.h>
+#import <AuthenticationServices/SFCredentialProviderExtensionManager-AuthenticationServicesExtras.h>
+#import <AuthenticationServices/SOAuthorizationDelegate-Protocol.h>
+#import <AuthenticationServices/Swift-Protocol.h>
+#import <AuthenticationServices/UIViewController-AuthenticationServicesExtras.h>

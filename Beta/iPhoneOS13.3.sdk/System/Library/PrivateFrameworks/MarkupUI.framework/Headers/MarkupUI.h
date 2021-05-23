@@ -1,0 +1,54 @@
+/*
+ Image: /System/Library/PrivateFrameworks/MarkupUI.framework/MarkupUI
+ */
+
+#import <MarkupUI/MarkupUI-Structures.h>
+
+#import <MarkupUI/_UIViewBoundingPathChangeObserver-Protocol.h>
+#import <MarkupUI/AKControllerDelegateProtocol-Protocol.h>
+#import <MarkupUI/MarkupViewController.h>
+#import <MarkupUI/MUCGPDFAnnotationAdaptor.h>
+#import <MarkupUI/MUCGPDFCircleAnnotationAdaptor.h>
+#import <MarkupUI/MUCGPDFFormWrapper.h>
+#import <MarkupUI/MUCGPDFFreeTextAnnotationAdaptor.h>
+#import <MarkupUI/MUCGPDFLineAnnotationAdaptor.h>
+#import <MarkupUI/MUCGPDFMarkupAnnotationAdaptor.h>
+#import <MarkupUI/MUCGPDFNukeAndPaveWriter.h>
+#import <MarkupUI/MUCGPDFPopupAnnotationAdaptor.h>
+#import <MarkupUI/MUCGPDFSquareAnnotationAdaptor.h>
+#import <MarkupUI/MUCGPDFStampAnnotationAdaptor.h>
+#import <MarkupUI/MUCGPDFTextWidgetAnnotationAdaptor.h>
+#import <MarkupUI/MUContentViewController.h>
+#import <MarkupUI/MUContentViewControllerDelegate-Protocol.h>
+#import <MarkupUI/MUContentViewControllerProtocol-Protocol.h>
+#import <MarkupUI/MUExtensionViewProtocol-Protocol.h>
+#import <MarkupUI/MUImageContentViewController.h>
+#import <MarkupUI/MUImageDownsamplingUtilities.h>
+#import <MarkupUI/MUImageReader.h>
+#import <MarkupUI/MUImageScrollView.h>
+#import <MarkupUI/MUImageWriter.h>
+#import <MarkupUI/MUPayloadEncryption.h>
+#import <MarkupUI/MUPDFAnnotationAdaptorHelper.h>
+#import <MarkupUI/MUPDFContentViewController.h>
+#import <MarkupUI/MUPDFPageLabelView.h>
+#import <MarkupUI/MUPDFUtilities.h>
+#import <MarkupUI/MUPDFView.h>
+#import <MarkupUI/MURemoteViewController.h>
+#import <MarkupUI/MURemoteViewProtocol-Protocol.h>
+#import <MarkupUI/MUStatistics.h>
+#import <MarkupUI/NSArray-Foundation_Extensions.h>
+#import <MarkupUI/NSCopying-Protocol.h>
+#import <MarkupUI/NSDictionary-Foundation_Extensions.h>
+#import <MarkupUI/NSMutableCopying-Protocol.h>
+#import <MarkupUI/NSObject-Protocol.h>
+#import <MarkupUI/PDFAKControllerDelegateProtocol-Protocol.h>
+#import <MarkupUI/PDFViewDelegate-Protocol.h>
+#import <MarkupUI/PDFViewDelegatePrivate-Protocol.h>
+#import <MarkupUI/PKRulerHostingDelegate-Protocol.h>
+#import <MarkupUI/Swift-Protocol.h>
+#import <MarkupUI/UIBarPositioningDelegate-Protocol.h>
+#import <MarkupUI/UIImage-UIImage_MarkupAppIcon.h>
+#import <MarkupUI/UINavigationBarDelegate-Protocol.h>
+#import <MarkupUI/UIPDFDocument-UIPDFDocumentAdditions.h>
+#import <MarkupUI/UIScrollViewDelegate-Protocol.h>
+#import <MarkupUI/UIToolbarDelegate-Protocol.h>

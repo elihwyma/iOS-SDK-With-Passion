@@ -1,0 +1,52 @@
+/*
+ Image: /System/Library/PrivateFrameworks/BiometricKitUI.framework/BiometricKitUI
+ */
+
+#import <BiometricKitUI/BiometricKitUI-Structures.h>
+
+#import <BiometricKitUI/AVPlayer-SnapShot.h>
+#import <BiometricKitUI/BiometricKitDelegate-Protocol.h>
+#import <BiometricKitUI/BiometricKitUI.h>
+#import <BiometricKitUI/BiometricKitUIEnrollViewController.h>
+#import <BiometricKitUI/BKEnrollOperationDelegate-Protocol.h>
+#import <BiometricKitUI/BKEnrollPearlOperationDelegate-Protocol.h>
+#import <BiometricKitUI/BKFaceDetectOperationDelegate-Protocol.h>
+#import <BiometricKitUI/BKOperationDelegate-Protocol.h>
+#import <BiometricKitUI/BKUIDevice.h>
+#import <BiometricKitUI/BKUIOrientationStateHandler.h>
+#import <BiometricKitUI/BKUIPearlAudioSession.h>
+#import <BiometricKitUI/BKUIPearlCoachingController.h>
+#import <BiometricKitUI/BKUIPearlCoachingControllerDelegate-Protocol.h>
+#import <BiometricKitUI/BKUIPearlCoachingDeviceView.h>
+#import <BiometricKitUI/BKUIPearlCrossHairsManager.h>
+#import <BiometricKitUI/BKUIPearlCrossHairsRenderingView.h>
+#import <BiometricKitUI/BKUIPearlCrossHairsView.h>
+#import <BiometricKitUI/BKUIPearlEnrollController.h>
+#import <BiometricKitUI/BKUIPearlEnrollControllerPreloadedState.h>
+#import <BiometricKitUI/BKUIPearlEnrollManager.h>
+#import <BiometricKitUI/BKUIPearlEnrollTransitionAnimator.h>
+#import <BiometricKitUI/BKUIPearlEnrollView.h>
+#import <BiometricKitUI/BKUIPearlEnrollViewController.h>
+#import <BiometricKitUI/BKUIPearlEnrollViewControllerDelegate-Protocol.h>
+#import <BiometricKitUI/BKUIPearlEnrollViewDelegate-Protocol.h>
+#import <BiometricKitUI/BKUIPearlInstructionView.h>
+#import <BiometricKitUI/BKUIPearlMovieLoopView.h>
+#import <BiometricKitUI/BKUIPearlPillContainerView.h>
+#import <BiometricKitUI/BKUIPearlPillView.h>
+#import <BiometricKitUI/BKUIPearlPositioningGuideView.h>
+#import <BiometricKitUI/BKUIPearlSpringInstance.h>
+#import <BiometricKitUI/BKUIPearlVideoCaptureSession.h>
+#import <BiometricKitUI/BKUIRotationArrowAnimationLayer.h>
+#import <BiometricKitUI/BKUIStyle.h>
+#import <BiometricKitUI/BKUITypeSafeCopier.h>
+#import <BiometricKitUI/BKUIVideoCaptureSesssionDelegate-Protocol.h>
+#import <BiometricKitUI/BKUIViewControllerAnimatedTransitioning-Protocol.h>
+#import <BiometricKitUI/CAAnimationDelegate-Protocol.h>
+#import <BiometricKitUI/LAUIDelegate-Protocol.h>
+#import <BiometricKitUI/NSObject-Protocol.h>
+#import <BiometricKitUI/Swift-Protocol.h>
+#import <BiometricKitUI/UIBezierPath-RoundedCorner.h>
+#import <BiometricKitUI/UIDevice-sfHelpers.h>
+#import <BiometricKitUI/UIView-Debug.h>
+#import <BiometricKitUI/UIViewController-ForcedRotation.h>
+#import <BiometricKitUI/UIViewControllerAnimatedTransitioning-Protocol.h>

@@ -1,0 +1,12 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: 30A204D7-FA77-358D-AF28-071406D92B0C' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/FoundationODR.framework/FoundationODR
+current-version:       1
+compatibility-version: 1
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ dyld_stub_binder ]
+...

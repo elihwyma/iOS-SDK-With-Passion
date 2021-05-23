@@ -1,0 +1,11 @@
+/*
+ Image: /System/Library/PrivateFrameworks/TelephonyUtilities.framework/TelephonyUtilities
+ */
+
+#import <TelephonyUtilities/Swift-Protocol.h>
+
+@protocol TUConversationMediaControllerDataSourceDelegate <Swift>
+
+- (unsigned short)mediaPrioritiesChangeForConversation: /* Error: Ran out of types for this method. */;
+
+@end

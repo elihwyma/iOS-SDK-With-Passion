@@ -1,0 +1,147 @@
+/*
+ Image: /System/Library/PrivateFrameworks/Memories.framework/Memories
+ */
+
+#import <Photos/PHAsset.h>
+
+@class MiroVPIrisRecommendedMetadataRange, NSArray, NSString, PHAdjustmentData, PHAssetResource;
+
+@interface PHAsset (miro_origFilename)
+
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (nonatomic, readonly) double miro_score;
+@property (nonatomic, readonly) unsigned long long miro_flags;
+@property (nonatomic, readonly) long long miro_analysisVersion;
+@property (nonatomic, readonly) unsigned long long miro_performedAnalysisTypes;
+@property (nonatomic, readonly) unsigned long long miro_faceCount;
+@property (nonatomic, readonly) unsigned long long miro_voiceCount;
+@property (nonatomic, readonly) _Bool miro_isJunk;
+@property (nonatomic, readonly) _Bool miro_isBlacklisted;
+@property (nonatomic, readonly) _Bool miro_IrisVideoUsable;
+@property (nonatomic, readonly) MiroVPIrisRecommendedMetadataRange *miro_IrisUsableRange;
+@property (nonatomic, readonly) double miro_IrisVideoUsableDuration;
+@property (retain, nonatomic) NSArray *miro_desirableRanges;
+@property (nonatomic, readonly) NSArray *pickListRanges;
+@property (nonatomic, readonly) NSArray *newAutoEditRanges;
+@property (nonatomic, readonly) NSArray *userSetSloMoRange;
+@property (nonatomic, readonly) double maximumDurationInSecondsJunkAndUserTrim;
+@property (nonatomic, readonly) _Bool irisVideoMeetsQualityRequirements;
+@property (nonatomic, readonly) _Bool irisVideoMeetsActionRequirements;
+@property (nonatomic, readonly) double badQualityThreshold;
+@property (retain, nonatomic) PHAssetResource *miro_cachedLocalMostUsefulResource;
+@property (retain, nonatomic) PHAssetResource *miro_cachedLocalMostUsefulIrisResource;
+@property (nonatomic, readonly) _Bool hasLocallyAvailableUsefulResource;
+@property (nonatomic, readonly) PHAdjustmentData *adjustmentData;
+@property (nonatomic, readonly) _Bool isSloMoAsset;
+
++ (void)miro_purgeAssetResourceCache;
++ (int)endTimeForRangeModel:(id)arg1;
++ (int)maxEndTimeRespectingTrimmingForClip:(id)arg1 projectFrameRate:(int)arg2;
++ (id)rangeConformingToVoiceRangesSurroundingTime:(int)arg1 forDuration:(int)arg2 durationTolerance:(int)arg3 inRanges:(id)arg4;
++ (double)_miro_faceScoreMaxForVideo:(_Bool)arg1;
++ (double)_miro_voiceScoreMaxForVideo:(_Bool)arg1;
++ (double)_miro_qualityScoreMaxForVideo:(_Bool)arg1;
++ (double)_miro_junkScoreMaxForVideo:(_Bool)arg1;
++ (double)_miro_camMotionScoreMaxForVideo:(_Bool)arg1;
++ (double)_miro_nonAnalysisRelatedScoreMaxForVideo:(_Bool)arg1;
++ (double)_miro_analysisRelatedScoreMaxForVideo:(_Bool)arg1;
++ (double)_miro_scoreMaxForVideo:(_Bool)arg1;
++ (id)globalMiroPhotoLibrary;
++ (id)rangeModelsByDeletingRangeModels:(id)arg1 outsideClip:(id)arg2 projectFrameRate:(int)arg3;
++ (_Bool)mirobackend_isCloudPhotosEnabled;
++ (void)updateAssets:(id)arg1 forPreferredClassificationKeys:(id)arg2;
++ (void)updateAssets:(id)arg1 forFeaturedPeople:(id)arg2;
++ (id)rangeSurroundingTime:(int)arg1 inRanges:(id)arg2;
++ (_Bool)range:(struct _NSRange)arg1 containsRange2:(struct _NSRange)arg2;
++ (id)_coalescedRangesFromRanges:(id)arg1;
++ (id)rangeIn:(id)arg1 correspondingToRange:(id)arg2;
++ (id)newRangeFromRange:(id)arg1 excludingRange:(id)arg2;
++ (id)rangeModels:(id)arg1 deletingLowQualityRangesFrom:(id)arg2 blueprint:(id)arg3 frameRate:(int)arg4;
++ (id)rangeModels:(id)arg1 deletingFastMotionRangesFrom:(id)arg2 blueprint:(id)arg3 frameRate:(int)arg4;
++ (void)changeGlobalMiroPhotoLibrary:(id)arg1;
++ (id)constrainRange:(id)arg1 selectionStart:(int)arg2 duration:(int)arg3;
++ (id)miro_cachedLocalMostUsefulResourceMap;
++ (_Bool)miro_isOkayAssetResource:(id)arg1;
++ (long long)miroMegaPixelLimit;
++ (id)fetchAssetWithURL:(id)arg1;
++ (id)fetchAssetWithLocalIdentifier:(id)arg1;
++ (id)fetchAssetsWithLocalIdentifierURLs:(id)arg1 options:(id)arg2;
++ (id)fetchAssetsWithURLs:(id)arg1 options:(id)arg2;
++ (id)fetchAssetLibraryURLsInAssetCollection:(id)arg1 withMediaType:(long long)arg2;
+
+- (id)preferredRepresentation;
+- (struct CGSize)pixelSize;
+- (id)defaultRepresentation;
+- (id)miro_rangesWithType:(unsigned long long)arg1 predicate:(id)arg2;
+- (id)miro_rangesWithType:(unsigned long long)arg1;
+- (id)mostUsefulResource;
+- (id)miro_allRanges;
+- (double)miro_scoreLogForDebugDisplayWithScoreReasonString:(id *)arg1 scoreLog:(id *)arg2;
+- (void)miro_setRanges:(id)arg1 replaceType:(unsigned long long)arg2;
+- (id)miro_originalFilename;
+- (double)miro_junkValue;
+- (id)assetResourceForIrisIfNeeded;
+- (void)miro_deleteRangesWithType:(unsigned long long)arg1;
+- (id)bestRangeFromRanges:(id)arg1 requestedDuration:(int)arg2;
+- (id)newAutoEditRangesConstrainedToClip:(id)arg1;
+- (_Bool)_miro_ignoreDoNotUseScore;
+- (double)miro_rawQualityScore;
+- (_Bool)mirobackend_isScreenshotOrPNG;
+- (_Bool)mirobackend_isGIF;
+- (_Bool)burstIsValid;
+- (double)_miro_faceScore:(id)arg1;
+- (double)_miro_voiceScore:(id)arg1;
+- (double)_miro_qualityScore:(id)arg1;
+- (double)_miro_junkScore:(id)arg1;
+- (double)_miro_camMotionScore:(id)arg1;
+- (double)_miro_nonAnalysisRelatedScore:(id)arg1 reasonString:(id)arg2;
+- (double)_miro_analysisRelatedScore:(id)arg1 reasonString:(id)arg2;
+- (double)_miro_normalizedScoreForRawScore:(double)arg1;
+- (double)miro_computeStaticScoreWithScoreReasonString:(id *)arg1 scoreLog:(id *)arg2 writeToFile:(_Bool)arg3 ignoreSetting:(_Bool)arg4;
+- (double)miro_computeStaticScoreWithScoreReasonString:(id *)arg1;
+- (id)miro_transientRangesWithType:(unsigned long long)arg1;
+- (id)avAssetWithOptions:(id)arg1;
+- (id)localIdentifierURL;
+- (id)miro_ingestServerSideAnalysisResults:(_Bool *)arg1;
+- (_Bool)miro_irisDoesNotContainFlash;
+- (_Bool)miro_irisMeetsFacesRequirements;
+- (id)sceneRangesRemovingLowQualityRanges;
+- (void)scoreRanges:(id)arg1 scoreForDuration:(_Bool)arg2;
+- (void)scoreInterestingSubranges:(id)arg1;
+- (id)sceneRangesSplitByLowQualityAndVPScenes;
+- (id)allUsefulMetadataRanges;
+- (double)qualityValueForAnalysisValue:(double)arg1;
+- (double)durationWeightedValue:(double)arg1;
+- (id)_intersectSplitAndCollectRanges:(id)arg1;
+- (float)scoreForAutoEditRange:(id)arg1 resultChildVoiceRange:(id *)arg2;
+- (void)arbitrarilySegmentLongUnanalyzedRanges:(id)arg1;
+- (id)_newRangeBySplittingRange:(id)arg1 atTime:(int)arg2;
+- (id)_ranges:(id)arg1 mergedAsChildRangesWhereOverlapingRanges:(id)arg2;
+- (int)numberOfNeededRangesForDuration:(double)arg1;
+- (id)rangesByTrimmingToBounds:(id)arg1 selectionStart:(int)arg2 duration:(int)arg3;
+- (_Bool)modifyForBadIrisSharpness;
+- (id)simplerSceneRangesRemovingLowQualityRanges;
+- (id)_intersectSplitAndCollectRangesInAWayThatDoesntWork:(id)arg1;
+- (void)CHECK_RANGES:(id)arg1;
+- (id)_mostUsefulResourceForExport:(_Bool)arg1;
+- (id)largeIfLocal_elseFullIfLocal_elseOriginalIfNotEditedAndLocal_elseMedium;
+- (_Bool)miro_originalVideoKnownToBeBad;
+- (int)_minimumUsefulResourceWidth;
+- (int)_minimumUsefulResourceHeight;
+- (int)downloadResource:(id)arg1 progressHandler:(CDUnknownBlockType)arg2 completionHandler:(CDUnknownBlockType)arg3 dataHandler:(CDUnknownBlockType)arg4;
+- (id)mostUsefulResourceForExport;
+- (id)originalRepresentation;
+- (int)_requestAVAssetWithOptions:(id)arg1 resultHandler:(CDUnknownBlockType)arg2;
+- (int)requestPlayerItemWithOptions:(id)arg1 resultHandler:(CDUnknownBlockType)arg2;
+- (int)requestImageForTargetSize:(struct CGSize)arg1 contentMode:(long long)arg2 options:(id)arg3 resultHandler:(CDUnknownBlockType)arg4;
+- (id)imageForTargetSize:(struct CGSize)arg1 contentMode:(long long)arg2 options:(id)arg3;
+- (void)cancelImageRequestWithID:(int)arg1;
+- (int)requestExportSessionWithOptions:(id)arg1 exportPreset:(id)arg2 resultHandler:(CDUnknownBlockType)arg3;
+- (int)requestAVAssetWithOptions:(id)arg1 resultHandler:(CDUnknownBlockType)arg2;
+- (id)avPlayerItemWithOptions:(id)arg1;
+- (id)adjustedRepresentation;
+
+@end

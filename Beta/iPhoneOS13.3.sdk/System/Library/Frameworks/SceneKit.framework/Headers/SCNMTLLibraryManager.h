@@ -1,0 +1,45 @@
+/*
+ Image: /System/Library/Frameworks/SceneKit.framework/SceneKit
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSDictionary, NSMapTable, SCNMTLLibrary;
+
+@protocol MTLDevice, MTLLibrary, OS_dispatch_group, OS_dispatch_queue;
+
+__attribute__((visibility("hidden")))
+@interface SCNMTLLibraryManager : NSObject
+
+{
+    id <MTLDevice> _device;
+    SCNMTLLibrary *_frameworkLibrary;
+    SCNMTLLibrary *_defaultLibrary;
+    struct __C3DEngineStats *__engineStats;
+    NSObject<OS_dispatch_queue> *_deviceQueue;
+    NSObject<OS_dispatch_group> *_shaderCompilationGroup;
+    id <MTLLibrary> _commonProfileCacheLibrary;
+    NSDictionary *_commonProfilePrecompiledFunctions;
+    NSMapTable *_availableLibraries;
+    struct __CFDictionary *_availableCompiledLibraries;
+    struct os_unfair_lock_s _availableCompiledLibrariesLock;
+}
+
++ (id)hashCodeForSource:(id)arg1 macros:(id)arg2;
+
+- (void)dealloc;
+- (id)device;
+- (id)initWithDevice:(id)arg1;
+- (id)frameworkLibrary;
+- (void)waitForShadersCompilation;
+- (void)_setEngineStats:(struct __C3DEngineStats *)arg1;
+- (void)clearCompiledLibraries;
+- (id)libraryForSourceCode:(id)arg1 options:(id)arg2;
+- (id)defaultLibrary;
+- (id)commonProfileCacheLibrary;
+- (id)shaderCompilationGroup;
+- (id)deviceQueue;
+- (id)libraryForFile:(id)arg1;
+- (void)libraryForProgramDesc:(CDStruct_1c56e179)arg1 completionHandler:(CDUnknownBlockType)arg2;
+
+@end

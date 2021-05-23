@@ -1,0 +1,22 @@
+/*
+ Image: /System/Library/Frameworks/Intents.framework/Intents
+ */
+
+#import <Foundation/NSDictionary.h>
+
+@class NSString;
+
+@interface NSDictionary (Intents)
+
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
++ (id)_intents_decodeWithJSONDecoder:(id)arg1 codableDescription:(id)arg2 from:(id)arg3;
+
+- (id)_intents_encodeWithJSONEncoder:(id)arg1 codableDescription:(id)arg2;
+- (id)descriptionAtIndent:(unsigned long long)arg1;
+- (id)_intents_indexingRepresentation;
+
+@end

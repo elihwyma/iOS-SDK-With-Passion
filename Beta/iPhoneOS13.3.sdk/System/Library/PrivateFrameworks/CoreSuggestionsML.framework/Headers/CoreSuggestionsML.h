@@ -1,0 +1,53 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CoreSuggestionsML.framework/CoreSuggestionsML
+ */
+
+#import <CoreSuggestionsML/CoreSuggestionsML-Structures.h>
+
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/(null).h>
+#import <CoreSuggestionsML/_PASDatabaseMigrationProtocol-Protocol.h>
+#import <CoreSuggestionsML/NSDictionary-SGQuickResponsesConfigDictionary.h>
+#import <CoreSuggestionsML/NSObject-Protocol.h>
+#import <CoreSuggestionsML/PMLPlistAndChunksSerializableProtocol-Protocol.h>
+#import <CoreSuggestionsML/PMLTransformerProtocol-Protocol.h>
+#import <CoreSuggestionsML/SGCustomResponsesParameters.h>
+#import <CoreSuggestionsML/SGLanguageDetection.h>
+#import <CoreSuggestionsML/SGLazyInit.h>
+#import <CoreSuggestionsML/SGModelAsset.h>
+#import <CoreSuggestionsML/SGModelFeatures.h>
+#import <CoreSuggestionsML/SGModelHyperparameters.h>
+#import <CoreSuggestionsML/SGModelSampler.h>
+#import <CoreSuggestionsML/SGModelSource.h>
+#import <CoreSuggestionsML/SGNestedArray.h>
+#import <CoreSuggestionsML/SGPipelineTransformer.h>
+#import <CoreSuggestionsML/SGQRMessage.h>
+#import <CoreSuggestionsML/SGQuickResponse.h>
+#import <CoreSuggestionsML/SGQuickResponsesClassificationParameters.h>
+#import <CoreSuggestionsML/SGQuickResponsesConfig.h>
+#import <CoreSuggestionsML/SGQuickResponsesInference.h>
+#import <CoreSuggestionsML/SGQuickResponsesModel.h>
+#import <CoreSuggestionsML/SGQuickResponsesModelRules.h>
+#import <CoreSuggestionsML/SGQuickResponsesPersonalization.h>
+#import <CoreSuggestionsML/SGQuickResponsesPredictionParameters.h>
+#import <CoreSuggestionsML/SGQuickResponsesRecords.h>
+#import <CoreSuggestionsML/SGQuickResponsesReplies.h>
+#import <CoreSuggestionsML/SGQuickResponsesReplyModel.h>
+#import <CoreSuggestionsML/SGQuickResponsesReplyOption.h>
+#import <CoreSuggestionsML/SGQuickResponsesReplyRecord.h>
+#import <CoreSuggestionsML/SGQuickResponsesStore.h>
+#import <CoreSuggestionsML/SGQuickResponsesTransformerInstance.h>
+#import <CoreSuggestionsML/SGStringPreprocessingTransformer.h>
+#import <CoreSuggestionsML/SGStringPreprocessor.h>
+#import <CoreSuggestionsML/Swift-Protocol.h>

@@ -1,0 +1,32 @@
+/*
+ Image: /System/Library/PrivateFrameworks/HealthUI.framework/HealthUI
+ */
+
+#import <ProtocolBuffer/PBCodable.h>
+
+@interface HealthUIAWDHealthUIMetric5 : PBCodable
+
+{
+    unsigned long long _timestamp;
+    int _type;
+    CDStruct_1769069f _has;
+}
+
+@property (nonatomic) _Bool hasTimestamp;
+@property (nonatomic) unsigned long long timestamp;
+@property (nonatomic) _Bool hasType;
+@property (nonatomic) int type;
+
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)dictionaryRepresentation;
+- (void)writeTo:(id)arg1;
+- (void)mergeFrom:(id)arg1;
+- (_Bool)readFrom:(id)arg1;
+- (void)copyTo:(id)arg1;
+- (id)typeAsString:(int)arg1;
+- (int)StringAsType:(id)arg1;
+
+@end

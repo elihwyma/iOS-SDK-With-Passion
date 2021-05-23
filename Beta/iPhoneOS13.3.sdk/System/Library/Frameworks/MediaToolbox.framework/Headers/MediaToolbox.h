@@ -1,0 +1,51 @@
+/*
+ Image: /System/Library/Frameworks/MediaToolbox.framework/MediaToolbox
+ */
+
+#import <MediaToolbox/MediaToolbox-Structures.h>
+
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/(null).h>
+#import <MediaToolbox/CALayerDelegate-Protocol.h>
+#import <MediaToolbox/CMNetworkActivityMonitor.h>
+#import <MediaToolbox/CMNetworkActivityObserver.h>
+#import <MediaToolbox/FigBaseCALayerHost.h>
+#import <MediaToolbox/FigCaptionLayer.h>
+#import <MediaToolbox/FigCaptionLayerPrivate.h>
+#import <MediaToolbox/FigCaptionRowLayer.h>
+#import <MediaToolbox/FigCDSCALayer.h>
+#import <MediaToolbox/FigCDSCALayerOutputNodeContentLayer.h>
+#import <MediaToolbox/FigCDSCALayerOutputNodeLayer.h>
+#import <MediaToolbox/FigCPEFPAirPlaySession.h>
+#import <MediaToolbox/FigDisplaySleepAssertion.h>
+#import <MediaToolbox/FigHTTPRequestSessionDataDelegate.h>
+#import <MediaToolbox/FigHUDGraphLayer.h>
+#import <MediaToolbox/FigHUDLayer.h>
+#import <MediaToolbox/FigNeroLayer.h>
+#import <MediaToolbox/FigNSURLSession.h>
+#import <MediaToolbox/FigNSURLSessionRegistry.h>
+#import <MediaToolbox/FigPhotoTile.h>
+#import <MediaToolbox/FigPhotoTiledLayer.h>
+#import <MediaToolbox/FigPiPableLayer-Protocol.h>
+#import <MediaToolbox/FigPlayablePattern.h>
+#import <MediaToolbox/FigScreenCaptureController.h>
+#import <MediaToolbox/FigSubtitleBackdropCALayerContentLayer.h>
+#import <MediaToolbox/FigSubtitleWebVTTCueCALayer.h>
+#import <MediaToolbox/FigSubtitleWebVTTRegionCALayer.h>
+#import <MediaToolbox/FPSupport_PowerStateSingleton.h>
+#import <MediaToolbox/NSObject-Protocol.h>
+#import <MediaToolbox/NSURLSessionDataDelegate-Protocol.h>
+#import <MediaToolbox/NSURLSessionDelegate-Protocol.h>
+#import <MediaToolbox/NSURLSessionTaskDelegate-Protocol.h>
+#import <MediaToolbox/Swift-Protocol.h>

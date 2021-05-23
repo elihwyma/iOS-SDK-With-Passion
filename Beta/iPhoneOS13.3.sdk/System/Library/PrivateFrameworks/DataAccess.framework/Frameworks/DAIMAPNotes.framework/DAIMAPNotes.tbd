@@ -1,0 +1,21 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: E9350DA1-636D-3A08-B48E-02CF8AB1E7E2' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/DataAccess.framework/Frameworks/DAIMAPNotes.framework/DAIMAPNotes
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64 ]
+    objc-classes:         [ _DAIMAPNotesAccount ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ ___CFConstantStringClassReference,
+                            __objc_empty_cache, _objc_msgSend, _objc_opt_class,
+                            _objc_release, _objc_retain, _objc_retainAutorelease,
+                            _objc_retainAutoreleasedReturnValue, _sel_getName,
+                            dyld_stub_binder ]
+    objc-classes:         [ _DAAccount, _NSAssertionHandler, _NSObject, _NSString ]
+...

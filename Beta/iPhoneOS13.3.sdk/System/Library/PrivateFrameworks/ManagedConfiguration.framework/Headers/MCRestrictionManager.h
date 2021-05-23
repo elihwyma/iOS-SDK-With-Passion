@@ -1,0 +1,184 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ManagedConfiguration.framework/ManagedConfiguration
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSDictionary, NSMutableDictionary;
+
+@protocol OS_dispatch_queue;
+
+@interface MCRestrictionManager : NSObject
+
+{
+    NSMutableDictionary *_memberQueueRestrictions;
+    NSMutableDictionary *_memberQueueSystemClientRestrictions;
+    NSMutableDictionary *_memberQueueSystemUserSettings;
+    NSMutableDictionary *_memberQueueSystemNamespacedUserSettings;
+    NSMutableDictionary *_memberQueueUserClientRestrictions;
+    NSMutableDictionary *_memberQueueUserUserSettings;
+    NSMutableDictionary *_memberQueueUserNamespacedUserSettings;
+    NSMutableDictionary *_memberQueueEffectiveUserSettings;
+    NSObject<OS_dispatch_queue> *_memberQueue;
+    NSMutableDictionary *_memberQueueSystemProfileRestrictions;
+    NSMutableDictionary *_memberQueueUserProfileRestrictions;
+}
+
+@property (nonatomic, readonly) NSDictionary *currentRestrictions;
+@property (nonatomic, readonly) NSDictionary *defaultRestrictions;
+@property (nonatomic, readonly) NSDictionary *defaultSettings;
+@property (copy, nonatomic, readonly) NSDictionary *userSettings;
+@property (copy, nonatomic, readonly) NSDictionary *effectiveUserSettings;
+@property (copy, nonatomic, readonly) NSDictionary *systemUserSettings;
+@property (copy, nonatomic, readonly) NSDictionary *userUserSettings;
+@property (copy, nonatomic, readonly) NSDictionary *systemProfileRestrictions;
+@property (copy, nonatomic, readonly) NSDictionary *userProfileRestrictions;
+@property (copy, nonatomic, readonly) NSDictionary *combinedProfileRestrictions;
+@property (retain, nonatomic) NSObject<OS_dispatch_queue> *memberQueue;
+@property (retain, nonatomic) NSMutableDictionary *memberQueueRestrictions;
+@property (retain, nonatomic) NSMutableDictionary *memberQueueSystemProfileRestrictions;
+@property (retain, nonatomic) NSMutableDictionary *memberQueueUserProfileRestrictions;
+@property (retain, nonatomic) NSMutableDictionary *memberQueueSystemClientRestrictions;
+@property (retain, nonatomic) NSMutableDictionary *memberQueueUserClientRestrictions;
+@property (retain, nonatomic) NSMutableDictionary *memberQueueSystemUserSettings;
+@property (retain, nonatomic) NSMutableDictionary *memberQueueSystemNamespacedUserSettings;
+@property (retain, nonatomic) NSMutableDictionary *memberQueueUserUserSettings;
+@property (retain, nonatomic) NSMutableDictionary *memberQueueUserNamespacedUserSettings;
+@property (retain, nonatomic) NSMutableDictionary *memberQueueEffectiveUserSettings;
+@property (nonatomic, readonly) NSMutableDictionary *memberQueueCombinedProfileRestrictions;
+
++ (id)sharedManager;
++ (id)defaultSettings;
++ (id)explicitlyRestrictedAppsBySetting;
++ (id)explicitlyRestrictedEphemeralMultiUserApps;
++ (_Bool)isInSingleAppModeWithSettingsDictionary:(id)arg1;
++ (id)unionValuesForFeature:(id)arg1 withRestrictionsDictionary:(id)arg2;
++ (id)intersectedValuesForFeature:(id)arg1 withRestrictionsDictionary:(id)arg2;
++ (id)filterRestrictionDictionary:(id)arg1 toIncludeOnlyRestrictionsThatDifferFromRestrictions:(id)arg2;
++ (int)restrictedBoolForFeature:(id)arg1 withRestrictionsDictionary:(id)arg2;
++ (id)valueForFeature:(id)arg1 withRestrictionsDictionary:(id)arg2;
++ (id)maximumValueForSetting:(id)arg1;
++ (id)minimumValueForSetting:(id)arg1;
++ (id)filterGrandfatheredRestrictionsIfNeededFromRestrictions:(id)arg1;
++ (id)allowedGrandfatheredRestrictionPayloadKeysDictionary;
++ (id)addRestrictionPayloadKeysDictionary:(id)arg1 toRestrictionPayloadKeysDictionary:(id)arg2;
++ (int)boolSettingForFeature:(id)arg1 withUserSettingDictionary:(id)arg2;
++ (id)valueSettingForFeature:(id)arg1 withUserSettingDictionary:(id)arg2;
++ (id)objectForFeature:(id)arg1 withRestrictionsDictionary:(id)arg2;
++ (id)intersectedValuesSettingForFeature:(id)arg1 withUserSettingDectionary:(id)arg2;
++ (id)unionValuesSettingForFeature:(id)arg1 withUserSettingDictionary:(id)arg2;
++ (int)defaultBoolValueForSetting:(id)arg1;
++ (id)defaultValueForSetting:(id)arg1;
++ (id)defaultIntersectedValuesForSetting:(id)arg1;
++ (id)defaultUnionValuesForSetting:(id)arg1;
++ (id)defaultParametersForBoolSetting:(id)arg1;
++ (id)defaultParametersForValueSetting:(id)arg1;
++ (id)defaultParametersForIntersectedValuesSetting:(id)arg1;
++ (id)defaultParametersForUnionValuesSetting:(id)arg1;
++ (_Bool)isWebContentFilterUIActiveWithRestrictionDictionary:(id)arg1;
++ (id)restrictionsAfterApplyingRestrictionsDictionary:(id)arg1 toRestrictionsDictionary:(id)arg2 outChangeDetected:(_Bool *)arg3 outError:(id *)arg4;
++ (int)appWhitelistStateWithSettingsDictionary:(id)arg1 restrictionsDictionary:(id)arg2;
++ (_Bool)isPasscodeRequiredToAccessWhitelistedAppsWithSettingsDictionary:(id)arg1;
++ (_Bool)mayEnterPasscodeToAccessNonWhitelistedAppsWithSettingsDictionary:(id)arg1;
++ (id)defaultRestrictionFilePath;
++ (id)restrictionsWithCurrentRestrictions:(id)arg1 defaultRestrictions:(id)arg2 systemProfileRestrictions:(id)arg3 userProfileRestrictions:(id)arg4 systemClientRestrictions:(id)arg5 userClientRestrictions:(id)arg6 outRestrictionsChanged:(_Bool *)arg7 outError:(id *)arg8;
++ (id)filterRestrictionDictionary:(id)arg1 acceptedKeysDict:(id)arg2;
++ (id)systemMetadataValueForKey:(id)arg1;
++ (id)grandfatheredRestrictionPayloadKeysDictionary;
++ (id)filterRestrictionPayloadKeysDictionary:(id)arg1 removingPayloadKeysInRestrictionPayloadKeysDictionary:(id)arg2;
++ (id)filterRestrictionDictionary:(id)arg1 removingPayloadKeysInRestrictionPayloadKeysDictionary:(id)arg2;
++ (id)restrictionKeys;
++ (id)_lockedDownRestrictionPayloadKeysWithPayloadKeysDictionary:(id)arg1 forRestrictionKey:(id)arg2;
++ (id)_payloadKeysDictionaryAfterAddingFeature:(id)arg1 toRestrictionPayloadKeysDictionary:(id)arg2 forRestrictionKey:(id)arg3;
++ (id)_filterRestrictionDictionary:(id)arg1 removingPayloadKeysInRestrictionPayloadKeysDictionary:(id)arg2 forRestrictionKey:(id)arg3;
++ (id)_filterRestrictionPayloadKeysDictionary:(id)arg1 removingPayloadKeysInRestrictionPayloadKeysDictionary:(id)arg2 forRestrictionKey:(id)arg3;
++ (id)_addRestrictionPayloadKeysDictionary:(id)arg1 toRestrictionPayloadKeysDictionary:(id)arg2 forRestrictionKey:(id)arg3;
++ (id)parametersForBoolSetting:(id)arg1 withUserSettingDictionary:(id)arg2;
++ (id)applyRestrictions:(id)arg1 forFeature:(id)arg2 toParametersForBoolSetting:(id)arg3;
++ (id)parametersForValueSetting:(id)arg1 withUserSettingDictionary:(id)arg2;
++ (id)parametersForIntersectedSetting:(id)arg1 withUserSettingDictionary:(id)arg2;
++ (id)parametersForUnionSetting:(id)arg1 withUserSettingDictionary:(id)arg2;
++ (int)defaultBoolValueForSetting:(id)arg1 outAsk:(_Bool *)arg2;
++ (int)boolSettingForFeature:(id)arg1 outAsk:(_Bool *)arg2 withUserSettingDictionary:(id)arg3;
++ (id)parametersForSetting:(id)arg1 ofType:(id)arg2 withUserSettingDictionary:(id)arg3;
++ (_Bool)isWhitelistedAppsRestrictionEnforcedWithRestrictionsDictionary:(id)arg1;
++ (id)restrictionsWithCurrentRestrictions:(id)arg1 defaultRestrictions:(id)arg2 profileRestrictions:(id)arg3 clientRestrictions:(id)arg4 outRestrictionsChanged:(_Bool *)arg5 outError:(id *)arg6;
++ (id)filterRestrictionDictionaryForPublicUse:(id)arg1;
++ (id)filterUserSettingsForPublicUse:(id)arg1;
++ (id)effectiveGrandfatheredRestrictionPayloadKeysDictionary;
++ (_Bool)restrictedBool:(id)arg1 changedBetweenOldRestrictions:(id)arg2 andNewRestrictions:(id)arg3;
++ (_Bool)restrictedValue:(id)arg1 changedBetweenOldRestrictions:(id)arg2 andNewRestrictions:(id)arg3;
++ (_Bool)intersectedValuesForFeature:(id)arg1 changedBetweenOldRestrictions:(id)arg2 andNewRestrictions:(id)arg3;
++ (_Bool)unionValuesForFeature:(id)arg1 changedBetweenOldRestrictions:(id)arg2 andNewRestrictions:(id)arg3;
++ (id)newEffectiveSettingsByApplyingRestrictions:(id)arg1 toSettings:(id)arg2;
++ (_Bool)boolSetting:(id)arg1 valueChangedBetweenOldSettings:(id)arg2 andNewSettings:(id)arg3;
++ (_Bool)valueSetting:(id)arg1 valueChangedBetweenOldSettings:(id)arg2 andNewSettings:(id)arg3;
++ (_Bool)intersectedValuesSetting:(id)arg1 valueChangedBetweenOldSettings:(id)arg2 andNewSettings:(id)arg3;
++ (_Bool)unionValuesSetting:(id)arg1 valueChangedBetweenOldSettings:(id)arg2 andNewSettings:(id)arg3;
++ (id)allowedOpenInAppBundleIDsWithOriginalAppBundleIDs:(id)arg1 managedAppBundleIDs:(id)arg2 localAppBundleID:(id)arg3 localAccountIsManaged:(_Bool)arg4 mayOpenFromUnmanagedToManaged:(_Bool)arg5 mayOpenFromManagedToUnmanaged:(_Bool)arg6 isAppBundleIDExemptBlock:(CDUnknownBlockType)arg7 isAppBundleIDAccountBasedBlock:(CDUnknownBlockType)arg8;
++ (id)allowedImportFromAppBundleIDsWithOriginalAppBundleIDs:(id)arg1 managedAppBundleIDs:(id)arg2 localAppBundleID:(id)arg3 localAccountIsManaged:(_Bool)arg4 mayOpenFromUnmanagedToManaged:(_Bool)arg5 mayOpenFromManagedToUnmanaged:(_Bool)arg6 isAppBundleIDExemptBlock:(CDUnknownBlockType)arg7 isAppBundleIDAccountBasedBlock:(CDUnknownBlockType)arg8;
++ (id)allowedKeyboardBundleIDsAfterApplyingFilterToBundleIDs:(id)arg1 managedAppBundleIDs:(id)arg2 hostAppIsManaged:(_Bool)arg3 mayOpenFromUnmanagedToManaged:(_Bool)arg4 mayOpenFromManagedToUnmanaged:(_Bool)arg5;
+
+- (id)init;
+- (id)description;
+- (int)appWhitelistState;
+- (id)effectiveValueForSetting:(id)arg1;
+- (id)effectiveWhitelistedAppBundleIDs;
+- (void)invalidateSettings;
+- (void)invalidateRestrictions;
+- (_Bool)isBoolSettingLockedDownByRestrictions:(id)arg1;
+- (_Bool)isValueSettingLockedDownByRestrictions:(id)arg1;
+- (id)effectiveUnionValuesForSetting:(id)arg1;
+- (id)restrictedAppBundleIDsExcludingRemovedSystemApps:(_Bool)arg1;
+- (int)effectiveRestrictedBoolForSetting:(id)arg1;
+- (id)effectiveBlacklistedAppBundleIDsExcludingRemovedSystemApps:(_Bool)arg1;
+- (id)unionValuesForFeature:(id)arg1;
+- (id)unionValuesSettingForFeature:(id)arg1;
+- (id)effectiveIntersectedValuesForSetting:(id)arg1;
+- (id)intersectedValuesForFeature:(id)arg1;
+- (id)intersectedValuesSettingForFeature:(id)arg1;
+- (_Bool)isInSingleAppMode;
+- (id)effectiveWhitelistedAppsAndOptions;
+- (id)restrictedAppBundleIDs;
+- (id)effectiveBlacklistedAppBundleIDs;
+- (id)restrictionEnforcedBlacklistedAppBundleIDs;
+- (id)restrictionEnforcedBlacklistedAppBundleIDsExcludingRemovedSystemApps:(_Bool)arg1;
+- (id)parentalControlsBlacklistedAppBundleIDs;
+- (id)restrictionEnforcedWhitelistedAppBundleIDs;
+- (id)parentalControlsWhitelistedAppBundleIDs;
+- (id)singleAppModeBundleID;
+- (_Bool)allowedToRunAppWithBundleID:(id)arg1;
+- (int)restrictedBoolForFeature:(id)arg1;
+- (id)valueForFeature:(id)arg1;
+- (id)objectForFeature:(id)arg1;
+- (id)systemClientRestrictions;
+- (id)allClientUUIDsForClientType:(id)arg1;
+- (id)clientRestrictionsForClientUUID:(id)arg1;
+- (id)userInfoForClientUUID:(id)arg1;
+- (id)effectiveParametersForBoolSetting:(id)arg1 configurationUUID:(id)arg2;
+- (id)effectiveParametersForIntersectedSetting:(id)arg1;
+- (id)effectiveParametersForUnionSetting:(id)arg1;
+- (id)effectiveParametersForValueSetting:(id)arg1;
+- (id)effectiveParametersForBoolSetting:(id)arg1;
+- (_Bool)isSettingLockedDownByRestrictions:(id)arg1;
+- (id)profileIdentifiersRestrictingSettings:(id)arg1;
+- (id)exchangeUUIDsRestrictingSettings:(id)arg1;
+- (_Bool)isIntersectionSettingLockedDownByRestrictions:(id)arg1;
+- (_Bool)isUnionSettingLockedDownByRestrictions:(id)arg1;
+- (int)boolSettingForFeature:(id)arg1;
+- (id)valueSettingForFeature:(id)arg1;
+- (id)memberQueueClientRestrictionsDictionaryForClientUUID:(id)arg1;
+- (id)memberQueueClientRestrictionsForClientUUID:(id)arg1;
+- (id)memberQueueUserInfoForClientUUID:(id)arg1;
+- (id)memberQueueAppsAndOptionsForClientUUID:(id)arg1;
+- (_Bool)_isBoolSettingLockedDown:(id)arg1;
+- (_Bool)_isValueSettingLockedDown:(id)arg1 effectiveSetting:(id)arg2;
+- (id)_effectiveIntersectedValuesForSetting:(id)arg1 effectiveUserSettings:(id)arg2;
+- (id)_effectiveUnionValuesForSetting:(id)arg1 effectiveUserSettings:(id)arg2;
+- (id)userClientRestrictions;
+- (int)effectiveRestrictedBoolForSetting:(id)arg1 configurationUUID:(id)arg2;
+- (id)potentialRestrictionsAfterApplyingRestrictionsDictionary:(id)arg1 outChangeDetected:(_Bool *)arg2 outError:(id *)arg3;
+- (id)memberQueueClientTypeForClientUUID:(id)arg1;
+- (id)appsAndOptionsForClientUUID:(id)arg1;
+
+@end

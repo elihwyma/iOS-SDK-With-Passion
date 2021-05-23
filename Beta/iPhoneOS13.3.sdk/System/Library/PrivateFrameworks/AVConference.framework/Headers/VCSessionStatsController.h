@@ -1,0 +1,86 @@
+/*
+ Image: /System/Library/PrivateFrameworks/AVConference.framework/AVConference
+ */
+
+#import <Foundation/NSObject.h>
+
+@class AVCStatisticsCollector, VCConnectionManager, VCTransportStream;
+
+@protocol OS_dispatch_source, VCSessionStatsControllerDelegate;
+
+__attribute__((visibility("hidden")))
+@interface VCSessionStatsController : NSObject
+
+{
+    id <VCSessionStatsControllerDelegate> _weakDelegate;
+    AVCStatisticsCollector *_uplinkStatisticsCollector;
+    AVCStatisticsCollector *_downlinkStatisticsCollector;
+    CDStruct_2756d7ac _remoteStats;
+    NSObject<OS_dispatch_source> *_localSessionStatsTimemoutSource;
+    unsigned int _statsRequestCounter;
+    VCConnectionManager *_connectionManager;
+    VCTransportStream *_transportStream;
+    double _lastTriggerRateControlTime;
+    id _reportingAgentWeak;
+    unsigned int _uplinkServerStatsByteUsed;
+    unsigned int _downlinkServerStatsByteUsed;
+    struct tagVCRealTimeThread *_statsReceiveThread;
+    unsigned short _streamID;
+    unsigned short _statsArrayIndex;
+    _Bool _enableStatsReceiveThread;
+    unsigned int _previousTotalPacketSent;
+    unsigned int _previousTotalPacketReceived;
+    unsigned int _uplinkMostRecentSendTimestamp;
+    unsigned int _downlinkMostRecentSendTimestamp;
+    _Bool _didReceiveServerStatsResponse;
+    _Bool _enableStatsReporting;
+    double _statsReportingInterval;
+    double _lastStatsReportTime;
+    int _lastProcessedBytesSent;
+    int _bytesSentToReport;
+    int _maxSentRate;
+    int _minSentRate;
+    int _lastProcessedBytesReceived;
+    int _bytesReceivedToReport;
+    int _maxReceivedRate;
+    int _minReceivedRate;
+    double _lastUpdateTime;
+    double _lastTimeReceiveStatsFailed;
+    _Bool _isReceiveStatsFailedSymptomReported;
+    unsigned int _statsResponseCounter;
+    unsigned int _numStatsDroppedDueToStatsID;
+    unsigned int _numStatsDroppedDueToLinkID;
+    unsigned int _numStatsDroppedDueToTooLate;
+    unsigned int _numStatsProcessed;
+    unsigned int _numStatsTriggered;
+    double _totalStatsTransportStreamQueueTime;
+    double _maxStatsTransportStreamQueueTime;
+    double _lastHealthPrintTime;
+}
+
+@property (readonly) id reportingAgent;
+@property (readonly) id strongDelegate;
+@property (nonatomic) double statsReportingInterval;
+
+- (void)dealloc;
+- (void)reset;
+- (void)registerPeriodicTask;
+- (void)deregisterPeriodicTask;
+- (void)periodicTask:(void *)arg1;
+- (id)initWithDelegate:(id)arg1 connectionManager:(id)arg2 uplinkStatsCollector:(id)arg3 downlinkStatsCollector:(id)arg4 reportingAgent:(struct opaqueRTCReporting *)arg5 transportSessionID:(unsigned int)arg6 streamID:(unsigned short)arg7 mediaQueue:(struct tagVCMediaQueue *)arg8;
+- (void)startLocalSessionStatsUpdate;
+- (void)stopLocalSessionStatsUpdate;
+- (void)flushRealTimeReportingStats;
+- (void)startLocalSessionStatsReceive;
+- (void)startLocalSessionStatsSend;
+- (void)sendLocalStats;
+- (void)triggerRateControlWithLocalSessionStats:(CDStruct_b5e1e8f2)arg1 time:(double)arg2;
+- (_Bool)isRemoteSessionStatsTooLateWithStatsId:(unsigned short)arg1;
+- (unsigned short)translateTimestampFromMicro:(double)arg1;
+- (void)handleRemoteSessionStats:(CDStruct_88f6cd69 *)arg1;
+- (void)healthPrintForServerStats;
+- (void)updateRemoteSessionStats:(CDStruct_2756d7ac)arg1;
+- (void)resetHealthPrintCounters;
+- (void)statsReceiveStatsPayload;
+
+@end

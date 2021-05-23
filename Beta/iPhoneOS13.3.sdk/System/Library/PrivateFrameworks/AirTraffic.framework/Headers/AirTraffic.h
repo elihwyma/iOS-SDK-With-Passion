@@ -1,0 +1,52 @@
+/*
+ Image: /System/Library/PrivateFrameworks/AirTraffic.framework/AirTraffic
+ */
+
+#import <AirTraffic/AirTraffic-Structures.h>
+
+#import <AirTraffic/ATAccountInfo.h>
+#import <AirTraffic/ATAirlock.h>
+#import <AirTraffic/ATAsset.h>
+#import <AirTraffic/ATCodableStream.h>
+#import <AirTraffic/ATConnection.h>
+#import <AirTraffic/ATConnectionDelegate-Protocol.h>
+#import <AirTraffic/ATFileBuffer.h>
+#import <AirTraffic/ATFileBufferedPipe.h>
+#import <AirTraffic/ATLegacyMessage.h>
+#import <AirTraffic/ATMessage.h>
+#import <AirTraffic/ATMessageLink-Protocol.h>
+#import <AirTraffic/ATMessageLink.h>
+#import <AirTraffic/ATMessageLinkObserver-Protocol.h>
+#import <AirTraffic/ATMessageLinkProxy-Protocol.h>
+#import <AirTraffic/ATMessageLinkProxy.h>
+#import <AirTraffic/ATMessageLinkProxyConnection-Protocol.h>
+#import <AirTraffic/ATMessageLinkRequestHandler-Protocol.h>
+#import <AirTraffic/ATMutableAccountInfo.h>
+#import <AirTraffic/ATRemoteFileManager.h>
+#import <AirTraffic/ATRequest.h>
+#import <AirTraffic/ATResponse.h>
+#import <AirTraffic/ATRollableLog.h>
+#import <AirTraffic/ATService.h>
+#import <AirTraffic/ATServiceObserver-Protocol.h>
+#import <AirTraffic/ATServiceProxy-Protocol.h>
+#import <AirTraffic/ATServiceProxy.h>
+#import <AirTraffic/ATServiceProxyConnection-Protocol.h>
+#import <AirTraffic/ATSession.h>
+#import <AirTraffic/ATSessionConnection-Protocol.h>
+#import <AirTraffic/ATSessionProxy-Protocol.h>
+#import <AirTraffic/ATSessionServer-Protocol.h>
+#import <AirTraffic/ATSessionTask.h>
+#import <AirTraffic/ATStatus.h>
+#import <AirTraffic/ATStatusObserver.h>
+#import <AirTraffic/ATStatusObserverConnectionProtocol-Protocol.h>
+#import <AirTraffic/ATStatusObserverProtocol-Protocol.h>
+#import <AirTraffic/ATStoreInfo.h>
+#import <AirTraffic/ATXPCConnection.h>
+#import <AirTraffic/ATXPCInterfaceProtocol-Protocol.h>
+#import <AirTraffic/ATXPCMessage.h>
+#import <AirTraffic/ATXPCServer.h>
+#import <AirTraffic/NSCoding-Protocol.h>
+#import <AirTraffic/NSCopying-Protocol.h>
+#import <AirTraffic/NSObject-Protocol.h>
+#import <AirTraffic/NSSecureCoding-Protocol.h>
+#import <AirTraffic/Swift-Protocol.h>

@@ -1,0 +1,52 @@
+/*
+ Image: /System/Library/PrivateFrameworks/FMCoreUI.framework/FMCoreUI
+ */
+
+#import <FMCoreUI/FMCoreUI-Structures.h>
+
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/(null).h>
+#import <FMCoreUI/FM_Workaround_30408319_Button.h>
+#import <FMCoreUI/FMAnnotation-Protocol.h>
+#import <FMCoreUI/FMAnnotationView.h>
+#import <FMCoreUI/FMAppShortcutManager.h>
+#import <FMCoreUI/FMBorderedField.h>
+#import <FMCoreUI/FMBottomPaneSegue.h>
+#import <FMCoreUI/FMDistanceBadge.h>
+#import <FMCoreUI/FMLeftPaneSegue.h>
+#import <FMCoreUI/FMMapAnnotationGestureRecognizer.h>
+#import <FMCoreUI/FMMapAnnotationGestureRecognizerDelegate-Protocol.h>
+#import <FMCoreUI/FMMapGestureRecognizer.h>
+#import <FMCoreUI/FMMapGestureRecognizerDelegate-Protocol.h>
+#import <FMCoreUI/FMMapView.h>
+#import <FMCoreUI/FMPaneSegue.h>
+#import <FMCoreUI/FMRightPaneSegue.h>
+#import <FMCoreUI/FMSlidingPaneViewController.h>
+#import <FMCoreUI/FMTopPaneSegue.h>
+#import <FMCoreUI/FMUserLocationView.h>
+#import <FMCoreUI/FMViewController.h>
+#import <FMCoreUI/ISPaneFrameView.h>
+#import <FMCoreUI/MKMapViewDelegate-Protocol.h>
+#import <FMCoreUI/MKUserTrackingView-Protocol.h>
+#import <FMCoreUI/NSObject-Protocol.h>
+#import <FMCoreUI/SlidingPaneViewState.h>
+#import <FMCoreUI/Swift-Protocol.h>
+#import <FMCoreUI/UIColor-Invert.h>
+#import <FMCoreUI/UIGestureRecognizerDelegate-Protocol.h>
+#import <FMCoreUI/UIImage-Compositing.h>
+#import <FMCoreUI/UIResponder-ISCommonUI.h>
+#import <FMCoreUI/UIScrollView-FMCoreUI.h>
+#import <FMCoreUI/UIView-FMRoundedRect.h>
+#import <FMCoreUI/UIViewController-ISSlidingPaneViewController.h>

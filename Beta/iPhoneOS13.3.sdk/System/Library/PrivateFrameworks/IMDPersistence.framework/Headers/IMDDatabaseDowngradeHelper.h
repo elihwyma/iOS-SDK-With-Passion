@@ -1,0 +1,51 @@
+/*
+ Image: /System/Library/PrivateFrameworks/IMDPersistence.framework/IMDPersistence
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSArray, NSString;
+
+@interface IMDDatabaseDowngradeHelper : NSObject
+
+{
+    _Bool _inTransaction;
+    struct sqlite3 *_database;
+    NSString *_path;
+    long long _downgradesToVersion;
+    NSArray *_tableNames;
+    NSArray *_createIndexesSQL;
+    NSArray *_createTablesSQL;
+    NSArray *_createTriggersSQL;
+}
+
+@property (retain, nonatomic) NSString *path;
+@property (retain, nonatomic) NSArray *tableNames;
+@property (retain, nonatomic) NSArray *createIndexesSQL;
+@property (retain, nonatomic) NSArray *createTablesSQL;
+@property (retain, nonatomic) NSArray *createTriggersSQL;
+@property (nonatomic, readonly) _Bool isOpen;
+@property (nonatomic, readonly) struct sqlite3 *database;
+@property (nonatomic, readonly) long long downgradesToVersion;
+
+- (void)dealloc;
+- (_Bool)open:(CDUnknownBlockType)arg1;
+- (_Bool)close:(CDUnknownBlockType)arg1;
+- (_Bool)commitTransaction:(CDUnknownBlockType)arg1;
+- (id)errorFromResult:(int)arg1 query:(id)arg2;
+- (_Bool)runSimpleQuery:(id)arg1 resultBlock:(CDUnknownBlockType)arg2;
+- (_Bool)runArrayOfQueries:(id)arg1 resultBlock:(CDUnknownBlockType)arg2;
+- (_Bool)cloneTableContents:(id)arg1 withOperation:(struct IMDSqlOperation *)arg2 resultBlock:(CDUnknownBlockType)arg3;
+- (id)initWithPath:(id)arg1 tableNames:(id)arg2 createTablesSQL:(id)arg3 createIndexesSQL:(id)arg4 createTriggersSQL:(id)arg5 downgradesToVersion:(long long)arg6;
+- (_Bool)createTables:(CDUnknownBlockType)arg1;
+- (_Bool)createIndexes:(CDUnknownBlockType)arg1;
+- (_Bool)createTriggers:(CDUnknownBlockType)arg1;
+- (_Bool)beginTransaction:(CDUnknownBlockType)arg1;
+- (_Bool)revertTransaction:(CDUnknownBlockType)arg1;
+- (_Bool)writeDatabaseVersion:(long long)arg1 resultBlock:(CDUnknownBlockType)arg2;
+- (_Bool)importDataFromWhitetailDatabaseWithSqlOperation:(struct IMDSqlOperation *)arg1 resultBlock:(CDUnknownBlockType)arg2;
+- (_Bool)_readIntegerFromQuery:(id)arg1 resultBlock:(CDUnknownBlockType)arg2;
+- (_Bool)readDatabaseVersion:(CDUnknownBlockType)arg1;
+- (_Bool)readRowCountForTable:(id)arg1 resultBlock:(CDUnknownBlockType)arg2;
+
+@end

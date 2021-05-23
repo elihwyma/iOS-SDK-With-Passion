@@ -1,0 +1,29 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: 3BFF66CA-8796-38A0-9D5F-16AE6CE55CEB' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/OpenGLES.framework/libCLRendererStubs.dylib
+current-version:       1
+compatibility-version: 1
+exports:
+  - archs:                [ arm64 ]
+    symbols:              [ _glrCompBuildProgram, _glrCompCloseDevice,
+                            _glrCompCopyStream, _glrCompCreateContext,
+                            _glrCompCreateKernel, _glrCompCreateProgram,
+                            _glrCompCreateStream, _glrCompDeleteContext,
+                            _glrCompDeleteEvent, _glrCompDeleteKernel,
+                            _glrCompDeleteProgram, _glrCompDeleteStream,
+                            _glrCompEnqueueMarker, _glrCompExecuteKernel,
+                            _glrCompExecuteNativeKernel, _glrCompFinish,
+                            _glrCompFinishStream, _glrCompFlush,
+                            _glrCompGetDeviceConfig, _glrCompGetEventStatus,
+                            _glrCompGetImageFormats, _glrCompGetKernelArgInfo,
+                            _glrCompGetKernelInfo, _glrCompGetKernelNames,
+                            _glrCompLoadBinary, _glrCompOpenDevice,
+                            _glrCompReadStream, _glrCompSetContextProperties,
+                            _glrCompWaitForEvent, _glrCompWriteStream ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ dyld_stub_binder ]
+...

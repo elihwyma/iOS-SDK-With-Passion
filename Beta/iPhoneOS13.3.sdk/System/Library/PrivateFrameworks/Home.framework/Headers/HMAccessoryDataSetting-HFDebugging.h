@@ -1,0 +1,21 @@
+/*
+ Image: /System/Library/PrivateFrameworks/Home.framework/Home
+ */
+
+#import <HomeKit/HMAccessoryDataSetting.h>
+
+#import <Home/Swift-Protocol.h>
+
+@class NSString;
+
+@interface HMAccessoryDataSetting (HFDebugging) <Swift>
+
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
+- (id)hf_stateDumpBuilderWithContext:(id)arg1;
+- (id)hf_debugValueForData:(unsigned long long *)arg1;
+
+@end

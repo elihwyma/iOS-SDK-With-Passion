@@ -1,0 +1,30 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CoreUtils.framework/CoreUtils
+ */
+
+#import <NSObject.h>
+
+@interface CUKeyValueStoreReader : NSObject
+
+{
+    struct cdb _cdb;
+    int _fd;
+    Class _keyType;
+    Class _valueType;
+}
+
+- (id)init;
+- (void)dealloc;
+- (void)close;
+- (id)initWithKeyType:(Class)arg1 valueType:(Class)arg2;
+- (_Bool)openAtPath:(id)arg1 error:(id *)arg2;
+- (id)_readObjectAtOffset:(unsigned int)arg1 length:(unsigned int)arg2 type:(Class)arg3 error:(id *)arg4;
+- (_Bool)enumerateKeysAndValuesAndReturnError:(id *)arg1 handler:(CDUnknownBlockType)arg2;
+- (_Bool)enumerateKeyType:(Class)arg1 valueType:(Class)arg2 error:(id *)arg3 handler:(CDUnknownBlockType)arg4;
+- (_Bool)enumerateValuesForKey:(id)arg1 error:(id *)arg2 handler:(CDUnknownBlockType)arg3;
+- (_Bool)enumerateValuesForKey:(id)arg1 valueType:(Class)arg2 error:(id *)arg3 handler:(CDUnknownBlockType)arg4;
+- (_Bool)valueExistsForKey:(id)arg1;
+- (id)valueForKey:(id)arg1 error:(id *)arg2;
+- (id)valueForKey:(id)arg1 valueType:(Class)arg2 error:(id *)arg3;
+
+@end

@@ -1,0 +1,34 @@
+/*
+ Image: /System/Library/PrivateFrameworks/UIKitCore.framework/UIKitCore
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSURLRequest, UICheckeredPatternView, UIScrollView, UIWebBrowserView, UIWebPDFViewHandler, UIWebViewWebViewDelegate;
+
+@protocol UIWebViewDelegate;
+
+__attribute__((visibility("hidden")))
+@interface UIWebViewInternal : NSObject
+
+{
+    UIScrollView *scroller;
+    UIWebBrowserView *browserView;
+    UICheckeredPatternView *checkeredPatternView;
+    id <UIWebViewDelegate> delegate;
+    unsigned int scalesPageToFit:1;
+    unsigned int isLoading:1;
+    unsigned int hasOverriddenOrientationChangeEventHandling:1;
+    unsigned int drawsCheckeredPattern:1;
+    unsigned int webSelectionEnabled:1;
+    unsigned int drawInWebThread:1;
+    unsigned int inRotation:1;
+    unsigned int didRotateEnclosingScrollView:1;
+    unsigned int safeAreaShouldAffectObscuredInsets:1;
+    NSURLRequest *request;
+    long long clickedAlertButtonIndex;
+    UIWebViewWebViewDelegate *webViewDelegate;
+    UIWebPDFViewHandler *pdfHandler;
+}
+
+@end

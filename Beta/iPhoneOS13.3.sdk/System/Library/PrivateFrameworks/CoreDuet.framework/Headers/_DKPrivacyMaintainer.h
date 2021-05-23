@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CoreDuet.framework/CoreDuet
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface _DKPrivacyMaintainer : NSObject
+
++ (id)deletionPredicateForBundleID:(id)arg1;
++ (void)maintainPrivacyWithKnowledgeStorage:(id)arg1 installedApps:(id)arg2 deleteMaxCount:(unsigned long long)arg3 objectMaxCount:(unsigned long long)arg4 objectMaxLifespan:(double)arg5 activity:(id)arg6;
+
+@end

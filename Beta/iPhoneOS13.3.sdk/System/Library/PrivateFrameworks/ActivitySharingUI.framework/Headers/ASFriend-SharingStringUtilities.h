@@ -1,0 +1,41 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ActivitySharingUI.framework/ActivitySharingUI
+ */
+
+#import <ActivitySharing/ASFriend.h>
+
+@interface ASFriend (SharingStringUtilities)
+
+- (id)as_competitionLearnMoreIntroduction;
+- (id)as_competitionLearnMoreDetailMessage;
+- (id)_competitionStartMessage:(id)arg1 replacingNameAndDatePlaceholdersForCompetitionStartDate:(id)arg2;
+- (id)as_friendListNameStringWithDotPrefix:(id)arg1 keyColor:(id)arg2;
+- (id)as_detailedSharingDurationString;
+- (id)as_simpleSharingDurationString;
+- (id)as_simpleHiddenFromString;
+- (id)as_invitedDurationString;
+- (id)as_competitionStatusBreadcrumbString;
+- (id)as_competitionRequestDurationRemainingString;
+- (id)as_competitionStageString;
+- (id)as_myCompetitionScoreStringWithContext:(id)arg1 color:(id)arg2;
+- (id)as_opponentCompetitionScoreStringWithContext:(id)arg1 color:(id)arg2;
+- (id)as_competitionSendConfirmationTitle;
+- (id)as_competitionSendConfirmationMessage;
+- (id)as_competitionSendConfirmationSendAction;
+- (id)as_competitionSendErrorMessage;
+- (id)as_competitionReceivedNotificationTitle;
+- (id)as_competitionReceivedNotificationMessage;
+- (id)as_competitionReceivedHidingWarningMessage;
+- (id)as_competitionReceivedNotificationAcceptAction;
+- (id)as_competitionReceivedHidingAcceptAction;
+- (id)as_competitionAcceptErrorMessage;
+- (id)as_competitionAcceptedNotificationTitle;
+- (id)as_competitionAcceptedNotificationMessageForCompetition:(id)arg1;
+- (id)as_competitionAcceptConfirmationTitle;
+- (id)as_competitionLearnMoreTitle;
+- (id)as_competitionLearnMoreDetailAction;
+- (id)as_competitionLearnMoreFullDescription;
+- (id)as_competitionAcceptConfirmationMessageForCompetition:(id)arg1;
+- (id)as_competitionLearnMorePopupAction;
+
+@end

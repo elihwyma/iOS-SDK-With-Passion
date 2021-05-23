@@ -1,0 +1,26 @@
+/*
+ Image: /System/Library/PrivateFrameworks/HealthUI.framework/HealthUI
+ */
+
+#import <HealthUI/HKHealthQueryChartCacheDataSource.h>
+
+@class HKUnitPreferenceController, NSCalendar, NSPredicate;
+
+@interface HKActivityStatisticsDataSource : HKHealthQueryChartCacheDataSource
+
+{
+    NSPredicate *_sourcesPredicate;
+    NSCalendar *_gregorianCalendar;
+    NSCalendar *_gregorianNonUTCCalendar;
+    HKUnitPreferenceController *_unitController;
+}
+
+- (id)queriesForStartDate:(id)arg1 endDate:(id)arg2 statisticsInterval:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (id)_dateComponentsForDate:(id)arg1;
+- (id)_cachePredicateForStartDate:(id)arg1 endDate:(id)arg2;
+- (id)_workoutsPredicateForStartDate:(id)arg1 endDate:(id)arg2;
+- (id)_calorieValueFromStatsCollection:(id)arg1 range:(id)arg2;
+- (void)_handleStatistics:(id)arg1 activityCaches:(id)arg2 workouts:(id)arg3 completion:(CDUnknownBlockType)arg4;
+- (id)initWithUnitController:(id)arg1 healthStore:(id)arg2 sourcesPredicate:(id)arg3;
+
+@end

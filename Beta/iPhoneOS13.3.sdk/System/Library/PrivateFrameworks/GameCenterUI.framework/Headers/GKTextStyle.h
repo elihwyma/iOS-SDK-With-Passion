@@ -1,0 +1,174 @@
+/*
+ Image: /System/Library/PrivateFrameworks/GameCenterUI.framework/GameCenterUI
+ */
+
+#import <Foundation/NSObject.h>
+
+@class GKColorPalette, NSString, UIColor;
+
+@interface GKTextStyle : NSObject
+
+{
+    double _UIKitFontLeading;
+    _Bool _needsParagraphStyle;
+    _Bool _overrideUIKitFontSize;
+    UIColor *_color;
+    long long _textAlignment;
+    long long _lineBreakMode;
+    GKColorPalette *_palette;
+    NSString *_fontName;
+    NSString *_UIKitFontTextStyleName;
+    double _fontSize;
+    double _minimumLineHeight;
+    double _m34;
+    double _zPosition;
+    SEL _fontSizeRebaseSelector;
+    SEL _fontNameRebaseSelector;
+}
+
+@property (retain, nonatomic) GKColorPalette *palette;
+@property (retain, nonatomic) NSString *fontName;
+@property (retain, nonatomic) NSString *UIKitFontTextStyleName;
+@property (nonatomic, readonly) double fontSize;
+@property (nonatomic) double minimumLineHeight;
+@property (nonatomic) double m34;
+@property (nonatomic) double zPosition;
+@property (nonatomic) _Bool needsParagraphStyle;
+@property (nonatomic) _Bool overrideUIKitFontSize;
+@property (nonatomic) SEL fontSizeRebaseSelector;
+@property (nonatomic) SEL fontNameRebaseSelector;
+@property (retain, nonatomic) UIColor *color;
+@property (nonatomic) long long textAlignment;
+@property (nonatomic) long long lineBreakMode;
+
++ (id)textStyle;
++ (id)attributedString:(id)arg1 byReplayingFromBaseStyle:(id)arg2 systemContentSizeDidChange:(_Bool)arg3;
++ (double)scaledValueFromHISpecLeading:(double)arg1 forFontTextStyle:(id)arg2;
++ (double)standardFontSize;
++ (double)bubbleTextScale;
++ (double)standardLeadingForFontTextStyle:(id)arg1;
+
+- (id)init;
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
+- (id)description;
+- (id)copy;
+- (id)attributes;
+- (id)info;
+- (id)buttonTitle;
+- (id)body;
+- (id)sectionHeader;
+- (id)caption;
+- (id)bannerTitle;
+- (id)footnote;
+- (id)headline;
+- (void)applyToLabel:(id)arg1;
+- (id)regular;
+- (id)initEmpty;
+- (id)light;
+- (id)emphasized;
+- (id)centered;
+- (id)strong;
+- (id)header3;
+- (id)header4;
+- (id)alignment:(long long)arg1 lineBreakMode:(long long)arg2;
+- (id)emphasizedOnDarkBackground;
+- (id)cellActionItem;
+- (id)tableCellTitle;
+- (id)tableCellSubtitle;
+- (id)composeMessage;
+- (id)replayOnBaseStyle:(id)arg1 systemContentSizeDidChange:(_Bool)arg2;
+- (id)styleWithName:(id)arg1 fallback:(id)arg2 layoutMode:(int)arg3;
+- (id)resolveFontAndLineSpacing:(double *)arg1;
+- (void)applyToEditField:(id)arg1;
+- (void)setFontSize:(double)arg1 rebaseSelector:(SEL)arg2;
+- (id)multiplayerFooterText;
+- (id)scaledForM34:(double)arg1 zPosition:(double)arg2;
+- (id)bubbleValue;
+- (id)bubbleCaption;
+- (id)bubbleValueSmall;
+- (id)bubbleTextSmall;
+- (id)bubbleText;
+- (id)bubbleHeadline;
+- (id)caption2;
+- (id)composeFields;
+- (id)baseFontRebaseSelector;
+- (id)copyWithBaseClass:(Class)arg1;
+- (void)applyScaleForMesh;
+- (void)setFontName:(id)arg1 kitTextStyleName:(id)arg2 leadingOverrideFromHISpec:(double)arg3 shouldOverrideSize:(_Bool)arg4 rebaseSelector:(SEL)arg5;
+- (void)setFontName:(id)arg1 rebaseSelector:(SEL)arg2;
+- (void)setFontName:(id)arg1 kitTextStyleName:(id)arg2 shouldOverrideSize:(_Bool)arg3 rebaseSelector:(SEL)arg4;
+- (id)signInFieldLabel;
+- (id)header0;
+- (id)header1;
+- (id)header2;
+- (id)caption1;
+- (id)bannerMessage;
+- (id)roundButtonTitle;
+- (id)buyButtonTitle;
+- (id)selectedBuyButtonTitle;
+- (id)small;
+- (id)smallInfo;
+- (id)viewBackground;
+- (id)scaled:(double)arg1;
+- (id)localPlayerColor;
+- (id)friendColor;
+- (id)friendCaptionColor;
+- (id)bold;
+- (id)thin;
+- (id)medium;
+- (id)headerViewSubText1;
+- (id)multiplayerNameText;
+- (id)multiplayerAddText;
+- (id)multiplayerStatusText;
+- (id)multiplayerHeaderText;
+- (id)thinNumberText;
+- (id)gameDetailNameText;
+- (id)detailSecondaryHeaderText;
+- (id)bubbleCaptionSmall;
+- (id)segmentBubbleCaption;
+- (id)segmentBubbleValue;
+- (id)meBubbleCaption;
+- (id)meBubbleValue;
+- (id)challengeBubbleValue;
+- (id)signInTitle;
+- (id)signInSubtitle;
+- (id)signInField;
+- (id)signInLink;
+- (id)leaderboardRankSmall;
+- (id)leaderboardRankMedium;
+- (id)leaderboardRankLarge;
+- (id)achievementLeaderboardRank;
+- (id)achievementLeaderboardPointsText;
+- (id)achievementValueText;
+- (id)sectionCaption;
+- (id)sectionCaptionSmall;
+- (id)challengeText;
+- (id)challengeTitleText;
+- (id)tableFooterStyle;
+- (id)tabIconCaption;
+- (id)removeButtonTitle;
+- (id)lineBreakMode:(long long)arg1;
+- (id)lineHeight:(double)arg1;
+- (id)remoteUISectionHeader:(int)arg1;
+- (id)remoteUISectionFooter:(int)arg1;
+- (id)remoteUILabel:(int)arg1;
+- (id)remoteUIDetailLabel:(int)arg1;
+- (id)remoteUITableHeaderLabel:(int)arg1;
+- (id)remoteUITableHeaderSubLabel:(int)arg1;
+- (id)remoteUITableFooterButton:(int)arg1;
+- (id)remoteUITableHeaderButton:(int)arg1;
+- (id)remoteUIEditField:(int)arg1;
+- (id)remoteUIEditLabel:(int)arg1;
+- (id)remoteUISelectLabel:(int)arg1;
+- (id)remoteUISelectField:(int)arg1;
+- (id)remoteUINickNameField:(int)arg1;
+- (id)remoteUINickNameLabel:(int)arg1;
+- (id)settingsLinkText;
+- (id)settingsButton;
+- (id)settingsBoldButton;
+- (id)settingsLabel;
+- (id)settingsHeader;
+- (id)settingsFooter;
+
+@end

@@ -1,0 +1,32 @@
+/*
+ Image: /System/Library/PrivateFrameworks/UserNotificationsServer.framework/UserNotificationsServer
+ */
+
+#import <NSObject.h>
+
+@class UNSKeyedDictionaryRepository;
+
+@protocol OS_dispatch_queue;
+
+@interface UNSNotificationScheduleRepository : NSObject
+
+{
+    UNSKeyedDictionaryRepository *_repository;
+    NSObject<OS_dispatch_queue> *_queue;
+}
+
+- (id)_dateFormatter;
+- (void)performMigration;
+- (id)allBundleIdentifiers;
+- (void)notificationSourcesDidUninstall:(id)arg1;
+- (void)_queue_performMigration;
+- (id)initWithDirectory:(id)arg1 librarian:(id)arg2;
+- (void)_queue_performMigrationForBundleIdentifier:(id)arg1;
+- (id)scheduleForBundleIdentifier:(id)arg1;
+- (void)setSchedule:(id)arg1 forBundleIdentifier:(id)arg2;
+- (id)_queue_scheduleForBundleIdentifier:(id)arg1;
+- (void)_queue_setSchedule:(id)arg1 forBundleIdentifier:(id)arg2;
+- (void)_queue_removeScheduleForBundleIdentifier:(id)arg1;
+- (void)removeScheduleForBundleIdentifier:(id)arg1;
+
+@end

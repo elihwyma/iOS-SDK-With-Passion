@@ -1,0 +1,30 @@
+/*
+ Image: /System/Library/PrivateFrameworks/TSReading.framework/TSReading
+ */
+
+#import <TSReading/EQKitBox.h>
+
+@interface EQKitOverlayBox : EQKitBox
+
+{
+    EQKitBox *mBox;
+    EQKitBox *mOverlayBox;
+}
+
+@property (nonatomic, readonly) EQKitBox *box;
+@property (nonatomic, readonly) EQKitBox *overlayBox;
+
+- (void)dealloc;
+- (_Bool)isEqual:(id)arg1;
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (double)depth;
+- (double)width;
+- (double)height;
+- (_Bool)p_getTransform:(struct CGAffineTransform *)arg1 fromDescendant:(id)arg2;
+- (struct CGRect)erasableBounds;
+- (void)renderIntoContext:(struct CGContext *)arg1 offset:(struct CGPoint)arg2;
+- (_Bool)appendOpticalAlignToSpec:(struct Spec *)arg1 offset:(struct CGPoint)arg2;
+- (id)initWithBox:(id)arg1 overlayBox:(id)arg2;
+
+@end

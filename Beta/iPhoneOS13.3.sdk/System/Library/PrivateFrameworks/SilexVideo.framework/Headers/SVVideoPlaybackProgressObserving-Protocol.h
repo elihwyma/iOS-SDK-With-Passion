@@ -1,0 +1,15 @@
+/*
+ Image: /System/Library/PrivateFrameworks/SilexVideo.framework/SilexVideo
+ */
+
+#import <SilexVideo/Swift-Protocol.h>
+
+@protocol SVVideoPlaybackProgressObserving <Swift>
+
+@property (nonatomic, readonly) double time;
+@property (nonatomic, readonly) double duration;
+@property (nonatomic, readonly) double progress;
+@property (copy, nonatomic, setter=onProgressChanged:) CDUnknownBlockType progressChangedBlock;
+@property (copy, nonatomic, setter=onReset:) CDUnknownBlockType resetBlock;
+
+@end

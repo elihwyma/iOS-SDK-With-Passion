@@ -1,0 +1,24 @@
+/*
+ Image: /System/Library/Frameworks/CloudKit.framework/CloudKit
+ */
+
+#import <CloudKit/CKOperationResult.h>
+
+@class NSString;
+
+@interface CKFetchWebAuthTokenOperationResult : CKOperationResult
+
+{
+    NSString *_webAuthToken;
+}
+
+@property (copy, nonatomic) NSString *webAuthToken;
+
++ (_Bool)supportsSecureCoding;
+
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (void)encodeWithCoder:(id)arg1;
+- (id)initWithCoder:(id)arg1;
+- (id)CKDescriptionPropertiesWithPublic:(_Bool)arg1 private:(_Bool)arg2 shouldExpand:(_Bool)arg3;
+
+@end

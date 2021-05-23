@@ -1,0 +1,16 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ChatKit.framework/ChatKit
+ */
+
+#import <ChatKit/CKSceneDelegate.h>
+
+@interface CKStarkSceneDelegate : CKSceneDelegate
+
+- (long long)type;
+- (void)scene:(id)arg1 willConnectToSession:(id)arg2 options:(id)arg3;
+- (void)sceneDidDisconnect:(id)arg1;
+- (void)scene:(id)arg1 openURLContexts:(id)arg2;
+- (void)openURL:(id)arg1 sourceApplication:(id)arg2;
+- (void)openSMSURL:(id)arg1;
+
+@end

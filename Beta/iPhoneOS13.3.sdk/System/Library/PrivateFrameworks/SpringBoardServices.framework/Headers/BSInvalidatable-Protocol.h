@@ -1,0 +1,11 @@
+/*
+ Image: /System/Library/PrivateFrameworks/SpringBoardServices.framework/SpringBoardServices
+ */
+
+#import <SpringBoardServices/Swift-Protocol.h>
+
+@protocol BSInvalidatable <Swift>
+
+- (unsigned short)invalidate;
+
+@end

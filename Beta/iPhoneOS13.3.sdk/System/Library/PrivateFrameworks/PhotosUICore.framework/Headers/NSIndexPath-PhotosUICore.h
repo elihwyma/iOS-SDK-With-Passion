@@ -1,0 +1,26 @@
+/*
+ Image: /System/Library/PrivateFrameworks/PhotosUICore.framework/PhotosUICore
+ */
+
+#import <Foundation/NSIndexPath.h>
+
+@interface NSIndexPath (PhotosUICore)
+
+@property (nonatomic, readonly) long long px_item;
+@property (nonatomic, readonly) long long px_section;
+@property (nonatomic, readonly) long long px_kind;
+
++ (id)px_indexPathForItem:(long long)arg1 inSection:(long long)arg2;
++ (id)px_indexPathsForItems:(id)arg1 inSection:(long long)arg2;
++ (id)px_indexPathForItem:(long long)arg1 inSection:(long long)arg2 withKind:(long long)arg3;
+
+- (id)px_alteredIndexPathAfterInsertingItemAtIndexPath:(id)arg1;
+- (id)px_alteredIndexPathAfterDeletingItemAtIndexPath:(id)arg1;
+- (id)px_indexPathByChangingIndexAtPosition:(unsigned long long)arg1 toIndex:(unsigned long long)arg2;
+- (id)px_alteredIndexPathAfterInsertingItemsAtIndexPaths:(id)arg1;
+- (id)px_alteredIndexPathAfterDeletingItemsAtIndexPaths:(id)arg1;
+- (id)px_alteredIndexPathAfterMovingItemAtIndexPath:(id)arg1 toIndexPath:(id)arg2;
+- (id)px_indexPathAfterInsertingItemAtIndexPath:(id)arg1;
+- (id)px_indexPathAfterDeletingItemAtIndexPath:(id)arg1;
+
+@end

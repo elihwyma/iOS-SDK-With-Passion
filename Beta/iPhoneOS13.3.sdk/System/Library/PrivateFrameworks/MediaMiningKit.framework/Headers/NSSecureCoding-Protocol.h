@@ -1,0 +1,11 @@
+/*
+ Image: /System/Library/PrivateFrameworks/MediaMiningKit.framework/MediaMiningKit
+ */
+
+#import <MediaMiningKit/Swift-Protocol.h>
+
+@protocol NSSecureCoding <Swift>
+
++ (unsigned short)supportsSecureCoding;
+
+@end

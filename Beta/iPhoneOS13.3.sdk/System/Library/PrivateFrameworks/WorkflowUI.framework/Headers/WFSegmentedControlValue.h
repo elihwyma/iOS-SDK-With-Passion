@@ -1,0 +1,28 @@
+/*
+ Image: /System/Library/PrivateFrameworks/WorkflowUI.framework/WorkflowUI
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSString, UIImage;
+
+@interface WFSegmentedControlValue : NSObject
+
+{
+    NSString *_displayName;
+    UIImage *_image;
+    id _representedObject;
+}
+
+@property (nonatomic, readonly) NSString *displayName;
+@property (nonatomic, readonly) UIImage *image;
+@property (nonatomic, readonly) id representedObject;
+
++ (id)valueWithDisplayName:(id)arg1;
++ (id)valueWithDisplayName:(id)arg1 representedObject:(id)arg2;
++ (id)valueWithImage:(id)arg1;
++ (id)valueWithImage:(id)arg1 representedObject:(id)arg2;
+
+- (id)initWithDisplayName:(id)arg1 image:(id)arg2 representedObject:(id)arg3;
+
+@end

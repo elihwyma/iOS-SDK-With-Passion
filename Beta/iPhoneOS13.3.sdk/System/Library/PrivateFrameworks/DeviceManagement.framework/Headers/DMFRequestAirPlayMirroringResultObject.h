@@ -1,0 +1,21 @@
+/*
+ Image: /System/Library/PrivateFrameworks/DeviceManagement.framework/DeviceManagement
+ */
+
+#import <Catalyst/CATTaskResultObject.h>
+
+@interface DMFRequestAirPlayMirroringResultObject : CATTaskResultObject
+
+{
+    unsigned long long _status;
+}
+
+@property (nonatomic, readonly) unsigned long long status;
+
++ (_Bool)supportsSecureCoding;
+
+- (void)encodeWithCoder:(id)arg1;
+- (id)initWithCoder:(id)arg1;
+- (id)initWithStatus:(unsigned long long)arg1;
+
+@end

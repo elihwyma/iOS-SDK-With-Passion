@@ -1,0 +1,57 @@
+/*
+ Image: /System/Library/PrivateFrameworks/Settings/GeneralSettingsUI.framework/GeneralSettingsUI
+ */
+
+#import <GeneralSettingsUI/GeneralSettingsUI-Structures.h>
+
+#import <GeneralSettingsUI/(null).h>
+#import <GeneralSettingsUI/BYClientDaemonCloudSyncProtocol-Protocol.h>
+#import <GeneralSettingsUI/CRCarPlayPreferencesDelegate-Protocol.h>
+#import <GeneralSettingsUI/DevicePINControllerDelegate-Protocol.h>
+#import <GeneralSettingsUI/EAAccessoryDelegate-Protocol.h>
+#import <GeneralSettingsUI/MBManagerDelegate-Protocol.h>
+#import <GeneralSettingsUI/NDOAppleCareFlowDelegate-Protocol.h>
+#import <GeneralSettingsUI/NSObject-Protocol.h>
+#import <GeneralSettingsUI/NSString-PrefsFormatting.h>
+#import <GeneralSettingsUI/PSDateTimePickerCellDelegate-Protocol.h>
+#import <GeneralSettingsUI/PSGAboutController.h>
+#import <GeneralSettingsUI/PSGAboutDataSource.h>
+#import <GeneralSettingsUI/PSGAccessoryDetailsController.h>
+#import <GeneralSettingsUI/PSGAirDropController.h>
+#import <GeneralSettingsUI/PSGAutomaticContentDownloadController.h>
+#import <GeneralSettingsUI/PSGBackupDisabledAppsInfo.h>
+#import <GeneralSettingsUI/PSGBackupUtils.h>
+#import <GeneralSettingsUI/PSGCertTrustSettings.h>
+#import <GeneralSettingsUI/PSGCircleSegment.h>
+#import <GeneralSettingsUI/PSGCircleSegmentedControl.h>
+#import <GeneralSettingsUI/PSGCircleSegmentedControlDelegate-Protocol.h>
+#import <GeneralSettingsUI/PSGContinuityController.h>
+#import <GeneralSettingsUI/PSGCurrentTimeCell.h>
+#import <GeneralSettingsUI/PSGDateTimeController.h>
+#import <GeneralSettingsUI/PSGDeviceNameEditingController.h>
+#import <GeneralSettingsUI/PSGDeviceNameTextEditCell.h>
+#import <GeneralSettingsUI/PSGEidTableCell.h>
+#import <GeneralSettingsUI/PSGFindMyiPhoneController.h>
+#import <GeneralSettingsUI/PSGFollowUpHeaderCell.h>
+#import <GeneralSettingsUI/PSGGeneralController.h>
+#import <GeneralSettingsUI/PSGHomeButtonCustomizeController.h>
+#import <GeneralSettingsUI/PSGHomeButtonCustomizeControllerDelegate-Protocol.h>
+#import <GeneralSettingsUI/PSGIgnoreLabelDisableCell.h>
+#import <GeneralSettingsUI/PSGMultilineTextCell.h>
+#import <GeneralSettingsUI/PSGMultitaskingGestureExplanationView.h>
+#import <GeneralSettingsUI/PSGNonGenuineComponentsController.h>
+#import <GeneralSettingsUI/PSGResetPrefController.h>
+#import <GeneralSettingsUI/PSGSEIDDetailsController.h>
+#import <GeneralSettingsUI/PSGShrinkingTextCell.h>
+#import <GeneralSettingsUI/PSGTitleTruncatedCell.h>
+#import <GeneralSettingsUI/PSGTVOutController.h>
+#import <GeneralSettingsUI/PSGTVOutManager.h>
+#import <GeneralSettingsUI/PSGUnderlineButton.h>
+#import <GeneralSettingsUI/PSGWallClockMinuteTimer.h>
+#import <GeneralSettingsUI/PSGWarrantyInfoController.h>
+#import <GeneralSettingsUI/PSGWarrantyTextCell.h>
+#import <GeneralSettingsUI/PSHeaderFooterView-Protocol.h>
+#import <GeneralSettingsUI/PSListControllerTestableSpecifiers-Protocol.h>
+#import <GeneralSettingsUI/SBSHardwareButtonEventConsuming-Protocol.h>
+#import <GeneralSettingsUI/SFAirDropDiscoveryControllerDelegate-Protocol.h>
+#import <GeneralSettingsUI/Swift-Protocol.h>

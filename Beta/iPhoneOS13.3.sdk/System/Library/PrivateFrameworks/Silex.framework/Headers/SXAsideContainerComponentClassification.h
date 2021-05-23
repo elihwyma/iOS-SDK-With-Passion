@@ -1,0 +1,14 @@
+/*
+ Image: /System/Library/PrivateFrameworks/Silex.framework/Silex
+ */
+
+#import <Silex/SXDefaultContainerComponentClassification.h>
+
+@interface SXAsideContainerComponentClassification : SXDefaultContainerComponentClassification
+
++ (int)role;
++ (id)roleString;
+
+- (unsigned long long)contentRelevance;
+
+@end

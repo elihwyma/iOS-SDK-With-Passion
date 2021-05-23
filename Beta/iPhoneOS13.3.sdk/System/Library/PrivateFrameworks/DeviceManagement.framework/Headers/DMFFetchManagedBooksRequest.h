@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/PrivateFrameworks/DeviceManagement.framework/DeviceManagement
+ */
+
+@interface DMFFetchManagedBooksRequest
+
++ (id)permittedPlatforms;
++ (_Bool)isPermittedOnSystemConnection;
++ (_Bool)isPermittedOnUserConnection;
++ (Class)whitelistedClassForResultObject;
+
+@end

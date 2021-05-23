@@ -1,0 +1,24 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: E0954E51-9A60-3669-BA1C-D53A4C502E07' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/Twitter.framework/Twitter
+current-version:       164
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64 ]
+    objc-classes:         [ _TWRequest, _TWTweetComposeViewController ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ _SLServiceTypeTwitter,
+                            ___CFConstantStringClassReference,
+                            __objc_empty_cache, _objc_alloc, _objc_msgSend,
+                            _objc_msgSendSuper2, _objc_release,
+                            _objc_retainAutoreleasedReturnValue,
+                            dyld_stub_binder ]
+    objc-classes:         [ _NSDataDetector, _NSObject, _NSString,
+                            _SLComposeViewController, _SLTwitterRequest,
+                            _UIViewController ]
+...

@@ -1,0 +1,19 @@
+/*
+ Image: /System/Library/Frameworks/Vision.framework/Vision
+ */
+
+#import <Foundation/NSObject.h>
+
+__attribute__((visibility("hidden")))
+@interface VNHeatMapUtilities : NSObject
+
++ (_Bool)smoothedFloat32ImageBuffer:(struct vImage_Buffer)arg1 fromImageBuffer:(struct vImage_Buffer)arg2 originalImageSize:(struct CGSize)arg3 sigmaX:(float)arg4 sigmaY:(float)arg5 nStd:(float)arg6;
++ (float)maximumValueFromFloat32ImageBuffer:(struct vImage_Buffer)arg1;
++ (id)significantRegionsFromFloat32ImageBuffer:(struct vImage_Buffer)arg1 threshold:(float)arg2;
++ (id)significantRegionsFromFloat32ImageBuffer:(struct vImage_Buffer)arg1 threshold:(float)arg2 relativeToMaximum:(_Bool)arg3;
++ (id)significantRegionsFromFloat32PixelBuffer:(struct __CVBuffer *)arg1 threshold:(float)arg2 relativeToMaximum:(_Bool)arg3 error:(id *)arg4;
++ (id)boundingBoxesFromFloat32ImageBuffer:(struct vImage_Buffer)arg1 thresholds:(id)arg2 error:(id *)arg3;
++ (id)boundingBoxesFromFloat32ImageBuffer:(struct vImage_Buffer)arg1 thresholds:(id)arg2 relativeToMaximum:(_Bool)arg3 applySmoothing:(_Bool)arg4 originalImageSize:(struct CGSize)arg5 sigmaX:(float)arg6 sigmaY:(float)arg7 nStd:(float)arg8 error:(id *)arg9;
++ (id)boundingBoxesFromFloat32PixelBuffer:(struct __CVBuffer *)arg1 thresholds:(id)arg2 relativeToMaximum:(_Bool)arg3 applySmoothing:(_Bool)arg4 originalImageSize:(struct CGSize)arg5 sigmaX:(float)arg6 sigmaY:(float)arg7 nStd:(float)arg8 error:(id *)arg9;
+
+@end

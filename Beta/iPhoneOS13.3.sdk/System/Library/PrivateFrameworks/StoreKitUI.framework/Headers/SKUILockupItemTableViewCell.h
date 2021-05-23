@@ -1,0 +1,21 @@
+/*
+ Image: /System/Library/PrivateFrameworks/StoreKitUI.framework/StoreKitUI
+ */
+
+#import <StoreKitUI/SKUIItemTableViewCell.h>
+
+@class SKUILockupItemCellLayout;
+
+__attribute__((visibility("hidden")))
+@interface SKUILockupItemTableViewCell : SKUIItemTableViewCell
+
+{
+    SKUILockupItemCellLayout *_layout;
+}
+
+@property (nonatomic, readonly) SKUILockupItemCellLayout *layout;
+
+- (id)initWithStyle:(long long)arg1 reuseIdentifier:(id)arg2;
+- (void)configureForItem:(id)arg1 clientContext:(id)arg2 rowIndex:(long long)arg3;
+
+@end

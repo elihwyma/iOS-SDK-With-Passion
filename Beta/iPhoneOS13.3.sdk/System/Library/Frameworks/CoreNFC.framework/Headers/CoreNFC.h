@@ -1,0 +1,57 @@
+/*
+ Image: /System/Library/Frameworks/CoreNFC.framework/CoreNFC
+ */
+
+#import <CoreNFC/CoreNFC-Structures.h>
+
+#import <CoreNFC/NFCError.h>
+#import <CoreNFC/NFCFeliCaTag-Protocol.h>
+#import <CoreNFC/NFCFeliCaTag.h>
+#import <CoreNFC/NFCHardwareManager.h>
+#import <CoreNFC/NFCHardwareManagerCallbacks-Protocol.h>
+#import <CoreNFC/NFCHardwareManagerCallbacks.h>
+#import <CoreNFC/NFCHardwareManagerInterface-Protocol.h>
+#import <CoreNFC/NFCHardwareManagerInterface.h>
+#import <CoreNFC/NFCISO15693CustomCommandConfiguration.h>
+#import <CoreNFC/NFCISO15693ReaderSession.h>
+#import <CoreNFC/NFCISO15693ReaderSessionTag.h>
+#import <CoreNFC/NFCISO15693ReadMultipleBlocksConfiguration.h>
+#import <CoreNFC/NFCISO15693Tag-Protocol.h>
+#import <CoreNFC/NFCISO15693Tag.h>
+#import <CoreNFC/NFCISO7816APDU.h>
+#import <CoreNFC/NFCISO7816Tag-Protocol.h>
+#import <CoreNFC/NFCISO7816Tag.h>
+#import <CoreNFC/NFCMiFareTag-Protocol.h>
+#import <CoreNFC/NFCMiFareTag.h>
+#import <CoreNFC/NFCNDEFMessage.h>
+#import <CoreNFC/NFCNDEFPayload.h>
+#import <CoreNFC/NFCNDEFReaderSession.h>
+#import <CoreNFC/NFCNDEFReaderSessionDelegate-Protocol.h>
+#import <CoreNFC/NFCNDEFTag-Protocol.h>
+#import <CoreNFC/NFCNDEFTag.h>
+#import <CoreNFC/NFCReaderSession-Protocol.h>
+#import <CoreNFC/NFCReaderSession.h>
+#import <CoreNFC/NFCReaderSessionDelegate-Protocol.h>
+#import <CoreNFC/NFCSession.h>
+#import <CoreNFC/NFCSessionCallbacks-Protocol.h>
+#import <CoreNFC/NFCTag-Protocol.h>
+#import <CoreNFC/NFCTag.h>
+#import <CoreNFC/NFCTagCommandConfiguration.h>
+#import <CoreNFC/NFCTagReaderSession.h>
+#import <CoreNFC/NFCTagReaderSessionDelegate-Protocol.h>
+#import <CoreNFC/NFCVASCommandConfiguration.h>
+#import <CoreNFC/NFCVASReaderSession.h>
+#import <CoreNFC/NFCVASReaderSessionDelegate-Protocol.h>
+#import <CoreNFC/NFCVASResponse.h>
+#import <CoreNFC/NFReaderSessionCallbacks-Protocol.h>
+#import <CoreNFC/NFReaderSessionCallbacks.h>
+#import <CoreNFC/NFReaderSessionInterface-Protocol.h>
+#import <CoreNFC/NFReaderSessionInterface.h>
+#import <CoreNFC/NFSessionCallbackInterface-Protocol.h>
+#import <CoreNFC/NFSessionInterface-Protocol.h>
+#import <CoreNFC/NSCoding-Protocol.h>
+#import <CoreNFC/NSCopying-Protocol.h>
+#import <CoreNFC/NSObject-Protocol.h>
+#import <CoreNFC/NSSecureCoding-Protocol.h>
+#import <CoreNFC/NSUserActivity-CoreNFC.h>
+#import <CoreNFC/Swift-Protocol.h>

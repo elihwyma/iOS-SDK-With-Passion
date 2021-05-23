@@ -1,0 +1,29 @@
+/*
+ Image: /System/Library/PrivateFrameworks/Pegasus.framework/Pegasus
+ */
+
+#import <NSObject.h>
+
+@protocol OS_dispatch_queue;
+
+__attribute__((visibility("hidden")))
+@interface PGSetterThrottler : NSObject
+
+{
+    CDUnknownBlockType _block;
+    NSObject<OS_dispatch_queue> *_queue;
+    id _value;
+    NSObject<OS_dispatch_queue> *_throttleQueue;
+    id _throttledValue;
+    _Bool _busy;
+    _Bool _pending;
+}
+
+@property (retain, nonatomic) id value;
+
+- (id)init;
+- (void)dealloc;
+- (void)_setValue;
+- (id)initWithBlock:(CDUnknownBlockType)arg1 usingQueue:(id)arg2;
+
+@end

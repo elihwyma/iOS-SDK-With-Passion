@@ -1,0 +1,183 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CloudServices.framework/CloudServices
+ */
+
+#import <Foundation/NSObject.h>
+
+@class EscrowPrerecord, NSData, NSDate, NSDictionary, NSError, NSString, SESWrapper;
+
+@protocol OS_dispatch_queue;
+
+@interface SecureBackup : NSObject
+
+{
+    _Bool _deleteAll;
+    _Bool _emcsMode;
+    _Bool _fmipRecovery;
+    _Bool _icdp;
+    _Bool _idmsRecovery;
+    _Bool _silent;
+    _Bool _stingray;
+    _Bool _synchronize;
+    _Bool _useCachedPassphrase;
+    _Bool _useRecoveryPET;
+    _Bool _usesMultipleiCSC;
+    _Bool _usesRandomPassphrase;
+    _Bool _usesRecoveryKey;
+    _Bool _suppressServerFiltering;
+    NSString *_appleID;
+    NSString *_authToken;
+    NSDate *_backOffDate;
+    NSData *_certData;
+    NSString *_countryDialCode;
+    NSString *_countryCode;
+    NSString *_dsid;
+    NSString *_emcsCred;
+    NSDictionary *_emcsDict;
+    NSString *_encodedMetadata;
+    NSDictionary *_escrowRecord;
+    NSString *_escrowProxyURL;
+    NSString *_fmipUUID;
+    NSString *_iCloudEnv;
+    NSData *_iCloudIdentityData;
+    NSString *_iCloudPassword;
+    NSData *_idmsData;
+    NSDictionary *_metadata;
+    NSDictionary *_metadataHash;
+    NSString *_oldEMCSCred;
+    NSString *_passphrase;
+    NSString *_recordID;
+    NSString *_recoveryKey;
+    NSString *_smsTarget;
+    NSString *_verificationToken;
+    NSObject<OS_dispatch_queue> *_queue;
+    NSError *_error;
+    NSString *_activityLabel;
+    NSString *_activityUUID;
+    NSString *_hsa2CachedPrerecordUUID;
+    EscrowPrerecord *_prerecord;
+    SESWrapper *_ses;
+}
+
+@property (retain, nonatomic) SESWrapper *ses;
+@property (copy, nonatomic) NSString *appleID;
+@property (copy, nonatomic) NSString *authToken;
+@property (retain, nonatomic) NSDate *backOffDate;
+@property (retain, nonatomic) NSData *certData;
+@property (copy, nonatomic) NSString *countryDialCode;
+@property (copy, nonatomic) NSString *countryCode;
+@property (nonatomic) _Bool deleteAll;
+@property (copy, nonatomic) NSString *dsid;
+@property (copy, nonatomic) NSString *emcsCred;
+@property (retain, nonatomic) NSDictionary *emcsDict;
+@property (nonatomic) _Bool emcsMode;
+@property (copy, nonatomic) NSString *encodedMetadata;
+@property (retain, nonatomic) NSDictionary *escrowRecord;
+@property (copy, nonatomic) NSString *escrowProxyURL;
+@property (nonatomic) _Bool fmipRecovery;
+@property (copy, nonatomic) NSString *fmipUUID;
+@property (nonatomic) _Bool icdp;
+@property (copy, nonatomic) NSString *iCloudEnv;
+@property (retain, nonatomic) NSData *iCloudIdentityData;
+@property (copy, nonatomic) NSString *iCloudPassword;
+@property (retain, nonatomic) NSData *idmsData;
+@property (nonatomic) _Bool idmsRecovery;
+@property (retain, nonatomic) NSDictionary *metadata;
+@property (retain, nonatomic) NSDictionary *metadataHash;
+@property (copy, nonatomic) NSString *oldEMCSCred;
+@property (copy, nonatomic) NSString *passphrase;
+@property (copy, nonatomic) NSString *recordID;
+@property (copy, nonatomic) NSString *recoveryKey;
+@property (copy, nonatomic) NSString *smsTarget;
+@property (nonatomic) _Bool silent;
+@property (nonatomic) _Bool stingray;
+@property (nonatomic) _Bool synchronize;
+@property (nonatomic) _Bool useCachedPassphrase;
+@property (nonatomic) _Bool useRecoveryPET;
+@property (nonatomic) _Bool usesMultipleiCSC;
+@property (nonatomic) _Bool usesRandomPassphrase;
+@property (nonatomic) _Bool usesRecoveryKey;
+@property (copy, nonatomic) NSString *verificationToken;
+@property (retain, nonatomic) NSObject<OS_dispatch_queue> *queue;
+@property (retain, nonatomic) NSError *error;
+@property (copy, nonatomic) NSString *activityLabel;
+@property (copy, nonatomic) NSString *activityUUID;
+@property (nonatomic) _Bool suppressServerFiltering;
+@property (copy, nonatomic) NSString *hsa2CachedPrerecordUUID;
+@property (retain, nonatomic) EscrowPrerecord *prerecord;
+
++ (_Bool)supportsSecureCoding;
++ (unsigned int)daemonPasscodeRequestOpinion:(id *)arg1;
++ (id)_ClassCreateSecureBackupConcurrentConnection;
++ (void)asyncRequestEscrowRecordUpdate;
++ (unsigned int)needPasscodeForHSA2EscrowRecordUpdate:(id *)arg1;
+
+- (id)init;
+- (void)encodeWithCoder:(id)arg1;
+- (id)initWithCoder:(id)arg1;
+- (id)recoverWithInfo:(id)arg1 results:(id *)arg2;
+- (id)getAccountInfoWithInfo:(id)arg1 results:(id *)arg2;
+- (id)disableWithInfo:(id)arg1;
+- (id)enableWithInfo:(id)arg1;
+- (void)recoverWithInfo:(id)arg1 completionBlockWithResults:(CDUnknownBlockType)arg2;
+- (void)startSMSChallengeWithInfo:(id)arg1 completionBlockWithResults:(CDUnknownBlockType)arg2;
+- (void)disableWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (void)enableWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (id)changeSMSTargetWithInfo:(id)arg1;
+- (void)recoverWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (void)getCertificates:(CDUnknownBlockType)arg1;
+- (id)backupWithInfo:(id)arg1;
+- (id)_CreateSecureBackupConnection;
+- (id)initWithUserActivityLabel:(id)arg1;
+- (void)populateWithInfo:(id)arg1;
+- (id)getAccountInfoWithError:(id *)arg1;
+- (void)getAccountInfoWithResults:(CDUnknownBlockType)arg1;
+- (void)getAccountInfoWithInfo:(id)arg1 completionBlockWithResults:(CDUnknownBlockType)arg2;
+- (_Bool)updateMetadataWithError:(id *)arg1;
+- (void)updateMetadataWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (_Bool)enableWithError:(id *)arg1;
+- (void)enableWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (id)recoverWithError:(id *)arg1;
+- (void)recoverWithResults:(CDUnknownBlockType)arg1;
+- (_Bool)disableWithError:(id *)arg1;
+- (void)disableWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)stashRecoveryDataWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)cachePassphrase;
+- (void)cachePassphraseWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)uncachePassphrase;
+- (void)uncachePassphraseWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (id)startSMSChallengeWithError:(id *)arg1;
+- (void)startSMSChallengeWithResults:(CDUnknownBlockType)arg1;
+- (void)getCountrySMSCodesWithResults:(CDUnknownBlockType)arg1;
+- (_Bool)changeSMSTargetWithError:(id *)arg1;
+- (void)changeSMSTargetWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)backOffDateWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)setBackOffDateWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)srpRecoveryUpdateDSID:(id)arg1 recoveryPassphrase:(id)arg2;
+- (id)beginHSA2PasscodeRequest:(_Bool)arg1 uuid:(id)arg2 error:(id *)arg3;
+- (void)recoverRecordContents:(CDUnknownBlockType)arg1;
+- (void)cacheRecoveryKeyWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)uncacheRecoveryKeyWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)backupWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (void)notificationInfo:(CDUnknownBlockType)arg1;
+- (void)stateCaptureWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)getAccountInfoWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (id)updateMetadataWithInfo:(id)arg1;
+- (void)updateMetadataWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (void)stashRecoveryDataWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (id)cachePassphraseWithInfo:(id)arg1;
+- (void)cachePassphraseWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (id)uncachePassphraseWithInfo:(id)arg1;
+- (void)uncachePassphraseWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (id)startSMSChallengeWithInfo:(id)arg1 results:(id *)arg2;
+- (void)startSMSChallengeWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (void)getCountrySMSCodesWithInfo:(id)arg1 completionBlockWithResults:(CDUnknownBlockType)arg2;
+- (void)changeSMSTargetWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (void)backOffDateWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (void)setBackOffDateWithInfo:(id)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (id)srpInitNonce;
+- (id)srpRecoveryBlobFromSRPInitResponse:(id)arg1;
+- (void)prepareHSA2EscrowRecordContents:(_Bool)arg1 reply:(CDUnknownBlockType)arg2;
+- (id)beginHSA2PasscodeRequest:(_Bool)arg1 error:(id *)arg2;
+
+@end

@@ -1,0 +1,200 @@
+/*
+ Image: /System/Library/PrivateFrameworks/UIKitCore.framework/UIKitCore
+ */
+
+#import <UIKitCore/UIPreviewPresentationController.h>
+
+#import <UIKitCore/Swift-Protocol.h>
+
+@class NSArray, NSLayoutConstraint, NSString, UIGestureRecognizer, UIImageView, UIInteractionProgress, UIPreviewAction, UIPreviewForceInteractionProgress, UIPreviewInteractionController, UIScrollView, UITapGestureRecognizer, UIView, UIWindow, _UIPlatterMenuDynamicsController, _UIPreviewActionSheetView, _UIPreviewPresentationAnimator, _UIPreviewPresentationContainerView, _UIPreviewPresentationEffectView, _UIPreviewQuickActionView, _UIStatesFeedbackGenerator, _UIVelocityIntegrator;
+
+@protocol UIViewControllerPreviewing, _UIForcePresentationControllerDelegate;
+
+@interface _UIPreviewPresentationController : UIPreviewPresentationController <Swift>
+
+{
+    _Bool _sourceViewSnapshotAndScaleTransformSuppressed;
+    _Bool _didSendBeginEvent;
+    _Bool _leadingQuickActionViewSelected;
+    _Bool _trailingQuickActionViewSelected;
+    _Bool _isAnimatingActionSheet;
+    _Bool _hasAskedForDismissalInternally;
+    _Bool _hasAskedForCommitInternally;
+    _Bool _preDismissAnimationsInflight;
+    _Bool _panningGestureRecognizerInProgress;
+    _Bool _breathing;
+    UIGestureRecognizer *_panningGestureRecognizer;
+    CDUnknownBlockType _presentationPhaseCompletionBlock;
+    id <_UIForcePresentationControllerDelegate> _forcePresentationControllerDelegate;
+    _UIStatesFeedbackGenerator *_feedbackGenerator;
+    UIView *_actionSheetContainerView;
+    UIScrollView *_containerScrollView;
+    _UIPreviewActionSheetView *_previewActionSheet;
+    UIPreviewForceInteractionProgress *_interactionProgressForCommit;
+    UIPreviewForceInteractionProgress *_interactionProgressForBreathing;
+    _UIPreviewPresentationContainerView *_presentationContainerView;
+    _UIPreviewPresentationEffectView *_revealContainerView;
+    UIWindow *_initialSourceViewSnapshotWindow;
+    UIView *_initialSourceViewSnapshot;
+    _UIPreviewPresentationAnimator *_unhighlightPreviewCellSnapshotViewAnimator;
+    NSArray *_previewActionItems;
+    UIPreviewAction *_leadingPreviewAction;
+    UIPreviewAction *_trailingPreviewAction;
+    _UIPreviewQuickActionView *_leadingQuickActionView;
+    _UIPreviewQuickActionView *_trailingQuickActionView;
+    NSLayoutConstraint *_leadingQuickActionViewEdgeConstraint;
+    NSLayoutConstraint *_trailingQuickActionViewEdgeConstraint;
+    UIImageView *_actionSheetAvailableImageView;
+    NSLayoutConstraint *_containerScrollViewXConstraint;
+    UITapGestureRecognizer *_tapToDismissGestureRecognizer;
+    UIGestureRecognizer *_modalPreviewActionsPanningGestureRecognizer;
+    _UIPlatterMenuDynamicsController *_platterMenuController;
+    _UIVelocityIntegrator *_revealPanningVelocityIntegrator;
+    unsigned long long _currentPresentationPhase;
+    UIPreviewInteractionController *_previewInteractionController;
+    id <UIViewControllerPreviewing> _previewingContext;
+    UIInteractionProgress *_interactionProgressForPresentation;
+}
+
+@property (nonatomic) _Bool didSendBeginEvent;
+@property (retain, nonatomic) UIView *actionSheetContainerView;
+@property (retain, nonatomic) UIScrollView *containerScrollView;
+@property (retain, nonatomic) _UIPreviewActionSheetView *previewActionSheet;
+@property (retain, nonatomic) UIPreviewForceInteractionProgress *interactionProgressForCommit;
+@property (retain, nonatomic) UIPreviewForceInteractionProgress *interactionProgressForBreathing;
+@property (retain, nonatomic) _UIPreviewPresentationContainerView *presentationContainerView;
+@property (retain, nonatomic) _UIPreviewPresentationEffectView *revealContainerView;
+@property (retain, nonatomic) UIWindow *initialSourceViewSnapshotWindow;
+@property (retain, nonatomic) UIView *initialSourceViewSnapshot;
+@property (retain, nonatomic) _UIPreviewPresentationAnimator *unhighlightPreviewCellSnapshotViewAnimator;
+@property (copy, nonatomic) NSArray *previewActionItems;
+@property (copy, nonatomic) UIPreviewAction *leadingPreviewAction;
+@property (copy, nonatomic) UIPreviewAction *trailingPreviewAction;
+@property (retain, nonatomic) _UIPreviewQuickActionView *leadingQuickActionView;
+@property (retain, nonatomic) _UIPreviewQuickActionView *trailingQuickActionView;
+@property (retain, nonatomic) NSLayoutConstraint *leadingQuickActionViewEdgeConstraint;
+@property (retain, nonatomic) NSLayoutConstraint *trailingQuickActionViewEdgeConstraint;
+@property (retain, nonatomic) UIImageView *actionSheetAvailableImageView;
+@property (nonatomic) _Bool leadingQuickActionViewSelected;
+@property (nonatomic) _Bool trailingQuickActionViewSelected;
+@property (retain, nonatomic) NSLayoutConstraint *containerScrollViewXConstraint;
+@property (retain, nonatomic) UITapGestureRecognizer *tapToDismissGestureRecognizer;
+@property (retain, nonatomic) UIGestureRecognizer *modalPreviewActionsPanningGestureRecognizer;
+@property (nonatomic) _Bool isAnimatingActionSheet;
+@property (retain, nonatomic) _UIPlatterMenuDynamicsController *platterMenuController;
+@property (retain, nonatomic) _UIVelocityIntegrator *revealPanningVelocityIntegrator;
+@property (nonatomic) _Bool hasAskedForDismissalInternally;
+@property (nonatomic) _Bool hasAskedForCommitInternally;
+@property (nonatomic) _Bool preDismissAnimationsInflight;
+@property (nonatomic) _Bool panningGestureRecognizerInProgress;
+@property (nonatomic, readonly, getter=isBreathing) _Bool breathing;
+@property (nonatomic) unsigned long long currentPresentationPhase;
+@property (weak, nonatomic) UIPreviewInteractionController *previewInteractionController;
+@property (weak, nonatomic) id <UIViewControllerPreviewing> previewingContext;
+@property (retain, nonatomic) UIInteractionProgress *interactionProgressForPresentation;
+@property (nonatomic) double presentationViewCornerRadius;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (copy, nonatomic) CDUnknownBlockType presentationPhaseCompletionBlock;
+@property (retain, nonatomic) UIGestureRecognizer *panningGestureRecognizer;
+@property (nonatomic) _Bool _sourceViewSnapshotAndScaleTransformSuppressed;
+@property (nonatomic, readonly) UIView *_revealContainerView;
+@property (retain, nonatomic) _UIStatesFeedbackGenerator *feedbackGenerator;
+@property (weak, nonatomic) id <_UIForcePresentationControllerDelegate> forcePresentationControllerDelegate;
+
++ (id)_backgroundEffectForTraitCollection:(id)arg1 interactive:(_Bool)arg2;
++ (_Bool)_shouldApplyVisualEffectsToPresentingView;
+
+- (void)dealloc;
+- (id)initWithPresentedViewController:(id)arg1 presentingViewController:(id)arg2;
+- (void)preferredContentSizeDidChangeForChildContentContainer:(id)arg1;
+- (_Bool)_canDismissPresentation;
+- (_Bool)_canCommitPresentation;
+- (void)_willCommitPresentation;
+- (void)containerViewWillLayoutSubviews;
+- (void)presentationTransitionWillBegin;
+- (void)interactionProgressDidUpdate:(id)arg1;
+- (void)interactionProgress:(id)arg1 didEnd:(_Bool)arg2;
+- (void)dismissalTransitionWillBegin;
+- (id)platterView;
+- (void)dismissalTransitionDidEnd:(_Bool)arg1;
+- (void)presentationTransitionDidEnd:(_Bool)arg1;
+- (void)systemLayoutFittingSizeDidChangeForChildContentContainer:(id)arg1;
+- (id)_viewsParticipatingInNavigationControllerTransition;
+- (id)_animatorForContainmentTransition;
+- (_Bool)_shouldSavePresentedViewControllerForStateRestoration;
+- (struct CGPoint)centerForPlatterWithMenuViewDismissed;
+- (struct CGPoint)centerForMenuDismissed;
+- (struct CGPoint)centerForPlatterWithMenuViewPresented;
+- (double)minimumSpacingBetweenPlatterAndMenu;
+- (struct CGPoint)centerForMenuPresented;
+- (void)platterMenuDynamicsControllerDidDismissWithController:(id)arg1;
+- (id)leadingSwipeActionView;
+- (id)trailingSwipeActionView;
+- (struct CGPoint)initialCenterForLeadingSwipeActionView;
+- (struct CGPoint)initialCenterForTrailingSwipeActionView;
+- (void)platterMenuDynamicsController:(id)arg1 didMoveSwipeView:(id)arg2 toPosition:(struct CGPoint)arg3;
+- (_Bool)previewActionSheetCanSelectItem:(id)arg1;
+- (id)_makeAndAddToViewHierarchyPreviewActionSheetForMenuItems:(id)arg1;
+- (double)_quickActionSelectionOffset;
+- (double)_quickActionsSelectionThresholdForPreviewMenuItemStyle:(long long)arg1;
+- (_Bool)_platterIsInInitialPositionMostly;
+- (struct CGPoint)_applyLayoutAdjustmentsForManagedViewWithPosition:(struct CGPoint)arg1;
+- (void)_presentationTransitionWillBeginForContainerEffectView:(id)arg1;
+- (void)_prepareInitialSourceViewSnapshot;
+- (struct CGRect)_preferredSourceViewRect;
+- (void)_updateRevealContainerViewForSourceRect:(struct CGRect)arg1;
+- (void)_unhighlightPreviewCellSnapshotViewsIfNeeded;
+- (void)_stopUnhighlightPreviewCellSnapshotViewAnimationIfNeeded;
+- (void)_hideQuickActions;
+- (void)_endBreathing;
+- (void)_triggerQuickActionHandlerIfNeeded;
+- (void)_layoutForDismissTransition;
+- (void)_invokeCommitHandlerFromInteractionProgress;
+- (void)_updateBreathingTransformWithProgress:(double)arg1 animated:(_Bool)arg2;
+- (void)_layoutForPreviewInteractionProgress:(double)arg1;
+- (_Bool)_hasPreviewActions;
+- (struct CGPoint)_dismissedActionSheetCenterForActionSheet:(id)arg1;
+- (void)_preparePresentationContainerViewForPreviewTransition;
+- (void)_preparePresentationContainerViewForPreviewInteraction;
+- (void)_configureActionSheetChromeViews;
+- (void)_updateVisibiltyOfPreviewActionChromeForCurrentState;
+- (void)_setupInteractionProgressForBreathing;
+- (void)_configureDynamicsController;
+- (void)_configureInitialActionSheetViewIfNeeded;
+- (void)_layoutForRevealUnhighlightTransition:(double)arg1;
+- (struct CGPoint)centerForPlatterWithMenuViewPresentedForActionSheet:(id)arg1;
+- (double)platterContainerCenterX;
+- (double)platterContainerCenterY;
+- (struct CGPoint)centerForMenuPresentedForActionSheet:(id)arg1;
+- (struct CGPoint)centerForMenuDismissedForActionSheet:(id)arg1;
+- (void)_dismissPresentation;
+- (double)_leadingQuickActionOffsetForCenterPosition:(struct CGPoint)arg1 swipeView:(id)arg2;
+- (double)_trailingQuickActionOffsetForCenterPosition:(struct CGPoint)arg1 swipeView:(id)arg2;
+- (struct CGRect)platterContainerBounds;
+- (struct CGRect)platterBounds;
+- (_Bool)_hasPreviewQuickActions;
+- (void)_dismissPresentationWithCompletion:(CDUnknownBlockType)arg1;
+- (void)_dismissForHandledActionWithCompletion:(CDUnknownBlockType)arg1;
+- (void)_presentSubActionSheetForPreviewActionGroup:(id)arg1;
+- (_Bool)_platterIsSelectingPreviewActions;
+- (_Bool)_hasSelectedQuickAction;
+- (void)_dismissForSelectionQuickActionAnimated;
+- (void)_restorePlatterToInitialStatePositionAnimatedWithCompletion:(CDUnknownBlockType)arg1;
+- (_Bool)_platterIsInInitialPosition;
+- (void)_panningGestureRecognizerDidFire:(id)arg1;
+- (void)updateSwipeActionsIfApplicable;
+- (void)setupAdditionalModalGestureRecognizers;
+- (void)_beginBreathing;
+- (void)_tapToDismissPreviewWithActionsDidFire:(id)arg1;
+- (void)_layoutForRevealTransition;
+- (void)_revealTransitionDidComplete:(_Bool)arg1;
+- (void)_layoutForPreviewTransition;
+- (void)_previewTransitionDidComplete:(_Bool)arg1;
+- (void)_dismissTransitionDidComplete:(_Bool)arg1;
+- (struct CGPoint)_presentedActionSheetCenterForActionSheet:(id)arg1;
+- (void)_restorePlatterToInitialStatePositionAnimated;
+
+@end

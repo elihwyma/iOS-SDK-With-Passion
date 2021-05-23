@@ -1,0 +1,51 @@
+/*
+ Image: /System/Library/Frameworks/HealthKit.framework/HealthKit
+ */
+
+#import <Foundation/NSArray.h>
+
+#import <HealthKit/Swift-Protocol.h>
+
+@class NSString;
+
+@interface NSArray (HKUUID) <Swift>
+
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
++ (id)indexableKeyPathsWithPrefix:(id)arg1;
++ (_Bool)_permutationHelperForArray:(id)arg1 number:(long long)arg2 permutationHandler:(CDUnknownBlockType)arg3;
++ (id)hk_arrayWithCount:(long long)arg1 generator:(CDUnknownBlockType)arg2;
+
+- (id)hk_filter:(CDUnknownBlockType)arg1;
+- (id)hk_map:(CDUnknownBlockType)arg1;
+- (id)codingsForKeyPath:(id)arg1 error:(id *)arg2;
+- (_Bool)applyConcepts:(id)arg1 forKeyPath:(id)arg2 error:(id *)arg3;
+- (id)hk_firstObjectPassingTest:(CDUnknownBlockType)arg1;
+- (_Bool)hk_enumerateUUIDsWithError:(id *)arg1 block:(CDUnknownBlockType)arg2;
+- (id)hk_dataForAllUUIDs;
+- (void)hk_partitionArrayWithPartitionSetupBlock:(CDUnknownBlockType)arg1 partitionMembershipCheckBlock:(CDUnknownBlockType)arg2 partitionExtendBlock:(CDUnknownBlockType)arg3 partitionFinalizeBlock:(CDUnknownBlockType)arg4;
+- (double)hk_sumUsingEvaluationBlock:(CDUnknownBlockType)arg1;
+- (id)hk_firstObjectWithMaximumValueUsingEvaluationBlock:(CDUnknownBlockType)arg1;
+- (id)hk_averageUsingEvaluationBlock:(CDUnknownBlockType)arg1;
+- (id)hk_firstObjectWithMinimumValueUsingEvaluationBlock:(CDUnknownBlockType)arg1;
+- (_Bool)_permutationsWithCount:(long long)arg1 permutation:(id)arg2 depth:(long long)arg3 block:(CDUnknownBlockType)arg4;
+- (id)hk_map:(CDUnknownBlockType)arg1 error:(id *)arg2;
+- (id)hk_foldRightFrom:(id)arg1 with:(CDUnknownBlockType)arg2;
+- (id)hk_firstSortedObjectWithComparison:(CDUnknownBlockType)arg1;
+- (_Bool)hk_containsObjectsInArray:(id)arg1;
+- (_Bool)hk_allElementsUnique;
+- (id)hk_orPredicateWithPredicateBlock:(CDUnknownBlockType)arg1;
+- (id)hk_mapToDictionary:(CDUnknownBlockType)arg1;
+- (id)hk_mapToSet:(CDUnknownBlockType)arg1;
+- (void)hk_enumeratePermutationsWithBlock:(CDUnknownBlockType)arg1;
+- (id)hk_reversed;
+- (void)hk_enumeratePermutationsOfSubsetsOfLength:(long long)arg1 block:(CDUnknownBlockType)arg2;
+
+@end

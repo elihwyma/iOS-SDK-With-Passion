@@ -1,0 +1,54 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CameraEditKit.framework/CameraEditKit
+ */
+
+#import <CameraEditKit/CameraEditKit-Structures.h>
+
+#import <CameraEditKit/CAAnimationDelegate-Protocol.h>
+#import <CameraEditKit/CEKAbstractSlider-Protocol.h>
+#import <CameraEditKit/CEKAnimationGenerator.h>
+#import <CameraEditKit/CEKAnimationGeneratorAnimation.h>
+#import <CameraEditKit/CEKApertureButton.h>
+#import <CameraEditKit/CEKApertureSlider.h>
+#import <CameraEditKit/CEKBadgeTextView.h>
+#import <CameraEditKit/CEKBadgeView.h>
+#import <CameraEditKit/CEKBadgeViewDelegate-Protocol.h>
+#import <CameraEditKit/CEKDiscreteSlider.h>
+#import <CameraEditKit/CEKEdgeGradientView.h>
+#import <CameraEditKit/CEKLightingControl.h>
+#import <CameraEditKit/CEKLightingControlItem.h>
+#import <CameraEditKit/CEKLightingCube.h>
+#import <CameraEditKit/CEKLightingCubeAppearance.h>
+#import <CameraEditKit/CEKLightingCubeMutableAppearance.h>
+#import <CameraEditKit/CEKLightingCubeRenderer.h>
+#import <CameraEditKit/CEKLightingCubeStyle-Protocol.h>
+#import <CameraEditKit/CEKLightingCubeStyleGlowing.h>
+#import <CameraEditKit/CEKLightingDialBackground.h>
+#import <CameraEditKit/CEKLightingEffectManager.h>
+#import <CameraEditKit/CEKLightingFrameCache.h>
+#import <CameraEditKit/CEKLightingNameBadge.h>
+#import <CameraEditKit/CEKSelectionFeedbackGenerator.h>
+#import <CameraEditKit/CEKSlider.h>
+#import <CameraEditKit/CEKSliderDotView.h>
+#import <CameraEditKit/CEKSliderTickMarksDelegate-Protocol.h>
+#import <CameraEditKit/CEKSliderTickMarksView.h>
+#import <CameraEditKit/CEKTickMarksConfiguration-Protocol.h>
+#import <CameraEditKit/CEKWheelScrubberCollectionViewLayout.h>
+#import <CameraEditKit/CEKWheelScrubberCollectionViewLayoutDelegate-Protocol.h>
+#import <CameraEditKit/CEKWheelScrubberRoundedCornerOverlayView.h>
+#import <CameraEditKit/CEKWheelScrubberRoundedCornerOverlayViewBottom.h>
+#import <CameraEditKit/CEKWheelScrubberRoundedCornerOverlayViewLeft.h>
+#import <CameraEditKit/CEKWheelScrubberRoundedCornerOverlayViewRight.h>
+#import <CameraEditKit/CEKWheelScrubberRoundedCornerOverlayViewTop.h>
+#import <CameraEditKit/CEKWheelScrubberView.h>
+#import <CameraEditKit/CEKWheelScrubberViewCell.h>
+#import <CameraEditKit/NSCopying-Protocol.h>
+#import <CameraEditKit/NSIndexSet-CEKLightingFrameCache.h>
+#import <CameraEditKit/NSMutableCopying-Protocol.h>
+#import <CameraEditKit/NSObject-Protocol.h>
+#import <CameraEditKit/Swift-Protocol.h>
+#import <CameraEditKit/UICollectionViewDataSource-Protocol.h>
+#import <CameraEditKit/UICollectionViewDelegate-Protocol.h>
+#import <CameraEditKit/UIGestureRecognizerDelegate-Protocol.h>
+#import <CameraEditKit/UIPreviewInteractionDelegate-Protocol.h>
+#import <CameraEditKit/UIScrollViewDelegate-Protocol.h>

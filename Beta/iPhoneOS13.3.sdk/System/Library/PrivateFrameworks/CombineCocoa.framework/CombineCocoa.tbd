@@ -1,0 +1,16 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: DFEA491E-152C-34FE-B88D-ECF1E7350615' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/CombineCocoa.framework/CombineCocoa
+current-version:       134
+compatibility-version: 0
+exports:
+  - archs:                [ arm64 ]
+    symbols:              [ _CombineCocoaVersionNumber,
+                            _CombineCocoaVersionString ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ dyld_stub_binder ]
+...

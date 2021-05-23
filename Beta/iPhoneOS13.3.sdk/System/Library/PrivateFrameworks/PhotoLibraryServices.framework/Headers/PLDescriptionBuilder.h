@@ -1,0 +1,41 @@
+/*
+ Image: /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/PhotoLibraryServices
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSMutableString, NSString, _PLDescriptionStyle;
+
+@interface PLDescriptionBuilder : NSObject
+
+{
+    NSObject *_object;
+    NSMutableString *_description;
+    NSString *_separator;
+    long long _indent;
+    NSString *_indentString;
+    _PLDescriptionStyle *_style;
+    long long _descriptionStyle;
+}
+
+@property (copy, nonatomic) NSString *separator;
+@property (nonatomic, readonly) long long style;
+@property (nonatomic, readonly) long long indent;
+
++ (id)descriptionBuilderWithObject:(id)arg1;
++ (id)plainDescriptionBuilder;
++ (id)plainMultiLineDescriptionBuilder;
++ (id)prettyMultiLineDescriptionBuilderWithObject:(id)arg1 indent:(long long)arg2;
+
+- (id)build;
+- (void)appendName:(id)arg1 object:(id)arg2;
+- (void)appendName:(id)arg1 integerValue:(long long)arg2;
+- (void)appendName:(id)arg1 boolValue:(_Bool)arg2;
+- (void)appendName:(id)arg1 doubleValue:(double)arg2;
+- (id)initWithObject:(id)arg1 style:(long long)arg2 indent:(long long)arg3;
+- (void)appendName:(id)arg1 unsignedIntegerValue:(unsigned long long)arg2;
+- (void)appendName:(id)arg1 floatValue:(float)arg2;
+- (void)appendName:(id)arg1 cgSize:(struct CGSize)arg2;
+- (void)appendName:(id)arg1 typeCode:(const char *)arg2 value:(const void *)arg3;
+
+@end

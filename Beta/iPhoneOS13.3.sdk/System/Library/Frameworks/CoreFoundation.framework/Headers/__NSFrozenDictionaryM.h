@@ -1,0 +1,33 @@
+/*
+ Image: /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+ */
+
+#import <Foundation/NSDictionary.h>
+
+__attribute__((visibility("hidden")))
+@interface __NSFrozenDictionaryM : NSDictionary
+
+{
+    CDStruct_bc24fd1e storage;
+    _Atomic struct __cow_state_t *cow;
+}
+
++ (id)allocWithZone:(struct _NSZone *)arg1;
+
+- (void)dealloc;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)mutableCopyWithZone:(struct _NSZone *)arg1;
+- (id)copy;
+- (id)mutableCopy;
+- (unsigned long long)count;
+- (unsigned long long)countByEnumeratingWithState:(CDStruct_58648341 *)arg1 objects:(id *)arg2 count:(unsigned long long)arg3;
+- (id)objectForKey:(id)arg1;
+- (void)__apply:(CDUnknownFunctionPointerType)arg1 context:(void *)arg2;
+- (void)enumerateKeysAndObjectsWithOptions:(unsigned long long)arg1 usingBlock:(CDUnknownBlockType)arg2;
+- (id)keyEnumerator;
+- (void)getObjects:(id *)arg1 andKeys:(id *)arg2 count:(unsigned long long)arg3;
+- (id)keyOfEntryWithOptions:(unsigned long long)arg1 passingTest:(CDUnknownBlockType)arg2;
+- (id)keysOfEntriesWithOptions:(unsigned long long)arg1 passingTest:(CDUnknownBlockType)arg2;
+- (id)objectForKeyedSubscript:(id)arg1;
+
+@end

@@ -1,0 +1,202 @@
+/*
+ Image: /System/Library/Frameworks/CoreData.framework/CoreData
+ */
+
+#import <Foundation/NSObject.h>
+
+#import <CoreData/Swift-Protocol.h>
+
+@class NSArray, NSData, NSDictionary, NSExpression, NSManagedObjectModel, NSMutableDictionary, NSString;
+
+@interface NSEntityDescription : NSObject <Swift>
+
+{
+    int _cd_rc;
+    id _snapshotClass;
+    NSString *_versionHashModifier;
+    NSData *_versionHash;
+    NSManagedObjectModel *_model;
+    NSString *_classNameForEntity;
+    Class _instanceClass;
+    NSString *_name;
+    NSEntityDescription *_rootentity;
+    NSEntityDescription *_superentity;
+    NSMutableDictionary *_subentities;
+    NSMutableDictionary *_properties;
+    id _propertyMapping;
+    struct _NSRange *_propertyRanges;
+    struct __entityDescriptionFlags {
+        unsigned int _isAbstract:1;
+        unsigned int _shouldValidateOnSave:1;
+        unsigned int _isImmutable:1;
+        unsigned int _isFlattened:1;
+        unsigned int _skipValidation:1;
+        unsigned int _hasPropertiesIndexedBySpotlight:1;
+        unsigned int _hasPropertiesStoredInTruthFile:1;
+        unsigned int _rangesAreInDataBlob:1;
+        unsigned int _hasAttributesWithExternalDataReferences:1;
+        unsigned int _hasNonstandardPrimitiveProperties:2;
+        unsigned int _hasUniqueProperties:1;
+        unsigned int _hasChildrenWithUniqueProperties:1;
+        unsigned int _validationUniqueProperties:1;
+        unsigned int _isPersistentHistoryEntity:1;
+        unsigned int _hasAttributesWithFileBackedFutures:1;
+        unsigned int _reservedEntityDescription:16;
+    } _entityDescriptionFlags;
+    struct _ExtraEntityIVars *_extraIvars;
+    NSMutableDictionary *_userInfo;
+    id _flattenedSubentities;
+    id **_kvcPropertyAccessors;
+    long long _modelsReferenceIDForEntity;
+}
+
+@property (readonly) NSManagedObjectModel *managedObjectModel;
+@property (copy) NSString *managedObjectClassName;
+@property (copy) NSString *name;
+@property (getter=isAbstract) _Bool abstract;
+@property (copy, readonly) NSDictionary *subentitiesByName;
+@property (retain) NSArray *subentities;
+@property (readonly) NSEntityDescription *superentity;
+@property (copy, readonly) NSDictionary *propertiesByName;
+@property (retain) NSArray *properties;
+@property (retain, nonatomic) NSDictionary *userInfo;
+@property (copy, readonly) NSDictionary *attributesByName;
+@property (copy, readonly) NSDictionary *relationshipsByName;
+@property (copy, readonly) NSData *versionHash;
+@property (copy) NSString *versionHashModifier;
+@property (copy) NSString *renamingIdentifier;
+@property (copy) NSArray *indexes;
+@property (retain) NSArray *uniquenessConstraints;
+@property (retain) NSArray *compoundIndexes;
+@property (retain, nonatomic) NSExpression *coreSpotlightDisplayNameExpression;
+
++ (void)initialize;
++ (_Bool)supportsSecureCoding;
++ (id)entityForName:(id)arg1 inManagedObjectContext:(id)arg2;
++ (id)insertNewObjectForEntityForName:(id)arg1 inManagedObjectContext:(id)arg2;
++ (id)_MOClassName;
+
+- (id)init;
+- (unsigned long long)retainCount;
+- (void)dealloc;
+- (_Bool)isEqual:(id)arg1;
+- (id)retain;
+- (oneway void)release;
+- (unsigned long long)hash;
+- (id)description;
+- (_Bool)_tryRetain;
+- (_Bool)_isDeallocating;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (unsigned long long)countByEnumeratingWithState:(CDStruct_70511ce9 *)arg1 objects:(id *)arg2 count:(unsigned long long)arg3;
+- (void)encodeWithCoder:(id)arg1;
+- (id)initWithCoder:(id)arg1;
+- (id)_initWithName:(id)arg1;
+- (_Bool)_isEditable;
+- (id)_allPropertyNames;
+- (id)_propertyNamed:(id)arg1;
+- (_Bool)_hasAttributesWithFileBackedFutures;
+- (struct _NSRange *)_propertyRangesByType;
+- (id)knownKeysMappingStrategy;
+- (id)_relationshipNamed:(id)arg1;
+- (id)attributeKeys;
+- (void)_nukeMOClassName__;
+- (id)_rootEntity;
+- (_Bool)isKindOfEntity:(id)arg1;
+- (void)_setIsEditable:(_Bool)arg1;
+- (_Bool)_isSchemaEqual:(id)arg1;
+- (_Bool)_subentitiesIncludes:(id)arg1;
+- (struct _ExtraEntityIVars *)_extraIVars;
+- (void)_throwIfNotEditable;
+- (void)_createCachesAndOptimizeState;
+- (long long)_modelsReferenceID;
+- (_Bool)_hasPropertiesIndexedBySpotlight;
+- (id)_propertySearchMapping;
+- (Class)_entityClass;
+- (void)_initializeExtraIVars;
+- (id)_oldCompoundIndexStyleIndexes;
+- (id)_indexElementFromJSONArray:(id)arg1;
+- (id)_indexDescriptionFromJSONArray:(id)arg1;
+- (void)_addSupplementalIndexes:(id)arg1;
+- (void)_setIndexes:(id)arg1;
+- (void)_setUniquenessConstraints:(id)arg1;
+- (void)_setIndexesFromJSONObject:(id)arg1 supplemental:(_Bool)arg2;
+- (void)_setSubentities:(id)arg1 preserveIndices:(_Bool)arg2;
+- (void)_setProperties:(id)arg1 preserveIndices:(_Bool)arg2;
+- (id)_uniquenessConstraints;
+- (id)_propertiesMatchingBlock:(CDUnknownBlockType)arg1;
+- (id)_propertiesOfType:(unsigned long long)arg1;
+- (void)_dropIndexes;
+- (void)_removeSubentity:(id)arg1;
+- (void)_addSubentity:(id)arg1;
+- (void)_removeProperty:(id)arg1;
+- (void)_addProperty:(id)arg1;
+- (_Bool)_isFlattened;
+- (id)_subentityNamed:(id)arg1;
+- (id)_versionHashInStyle:(unsigned long long)arg1;
+- (void)_validateIndexNameChangeFrom:(id)arg1 to:(id)arg2;
+- (id)_attributeNamed:(id)arg1;
+- (void)_validateIndex:(id)arg1;
+- (id)_propertiesOnlySubsetFromIndexes:(id)arg1;
+- (_Bool)_hasIndexForProperty:(id)arg1;
+- (id)_collectSubentities;
+- (id)_checkSelfForNonCascadeNoInverses;
+- (id)_checkForNonCascadeNoInverses;
+- (id)relationshipsWithDestinationEntity:(id)arg1;
+- (id)_newVersionHashInStyle:(unsigned long long)arg1;
+- (Class)_snapshotClass;
+- (id)_flattenedSubentities;
+- (id)_keypathsToPrefetchForDeletePropagation;
+- (void)_setSuperentity:(id)arg1;
+- (void)setElementID:(id)arg1;
+- (id)elementID;
+- (id)keypathsToPrefetchForDeletePropagation;
+- (id)_constraintAsIndex:(id)arg1;
+- (id)_keypathsToPrefetchForDeletePropagationPrefixedWith:(id)arg1 toDepth:(long long)arg2 processedEntities:(id)arg3;
+- (_Bool)_propertyKeys:(id)arg1 matchingBlock:(CDUnknownBlockType)arg2;
+- (id)_relationshipNamesByType:(_Bool)arg1;
+- (id)_localPropertyDescriptionNamed:(id)arg1;
+- (id)_localRelationshipNamed:(id)arg1;
+- (void)_flattenProperties;
+- (_Bool)_isInheritedPropertyNamed:(id)arg1;
+- (id)_newMappingForPropertiesOfRange:(unsigned int)arg1;
+- (void)_commonCachesAndOptimizedState;
+- (void)_removePropertyNamed:(id)arg1;
+- (void)_setIsFlattened:(_Bool)arg1;
+- (void)_stripForMigration;
+- (void)_restoreValidation;
+- (_Bool)_constraintIsExtension:(id)arg1;
+- (_Bool)_hasUniquePropertiesRaw;
+- (void)_addFactoryToRetainList:(id)arg1;
+- (id)_uniquenessConstraintsAsFetchIndexes;
+- (id)_propertyWithRenamingIdentifier:(id)arg1;
+- (id)_keypathsForDeletions;
+- (void)_setManagedObjectModel:(id)arg1;
+- (id)toManyRelationshipKeys;
+- (id)toOneRelationshipKeys;
+- (id)inverseForRelationshipKey:(id)arg1;
+- (_Bool)_hasCustomPrimitiveProperties;
+- (unsigned long long)_inheritanceDepth;
+- (_Bool)_hasPotentialHashSkew;
+- (unsigned long long)_offsetRelationshipIndex:(unsigned long long)arg1 fromSuperEntity:(id)arg2 andIsToMany:(_Bool)arg3;
+- (void *)_newSnowLeopardStyleDictionaryContainingPropertiesOfType:(unsigned long long)arg1;
+- (void *)_leopardStyleRelationshipsByName;
+- (void *)_leopardStyleAttributesByName;
+- (id)_new_implicitlyObservedKeys;
+- (void)_setModelsReferenceID:(long long)arg1;
+- (id)_sortedSubentities;
+- (_Bool)_skipValidation;
+- (_Bool)_hasAttributesWithExternalDataReferences;
+- (_Bool)_hasPropertiesStoredInTruthFile;
+- (void)_addIndexForProperty:(id)arg1;
+- (void)_removeIndexForProperty:(id)arg1;
+- (void)_finalizeIndexes;
+- (_Bool)_isPathologicalForConstraintMerging:(id *)arg1;
+- (void)_setValidationRequiredUniquePropertiesUpInheritanceHierachy;
+- (void)_setHasUniqueProperties:(_Bool)arg1;
+- (void)_setHasUniquePropertiesUpInheritanceHierachy;
+- (_Bool)_hasUniqueProperties;
+- (id)_extensionsOfParentConstraint:(id)arg1;
+- (_Bool)_hasUniquedPropertyNamed:(id)arg1;
+- (void)_writeIntoData:(id)arg1 propertiesDict:(id)arg2 uniquedPropertyNames:(id)arg3 uniquedStrings:(id)arg4 uniquedData:(id)arg5 uniquedMappings:(id)arg6 entities:(id)arg7;
+
+@end

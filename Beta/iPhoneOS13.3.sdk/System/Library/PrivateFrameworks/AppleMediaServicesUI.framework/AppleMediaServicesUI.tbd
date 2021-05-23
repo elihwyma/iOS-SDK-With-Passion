@@ -1,0 +1,80 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: BFCC5C9B-5A6E-3FC9-8112-A51378FF79CD' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/AppleMediaServicesUI.framework/AppleMediaServicesUI
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64 ]
+    objc-classes:         [ _AMSUIAlertDialogTask, _AMSUIAuthenticateTask,
+                            _AMSUICGRectHelper, _AMSUIOnboardingFeature,
+                            _AMSUIOnboardingViewController,
+                            _AMSUIPrivacyViewController ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ _AKAuthenticationPasswordKey,
+                            _AMSAuthenticateErrorDialogKey,
+                            _AMSAuthenticateOptionsCreateAccountQueryParamsKey,
+                            _AMSAuthenticateOptionsUserAgentKey, _AMSError,
+                            _AMSHashIfNeeded, _AMSLogKey, _AMSLogableError,
+                            _AMSSetLogKey, _CGAffineTransformIdentity,
+                            _CGAffineTransformMakeScale,
+                            _CGAffineTransformTranslate,
+                            _CGRectApplyAffineTransform, _CGRectGetHeight,
+                            _CGRectGetMaxX, _CGRectGetMaxY, _CGRectGetMidX,
+                            _CGRectGetMidY, _CGRectGetMinX, _CGRectGetMinY,
+                            _CGRectGetWidth, _CGRectZero, _NSUnderlyingErrorKey,
+                            _UIContentSizeCategoryAccessibilityExtraExtraExtraLarge,
+                            _UIContentSizeCategoryAccessibilityExtraExtraLarge,
+                            _UIContentSizeCategoryAccessibilityExtraLarge,
+                            _UIContentSizeCategoryAccessibilityLarge,
+                            _UIContentSizeCategoryIsAccessibilityCategory,
+                            _UIFontTextStyleBody, _UIFontTextStyleSubhead,
+                            _UIFontTextStyleTitle0,
+                            _UITransitionContextFromViewControllerKey,
+                            _UITransitionContextToViewControllerKey,
+                            __Block_object_assign, __Block_object_dispose,
+                            __NSConcreteGlobalBlock, __NSConcreteStackBlock,
+                            __Unwind_Resume, ___CFConstantStringClassReference,
+                            ___NSArray0__, ___objc_personality_v0,
+                            ___stack_chk_fail, ___stack_chk_guard,
+                            __dispatch_main_q, __kCFBundleIconFileKey,
+                            __objc_empty_cache, __os_log_impl, _abort_report_np,
+                            _dispatch_assert_queue$V2, _dispatch_async,
+                            _dispatch_once, _dispatch_queue_create,
+                            _dispatch_semaphore_create,
+                            _dispatch_semaphore_signal, _dispatch_semaphore_wait,
+                            _dlerror, _dlopen, _objc_alloc,
+                            _objc_autoreleaseReturnValue, _objc_copyWeak,
+                            _objc_destroyWeak, _objc_enumerationMutation,
+                            _objc_getClass, _objc_getProperty, _objc_initWeak,
+                            _objc_loadWeakRetained, _objc_msgSend,
+                            _objc_msgSendSuper2, _objc_opt_class,
+                            _objc_opt_isKindOfClass, _objc_release, _objc_retain,
+                            _objc_retainAutorelease,
+                            _objc_retainAutoreleaseReturnValue,
+                            _objc_retainAutoreleasedReturnValue,
+                            _objc_setProperty_nonatomic_copy, _objc_storeStrong,
+                            _objc_unsafeClaimAutoreleasedReturnValue,
+                            _os_log_type_enabled, dyld_stub_binder ]
+    objc-classes:         [ _AKAppleIDAuthenticationController,
+                            _AKAppleIDAuthenticationInAppContext,
+                            _AMSAuthKitUpdateResult, _AMSAuthKitUpdateTask,
+                            _AMSAuthenticateTask, _AMSBag, _AMSBagKeySet,
+                            _AMSDialogRequest, _AMSDialogResult,
+                            _AMSHandleDialogResultTask, _AMSLazyPromise,
+                            _AMSLogConfig, _AMSMetrics, _AMSMetricsEvent,
+                            _AMSMutableBagKeySet, _AMSProcessInfo, _AMSPromise,
+                            _AMSTask, _AMSURLRequestEncoder, _NSArray, _NSBundle,
+                            _NSDate, _NSDictionary, _NSError, _NSMutableArray,
+                            _NSMutableDictionary, _NSNumber, _NSObject, _NSString,
+                            _NSURL, _NSURLComponents, _NSURLQueryItem,
+                            _UIAlertAction, _UIAlertController, _UIButton, _UIColor,
+                            _UIFont, _UIFontDescriptor, _UIFontMetrics, _UIImage,
+                            _UIImageView, _UILabel, _UIPresentationController,
+                            _UIScrollView, _UITextField, _UITraitCollection, _UIView,
+                            _UIViewController ]
+...

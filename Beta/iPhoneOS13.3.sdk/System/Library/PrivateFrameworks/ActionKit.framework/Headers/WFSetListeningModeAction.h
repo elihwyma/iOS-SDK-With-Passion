@@ -1,0 +1,15 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ActionKit.framework/ActionKit
+ */
+
+#import <WorkflowKit/WFAction.h>
+
+@interface WFSetListeningModeAction : WFAction
+
+- (id)routeDescriptor;
+- (void)initializeParameters;
+- (void)runAsynchronouslyWithInput:(id)arg1;
+- (id)errorFromRoutePickerError:(id)arg1;
+- (id)errorUserInfoForRoutePickerErrorCode:(long long)arg1;
+
+@end

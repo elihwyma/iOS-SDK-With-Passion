@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/PrivateFrameworks/OfficeImport.framework/OfficeImport
+ */
+
+#import <Foundation/NSObject.h>
+
+__attribute__((visibility("hidden")))
+@interface WBTableCell : NSObject
+
++ (void)readFrom:(id)arg1 textRun:(struct WrdTextRun *)arg2 with:(struct WrdTableProperties *)arg3 tracked:(struct WrdTableProperties *)arg4 row:(id)arg5 index:(unsigned long long)arg6 cell:(id)arg7;
+
+@end

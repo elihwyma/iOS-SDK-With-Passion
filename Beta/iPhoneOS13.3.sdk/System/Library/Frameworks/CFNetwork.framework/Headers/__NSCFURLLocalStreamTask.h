@@ -1,0 +1,174 @@
+/*
+ Image: /System/Library/Frameworks/CFNetwork.framework/CFNetwork
+ */
+
+#import <CFNetwork/NSURLSessionStreamTask.h>
+
+@class NSData, NSDictionary, NSError, NSMutableArray, NSObject, NSString, NSURLRequest, NSURLResponse, NSUUID;
+
+@protocol OS_dispatch_queue, OS_dispatch_source;
+
+@interface __NSCFURLLocalStreamTask : NSURLSessionStreamTask
+
+{
+    struct BaseSocketStreamClient *_socketStreamClient;
+    NSMutableArray *_extraWork;
+    int _connectionState;
+    NSObject<OS_dispatch_queue> *_workQueueForStreamTask;
+    struct __CFReadStream *_readStream;
+    struct __CFWriteStream *_writeStream;
+    NSMutableArray *_pendingWork;
+    _Bool _doingWorkOnThisQueue;
+    NSData *_readBuffer;
+    _Bool _readSignaled;
+    _Bool _readEOF;
+    CDStruct_59046461 _readError;
+    NSData *_writeBuffer;
+    _Bool _writeSignaled;
+    _Bool _writeEOF;
+    _Bool _deliveredConnectionEstablished;
+    CDStruct_59046461 _writeError;
+    long long _writeBufferAlreadyWrittenForNextWrite;
+    NSMutableArray *_finalizationQueue;
+    NSMutableArray *_afterConnectQueue;
+    unsigned long long _taskIdentifier;
+    long long _state;
+    NSString *_taskDescription;
+    NSError *_error;
+    long long _countOfBytesReceived;
+    long long _countOfBytesSent;
+    _Bool _goneSecure;
+    NSObject<OS_dispatch_source> *_tickerTimeoutTimer;
+    CDUnknownBlockType _disavow;
+    NSURLRequest *_originalRequest;
+    NSURLRequest *_currentRequest;
+    NSURLResponse *_response;
+    long long _countOfBytesClientExpectsToSend;
+    long long _countOfBytesClientExpectsToReceive;
+    long long _countOfBytesExpectedToSend;
+    long long _countOfBytesExpectedToReceive;
+    long long _expectedWorkload;
+    double _timeWindowDelay;
+    double _timeWindowDuration;
+    double startTime;
+    long long _priorityValue;
+    double _loadingPriorityValue;
+    NSString *_boundInterfaceIdentifier;
+    _Bool _disallowCellular;
+    int _allowsExpensiveOverride;
+    int _allowsConstrainedOverride;
+    int _allowsCellularOverride;
+    int _networkServiceType;
+    NSDictionary *_legacySocketStreamProperties;
+    _Bool _betterRouteDiscovered;
+    NSData *__TCPConnectionMetadata;
+    NSData *__initialDataPayload;
+    _Bool _didIssueCancel;
+    NSUUID *_uniqueIdentifier;
+    float priority;
+}
+
+@property (copy) NSData *_TCPConnectionMetadata;
+@property (copy) NSData *_initialDataPayload;
+@property unsigned long long taskIdentifier;
+@property (copy) NSURLRequest *originalRequest;
+@property (copy) NSURLRequest *currentRequest;
+@property (copy) NSURLResponse *response;
+@property long long countOfBytesClientExpectsToSend;
+@property long long countOfBytesClientExpectsToReceive;
+@property long long countOfBytesExpectedToSend;
+@property long long countOfBytesExpectedToReceive;
+@property long long countOfBytesReceived;
+@property long long countOfBytesSent;
+@property long long state;
+@property (copy) NSString *taskDescription;
+@property (copy) NSError *error;
+@property (readonly) _Bool _goneSecure;
+@property double _timeoutIntervalForResource;
+@property (copy, readonly) NSUUID *_uniqueIdentifier;
+
+- (void)dealloc;
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (void)cancel;
+- (void)resume;
+- (void)suspend;
+- (float)priority;
+- (void)setPriority:(float)arg1;
+- (id)workQueue;
+- (void)_onqueue_checkForCompletion;
+- (id)_effectiveConfiguration;
+- (void)_onSessionQueue_disavow;
+- (void)_onqueue_cancel;
+- (void)_onqueue_resume;
+- (void)_onSessionQueue_cleanupAndBreakCycles;
+- (void)_task_onqueue_didFinish;
+- (void)_task_onqueue_didReceiveDispatchData:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)set_legacySocketStreamProperties:(id)arg1;
+- (id)_legacySocketStreamProperties;
+- (long long)computeAdjustedPoolPriority;
+- (struct __CFDictionary *)_copySocketStreamProperties;
+- (void)set_networkServiceType:(int)arg1;
+- (void)set_boundInterfaceIdentifier:(id)arg1;
+- (void)set_allowsConstrainedOverride:(int)arg1;
+- (void)set_allowsExpensiveOverride:(int)arg1;
+- (void)set_expectedWorkload:(long long)arg1;
+- (void)set_timeWindowDelay:(double)arg1;
+- (void)set_timeWindowDuration:(double)arg1;
+- (id)initWithHost:(id)arg1 port:(long long)arg2 taskGroup:(id)arg3 disavow:(CDUnknownBlockType)arg4;
+- (void)readDataOfMinLength:(unsigned long long)arg1 maxLength:(unsigned long long)arg2 timeout:(double)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (void)writeData:(id)arg1 timeout:(double)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)captureStreams;
+- (void)closeWrite;
+- (void)closeRead;
+- (void)copyStreamProperty:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)startSecureConnection;
+- (void)stopSecureConnection;
+- (void)_onqueue_stopSecureConnection;
+- (void)_onqueue_startSecureConnection;
+- (void)_onqueue_captureStreams;
+- (void)_onqueue_addBlockOp:(CDUnknownBlockType)arg1 description:(const char *)arg2;
+- (void)_onqueue_ioTick;
+- (_Bool)_onqueue_processWriteWork:(id)arg1;
+- (_Bool)_onqueue_processReadWork:(id)arg1;
+- (id)_onqueue_errorOrCancelError;
+- (void)_onqueue_dealWithSessionTrustAuth:(long long)arg1 credential:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (_Bool)_onqueue_sendSessionChallenge:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)_onqueue_needServerTrust:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)_onqueue_needClientCert:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)_onqueue_dealWithSessionClientCertAuth:(long long)arg1 credential:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (id)initWithNetService:(id)arg1 taskGroup:(id)arg2 disavow:(CDUnknownBlockType)arg3;
+- (_Bool)_cacheOnly;
+- (double)_timeWindowDelay;
+- (double)_timeWindowDuration;
+- (long long)_expectedWorkload;
+- (id)_boundInterfaceIdentifier;
+- (_Bool)_disallowCellular;
+- (int)_allowsExpensiveOverride;
+- (int)_allowsConstrainedOverride;
+- (int)_allowsCellularOverride;
+- (int)_networkServiceType;
+- (void)_adoptEffectiveConfiguration:(id)arg1;
+- (void)_init_setupTimeoutTimer;
+- (id)_initCommonWithGroup:(id)arg1 disavow:(CDUnknownBlockType)arg2;
+- (id)_initWithTaskGroup:(id)arg1 disavow:(CDUnknownBlockType)arg2;
+- (id)_initWithExistingTask:(id)arg1 disavow:(CDUnknownBlockType)arg2;
+- (void)adjustConditionalConnectionProperties:(struct __CFDictionary *)arg1;
+- (id)describePending:(id)arg1;
+- (void)_onqueue_readDataOfMinLength:(unsigned long long)arg1 maxLength:(unsigned long long)arg2 timeout:(double)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (void)_onqueue_writeData:(id)arg1 timeout:(double)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)_onqueue_closeWriteOp;
+- (void)_onqueue_closeReadOp;
+- (void)_onqueue_preConnectionConfiguration:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)_onqueue_postConnectConfiguration:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)_onqueue_readStreamEvent:(unsigned long long)arg1;
+- (_Bool)_onqueue_shufflePendingFor:(Class)arg1;
+- (void)_onqueue_writeStreamEvent:(unsigned long long)arg1;
+- (void)_onqueue_readStream:(struct __CFReadStream *)arg1 writeStreamAvailable:(struct __CFWriteStream *)arg2;
+- (void)_onqueue_scheduleStreams;
+- (void)_onqueue_unscheduleStreams;
+- (void)_onqueue_addBlockOpAtHead:(CDUnknownBlockType)arg1 description:(const char *)arg2;
+- (void)set_disallowCellular:(_Bool)arg1;
+- (void)set__allowsCellularOverride:(int)arg1;
+
+@end

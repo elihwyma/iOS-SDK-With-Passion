@@ -1,0 +1,167 @@
+/*
+ Image: /System/Library/PrivateFrameworks/iTunesCloud.framework/iTunesCloud
+ */
+
+#import <NSObject.h>
+
+@class ICCloudClientAvailabilityService, ICCloudClientCloudService, ICConnectionConfiguration, NSString, NSXPCConnection;
+
+@protocol OS_dispatch_queue;
+
+@interface ICCloudClient : NSObject
+
+{
+    _Bool _active;
+    ICConnectionConfiguration *_configuration;
+    CDUnknownBlockType _updateSagaInProgressChangedHandler;
+    CDUnknownBlockType _updateJaliscoInProgressChangedHandler;
+    NSXPCConnection *_xpcConnection;
+    NSXPCConnection *_xpcListenerEndpointProviderConnection;
+    NSObject<OS_dispatch_queue> *_serialAccessQueue;
+    long long _preferredVideoQuality;
+    ICCloudClientAvailabilityService *_availabilityService;
+    ICCloudClientCloudService *_cloudService;
+}
+
+@property (nonatomic, readonly) NSObject<OS_dispatch_queue> *serialAccessQueue;
+@property (nonatomic, readonly) NSXPCConnection *xpcListenerEndpointProviderConnection;
+@property (nonatomic, readonly) NSXPCConnection *xpcConnection;
+@property (nonatomic) long long preferredVideoQuality;
+@property (nonatomic, getter=isActive) _Bool active;
+@property (nonatomic, readonly) ICCloudClientAvailabilityService *availabilityService;
+@property (nonatomic, readonly) ICCloudClientCloudService *cloudService;
+@property (nonatomic, readonly) ICConnectionConfiguration *configuration;
+@property (copy, nonatomic) CDUnknownBlockType updateSagaInProgressChangedHandler;
+@property (copy, nonatomic) CDUnknownBlockType updateJaliscoInProgressChangedHandler;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
+- (id)init;
+- (void)dealloc;
+- (id)initWithConfiguration:(id)arg1;
+- (void)_setupNotifications;
+- (void)_tearDownNotifications;
+- (void)becomeActive;
+- (_Bool)hasProperNetworkConditionsToPlayMedia;
+- (_Bool)hasProperNetworkConditionsToShowCloudMedia;
+- (_Bool)isCellularDataRestrictedForMusic;
+- (_Bool)shouldProhibitMusicActionForCurrentNetworkConditions;
+- (_Bool)isCellularDataRestrictedForVideos;
+- (_Bool)shouldProhibitVideosActionForCurrentNetworkConditions;
+- (_Bool)isCellularDataRestrictedForStoreApps;
+- (_Bool)shouldProhibitStoreAppsActionForCurrentNetworkConditions;
+- (_Bool)isCellularDataRestricted;
+- (_Bool)shouldProhibitActionsForCurrentNetworkConditions;
+- (_Bool)canShowCloudDownloadButtons;
+- (_Bool)canShowCloudMusic;
+- (_Bool)canShowCloudVideo;
+- (void)createPlaylistWithPersistentID:(long long)arg1 properties:(id)arg2 trackList:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (void)addGeniusPlaylistWithPersistentID:(long long)arg1 name:(id)arg2 seedItemSagaIDs:(id)arg3 itemSagaIDs:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
+- (void)addItemWithSagaID:(long long)arg1 toPlaylistWithPersistentID:(long long)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)sdk_addStoreItemWithOpaqueID:(id)arg1 toPlaylistWithPersistentID:(long long)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)uploadCloudPlaylistProperties;
+- (void)removePlaylistsWithSagaIDs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)publishPlaylistWithSagaID:(long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)setItemProperties:(id)arg1 forSagaID:(unsigned long long)arg2;
+- (void)uploadCloudItemProperties;
+- (void)sdk_addStoreItemWithOpaqueID:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)addStorePlaylistWithGlobalID:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)removeItemsWithSagaIDs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)resignActive;
+- (void)loadGeniusItemsForSagaID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadUpdateProgressWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)loadLastKnownEnableICMLErrorStatusWithCompletionHander:(CDUnknownBlockType)arg1;
+- (void)disableCloudLibraryWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (long long)cloudAddToPlaylistBehavior;
+- (void)setCloudAddToPlaylistBehavior:(long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)hideItemsWithPurchaseHistoryIDs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)setItemProperties:(id)arg1 forPurchaseHistoryID:(unsigned long long)arg2;
+- (void)loadIsJaliscoUpdateInProgressWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)loadIsSagaUpdateInProgressWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)isAuthenticatedWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)loadIsJaliscoGeniusSupportedWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)loadJaliscoGeniusCUIDWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)updateJaliscoLibraryWithReason:(long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (_Bool)canSetItemProperty:(id)arg1;
+- (void)enableCloudLibraryWithPolicy:(long long)arg1 startInitialImport:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)isAuthenticatedWithQueue:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadJaliscoUpdateProgressWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)loadSagaUpdateProgressWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)deprioritizeAlbumArtistHeroImageForPersistentID:(long long)arg1;
+- (void)deprioritizeArtistHeroImageForPersistentID:(long long)arg1;
+- (void)deprioritizeSubscriptionContainerArtworkForPersistentID:(long long)arg1;
+- (void)deprioritizeContainerArtworkForSagaID:(unsigned long long)arg1;
+- (void)deprioritizeSubscriptionScreenshotForPersistentID:(long long)arg1;
+- (void)deprioritizeScreenshotForPurchaseHistoryID:(unsigned long long)arg1;
+- (void)deprioritizeScreenshotForSagaID:(unsigned long long)arg1;
+- (void)deprioritizeSubscriptionItemArtworkForPersistentID:(long long)arg1;
+- (void)deprioritizeItemArtworkForPurchaseHistoryID:(unsigned long long)arg1;
+- (void)deprioritizeItemArtworkForSagaID:(unsigned long long)arg1;
+- (void)loadArtworkInfoForSubscriptionContainerPersistentID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadArtworkInfoForContainerSagaID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadScreenshotInfoForSubscriptionPersistentID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadScreenshotInfoForPurchaseHistoryID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadScreenshotInfoForSagaID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadArtworkInfoForSubscriptionItemPersistentID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadArtworkInfoForPurchaseHistoryID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadArtworkInfoForSagaID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)importAlbumArtistHeroImageForPersistentID:(long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)importArtistHeroImageForPersistentID:(long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)importSubscriptionContainerArtworkForPersistentID:(long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)importContainerArtworkForSagaID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)importSubscriptionScreenshotForPersistentID:(long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)importScreenshotForPurchaseHistoryID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)importScreenshotForSagaID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)importSubscriptionItemArtworkForPersistentID:(long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)importItemArtworkForPurchaseHistoryID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)importItemArtworkForSagaID:(unsigned long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)addStoreItemWithAdamID:(long long)arg1 referral:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)setAlbumProperties:(id)arg1 forAlbumPersistentID:(long long)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)uploadArtworkForPlaylistWithPersistentID:(long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)addStoreItemWithAdamID:(long long)arg1 referral:(id)arg2 toPlaylistWithPersistentID:(long long)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (void)setPlaylistProperties:(id)arg1 trackList:(id)arg2 forPlaylistPersistentID:(long long)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (_Bool)canSetPlaylistProperty:(id)arg1;
+- (void)sdk_createPlaylistWithPersistentID:(long long)arg1 properties:(id)arg2 tracklist:(id)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (void)updateSubscribedPlaylistsWithSagaIDs:(id)arg1 ignoreMinRefreshInterval:(_Bool)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (id)initWithUserIdentity:(id)arg1;
+- (id)listenerEndpointForService:(long long)arg1 error:(id *)arg2;
+- (void)authenticateAndStartInitialImport:(_Bool)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)_enableCloudLibraryWithPolicy:(long long)arg1 startinitialImport:(_Bool)arg2 isExplicitUserAction:(_Bool)arg3 completionHandler:(CDUnknownBlockType)arg4;
+- (void)_sendConfigurationToDaemon;
+- (void)updateSagaLibraryWithReason:(long long)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadArtworkInfoForPurchaseHistoryIDs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadScreenshotInfoForPurchaseHistoryIDs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadArtworkInfoForSagaIDs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadArtworkInfoForContainerSagaIDs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadScreenshotInfoForSagaIDs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadArtworkInfoForSubscriptionItemPersistentIDs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadScreenshotInfoForSubscriptionPersistentIDs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)loadArtworkInfoForSubscriptionContainerPersistentIDs:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)authenticateWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)removeJaliscoLibraryWithCompletionHander:(CDUnknownBlockType)arg1;
+- (_Bool)isMediaKindDisabledForJaliscoLibrary:(long long)arg1;
+- (void)updateJaliscoLibraryWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)updateSagaLibraryWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)deauthenticateWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)loadJaliscoGeniusLearnMoreURLWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)setJaliscoGeniusCUID:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)enableJaliscoGeniusWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)updateJaliscoGeniusDataWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)cancelUpdateJaliscoGeniusDataInProgressWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)loadJaliscoGeniusOperationStatusWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)disableJaliscoGeniusWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)loadMissingArtwork;
+- (void)loadIsUpdateInProgressWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)resetConfiguration:(id)arg1;
+- (void)setDaemonConfiguration:(unsigned long long)arg1;
+- (void)uploadItemProperties;
+- (void)updateArtistHeroImages;
+- (void)loadBooksForStoreIDs:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)_serverDidLaunch;
+- (void)_serverSagaUpdateInProgressDidChange;
+- (void)_serverJaliscoUpdateInProgressDidChange;
+- (void)_deauthenticateAndDisableActiveLockerAccountWithCompletionHandler:(CDUnknownBlockType)arg1;
+
+@end

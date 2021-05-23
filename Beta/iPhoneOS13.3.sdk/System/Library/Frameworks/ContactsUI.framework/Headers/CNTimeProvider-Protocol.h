@@ -1,0 +1,11 @@
+/*
+ Image: /System/Library/Frameworks/ContactsUI.framework/ContactsUI
+ */
+
+#import <ContactsUI/Swift-Protocol.h>
+
+@protocol CNTimeProvider <Swift>
+
+@property (readonly) double timestamp;
+
+@end

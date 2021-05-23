@@ -1,0 +1,26 @@
+/*
+ Image: /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation
+ */
+
+#import <Foundation/NSObject.h>
+
+@protocol OS_xpc_object;
+
+__attribute__((visibility("hidden")))
+@interface _CFPrefsClientContext : NSObject
+
+{
+    _Atomic id _cfprefsd;
+    struct __CFDictionary *_suiteCache;
+    struct __CFSet *_observedSources;
+    NSObject<OS_xpc_object> *_entitlements;
+    struct __CFBoolean *_sandboxed;
+    struct os_unfair_lock_s _lock;
+    BOOL _isPlatformBinary;
+    _Bool _impersonatingAnotherProcess;
+    _Bool _hasInFlightKVONotifications;
+    _Bool _didDeferKVONotifications;
+    _Bool _valid;
+}
+
+@end

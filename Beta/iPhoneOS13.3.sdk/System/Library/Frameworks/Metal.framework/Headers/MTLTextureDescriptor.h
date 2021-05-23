@@ -1,0 +1,35 @@
+/*
+ Image: /System/Library/Frameworks/Metal.framework/Metal
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface MTLTextureDescriptor : NSObject
+
+@property (nonatomic) _Bool forceResourceIndex;
+@property (nonatomic) unsigned long long resourceIndex;
+@property (nonatomic) unsigned long long textureType;
+@property (nonatomic) unsigned long long pixelFormat;
+@property (nonatomic) unsigned long long width;
+@property (nonatomic) unsigned long long height;
+@property (nonatomic) unsigned long long depth;
+@property (nonatomic) unsigned long long mipmapLevelCount;
+@property (nonatomic) unsigned long long sampleCount;
+@property (nonatomic) unsigned long long arrayLength;
+@property (nonatomic) unsigned long long resourceOptions;
+@property (nonatomic) unsigned long long cpuCacheMode;
+@property (nonatomic) unsigned long long storageMode;
+@property (nonatomic) unsigned long long hazardTrackingMode;
+@property (nonatomic) unsigned long long usage;
+@property (nonatomic) _Bool allowGPUOptimizedContents;
+@property (nonatomic) CDStruct_a06f635e swizzle;
+
++ (id)alloc;
++ (id)allocWithZone:(struct _NSZone *)arg1;
++ (id)texture2DDescriptorWithPixelFormat:(unsigned long long)arg1 width:(unsigned long long)arg2 height:(unsigned long long)arg3 mipmapped:(_Bool)arg4;
++ (id)textureCubeDescriptorWithPixelFormat:(unsigned long long)arg1 size:(unsigned long long)arg2 mipmapped:(_Bool)arg3;
++ (id)textureBufferDescriptorWithPixelFormat:(unsigned long long)arg1 width:(unsigned long long)arg2 resourceOptions:(unsigned long long)arg3 usage:(unsigned long long)arg4;
+
+- (id)copyWithZone:(struct _NSZone *)arg1;
+
+@end

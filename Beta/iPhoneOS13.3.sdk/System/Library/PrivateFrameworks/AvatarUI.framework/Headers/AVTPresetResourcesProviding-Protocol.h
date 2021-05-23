@@ -1,0 +1,11 @@
+/*
+ Image: /System/Library/PrivateFrameworks/AvatarUI.framework/AvatarUI
+ */
+
+#import <AvatarUI/Swift-Protocol.h>
+
+@protocol AVTPresetResourcesProviding <Swift>
+
+- (unsigned short)representedAVTPresetResources;
+
+@end

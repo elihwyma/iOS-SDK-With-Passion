@@ -1,0 +1,38 @@
+/*
+ Image: /System/Library/PrivateFrameworks/TrialProto.framework/TrialProto
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSMutableDictionary, TRIPBMessage;
+
+@interface TRIPBUInt64UInt64Dictionary : NSObject
+
+{
+    TRIPBMessage *_autocreator;
+    NSMutableDictionary *_dictionary;
+}
+
+@property (nonatomic, readonly) unsigned long long count;
+
+- (id)init;
+- (void)dealloc;
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)initWithCapacity:(unsigned long long)arg1;
+- (id)initWithDictionary:(id)arg1;
+- (void)addEntriesFromDictionary:(id)arg1;
+- (void)removeAll;
+- (void)setUInt64:(unsigned long long)arg1 forKey:(unsigned long long)arg2;
+- (_Bool)getUInt64:(unsigned long long *)arg1 forKey:(unsigned long long)arg2;
+- (unsigned long long)computeSerializedSizeAsField:(id)arg1;
+- (void)writeToCodedOutputStream:(id)arg1 asField:(id)arg2;
+- (void)enumerateForTextFormat:(CDUnknownBlockType)arg1;
+- (id)initWithUInt64s:(const unsigned long long *)arg1 forKeys:(const unsigned long long *)arg2 count:(unsigned long long)arg3;
+- (void)enumerateKeysAndUInt64sUsingBlock:(CDUnknownBlockType)arg1;
+- (void)removeUInt64ForKey:(unsigned long long)arg1;
+- (void)setTRIPBGenericValue:(CDUnion_a49d1a5a *)arg1 forTRIPBGenericValueKey:(CDUnion_a49d1a5a *)arg2;
+
+@end

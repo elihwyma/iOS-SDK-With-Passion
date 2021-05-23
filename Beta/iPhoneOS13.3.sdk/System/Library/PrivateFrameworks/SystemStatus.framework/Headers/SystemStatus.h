@@ -1,0 +1,51 @@
+/*
+ Image: /System/Library/PrivateFrameworks/SystemStatus.framework/SystemStatus
+ */
+
+#import <SystemStatus/SystemStatus-Structures.h>
+
+#import <SystemStatus/(null).h>
+#import <SystemStatus/(null).h>
+#import <SystemStatus/(null).h>
+#import <SystemStatus/(null).h>
+#import <SystemStatus/(null).h>
+#import <SystemStatus/BSDescriptionProviding-Protocol.h>
+#import <SystemStatus/NSCoding-Protocol.h>
+#import <SystemStatus/NSCopying-Protocol.h>
+#import <SystemStatus/NSMutableCopying-Protocol.h>
+#import <SystemStatus/NSObject-Protocol.h>
+#import <SystemStatus/NSSecureCoding-Protocol.h>
+#import <SystemStatus/STBatteryStatusDomain.h>
+#import <SystemStatus/STBatteryStatusDomainData.h>
+#import <SystemStatus/STBatteryStatusDomainPublisher.h>
+#import <SystemStatus/STMutableBatteryStatusDomainData.h>
+#import <SystemStatus/STMutableStatusDomainData-Protocol.h>
+#import <SystemStatus/STMutableStatusDomainDataDifferencing-Protocol.h>
+#import <SystemStatus/STMutableTelephonyStatusDomainData.h>
+#import <SystemStatus/STMutableTelephonyStatusDomainSIMInfo.h>
+#import <SystemStatus/STMutableVoiceControlStatusDomainData.h>
+#import <SystemStatus/STMutableWifiStatusDomainData.h>
+#import <SystemStatus/STStatusDomain.h>
+#import <SystemStatus/STStatusDomainClientHandle-Protocol.h>
+#import <SystemStatus/STStatusDomainData-Protocol.h>
+#import <SystemStatus/STStatusDomainDataDiff-Protocol.h>
+#import <SystemStatus/STStatusDomainDataDifferencing-Protocol.h>
+#import <SystemStatus/STStatusDomainPublisher.h>
+#import <SystemStatus/STStatusDomainPublisherServerHandle-Protocol.h>
+#import <SystemStatus/STStatusDomainPublisherXPCServer-Protocol.h>
+#import <SystemStatus/STStatusDomainServerHandle-Protocol.h>
+#import <SystemStatus/STStatusDomainXPCClient-Protocol.h>
+#import <SystemStatus/STStatusDomainXPCServer-Protocol.h>
+#import <SystemStatus/STStatusDomainXPCServerHandle.h>
+#import <SystemStatus/STTelephonyStatusDomain.h>
+#import <SystemStatus/STTelephonyStatusDomainData.h>
+#import <SystemStatus/STTelephonyStatusDomainPublisher.h>
+#import <SystemStatus/STTelephonyStatusDomainSIMInfo.h>
+#import <SystemStatus/STTelephonyStatusDomainSIMInfoDiff.h>
+#import <SystemStatus/STVoiceControlStatusDomain.h>
+#import <SystemStatus/STVoiceControlStatusDomainData.h>
+#import <SystemStatus/STVoiceControlStatusDomainPublisher.h>
+#import <SystemStatus/STWifiStatusDomain.h>
+#import <SystemStatus/STWifiStatusDomainData.h>
+#import <SystemStatus/STWifiStatusDomainPublisher.h>
+#import <SystemStatus/Swift-Protocol.h>

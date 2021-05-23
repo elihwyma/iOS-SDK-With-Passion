@@ -1,0 +1,68 @@
+/*
+ Image: /System/Library/Frameworks/EventKitUI.framework/EventKitUI
+ */
+
+typedef void (^CDUnknownBlockType)(void);
+
+struct CGPoint {
+    double x;
+    double y;
+};
+
+struct CGRect {
+    struct CGPoint origin;
+    struct CGSize size;
+};
+
+struct CGSize {
+    double width;
+    double height;
+};
+
+struct CLLocationCoordinate2D {
+    double _field1;
+    double _field2;
+};
+
+struct NSDictionary {
+    Class _field1;
+};
+
+struct UIEdgeInsets {
+    double top;
+    double left;
+    double bottom;
+    double right;
+};
+
+struct _NSRange {
+    unsigned long long location;
+    unsigned long long length;
+};
+
+typedef struct {
+    unsigned int listIsFlat:1;
+    unsigned int showAll:1;
+    unsigned int showColors:1;
+    unsigned int allSelected:1;
+    unsigned int allowsRotation:1;
+    unsigned int showsDoneButton:1;
+    unsigned int showsCancelButton:1;
+    unsigned int showsWritableCalendarsOnly:1;
+    unsigned int showsRefreshButton:1;
+    unsigned int allowsPullToRefresh:1;
+} CDStruct_424d6339;
+
+typedef struct {
+    double _field1;
+    double _field2;
+} CDStruct_c3b9c2ee;
+
+typedef struct {
+    int _field1;
+    char _field2;
+    char _field3;
+    char _field4;
+    char _field5;
+    double _field6;
+} CDStruct_79f9e052;

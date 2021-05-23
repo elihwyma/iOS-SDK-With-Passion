@@ -1,0 +1,89 @@
+/*
+ Image: /System/Library/PrivateFrameworks/iTunesCloud.framework/iTunesCloud
+ */
+
+@protocol ICCloudServerProtocol
+
+- (unsigned short)setupInitialSagaPoolingForConfiguration: /* Error: Ran out of types for this method. */;
+- (unsigned short)setupInitialJaliscoPoolingForConfiguration: /* Error: Ran out of types for this method. */;
+- (unsigned short)setConnectionConfiguration:preferredVideoQuality:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)isSagaAuthenticatedForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)updateJaliscoLibraryWithReason:forConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)updateSagaLibraryWithReason:forConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)authenticateForConfiguration:startInitialImport:enableCloudLibraryPolicy:isExplicitUserAction:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)deauthenticateForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)deauthenticateAndDisableActiveLockerAccountWithCompletion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setCloudAddToPlaylistBehavior:forConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)removeJaliscoLibraryForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)isMediaKindDisabledForJaliscoLibrary:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadIsUpdateInProgressForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadUpdateProgressForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadIsSagaUpdateInProgressForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadSagaUpdateProgressForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadIsJaliscoUpdateInProgressForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadJaliscoUpdateProgressForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadLastKnownEnableICMLErrorStatusForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)importItemArtworkForPurchaseHistoryID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)importScreenshotForPurchaseHistoryID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)importItemArtworkForSagaID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)importScreenshotForSagaID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)importContainerArtworkForSagaID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)importSubscriptionItemArtworkForPersistentID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)importSubscriptionScreenshotForPersistentID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)importSubscriptionContainerArtworkForPersistentID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)importArtistHeroImageForPersistentID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)importAlbumArtistHeroImageForPersistentID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)deprioritizeItemArtworkForPurchaseHistoryID:configuration: /* Error: Ran out of types for this method. */;
+- (unsigned short)deprioritizeScreenshotForPurchaseHistoryID:configuration: /* Error: Ran out of types for this method. */;
+- (unsigned short)deprioritizeItemArtworkForSagaID:configuration: /* Error: Ran out of types for this method. */;
+- (unsigned short)deprioritizeScreenshotForSagaID:configuration: /* Error: Ran out of types for this method. */;
+- (unsigned short)deprioritizeContainerArtworkForSagaID:configuration: /* Error: Ran out of types for this method. */;
+- (unsigned short)deprioritizeSubscriptionItemArtworkForPersistentID:configuration: /* Error: Ran out of types for this method. */;
+- (unsigned short)deprioritizeSubscriptionScreenshotForPersistentID:configuration: /* Error: Ran out of types for this method. */;
+- (unsigned short)deprioritizeSubscriptionContainerArtworkForPersistentID:configuration: /* Error: Ran out of types for this method. */;
+- (unsigned short)deprioritizeArtistHeroImageForPersistentID:configuration: /* Error: Ran out of types for this method. */;
+- (unsigned short)deprioritizeAlbumArtistHeroImageForPersistentID:configuration: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadArtworkInfoForPurchaseHistoryIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadScreenshotInfoForPurchaseHistoryIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadArtworkInfoForSagaIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadArtworkInfoForContainerSagaIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadScreenshotInfoForSagaIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadArtworkInfoForSubscriptionItemPersistentIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadScreenshotInfoForSubscriptionPersistentIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadArtworkInfoForSubscriptionContainerPersistentIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadMissingArtworkForConfiguration: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadGeniusItemsForSagaID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)addGeniusPlaylistWithPersistentID:name:seedItemSagaIDs:itemSagaIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)createPlaylistWithPersistentID:properties:trackList:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)sdk_createPlaylistWithPersistentID:properties:trackList:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setPlaylistProperties:trackList:forPlaylistPersistentID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)addStoreItemWithAdamID:referral:toPlaylistWithPersistentID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)addItemWithSagaID:toPlaylistWithPersistentID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)sdk_addStoreItemWithOpaqueID:toPlaylistWithPersistentID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)publishPlaylistWithSagaID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)removePlaylistsWithSagaIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)uploadArtworkForPlaylistWithPersistentID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)updateSubscribedPlaylistsWithSagaIDs:ignoreMinRefreshInterval:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)addStoreItemWithAdamID:referral:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)sdk_addStoreItemWithOpaqueID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)addStorePlaylistWithGlobalID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)removeItemsWithSagaIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)hideItemsWithPurchaseHistoryIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setItemProperties:forPurchaseHistoryID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setItemProperties:forSagaID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)uploadCloudItemPropertiesForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)uploadCloudPlaylistPropertiesForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setAlbumProperties:forAlbumPersistentID:configuration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)updateArtistHeroImagesForConfiguration: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadIsJaliscoGeniusSupportedForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadJaliscoGeniusLearnMoreURLForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadJaliscoGeniusCUIDForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)setJaliscoGeniusCUID:forConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)enableJaliscoGeniusForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)updateJaliscoGeniusDataForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)cancelUpdateJaliscoGeniusDataForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadJaliscoGeniusOperationStatusForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)disableJaliscoGeniusForConfiguration:completion: /* Error: Ran out of types for this method. */;
+- (unsigned short)loadBooksForStoreIDs:configuration:completion: /* Error: Ran out of types for this method. */;
+
+@end

@@ -1,0 +1,203 @@
+/*
+ Image: /System/Library/Frameworks/PhotosUI.framework/PhotosUI
+ */
+
+#import <PhotosUI/PUBarsController.h>
+
+#import <PhotosUI/Swift-Protocol.h>
+
+@class NSMutableIndexSet, NSString, PUAssetActionPerformer, PUBarButtonItemCollection, PUBrowsingSession, PUPhotoBrowserTitleViewController, PUPlayPauseBarItemsController, PUScrubberView, PXImageModulationManager, PXInfoUpdater, UITapGestureRecognizer, UIView;
+
+@protocol PUOneUpBarsControllerDelegate;
+
+@interface PUOneUpBarsController : PUBarsController <Swift>
+
+{
+    struct {
+        _Bool respondsToDidChangeShowingPlayPauseButton;
+        _Bool respondsToDidTapPlayPauseButton;
+        _Bool respondsToDidTapTitle;
+        _Bool respondsToToggleDetailsVisibility;
+        _Bool respondsToToggleCommentsVisibility;
+        _Bool respondsToCanShowCommentsForAsset;
+        _Bool respondsToShouldTapBeginAtLocationFromProvider;
+        _Bool respondsToShouldHideToolbarWhenShowingAccessoryViewForAssetReference;
+        _Bool respondsToWillExecuteActionPerformer;
+        _Bool respondsToCanShowOriginal;
+        _Bool respondsToDidBeginShowingOriginal;
+        _Bool respondsToDidEndShowingOriginal;
+        _Bool respondsToShouldEnableShowingOriginal;
+        _Bool respondsToCanViewInLibrary;
+    } _delegateFlags;
+    _Bool _shouldPlaceButtonsInNavigationBar;
+    _Bool _shouldUseCompactTitleView;
+    _Bool _shouldUseCompactCommentsTitle;
+    _Bool _shouldShowDoneButton;
+    _Bool _shouldShowAirPlayButton;
+    _Bool _shouldShowScrubber;
+    _Bool _shouldShowTitleView;
+    _Bool _allowTapOnTitle;
+    _Bool _allowShowingPlayPauseButton;
+    _Bool _disableShowingNavigationBars;
+    _Bool _shouldPlaceScrubberInScrubberBar;
+    _Bool _isShowingPlayPauseButton;
+    _Bool __needsUpdateTitle;
+    _Bool __needsUpdateCommentsTitle;
+    _Bool __nextCommentsActionShouldBeginEditing;
+    _Bool __needsUpdateChromeVisibility;
+    _Bool __lastChromeVisibility;
+    PUBrowsingSession *_browsingSession;
+    double _maximumToolbarHeight;
+    double _maximumAccessoryToolbarHeight;
+    NSString *__scrubbingIdentifier;
+    PUAssetActionPerformer *__activeActionPerformer;
+    PUScrubberView *__scrubberView;
+    NSString *__title;
+    PUPhotoBrowserTitleViewController *__titleViewController;
+    PXInfoUpdater *__currentAssetDisplayInfoUpdater;
+    UITapGestureRecognizer *__tapGestureRecognizer;
+    long long __nextChromeVisibilityUpdateAnimationType;
+    PUPlayPauseBarItemsController *__playPauseBarItemsController;
+    PUBarButtonItemCollection *__toolbarButtonItemCollection;
+    NSMutableIndexSet *__toolbarButtonIdentifiers;
+    PUBarButtonItemCollection *__rightNavBarButtonItemCollection;
+    NSMutableIndexSet *__rightNavBarButtonIdentifiers;
+    PUBarButtonItemCollection *__leftNavBarButtonItemCollection;
+    NSMutableIndexSet *__leftNavBarButtonIdentifiers;
+    PUAssetActionPerformer *_sharingPreheatedPerformer;
+    PXImageModulationManager *_debuggingObservedImageModulationManager;
+}
+
+@property (nonatomic, readonly) NSString *_scrubbingIdentifier;
+@property (retain, nonatomic, setter=_setActiveActionPerformer:) PUAssetActionPerformer *_activeActionPerformer;
+@property (nonatomic, readonly) PUScrubberView *_scrubberView;
+@property (nonatomic, setter=_setNeedsUpdateTitle:) _Bool _needsUpdateTitle;
+@property (copy, nonatomic, setter=_setTitle:) NSString *_title;
+@property (nonatomic, readonly) PUPhotoBrowserTitleViewController *_titleViewController;
+@property (nonatomic, setter=_setNeedsUpdateCommentsTitle:) _Bool _needsUpdateCommentsTitle;
+@property (nonatomic, setter=_setNextCommentsActionShouldBeginEditing:) _Bool _nextCommentsActionShouldBeginEditing;
+@property (nonatomic, readonly) PXInfoUpdater *_currentAssetDisplayInfoUpdater;
+@property (retain, nonatomic, setter=_setTapGestureRecognizer:) UITapGestureRecognizer *_tapGestureRecognizer;
+@property (nonatomic, setter=_setNeedsUpdateChromeVisibility:) _Bool _needsUpdateChromeVisibility;
+@property (nonatomic, setter=_setNextChromeVisibilityUpdateAnimationType:) long long _nextChromeVisibilityUpdateAnimationType;
+@property (nonatomic, setter=_setLastChromeVisibility:) _Bool _lastChromeVisibility;
+@property (nonatomic, readonly) PUPlayPauseBarItemsController *_playPauseBarItemsController;
+@property (nonatomic, setter=_setShowingPlayPauseButton:) _Bool isShowingPlayPauseButton;
+@property (retain, nonatomic, setter=_setToolbarButtonItemCollection:) PUBarButtonItemCollection *_toolbarButtonItemCollection;
+@property (retain, nonatomic, setter=_setToolbarButtonIdentifiers:) NSMutableIndexSet *_toolbarButtonIdentifiers;
+@property (retain, nonatomic, setter=_setRightNavBarButtonItemCollection:) PUBarButtonItemCollection *_rightNavBarButtonItemCollection;
+@property (retain, nonatomic, setter=_setRightNavBarButtonIdentifiers:) NSMutableIndexSet *_rightNavBarButtonIdentifiers;
+@property (retain, nonatomic, setter=_setLeftNavBarButtonItemCollection:) PUBarButtonItemCollection *_leftNavBarButtonItemCollection;
+@property (retain, nonatomic, setter=_setLeftNavBarButtonIdentifiers:) NSMutableIndexSet *_leftNavBarButtonIdentifiers;
+@property (retain, nonatomic) PUAssetActionPerformer *sharingPreheatedPerformer;
+@property (retain, nonatomic) PXImageModulationManager *debuggingObservedImageModulationManager;
+@property (nonatomic, readonly) UIView *ppt_scrubberView;
+@property (weak, nonatomic) id <PUOneUpBarsControllerDelegate> delegate;
+@property (retain, nonatomic) PUBrowsingSession *browsingSession;
+@property (nonatomic) _Bool shouldPlaceButtonsInNavigationBar;
+@property (nonatomic) _Bool shouldUseCompactTitleView;
+@property (nonatomic) _Bool shouldUseCompactCommentsTitle;
+@property (nonatomic) double maximumToolbarHeight;
+@property (nonatomic) double maximumAccessoryToolbarHeight;
+@property (nonatomic) _Bool shouldShowDoneButton;
+@property (nonatomic) _Bool shouldShowAirPlayButton;
+@property (nonatomic) _Bool shouldShowScrubber;
+@property (nonatomic) _Bool shouldShowTitleView;
+@property (nonatomic) _Bool allowTapOnTitle;
+@property (nonatomic) _Bool allowShowingPlayPauseButton;
+@property (nonatomic) _Bool disableShowingNavigationBars;
+@property (nonatomic) _Bool shouldPlaceScrubberInScrubberBar;
+@property (nonatomic, readonly) UITapGestureRecognizer *tapGestureRecognizer;
+@property (nonatomic, readonly) NSString *title;
+@property (nonatomic, readonly) NSString *subtitle;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
+- (id)init;
+- (void)dealloc;
+- (void)setViewController:(id)arg1;
+- (void)prepareForPopoverPresentation:(id)arg1;
+- (_Bool)prefersStatusBarHidden;
+- (void)_updateTitleIfNeeded;
+- (void)_handleTapGestureRecognizer:(id)arg1;
+- (void)observable:(id)arg1 didChange:(unsigned long long)arg2 context:(void *)arg3;
+- (void)updateBars;
+- (id)requestInfoOfKind:(id)arg1 withResultHandler:(CDUnknownBlockType)arg2;
+- (void)infoUpdaterDidUpdate:(id)arg1;
+- (_Bool)wantsToolbarVisible;
+- (void)_invalidateTitle;
+- (void)viewModel:(id)arg1 didChange:(id)arg2;
+- (void)_performCancelAction;
+- (void)_toggleCTM;
+- (void)invalidateViewControllerView;
+- (_Bool)wantsNavigationBarVisible;
+- (long long)preferredBarStyle;
+- (void)updateGestureRecognizersWithHostingView:(id)arg1;
+- (void)updateContentGuideInsets;
+- (void)overOneUpPresentationSession:(id)arg1 didCompleteWithActivityType:(id)arg2 assetsByAssetCollection:(id)arg3 success:(_Bool)arg4;
+- (id)overOneUpPresentationSession:(id)arg1 barButtonItemForActivityType:(id)arg2;
+- (void)overOneUpPresentationSession:(id)arg1 didAppendReviewScreenAction:(unsigned long long)arg2;
+- (void)photoBrowserTitleViewControllerTapped:(id)arg1;
+- (_Bool)scrubberView:(id)arg1 shouldIgnoreHitTest:(struct CGPoint)arg2 withEvent:(id)arg3;
+- (id)barButtonItemCollection:(id)arg1 newBarButtonItemForIdentifier:(long long)arg2;
+- (void)playPauseBarItemsController:(id)arg1 didChange:(id)arg2;
+- (void)assetActionPerformer:(id)arg1 didChangeState:(unsigned long long)arg2;
+- (_Bool)assetActionPerformer:(id)arg1 presentViewController:(id)arg2;
+- (_Bool)assetActionPerformer:(id)arg1 dismissViewController:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)_initializeBarButtonItemCollections;
+- (void)_resetIdentifierIndexes;
+- (void)_updateIdentifiersIndexesWithIdentifier:(long long)arg1 location:(long long)arg2 shouldEnable:(_Bool)arg3;
+- (void)_updateFavoriteBarButtonItem;
+- (_Bool)shouldTapBeginAtLocationFromProvider:(id)arg1;
+- (_Bool)_wantsChromeVisible;
+- (_Bool)_canShowCommentsForCurrentAsset;
+- (long long)_scrubberType;
+- (long long)_locationForBarButtonItemWithIdentifier:(long long)arg1;
+- (id)_newBarButtonItemWithIdentifier:(long long)arg1 location:(long long)arg2;
+- (void)_updateScrubberViewIfNeeded;
+- (void)_invalidateScrubber;
+- (void)_invalidateCommentsTitle;
+- (void)_updateCommentsTitleIfNeeded;
+- (void)_invalidateChromeVisibilityWithAnimationType:(long long)arg1;
+- (void)_updateChromeVisibilityIfNeeded;
+- (void)_updateShowingPlayPauseButton;
+- (void)_handleSharingPreheat;
+- (void)barButtonItemTapped:(id)arg1;
+- (void)toggleOriginalButtonTouched:(id)arg1;
+- (void)_performTrashAction;
+- (void)_performRestoreAction;
+- (void)_performToggleFavoriteAction;
+- (void)_performChangesWithCurrentVideoPlayer:(CDUnknownBlockType)arg1;
+- (void)_performPlayPauseAction:(long long)arg1;
+- (void)_performMuteAction:(_Bool)arg1;
+- (void)_performToggleCommentsAction;
+- (void)_handleAssetViewModelBeginEditingTimer:(id)arg1;
+- (void)_performLikeAction:(_Bool)arg1;
+- (void)_performEditAction;
+- (void)_performShareAction;
+- (void)_performReviewAction;
+- (void)_peformSuggestionSaveAction;
+- (void)_peformSuggestionRevertAction;
+- (void)_performSuggestionViewInLibraryAction;
+- (void)_performSlideShowAction;
+- (void)_performAirPlayAction;
+- (void)_performHideActivityWithAssetsByAssetCollection:(id)arg1;
+- (void)_performDuplicateActivityWithAssetsByAssetCollection:(id)arg1;
+- (void)_performAllPhotosAction;
+- (void)_performAssetExplorerReviewScreenActionType:(unsigned long long)arg1;
+- (void)_performAddToLibraryAction;
+- (void)_executeActionPerformer:(id)arg1;
+- (void)_executeActionPerformer:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)_browsingViewModel:(id)arg1 didChange:(id)arg2;
+- (void)_toolbarViewModel:(id)arg1 didChange:(id)arg2;
+- (id)_barButtonItemForActionType:(unsigned long long)arg1;
+- (id)_barButtonItemCollectionForLocation:(long long)arg1;
+- (long long)_locationForBarButtonItemCollection:(id)arg1;
+- (id)_barButtonItemForIdentifier:(long long)arg1 location:(long long)arg2;
+- (id)_activeBarButtonItemForIdentifier:(long long)arg1;
+- (long long)_identifierForButton:(id)arg1;
+- (void)ppt_performAction:(unsigned long long)arg1;
+
+@end

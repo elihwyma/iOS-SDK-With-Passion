@@ -1,0 +1,52 @@
+/*
+ Image: /System/Library/PrivateFrameworks/FTServices.framework/FTServices
+ */
+
+#import <FTServices/FTServices-Structures.h>
+
+#import <FTServices/(null).h>
+#import <FTServices/(null).h>
+#import <FTServices/(null).h>
+#import <FTServices/APSConnectionDelegate-Protocol.h>
+#import <FTServices/CoreTelephonyClientCarrierBundleDelegate-Protocol.h>
+#import <FTServices/CoreTelephonyClientDelegate-Protocol.h>
+#import <FTServices/CoreTelephonyClientPNRDelegate-Protocol.h>
+#import <FTServices/CoreTelephonyClientSubscriberDelegate-Protocol.h>
+#import <FTServices/CoreTelephonyClientSuppServicesDelegate-Protocol.h>
+#import <FTServices/FTAuthKitManager.h>
+#import <FTServices/FTDeviceSupport.h>
+#import <FTServices/FTEmbeddedReachability.h>
+#import <FTServices/FTEntitlementSupport.h>
+#import <FTServices/FTIDSMessage.h>
+#import <FTServices/FTiMessageStatus.h>
+#import <FTServices/FTMessageDelivery.h>
+#import <FTServices/FTMessageDelivery_APS.h>
+#import <FTServices/FTMessageDelivery_DualMode.h>
+#import <FTServices/FTMessageDelivery_HTTP.h>
+#import <FTServices/FTMessageDeliveryAPSMobileNetworkManager-Protocol.h>
+#import <FTServices/FTMessageDeliveryHTTPMobileNetworkManager-Protocol.h>
+#import <FTServices/FTMessageDeliveryProtocol-Protocol.h>
+#import <FTServices/FTMessageDeliveryRemoteURLConnection-Protocol.h>
+#import <FTServices/FTMessageDeliveryRemoteURLConnectionFactory-Protocol.h>
+#import <FTServices/FTMessageDeliveryRemoteURLConnectionFactory.h>
+#import <FTServices/FTMessageQueue.h>
+#import <FTServices/FTMessageQueueDelegate-Protocol.h>
+#import <FTServices/FTNetworkSupport.h>
+#import <FTServices/FTPasswordManager-Protocol.h>
+#import <FTServices/FTPasswordManager.h>
+#import <FTServices/FTSelectedPNRSubscription.h>
+#import <FTServices/FTSelectedPNRSubscriptionCache.h>
+#import <FTServices/FTServerBag.h>
+#import <FTServices/FTServiceStatus.h>
+#import <FTServices/FTURLRequestMessage.h>
+#import <FTServices/FTUserConfiguration.h>
+#import <FTServices/IDSRemoteURLConnection-FTMessageDelivery_HTTP.h>
+#import <FTServices/IDSWebTunnelRequestMessage.h>
+#import <FTServices/IMMobileNetworkManager-FTMessageDelivery_HTTP.h>
+#import <FTServices/NSArray-FTAPSOutgoingMessage_Additions.h>
+#import <FTServices/NSCopying-Protocol.h>
+#import <FTServices/NSData-CompressionAdditions.h>
+#import <FTServices/NSDictionary-FTAPSOutgoingMessage_Additions.h>
+#import <FTServices/NSObject-Protocol.h>
+#import <FTServices/NSString-FaceTimeStringAdditions.h>
+#import <FTServices/Swift-Protocol.h>

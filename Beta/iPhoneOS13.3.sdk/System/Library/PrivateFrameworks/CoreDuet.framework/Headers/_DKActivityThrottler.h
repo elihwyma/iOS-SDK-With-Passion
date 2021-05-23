@@ -1,0 +1,37 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CoreDuet.framework/CoreDuet
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSCache, NSCountedSet;
+
+@protocol OS_dispatch_queue, _DKSimpleKeyValueStore;
+
+@interface _DKActivityThrottler : NSObject
+
+{
+    NSCountedSet *_minimumIntervalScheduledActions;
+    NSCountedSet *_delayScheduledActions;
+    NSCache *_cache;
+    NSObject<OS_dispatch_queue> *_storeQueue;
+    id <_DKSimpleKeyValueStore> _store;
+}
+
+@property (retain, nonatomic) id <_DKSimpleKeyValueStore> store;
+
+- (id)description;
+- (id)initWithStore:(id)arg1;
+- (id)dateForKey:(id)arg1;
+- (void)setDate:(id)arg1 forKey:(id)arg2;
+- (void)_performNoMoreOftenInSecondsThan:(double)arg1 name:(id)arg2 activityBlock:(CDUnknownBlockType)arg3 throttleBlock:(CDUnknownBlockType)arg4;
+- (void)_performOrScheduleWithTimeInterval:(double)arg1 name:(id)arg2 queue:(id)arg3 activityBlock:(CDUnknownBlockType)arg4 callDepth:(unsigned long long)arg5;
+- (void)_performWithDelayInSecondsOf:(double)arg1 name:(id)arg2 queue:(id)arg3 activityBlock:(CDUnknownBlockType)arg4;
+- (void)clearHistoryForName:(id)arg1;
+- (id)keyForName:(id)arg1;
+- (_Bool)_minimumIntervalScheduledActionsContainsActionName:(id)arg1;
+- (void)_minimumIntervalScheduledActionsAddActionName:(id)arg1;
+- (void)_minimumIntervalScheduledActionsRemoveActionName:(id)arg1;
+- (void)clearDateForKey:(id)arg1;
+
+@end

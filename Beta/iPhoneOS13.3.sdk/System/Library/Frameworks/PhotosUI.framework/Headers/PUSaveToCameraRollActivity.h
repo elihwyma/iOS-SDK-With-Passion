@@ -1,0 +1,31 @@
+/*
+ Image: /System/Library/Frameworks/PhotosUI.framework/PhotosUI
+ */
+
+#import <UIKit/UISaveToCameraRollActivity.h>
+
+#import <PhotosUI/Swift-Protocol.h>
+
+@class NSString;
+
+@protocol PXActivityItemSourceController;
+
+__attribute__((visibility("hidden")))
+@interface PUSaveToCameraRollActivity : UISaveToCameraRollActivity <Swift>
+
+{
+    id <PXActivityItemSourceController> _itemSourceController;
+}
+
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (weak, nonatomic) id <PXActivityItemSourceController> itemSourceController;
+
+- (_Bool)canPerformWithActivityItems:(id)arg1;
+- (void)prepareWithActivityItems:(id)arg1;
+- (void)performActivity;
+- (_Bool)_itemIsVideoAtURL:(id)arg1;
+
+@end

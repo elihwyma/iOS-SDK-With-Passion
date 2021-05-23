@@ -1,0 +1,204 @@
+/*
+ Image: /System/Library/PrivateFrameworks/DataAccess.framework/Frameworks/DACalDAV.framework/DACalDAV
+ */
+
+#import <Foundation/NSObject.h>
+
+#import <DACalDAV/Swift-Protocol.h>
+
+@class CalDAVDBChangeTrackingHelper, CalDiagCalendarCollectionSync, MobileCalDAVPrincipal, NSArray, NSDictionary, NSMutableDictionary, NSSet, NSString, NSTimeZone, NSURL;
+
+@protocol CalDAVPrincipal;
+
+@interface MobileCalDAVCalendar : NSObject <Swift>
+
+{
+    MobileCalDAVPrincipal *_principal;
+    void *_calCalendar;
+    NSMutableDictionary *_changesToClear;
+    NSString *_calendarURLString;
+    _Bool _isScheduleOutbox;
+    _Bool _isEnabled;
+    _Bool _wasModifiedLocally;
+    _Bool _needsResync;
+    _Bool _didResync;
+    _Bool _isDirty;
+    _Bool _needsPublishUpdate;
+    _Bool _needsIsAffectingAvailabilityUpdate;
+    NSString *_guid;
+    long long _maxAttendees;
+    unsigned long long _numDownloadedElements;
+    unsigned long long _numUploadedElements;
+    CalDAVDBChangeTrackingHelper *_changeTracker;
+    CalDiagCalendarCollectionSync *_calendarCollectionSyncDiagnostics;
+    NSMutableDictionary *_deletedCalendarItems;
+    NSArray *_syncActions;
+    NSArray *_shareeActions;
+    NSArray *_itemsToReportAsJunk;
+    NSArray *_recurrenceSplitActions;
+    NSDictionary *_hrefsToModDeleteActions;
+    NSDictionary *_uuidsToAddActions;
+    NSMutableDictionary *_uniqueIdentifierToRecordIDMap;
+    NSMutableDictionary *_URLToRecordIDMap;
+    NSMutableDictionary *_URLToEtagMap;
+}
+
+@property (nonatomic, readonly) MobileCalDAVPrincipal *daPrincipal;
+@property (retain, nonatomic) CalDiagCalendarCollectionSync *calendarCollectionSyncDiagnostics;
+@property (weak, nonatomic) id <CalDAVPrincipal> principal;
+@property (nonatomic, readonly) void *calCalendar;
+@property (retain, nonatomic) NSString *calendarURLString;
+@property (retain, nonatomic) NSMutableDictionary *deletedCalendarItems;
+@property (retain, nonatomic) NSArray *syncActions;
+@property (retain, nonatomic) NSArray *shareeActions;
+@property (retain, nonatomic) NSArray *itemsToReportAsJunk;
+@property (retain, nonatomic) NSArray *recurrenceSplitActions;
+@property (retain, nonatomic) NSDictionary *hrefsToModDeleteActions;
+@property (retain, nonatomic) NSDictionary *uuidsToAddActions;
+@property (retain, nonatomic) NSMutableDictionary *uniqueIdentifierToRecordIDMap;
+@property (retain, nonatomic) NSMutableDictionary *URLToRecordIDMap;
+@property (retain, nonatomic) NSMutableDictionary *URLToEtagMap;
+@property (nonatomic, readonly) _Bool mustCalendarBeReadOnly;
+@property (nonatomic, readonly) _Bool shouldCalendarBeHidden;
+@property (retain, nonatomic) NSString *guid;
+@property (retain, nonatomic) NSURL *calendarURL;
+@property (retain, nonatomic) NSString *title;
+@property (retain, nonatomic) NSString *notes;
+@property (retain, nonatomic) NSString *color;
+@property (retain, nonatomic) NSString *symbolicColorName;
+@property (retain, nonatomic) NSString *pushKey;
+@property (retain, nonatomic) NSURL *owner;
+@property (retain, nonatomic) NSString *ownerDisplayName;
+@property (nonatomic, readonly) NSString *ownerEmailAddress;
+@property (nonatomic, readonly) NSString *ownerPhoneNumber;
+@property (retain, nonatomic) NSSet *preferredCalendarUserAddresses;
+@property (retain, nonatomic) NSURL *publishURL;
+@property (retain, nonatomic) NSURL *prePublishURL;
+@property (nonatomic) int order;
+@property (nonatomic) int sharingStatus;
+@property (retain, nonatomic) NSSet *sharees;
+@property (nonatomic) _Bool isTaskContainer;
+@property (nonatomic) _Bool isEventContainer;
+@property (nonatomic) _Bool isSubscribed;
+@property (nonatomic) _Bool isManagedByServer;
+@property (nonatomic) _Bool isScheduleInbox;
+@property (nonatomic) _Bool isScheduleOutbox;
+@property (nonatomic) _Bool isNotification;
+@property (nonatomic) _Bool isEditable;
+@property (nonatomic) _Bool isRenameable;
+@property (nonatomic) _Bool isEnabled;
+@property (nonatomic) _Bool isAffectingAvailability;
+@property (nonatomic) _Bool canBePublished;
+@property (nonatomic) _Bool canBeShared;
+@property (nonatomic) _Bool isFamilyCalendar;
+@property (nonatomic) _Bool isMarkedUndeletable;
+@property (nonatomic) _Bool isMarkedImmutableSharees;
+@property (nonatomic) _Bool wasModifiedLocally;
+@property (nonatomic) long long maxAttendees;
+@property (retain, nonatomic) NSString *ctag;
+@property (retain, nonatomic) NSDictionary *bulkRequests;
+@property (retain, nonatomic) NSString *syncToken;
+@property (nonatomic) _Bool needsResync;
+@property (nonatomic) _Bool didResync;
+@property (nonatomic, readonly) NSSet *allItemURLs;
+@property (nonatomic) _Bool isDirty;
+@property (nonatomic, readonly) NSString *displayColor;
+@property (nonatomic, readonly) _Bool isHidden;
+@property (nonatomic, readonly) NSString *accountID;
+@property (nonatomic) _Bool needsPublishUpdate;
+@property (nonatomic) unsigned long long numDownloadedElements;
+@property (nonatomic) unsigned long long numUploadedElements;
+@property (retain, nonatomic) CalDAVDBChangeTrackingHelper *changeTracker;
+@property (nonatomic) _Bool needsIsAffectingAvailabilityUpdate;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (retain, nonatomic) NSTimeZone *timeZone;
+@property (nonatomic) _Bool isPoll;
+@property (nonatomic) _Bool isPublished;
+
++ (id)calendarWithCalCalendar:(void *)arg1 principal:(id)arg2;
++ (struct __CFArray *)gatherCalendarChangesInPrincipal:(id)arg1 calendars:(id)arg2 adds:(id *)arg3 modifies:(id *)arg4 deletes:(id *)arg5 changeTracker:(id)arg6;
++ (_Bool)clearCalendarChanges:(struct __CFArray *)arg1 forChangeTrackingClient:(id)arg2;
++ (void)cacheCalendarUID:(int)arg1 forCalendarURLString:(id)arg2;
++ (id)calURLToUIDCache;
++ (void)removeUIDCacheEntryForCalendarURLString:(id)arg1;
++ (int)cachedCalendarUIDForURLString:(id)arg1;
++ (_Bool)shouldSkipAddedCalendar:(void *)arg1;
++ (void)processAddedCalendar:(id)arg1;
++ (_Bool)shouldSkipCalendar:(void *)arg1 withChangeType:(int)arg2;
++ (void)processModifiedCalendar:(id)arg1 oldFlags:(unsigned int)arg2 newFlags:(unsigned int)arg3;
++ (_Bool)shouldSkipModifiedCalendar:(void *)arg1;
++ (void)clearCalendarUIDCache;
+
+- (void)dealloc;
+- (void)flushCaches;
+- (_Bool)hasEvents;
+- (id)_preferredAddress;
+- (id)copyAllItems;
+- (id)calendarUserAddresses;
+- (void)deleteCalendar;
+- (id)initWithCalendarURL:(id)arg1 principal:(id)arg2;
+- (id)initWithCalendarURL:(id)arg1 calendar:(void *)arg2 principal:(id)arg3 title:(id)arg4;
+- (void)_dropCalStoreContext;
+- (void *)getCalCalendar;
+- (void *)initCalCalendarWithTitle:(id)arg1;
+- (void)_updateCalendarInfo;
+- (void)_setSupportsEvents:(_Bool)arg1 supportsTodos:(_Bool)arg2;
+- (struct CalRecordID *)recordIDForUniqueIdentifier:(id)arg1;
+- (void)setUniqueIdentifier:(id)arg1 forRecordID:(struct CalRecordID *)arg2;
+- (void *)_copyCalItemWithUniqueIdentifier:(id)arg1 inCalendar:(void *)arg2 orStore:(void *)arg3;
+- (void *)_copyCalItemWithExternalID:(id)arg1;
+- (_Bool)setEtag:(id)arg1 forItemAtURL:(id)arg2;
+- (_Bool)_removeCalendarItemWithURL:(id)arg1;
+- (void)_addCalendarItemWithRowID:(int)arg1 toArrayIfNeeded:(id)arg2 withChangeRowid:(int)arg3 changeType:(id)arg4;
+- (void)_addAddedItemsOfType:(int)arg1 toArray:(id)arg2;
+- (void)_gatherModifiedItemsFromCalChangesCall:(CDUnknownFunctionPointerType)arg1 forType:(id)arg2 inArray:(id)arg3;
+- (void)_gatherModifiedTasksInArray:(id)arg1;
+- (void)_gatherModifiedEventsInArray:(id)arg1;
+- (void)_addAddedRecurrenceSplitItemsToArray:(id)arg1;
+- (id)_itemPropertyDictForItemAtIndex:(long long)arg1 withChangedIDs:(struct __CFArray *)arg2 withChangedRowids:(struct __CFArray *)arg3 withExternalIDs:(struct __CFArray *)arg4 uniqueIdentifiers:(struct __CFArray *)arg5 significantAttributeChanges:(struct __CFArray *)arg6 oldCalendarIDs:(struct __CFArray *)arg7 entityType:(int)arg8;
+- (void)_gatherDeletedChanges:(CDUnknownFunctionPointerType)arg1 inDictionary:(id)arg2;
+- (void)addChangesToBeCleared:(struct __CFArray *)arg1 forEntityType:(int)arg2;
+- (void)clearChangesForEntityType:(int)arg1;
+- (void)_clearChangesFromItem:(id)arg1 shouldClearAttachmentChanges:(_Bool)arg2;
+- (void)_clearChangesAtIndices:(id)arg1 forType:(int)arg2;
+- (void)_saveChangesAtIndices:(id)arg1 forType:(int)arg2;
+- (_Bool)_isItemJunk:(void *)arg1;
+- (void)_clearChangesFromItem:(id)arg1;
+- (void)_forceRefreshNextSync;
+- (void)_saveChangesForItem:(id)arg1;
+- (_Bool)setScheduleTag:(id)arg1 forItemAtURL:(id)arg2;
+- (_Bool)setURL:(id)arg1 forResourceWithUUID:(id)arg2;
+- (void)_collectShareeActions;
+- (void)_addShareeWithRowID:(id)arg1 toDictionaryIfNeeded:(id)arg2;
+- (id)copyDeletedItems;
+- (id)copyRecurrenseSplitItems;
+- (id)_recurrenceSplitActionsForItems:(id)arg1 alreadySentItems:(id)arg2;
+- (id)copyAddedItems;
+- (id)_createActionsForItems:(id)arg1 withAction:(int)arg2 alreadySentItems:(id)arg3 createServerIDs:(_Bool)arg4 shouldSave:(_Bool *)arg5;
+- (id)copyModifiedItems;
+- (id)_resourceURLsForJunkItemsInModifiedItems:(id)arg1 alreadySentItems:(id)arg2;
+- (id)_copyDeletedEventActions;
+- (id)removeInvitationsForItemWithUniqueIdentifier:(id)arg1;
+- (id)etagsForItemURLs:(id)arg1;
+- (_Bool)updateResourcesFromServer:(id)arg1;
+- (_Bool)deleteResourcesAtURLs:(id)arg1;
+- (_Bool)hasCalendarUserAddressEquivalentToURL:(id)arg1;
+- (Class)appSpecificCalendarItemClass;
+- (void)prepareMergeSyncActionsWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)clearShareeActions;
+- (void)syncDidFinishWithError:(id)arg1;
+- (void)putAction:(id)arg1 completedWithError:(id)arg2;
+- (void)deleteAction:(id)arg1 completedWithError:(id)arg2;
+- (void)recurrenceSplitAction:(id)arg1 completedWithUpdatedETag:(id)arg2 updatedScheduleTag:(id)arg3 createdURL:(id)arg4 createdETag:(id)arg5 createdScheduleTag:(id)arg6;
+- (void)recurrenceSplitAction:(id)arg1 failedWithError:(id)arg2;
+- (void)recurrenceSplitActionsCompletedWithError:(id)arg1;
+- (id)initWithCalendarURL:(id)arg1 principal:(id)arg2 title:(id)arg3;
+- (id)_calExternalRep;
+- (void)clearEventChanges;
+- (void)prepareSyncActionsWithCompletionBlock:(CDUnknownBlockType)arg1;
+- (void)recordDiagnosticsForAccountSync:(id)arg1;
+
+@end

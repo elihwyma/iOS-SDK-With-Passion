@@ -1,0 +1,39 @@
+/*
+ Image: /System/Library/PrivateFrameworks/SAObjects.framework/SAObjects
+ */
+
+#import <SAObjects/SADomainObject.h>
+
+@class NSArray, NSDate, NSNumber, NSString, NSURL, SAAppInfo, SAPersonAttribute;
+
+@interface SASmsSms : SADomainObject
+
+@property (retain, nonatomic) SAAppInfo *appInfo;
+@property (copy, nonatomic) NSURL *attachment;
+@property (copy, nonatomic) NSArray *attachments;
+@property (copy, nonatomic) NSString *chatIdentifier;
+@property (copy, nonatomic) NSDate *dateLastMessageReadInThread;
+@property (copy, nonatomic) NSDate *dateSent;
+@property (copy, nonatomic) NSString *effect;
+@property (copy, nonatomic) NSString *groupName;
+@property (copy, nonatomic) NSString *groupNameId;
+@property (nonatomic) _Bool hasGroupName;
+@property (copy, nonatomic) NSNumber *isAudioMessage;
+@property (copy, nonatomic) NSString *message;
+@property (copy, nonatomic) NSString *messageType;
+@property (copy, nonatomic) NSArray *msgRecipients;
+@property (retain, nonatomic) SAPersonAttribute *msgSender;
+@property (copy, nonatomic) NSNumber *outgoing;
+@property (copy, nonatomic) NSArray *recipients;
+@property (retain, nonatomic) SASmsSms *referencedMessage;
+@property (copy, nonatomic) NSString *sender;
+@property (copy, nonatomic) NSString *subject;
+@property (copy, nonatomic) NSString *timezoneId;
+
++ (id)sms;
++ (id)smsWithDictionary:(id)arg1 context:(id)arg2;
+
+- (id)groupIdentifier;
+- (id)encodedClassName;
+
+@end

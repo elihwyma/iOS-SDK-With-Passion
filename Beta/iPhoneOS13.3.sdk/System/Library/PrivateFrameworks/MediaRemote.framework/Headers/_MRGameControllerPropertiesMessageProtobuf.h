@@ -1,0 +1,32 @@
+/*
+ Image: /System/Library/PrivateFrameworks/MediaRemote.framework/MediaRemote
+ */
+
+#import <ProtocolBuffer/PBCodable.h>
+
+@class _MRGameControllerPropertiesProtobuf;
+
+@interface _MRGameControllerPropertiesMessageProtobuf : PBCodable
+
+{
+    unsigned long long _controllerID;
+    _MRGameControllerPropertiesProtobuf *_properties;
+    CDStruct_669c4a63 _has;
+}
+
+@property (nonatomic) _Bool hasControllerID;
+@property (nonatomic) unsigned long long controllerID;
+@property (nonatomic, readonly) _Bool hasProperties;
+@property (retain, nonatomic) _MRGameControllerPropertiesProtobuf *properties;
+
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)dictionaryRepresentation;
+- (void)writeTo:(id)arg1;
+- (void)mergeFrom:(id)arg1;
+- (_Bool)readFrom:(id)arg1;
+- (void)copyTo:(id)arg1;
+
+@end

@@ -1,0 +1,17 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: CCFF2E7F-7FC0-3C67-842B-6778DEB92B15' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/MobileCoreServices.framework/MobileCoreServices
+current-version:       1069.14
+compatibility-version: 1
+exports:
+  - archs:                [ arm64 ]
+    re-exports:           [ /System/Library/Frameworks/CoreServices.framework/CoreServices ]
+    symbols:              [ _MobileCoreServicesVersionNumber,
+                            _MobileCoreServicesVersionString ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ dyld_stub_binder ]
+...

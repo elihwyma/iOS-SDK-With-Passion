@@ -1,0 +1,19 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: ECE93CE9-4B8E-34E1-A4B6-8F824F834B23' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/libBigNum.dylib
+current-version:       1
+compatibility-version: 1
+exports:
+  - archs:                [ arm64 ]
+    symbols:              [ _BigIntegerAbs, _BigIntegerAdd,
+                            _BigIntegerCreateWithInt64,
+                            _BigIntegerCreateWithString, _BigIntegerMul,
+                            _BigIntegerNeg, _BigIntegerRelease, _BigIntegerRetain,
+                            _BigIntegerSign, _BigIntegerSub ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ dyld_stub_binder ]
+...

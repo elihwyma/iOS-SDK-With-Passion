@@ -1,0 +1,166 @@
+/*
+ Image: /System/Library/PrivateFrameworks/UIKitCore.framework/UIKitCore
+ */
+
+#import <UIKitCore/UICollectionViewCell.h>
+
+@class NSMutableSet, NSString, UICollectionViewLayout, UICollectionViewTableLayout, UICollectionViewTableLayoutAttributes, UIColor, UIImageView, UILabel, UIScrollView, UIShadowView, UITableViewCell, UITableViewCollectionCell, UIView;
+
+@interface UICollectionViewTableCell : UICollectionViewCell
+
+{
+    UIView *_swipeableView;
+    UIShadowView *_borderShadowTopView;
+    UIShadowView *_borderShadowBottomView;
+    UIView *_selectedBackgroundViewToRestoreWhenInteractiveMoveEnds;
+    long long _accessoryType;
+    NSMutableSet *_trackedAnimators;
+    _Bool _editing;
+    double _reorderingCenterX;
+    _Bool _interactiveMoveEffectsVisible;
+    _Bool _borderShadowVisible;
+    _Bool _transitioningLayouts;
+    UITableViewCell *_swipeToDeleteCell;
+    UITableViewCollectionCell *_tableViewCell;
+    UICollectionViewLayout *_currentLayout;
+    double _offsetForRevealingDeleteConfirmationButton;
+}
+
+@property (nonatomic, readonly, getter=_tableLayout) UICollectionViewTableLayout *tableLayout;
+@property (nonatomic, readonly, getter=_tableAttributes) UICollectionViewTableLayoutAttributes *tableAttributes;
+@property (retain, nonatomic) UITableViewCollectionCell *tableViewCell;
+@property (nonatomic) _Bool interactiveMoveEffectsVisible;
+@property (nonatomic) _Bool borderShadowVisible;
+@property (nonatomic) _Bool transitioningLayouts;
+@property (weak, nonatomic) UICollectionViewLayout *currentLayout;
+@property (nonatomic, readonly) UIView *swipeableView;
+@property (nonatomic, getter=_offsetForRevealingDeleteConfirmationButton, setter=_setOffsetForRevealingDeleteConfirmationButton:) double offsetForRevealingDeleteConfirmationButton;
+@property (nonatomic, readonly) UIImageView *imageView;
+@property (nonatomic, readonly) UILabel *textLabel;
+@property (nonatomic, readonly) UILabel *detailTextLabel;
+@property (retain, nonatomic) UIView *multipleSelectionBackgroundView;
+@property (nonatomic) long long selectionStyle;
+@property (nonatomic, readonly) long long editingStyle;
+@property (nonatomic) _Bool showsReorderControl;
+@property (nonatomic) _Bool shouldIndentWhileEditing;
+@property (nonatomic) long long accessoryType;
+@property (retain, nonatomic) UIView *accessoryView;
+@property (nonatomic) long long editingAccessoryType;
+@property (retain, nonatomic) UIView *editingAccessoryView;
+@property (nonatomic) long long indentationLevel;
+@property (nonatomic) double indentationWidth;
+@property (nonatomic) struct UIEdgeInsets separatorInset;
+@property (nonatomic, readonly) _Bool showingDeleteConfirmation;
+@property (nonatomic, readonly, getter=isInTableLayout) _Bool inTableLayout;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (nonatomic, readonly) _Bool canBeEdited;
+@property (nonatomic, getter=isEditing) _Bool editing;
+@property (nonatomic, readonly, getter=_scrollView) UIScrollView *scrollView;
+@property (nonatomic, readonly, getter=_tableStyle) long long tableStyle;
+@property (nonatomic, readonly, getter=_sectionContentInsetFollowsLayoutMargins) _Bool sectionContentInsetFollowsLayoutMargins;
+@property (nonatomic, readonly, getter=_accessoryBaseColor) UIColor *accessoryBaseColor;
+@property (nonatomic, readonly, getter=_multiselectCheckmarkColor) UIColor *multiselectCheckmarkColor;
+@property (nonatomic, readonly, getter=_numberOfSections) long long numberOfSections;
+@property (nonatomic, readonly) _Bool allowsMultipleSelection;
+@property (nonatomic, readonly) _Bool allowsMultipleSelectionDuringEditing;
+@property (nonatomic, readonly) double rowHeight;
+@property (nonatomic, readonly) double sectionHeaderHeight;
+@property (nonatomic, readonly) double sectionFooterHeight;
+@property (nonatomic, readonly) double estimatedRowHeight;
+@property (nonatomic, readonly) double estimatedSectionHeaderHeight;
+@property (nonatomic, readonly) double estimatedSectionFooterHeight;
+@property (nonatomic, readonly, getter=_separatorInsetIsRelativeToCellEdges) _Bool separatorInsetIsRelativeToCellEdges;
+@property (nonatomic, readonly) _Bool usesVariableMargins;
+@property (nonatomic, readonly) _Bool overlapsSectionHeaderViews;
+@property (nonatomic, readonly, getter=_backgroundInset) double backgroundInset;
+@property (nonatomic, readonly, getter=_cellSafeAreaInsets) struct UIEdgeInsets cellSafeAreaInsets;
+@property (nonatomic, readonly) _Bool cellLayoutMarginsFollowReadableWidth;
+@property (nonatomic, readonly, getter=_topPadding) double topPadding;
+@property (nonatomic, readonly, getter=_bottomPadding) double bottomPadding;
+@property (nonatomic, readonly, getter=_isShowingIndex) _Bool showingIndex;
+@property (nonatomic, readonly, getter=_indexFrame) struct CGRect indexFrame;
+@property (nonatomic, readonly, getter=_indexBarExtentFromEdge) double indexBarExtentFromEdge;
+@property (nonatomic, readonly, getter=_sectionContentInset) struct UIEdgeInsets sectionContentInset;
+@property (nonatomic, readonly, getter=_rawSectionContentInset) struct UIEdgeInsets rawSectionContentInset;
+@property (nonatomic, readonly, getter=_sectionCornerRadius) double sectionCornerRadius;
+@property (nonatomic, readonly, getter=_rowSpacing) double rowSpacing;
+@property (nonatomic, readonly, getter=_rawSeparatorInset) struct UIEdgeInsets rawSeparatorInset;
+@property (nonatomic, readonly, getter=_popoverControllerStyle) long long popoverControllerStyle;
+@property (nonatomic, readonly, getter=_isInModalViewController) _Bool inModalViewController;
+@property (nonatomic, readonly, getter=_wasEditing) _Bool wasEditing;
+@property (nonatomic, readonly, getter=_isEditingForSwipeDeletion) _Bool editingForSwipeDeletion;
+@property (retain, nonatomic, getter=_swipeToDeleteCell, setter=_setSwipeToDeleteCell:) UITableViewCell *swipeToDeleteCell;
+
+- (void)prepareForReuse;
+- (_Bool)isSelected;
+- (id)backgroundColor;
+- (void)setBackgroundColor:(id)arg1;
+- (id)initWithFrame:(struct CGRect)arg1;
+- (id)backgroundView;
+- (void)layoutSubviews;
+- (_Bool)isHighlighted;
+- (void)setHighlighted:(_Bool)arg1;
+- (id)preferredLayoutAttributesFittingAttributes:(id)arg1;
+- (void)setSelected:(_Bool)arg1;
+- (void)setBackgroundView:(id)arg1;
+- (void)setSelectedBackgroundView:(id)arg1;
+- (id)selectedBackgroundView;
+- (struct UIEdgeInsets)_contentViewInset;
+- (_Bool)insetsContentViewsToSafeArea;
+- (void)_commonSetupTableCell;
+- (void)awakeFromNib;
+- (_Bool)_isInteractiveMoveShadowInstalled;
+- (void)_insertInteractiveMoveShadowViews;
+- (void)_removeInteractiveMoveShadowViews;
+- (void)_layoutTableViewCell;
+- (void)_layoutInteractiveMoveShadow;
+- (void)applyLayoutAttributes:(id)arg1;
+- (void)_updateInternalCellForTableLayout:(_Bool)arg1 animated:(_Bool)arg2;
+- (void)updateCellForTableLayout:(_Bool)arg1;
+- (void)_updateEditing;
+- (void)_setupForEditing:(_Bool)arg1 atIndexPath:(id)arg2 multiselect:(_Bool)arg3 editingStyle:(long long)arg4 shouldIndentWhileEditing:(_Bool)arg5 showsReorderControl:(_Bool)arg6 accessoryType:(long long)arg7 updateSeparators:(_Bool)arg8;
+- (void)_swipeToDeleteCell:(id)arg1;
+- (void)_updateCollectionViewInteractiveMovementTargetPositionForTouch:(id)arg1;
+- (void)_animateDeletionOfRowAtIndexPath:(id)arg1;
+- (_Bool)_shouldDrawThickSeparators;
+- (long long)_numberOfRowsInSection:(long long)arg1;
+- (_Bool)_shouldHaveHeaderViewForSection:(long long)arg1;
+- (_Bool)_shouldHaveFooterViewForSection:(long long)arg1;
+- (long long)focusStyle;
+- (void)setFocusStyle:(long long)arg1;
+- (void)willTransitionToState:(unsigned long long)arg1;
+- (void)didTransitionToState:(unsigned long long)arg1;
+- (void)setEditing:(_Bool)arg1 animated:(_Bool)arg2;
+- (void)_cellDidShowSelectedBackground:(id)arg1;
+- (void)_cellDidHideSelectedBackground:(id)arg1;
+- (_Bool)_canFocusCell:(id)arg1;
+- (void)_cellDidBecomeFocused:(id)arg1;
+- (void)_cellDidBecomeUnfocused:(id)arg1;
+- (_Bool)_shouldShowMenuForCell:(id)arg1;
+- (_Bool)_canPerformAction:(SEL)arg1 forCell:(id)arg2 sender:(id)arg3;
+- (void)_performAction:(SEL)arg1 forCell:(id)arg2 sender:(id)arg3;
+- (struct CGRect)_calloutTargetRectForCell:(id)arg1;
+- (id)_reorderingCell;
+- (_Bool)_isCellReorderable:(id)arg1;
+- (_Bool)_isReorderControlActiveForCell:(id)arg1;
+- (_Bool)_beginReorderingForCell:(id)arg1 touch:(id)arg2;
+- (void)_draggingReorderingCell:(id)arg1 yDelta:(double)arg2 touch:(id)arg3;
+- (void)_endReorderingForCell:(id)arg1 wasCancelled:(_Bool)arg2 animated:(_Bool)arg3;
+- (void)_didInsertRowForTableCell:(id)arg1;
+- (id)_titleForDeleteConfirmationButton:(id)arg1;
+- (void)_animateDeletionOfRowWithCell:(id)arg1;
+- (void)_highlightCell:(id)arg1 animated:(_Bool)arg2 scrollPosition:(long long)arg3 highlight:(_Bool)arg4;
+- (void)_updateCell:(id)arg1 withValue:(id)arg2;
+- (void)_accessoryButtonAction:(id)arg1;
+- (void)_userSelectCell:(id)arg1;
+- (void)_prepareHighlightForCell:(id)arg1 withInteraction:(id)arg2;
+- (void)_highlightDidEndForCell:(id)arg1 withInteraction:(id)arg2;
+- (void)willTransitionFromLayout:(id)arg1 toLayout:(id)arg2;
+- (void)didTransitionFromLayout:(id)arg1 toLayout:(id)arg2;
+- (void)_trackAnimator:(id)arg1;
+- (double)_selectionAnimationDuration;
+
+@end

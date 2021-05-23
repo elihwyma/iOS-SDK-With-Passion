@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSCore.framework/MPSCore
+ */
+
+#import <MPSCore/MPSParallelScan.h>
+
+@interface MPSParallelExclusiveScan : MPSParallelScan
+
+- (id)initWithDevice:(id)arg1;
+- (id)initWithDevice:(id)arg1 sourceDataType:(unsigned int)arg2 destinationDataType:(unsigned int)arg3;
+
+@end

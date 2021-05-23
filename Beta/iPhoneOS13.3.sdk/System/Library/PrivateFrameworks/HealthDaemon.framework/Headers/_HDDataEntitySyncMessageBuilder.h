@@ -1,0 +1,40 @@
+/*
+ Image: /System/Library/PrivateFrameworks/HealthDaemon.framework/HealthDaemon
+ */
+
+#import <Foundation/NSObject.h>
+
+@class HDDataProvenanceCache, HDEntityEncoder, HDProfile, HDSQLiteDatabase, HDSyncSession, NSArray;
+
+@protocol HDSyncMessageHandler;
+
+@interface _HDDataEntitySyncMessageBuilder : NSObject
+
+{
+    HDProfile *_profile;
+    HDSQLiteDatabase *_database;
+    Class _entityClass;
+    HDDataProvenanceCache *_provenanceCache;
+    HDEntityEncoder *_entityEncoder;
+    id <HDSyncMessageHandler> _messageHandler;
+    long long _currentEncodedBytes;
+    _Bool _hasSentObject;
+    _Bool _didSendFinal;
+    long long _maxEncodedBytesPerMessage;
+    long long _lastSyncAnchor;
+    HDSyncSession *_syncSession;
+}
+
+@property (nonatomic, readonly) long long maxEncodedBytesPerMessage;
+@property (nonatomic, readonly) long long currentEncodedBytes;
+@property (nonatomic, readonly) long long lastSyncAnchor;
+@property (nonatomic, readonly) NSArray *orderedProperties;
+@property (nonatomic, readonly) HDSyncSession *syncSession;
+
+- (id)initWithProfile:(id)arg1 database:(id)arg2 entityClass:(Class)arg3 bytesPerMessage:(long long)arg4 syncSession:(id)arg5 messageHandler:(id)arg6;
+- (long long)addEntity:(id)arg1 properties:(id)arg2 row:(struct HDSQLiteRow *)arg3 anchor:(long long)arg4 index:(unsigned long long)arg5 error:(id *)arg6;
+- (_Bool)finishAndFlush:(_Bool)arg1 error:(id *)arg2;
+- (id)_provenanceForID:(id)arg1 error:(id *)arg2;
+- (_Bool)_sendCurrentCollectionWithAnchor:(long long)arg1 final:(_Bool)arg2 error:(id *)arg3;
+
+@end

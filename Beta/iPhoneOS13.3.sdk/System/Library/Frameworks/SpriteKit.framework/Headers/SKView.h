@@ -1,0 +1,187 @@
+/*
+ Image: /System/Library/Frameworks/SpriteKit.framework/SpriteKit
+ */
+
+#import <UIKit/UIView.h>
+
+@class CAEAGLLayer, CAMetalLayer, MISSING_TYPE, NSData, NSMapTable, NSMutableDictionary, NSObject, SKDisplayLink, SKScene, SKTransition;
+
+@protocol OS_dispatch_queue, OS_dispatch_semaphore, SKViewDelegate;
+
+@interface SKView : UIView
+
+{
+    struct SKCStats _currentStats;
+    struct SKCStats _nextStats;
+    struct SKCStats _frameStats;
+    struct SKCRenderer *_renderer;
+    MISSING_TYPE *_viewScale;
+    MISSING_TYPE *_viewTranslation;
+    shared_ptr_2ce53ef7 _framebuffer;
+    shared_ptr_bb77cfd9 _frameBufferColorTexture;
+    shared_ptr_bb77cfd9 _frameBufferDepthStencilTexture;
+    unsigned int _colorRenderBuffer;
+    unsigned int _depthStencilRenderBuffer;
+    struct shared_ptr<jet_fence> _renderFence;
+    CAMetalLayer *_metalLayer;
+    CAEAGLLayer *_eaglLayer;
+    _Bool _needsInitialUpdate;
+    _Bool _didRunOnce;
+    _Bool _viewFramebufferIsValid;
+    MISSING_TYPE *_viewFramebufferPixelSize;
+    _Bool _isBackgrounded;
+    _Bool _allowsTransparency;
+    _Bool _priorResignActivePausedState;
+    unsigned long long _frameInterval;
+    unsigned long long _preferredFramesPerSecond;
+    SKDisplayLink *_displayLink;
+    NSObject<OS_dispatch_queue> *_updateQueue;
+    double _timePreviousUpdate;
+    _Bool _prefersLowPowerGPU;
+    _Bool _usesAsyncUpdateQueue;
+    _Bool _hasRenderedOnce;
+    _Bool _hasRenderedForCurrentUpdate;
+    _Bool _disableInput;
+    _Bool _mouseIsDown;
+    _Bool _rightMouseIsDown;
+    SKTransition *_transition;
+    SKScene *_nextScene;
+    SKScene *_scene;
+    _Bool _paused;
+    NSData *_spriteArrayHint;
+    NSMutableDictionary *_viewRenderOptions;
+    NSMapTable *_touchMap;
+    float _prevBackingScaleFactor;
+    CDUnknownBlockType _dynamicRenderBlock;
+    NSObject<OS_dispatch_queue> *_renderQueue;
+    NSObject<OS_dispatch_semaphore> *_renderSemaphore;
+    int _queuedFrameCount;
+    double _prevVsyncRenderTime;
+    double _prevRenderTime;
+    NSObject<SKViewDelegate> *_delegate;
+    struct SKCRenderer *__layerBackedRenderer;
+    NSMutableDictionary *__info;
+    double _physicsDebugStrokeWidth;
+    struct CGSize _pixelSize;
+}
+
+@property (nonatomic, readonly) struct CGSize pixelSize;
+@property struct SKCRenderer *_layerBackedRenderer;
+@property (retain, nonatomic) NSMutableDictionary *_info;
+@property (readonly) NSMutableDictionary *options;
+@property (nonatomic) double physicsDebugStrokeWidth;
+@property (nonatomic) _Bool disableStencilBuffers;
+@property (nonatomic, getter=isPaused) _Bool paused;
+@property (nonatomic) _Bool showsFPS;
+@property (nonatomic) _Bool showsDrawCount;
+@property (nonatomic) _Bool showsNodeCount;
+@property (nonatomic) _Bool showsQuadCount;
+@property (nonatomic) _Bool showsPhysics;
+@property (nonatomic) _Bool showsFields;
+@property (nonatomic, getter=isAsynchronous) _Bool asynchronous;
+@property (nonatomic) _Bool allowsTransparency;
+@property (nonatomic) _Bool ignoresSiblingOrder;
+@property (nonatomic) _Bool shouldCullNonVisibleNodes;
+@property (nonatomic) long long preferredFramesPerSecond;
+@property (weak, nonatomic) NSObject<SKViewDelegate> *delegate;
+@property (nonatomic) long long frameInterval;
+@property (nonatomic) float preferredFrameRate;
+@property (nonatomic, readonly) SKScene *scene;
+
++ (_Bool)supportsSecureCoding;
++ (Class)layerClass;
++ (id)debugHierarchyPropertyDescriptions;
++ (id)debugHierarchyValueForPropertyWithName:(id)arg1 onObject:(id)arg2 outOptions:(id *)arg3 outError:(id *)arg4;
++ (void)_setCurrentTime:(double)arg1;
++ (id)debugHierarchyAdditionalGroupingIDs;
++ (id)debugHierarchyObjectsInGroupWithID:(id)arg1 onObject:(id)arg2 outOptions:(id *)arg3;
+
+- (void)dealloc;
+- (void)encodeWithCoder:(id)arg1;
+- (id)initWithCoder:(id)arg1;
+- (void)_update:(double)arg1;
+- (id).cxx_construct;
+- (_Bool)isOpaque;
+- (id)snapshot;
+- (void)_commonInit;
+- (double)_viewScale;
+- (id)initWithFrame:(struct CGRect)arg1;
+- (long long)_preferredFocusMovementStyle;
+- (void)layoutSubviews;
+- (void)touchesBegan:(id)arg1 withEvent:(id)arg2;
+- (void)touchesMoved:(id)arg1 withEvent:(id)arg2;
+- (void)touchesEnded:(id)arg1 withEvent:(id)arg2;
+- (void)touchesCancelled:(id)arg1 withEvent:(id)arg2;
+- (void)didMoveToWindow;
+- (void)drawRect:(struct CGRect)arg1;
+- (void)_searchForFocusRegionsInContext:(id)arg1;
+- (id)_regionForFocusedItem:(id)arg1 inCoordinateSpace:(id)arg2;
+- (double)_fps;
+- (id)_focusedItemRegionContainer;
+- (void)CBApplicationWillResignActive;
+- (void)CBApplicationDidBecomeActive;
+- (void)set_showsGPUStats:(_Bool)arg1;
+- (void)set_showsCPUStats:(_Bool)arg1;
+- (_Bool)_showsCPUStats;
+- (_Bool)_showsGPUStats;
+- (void)_showAllStats;
+- (int)_spriteRenderCount;
+- (int)_spriteSubmitCount;
+- (CDStruct_14d5dc5e)getViewTransform;
+- (struct CGPoint)convertPoint:(struct CGPoint)arg1 fromScene:(id)arg2;
+- (void)willRenderContent;
+- (id)textureFromNode:(id)arg1 withOptions:(id)arg2;
+- (id)archiveToFile:(id)arg1;
+- (float)_getViewContentsScale;
+- (void)debugPrint;
+- (struct SKCRenderer *)chooseViewRenderer;
+- (id)getRenderOptions;
+- (void)onInit;
+- (void)_ensureRenderer;
+- (void)setUpRenderCallback;
+- (void)startRenderCallbacks;
+- (void)_renderSynchronouslyForTime:(double)arg1 preRender:(CDUnknownBlockType)arg2 postRender:(CDUnknownBlockType)arg3;
+- (unsigned long long)_getEffectivePreferredFramesPerSecond;
+- (id)captureToFile:(id)arg1;
+- (struct SKCNode *)getRootNode;
+- (_Bool)hasValidViewFramebuffer;
+- (shared_ptr_2ce53ef7)nextFramebuffer;
+- (MISSING_TYPE *)getViewport;
+- (void)_endFrameStats;
+- (void)notifyWillRenderContent;
+- (void)_renderSynchronouslyForTime:(double)arg1 preRender:(CDUnknownBlockType)arg2 postRender:(CDUnknownBlockType)arg3 withMTLScheduleHandler:(CDUnknownBlockType)arg4;
+- (void)_renderToIOSurfaceID:(unsigned int)arg1 scaleFactor:(float)arg2 asynchronous:(_Bool)arg3 waitOnFence:(_Bool)arg4 preRender:(CDUnknownBlockType)arg5 postRender:(CDUnknownBlockType)arg6;
+- (void)runOnce;
+- (_Bool)_shouldRenderForTime:(double)arg1;
+- (void)_vsyncRenderForTime:(double)arg1 preRender:(CDUnknownBlockType)arg2 postRender:(CDUnknownBlockType)arg3;
+- (void)stopRenderCallbacks;
+- (void)renderContent;
+- (void)presentScene:(id)arg1;
+- (void)_reshape;
+- (void)_renderToIOSurfaceID:(unsigned int)arg1 scaleFactor:(float)arg2 asynchronous:(_Bool)arg3 preRender:(CDUnknownBlockType)arg4 postRender:(CDUnknownBlockType)arg5;
+- (void)remakeFramebuffer;
+- (void)_renderContent;
+- (id)textureFromNode:(id)arg1 crop:(struct CGRect)arg2;
+- (void)setDynamicRenderBlock:(CDUnknownBlockType)arg1;
+- (void)renderForTime:(double)arg1 shouldBlock:(_Bool)arg2;
+- (void)_dispatchRenderToIOSurfaceID:(unsigned int)arg1 async:(_Bool)arg2 onQueue:(id)arg3 waitOnFence:(_Bool)arg4 preRender:(CDUnknownBlockType)arg5 postRender:(CDUnknownBlockType)arg6;
+- (void)set_usesAsyncUpdateQueue:(_Bool)arg1;
+- (_Bool)_usesAsyncUpdateQueue;
+- (_Bool)_renderUpdateEnabled;
+- (void)set_renderUpdateEnabled:(_Bool)arg1;
+- (struct CGPoint)convertPoint:(struct CGPoint)arg1 toScene:(id)arg2;
+- (void)remakeFramebuffer:(double)arg1;
+- (double)alphaValue;
+- (void)presentScene:(id)arg1 transition:(id)arg2;
+- (id)textureFromNode:(id)arg1;
+- (id)initWithFrame:(struct CGRect)arg1 updateQueue:(id)arg2;
+- (_Bool)isEqualToView:(id)arg1;
+- (void)writeContentsToPNG:(id)arg1;
+- (void)renderToIOSurfaceID:(unsigned int)arg1 withScaleFactor:(double)arg2;
+- (void)_setUpdateQueue:(id)arg1;
+- (void)set_viewScale:(double)arg1;
+- (struct CGPoint)_viewTranslation;
+- (void)set_viewTranslation:(struct CGPoint)arg1;
+- (id)_getPerformanceStats;
+
+@end

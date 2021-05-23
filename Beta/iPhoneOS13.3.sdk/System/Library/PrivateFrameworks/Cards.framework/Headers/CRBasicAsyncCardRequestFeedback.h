@@ -1,0 +1,26 @@
+/*
+ Image: /System/Library/PrivateFrameworks/Cards.framework/Cards
+ */
+
+#import <NSObject.h>
+
+@class NSString, SFFeedback;
+
+@protocol CRCard;
+
+@interface CRBasicAsyncCardRequestFeedback : NSObject
+
+{
+    id <CRCard> baseCard;
+    id <CRCard> requestedCard;
+}
+
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (nonatomic, readonly) SFFeedback *backingFeedback;
+@property (retain, nonatomic) id <CRCard> baseCard;
+@property (retain, nonatomic) id <CRCard> requestedCard;
+
+@end

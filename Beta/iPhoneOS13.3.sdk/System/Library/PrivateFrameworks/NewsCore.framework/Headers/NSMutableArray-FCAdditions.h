@@ -1,0 +1,29 @@
+/*
+ Image: /System/Library/PrivateFrameworks/NewsCore.framework/NewsCore
+ */
+
+#import <Foundation/NSMutableArray.h>
+
+@interface NSMutableArray (FCAdditions)
+
+- (void)fc_safelyAddObject:(id)arg1;
+- (void)fc_insertObjects:(id)arg1 atIndex:(unsigned long long)arg2;
+- (void)fc_removeObjectsPassingTest:(CDUnknownBlockType)arg1;
+- (void)fc_trimFromFrontToMaxCount:(unsigned long long)arg1;
+- (void)fc_safelyAddObjectsFromArray:(id)arg1;
+- (void)fc_removeFirstObject;
+- (void)fc_trimToMaxCount:(unsigned long long)arg1;
+- (id)fc_mergeSortedOrderedCollection:(id)arg1 usingComparator:(CDUnknownBlockType)arg2;
+- (id)fc_popFirstObject;
+- (id)fc_popLastObject;
+- (void)fc_rotateRightWithCount:(unsigned long long)arg1;
+- (void)fc_insertObject:(id)arg1 sortedUsingSelector:(SEL)arg2;
+- (void)fc_removeObject:(id)arg1 sortedUsingSelector:(SEL)arg2;
+- (void)fc_insertObject:(id)arg1 inOrderRelativeToContents:(unsigned long long)arg2;
+- (void)fc_insertObjects:(id)arg1 inOrderRelativeToContents:(unsigned long long)arg2;
+- (void)fc_replaceObjectIdenticalTo:(id)arg1 withObject:(id)arg2;
+- (void)fc_replaceObjectIdenticalTo:(id)arg1 withObjects:(id)arg2;
+- (void)fc_reverseObjects;
+- (void)fc_safelyAddStringIfNonNilAndNotZeroLength:(id)arg1;
+
+@end

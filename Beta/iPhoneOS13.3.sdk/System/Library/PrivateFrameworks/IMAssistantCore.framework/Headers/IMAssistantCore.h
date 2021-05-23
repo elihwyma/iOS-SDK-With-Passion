@@ -1,0 +1,51 @@
+/*
+ Image: /System/Library/PrivateFrameworks/IMAssistantCore.framework/IMAssistantCore
+ */
+
+#import <IMAssistantCore/IMAssistantCore-Structures.h>
+
+#import <IMAssistantCore/AVAudioPlayerDelegate-Protocol.h>
+#import <IMAssistantCore/CNContact-IMAssistantCore.h>
+#import <IMAssistantCore/CNContactStore-IMAssistantContactsDataSource.h>
+#import <IMAssistantCore/IMAccountController-IMAssistantCore.h>
+#import <IMAssistantCore/IMAssistantAccountDataSource-Protocol.h>
+#import <IMAssistantCore/IMAssistantAccountDefaultDataSource.h>
+#import <IMAssistantCore/IMAssistantAudioPlayer.h>
+#import <IMAssistantCore/IMAssistantAudioPlayerDelegate-Protocol.h>
+#import <IMAssistantCore/IMAssistantChatDataSource-Protocol.h>
+#import <IMAssistantCore/IMAssistantChatParticipant.h>
+#import <IMAssistantCore/IMAssistantContactsDataSource-Protocol.h>
+#import <IMAssistantCore/IMAssistantHandleFromContact.h>
+#import <IMAssistantCore/IMAssistantIdentifiableIntentHandler-Protocol.h>
+#import <IMAssistantCore/IMAssistantINMessageConverter.h>
+#import <IMAssistantCore/IMAssistantINMessageConverterPersonProvider-Protocol.h>
+#import <IMAssistantCore/IMAssistantIntentHandler.h>
+#import <IMAssistantCore/IMAssistantMessageAttributeOptions.h>
+#import <IMAssistantCore/IMAssistantMessageAttributeSanitizer-Protocol.h>
+#import <IMAssistantCore/IMAssistantMessageHandler.h>
+#import <IMAssistantCore/IMAssistantMessageHandlerDataSource-Protocol.h>
+#import <IMAssistantCore/IMAssistantMessageHandlerDefaultDataSource.h>
+#import <IMAssistantCore/IMAssistantMessagePlayAudioHandler.h>
+#import <IMAssistantCore/IMAssistantMessagePlayMessageSoundHandler.h>
+#import <IMAssistantCore/IMAssistantMessageQueryHandler.h>
+#import <IMAssistantCore/IMAssistantMessageReadAttributeSanitizer.h>
+#import <IMAssistantCore/IMAssistantMessageSearchChatParticipant.h>
+#import <IMAssistantCore/IMAssistantMessageSearchHandler.h>
+#import <IMAssistantCore/IMAssistantMessageSendHandler.h>
+#import <IMAssistantCore/IMAssistantMessageSendHandlerDefaultDelegate.h>
+#import <IMAssistantCore/IMAssistantMessageSendHandlerDelegate-Protocol.h>
+#import <IMAssistantCore/IMAssistantMessageSetAttributeHandler.h>
+#import <IMAssistantCore/IMAssistantRelevantChatMatchingRecipients.h>
+#import <IMAssistantCore/IMChatRegistry-IMAssistantChatDataSource.h>
+#import <IMAssistantCore/INMessage-IMAssistantCore.h>
+#import <IMAssistantCore/INPerson-IMAssistantCore.h>
+#import <IMAssistantCore/INPersonHandle-IMAssistantCore.h>
+#import <IMAssistantCore/INPersonResolutionResult-IMAssistantCore.h>
+#import <IMAssistantCore/INPlayAudioMessageIntentHandling-Protocol.h>
+#import <IMAssistantCore/INPlayMessageSoundIntentHandling-Protocol.h>
+#import <IMAssistantCore/INSearchForMessagesIntentHandling-Protocol.h>
+#import <IMAssistantCore/INSendMessageIntentHandling-Protocol.h>
+#import <IMAssistantCore/INSetMessageAttributeIntentHandling-Protocol.h>
+#import <IMAssistantCore/NSArray-IMAssistantCore.h>
+#import <IMAssistantCore/NSObject-Protocol.h>
+#import <IMAssistantCore/Swift-Protocol.h>

@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/Frameworks/SafariServices.framework/SafariServices
+ */
+
+#import <Foundation/NSObject.h>
+
+__attribute__((visibility("hidden")))
+@interface _SFPasswordPickerHintStringGenerator : NSObject
+
++ (void)getHintStringsForAppID:(id)arg1 appNames:(id)arg2 matchedSites:(id)arg3 urlString:(id)arg4 outServiceNameHintStrings:(id *)arg5 outDomainHintStrings:(id *)arg6;
+
+@end

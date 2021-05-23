@@ -1,0 +1,39 @@
+/*
+ Image: /System/Library/PrivateFrameworks/UIKitCore.framework/UIKitCore
+ */
+
+#import <Foundation/NSObject.h>
+
+@class UIGraphicsRendererFormat, _UIReusePool;
+
+@interface UIGraphicsRenderer : NSObject
+
+{
+    UIGraphicsRendererFormat *_format;
+    _UIReusePool *_reusePool;
+}
+
+@property (nonatomic, readonly) UIGraphicsRendererFormat *format;
+@property (nonatomic, readonly) _Bool allowsImageOutput;
+
++ (Class)rendererContextClass;
++ (struct CGContext *)contextWithFormat:(id)arg1;
++ (void)prepareCGContext:(struct CGContext *)arg1 withRendererContext:(id)arg2;
++ (_Bool)_supportsContextReuse;
++ (struct CGContext *)_contextWithFormat:(id)arg1 renderer:(id)arg2;
++ (void)_destroyCGContext:(struct CGContext *)arg1 withRenderer:(id)arg2;
+
+- (id)init;
+- (id)initWithBounds:(struct CGRect)arg1 format:(id)arg2;
+- (void)pushContext:(id)arg1;
+- (void)popContext:(id)arg1;
+- (_Bool)runDrawingActions:(CDUnknownBlockType)arg1 completionActions:(CDUnknownBlockType)arg2 error:(id *)arg3;
+- (void)_prepareContextForReuse:(struct CGContext *)arg1;
+- (id)initWithBounds:(struct CGRect)arg1;
+- (_Bool)runDrawingActions:(CDUnknownBlockType)arg1 completionActions:(CDUnknownBlockType)arg2 format:(id)arg3 error:(id *)arg4;
+- (struct CGContext *)_dequeueContextForReuse;
+- (void)_enqueueContextForReuse:(struct CGContext *)arg1;
+- (void)_configureReuseState;
+- (id)initWithFormat:(id)arg1 bounds:(struct CGRect)arg2;
+
+@end

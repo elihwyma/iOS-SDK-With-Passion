@@ -1,0 +1,187 @@
+/*
+ Image: /System/Library/Frameworks/ImageCaptureCore.framework/ImageCaptureCore
+ */
+
+#import <ImageCaptureCore/ICDevice.h>
+
+@class NSArray, NSMutableArray, NSMutableIndexSet, NSMutableOrderedSet, NSMutableSet, NSNumber, NSObject, NSProgress, NSString, NSXPCConnection, NSXPCListenerEndpoint;
+
+@protocol OS_dispatch_queue;
+
+@interface ICCameraDevice : ICDevice
+
+{
+    struct os_unfair_lock_s _mediaFilesLock;
+    struct os_unfair_lock_s _contentsLock;
+    NSObject<OS_dispatch_queue> *_devCommandQueue;
+    NSObject<OS_dispatch_queue> *_devNotificationQueue;
+    NSXPCConnection *_devConnection;
+    unsigned long long _contentCatalogPercentCompleted;
+    _Bool _ejectable;
+    _Bool _locked;
+    _Bool _iCloudPhotosEnabled;
+    _Bool _batteryLevelAvailable;
+    _Bool _tetheredCaptureEnabled;
+    _Bool _contentReceived;
+    _Bool _basicMediaModel;
+    _Bool _ready;
+    _Bool _accessRestrictedAppleDevice;
+    _Bool _allowsSyncingClock;
+    _Bool _isEnumeratingContent;
+    _Bool _preheatMetadata;
+    _Bool _beingEjected;
+    NSString *_mountPoint;
+    double _timeOffset;
+    unsigned long long _batteryLevel;
+    CDUnknownBlockType _ptpEventHandler;
+    unsigned long long _estimatedCountOfMediafiles;
+    long long _preflightCountOfObjects;
+    double _downloadCancelTimestamp;
+    NSMutableIndexSet *_enumeratedObjectIndexes;
+    NSMutableArray *_originalMediaFiles;
+    NSMutableArray *_convertedMediaFiles;
+    NSMutableArray *_universalMediaFiles;
+    NSMutableOrderedSet *_indexedCameraFiles;
+    NSMutableOrderedSet *_indexedCameraFolders;
+    unsigned long long _appleRelatedUUIDSupport;
+    NSMutableArray *_devContents;
+    NSMutableArray *_devMediaFiles;
+    unsigned long long _devMediaPresentation;
+    unsigned long long _devFailureCount;
+    NSMutableSet *_devCapabilities;
+    unsigned long long _mediaObjectCount;
+    unsigned long long _estMediaObjectCount;
+    NSString *_devProductType;
+    NSXPCListenerEndpoint *_devEndpoint;
+    NSString *_buildVersion;
+    NSString *_deviceClass;
+    NSString *_deviceColor;
+    NSString *_deviceEnclosureColor;
+    NSNumber *_devicePairedState;
+    NSString *_productVersion;
+    NSArray *_supportedSidecarFiles;
+    long long _enumerationOrder;
+    NSProgress *_progress;
+}
+
+@property (nonatomic) _Bool contentReceived;
+@property unsigned long long estimatedCountOfMediafiles;
+@property long long preflightCountOfObjects;
+@property (nonatomic) double downloadCancelTimestamp;
+@property (retain, nonatomic) NSMutableIndexSet *enumeratedObjectIndexes;
+@property (retain, nonatomic) NSMutableArray *originalMediaFiles;
+@property (retain, nonatomic) NSMutableArray *convertedMediaFiles;
+@property (retain, nonatomic) NSMutableArray *universalMediaFiles;
+@property (retain, nonatomic) NSMutableOrderedSet *indexedCameraFiles;
+@property (retain, nonatomic) NSMutableOrderedSet *indexedCameraFolders;
+@property (nonatomic) unsigned long long appleRelatedUUIDSupport;
+@property (retain, nonatomic) NSMutableArray *devContents;
+@property (retain, nonatomic) NSMutableArray *devMediaFiles;
+@property unsigned long long devMediaPresentation;
+@property unsigned long long devFailureCount;
+@property (retain, nonatomic) NSMutableSet *devCapabilities;
+@property (nonatomic) unsigned long long mediaObjectCount;
+@property (nonatomic) unsigned long long estMediaObjectCount;
+@property (nonatomic) _Bool basicMediaModel;
+@property (copy, nonatomic) NSString *devProductType;
+@property (nonatomic) _Bool ready;
+@property (nonatomic, getter=isLocked) _Bool locked;
+@property (nonatomic) _Bool iCloudPhotosEnabled;
+@property (nonatomic, getter=isAccessRestrictedAppleDevice) _Bool accessRestrictedAppleDevice;
+@property (retain, nonatomic) NSXPCConnection *devConnection;
+@property (retain, nonatomic) NSXPCListenerEndpoint *devEndpoint;
+@property (nonatomic) _Bool batteryLevelAvailable;
+@property (nonatomic) unsigned long long batteryLevel;
+@property (nonatomic, readonly) unsigned long long numberOfDownloadableItems;
+@property (nonatomic, readonly) NSObject<OS_dispatch_queue> *deviceNotificationQueue;
+@property (nonatomic, readonly) NSObject<OS_dispatch_queue> *deviceCommandQueue;
+@property (nonatomic, getter=isEjectable) _Bool ejectable;
+@property (nonatomic) _Bool allowsSyncingClock;
+@property (readonly) NSString *buildVersion;
+@property (readonly) NSString *deviceClass;
+@property (readonly) NSString *deviceColor;
+@property (readonly) NSString *deviceEnclosureColor;
+@property (readonly) NSNumber *devicePairedState;
+@property (readonly) NSString *productType;
+@property (readonly) NSString *productVersion;
+@property (readonly) NSArray *supportedSidecarFiles;
+@property (readonly) _Bool isEnumeratingContent;
+@property (nonatomic) _Bool preheatMetadata;
+@property unsigned long long mediaPresentation;
+@property (nonatomic) _Bool beingEjected;
+@property (nonatomic) long long enumerationOrder;
+@property (retain, nonatomic) NSProgress *progress;
+@property (nonatomic, readonly) unsigned long long contentCatalogPercentCompleted;
+@property (nonatomic, readonly) NSArray *contents;
+@property (nonatomic, readonly) NSArray *mediaFiles;
+@property (nonatomic, readonly) NSString *mountPoint;
+@property (readonly) double timeOffset;
+@property (nonatomic, readonly) _Bool tetheredCaptureEnabled;
+@property (copy, nonatomic) CDUnknownBlockType ptpEventHandler;
+
++ (_Bool)automaticallyNotifiesObserversForKey:(id)arg1;
+
+- (id)init;
+- (void)dealloc;
+- (id)description;
+- (void)addFolder:(id)arg1;
+- (id)remoteCamera;
+- (unsigned long long)countOfObjects;
+- (void)setContentCatalogPercentCompleted:(unsigned long long)arg1;
+- (id)relateMedia:(id)arg1;
+- (_Bool)addMediaFiles:(id)arg1;
+- (unsigned long long)estimatedNumberOfDownloadableItems;
+- (void)addEstimatedNumberOfDownloadableItems:(long long)arg1;
+- (void)updateContentCatalogPercentCompleted;
+- (void)lockContents;
+- (void)unlockContents;
+- (void)lockMediaFiles;
+- (void)unlockMediaFiles;
+- (long long)stitchMedia:(id)arg1 withMedia:(id)arg2;
+- (id)ownerMedia:(id)arg1 withMedia:(id)arg2;
+- (void)grindMedia:(id [10])arg1 index:(int *)arg2 file:(id)arg3;
+- (void)blendMedia:(id [10])arg1 ofLength:(int)arg2 withMedia:(id [10])arg3 ofLength:(int)arg4;
+- (_Bool)legacyDevice;
+- (id)relateLegacyMedia:(id)arg1;
+- (id)relateGroupedMedia:(id)arg1;
+- (_Bool)addMediaFile:(id)arg1;
+- (id)cameraFolderWithObjectID:(unsigned long long)arg1;
+- (_Bool)updateMediaPresentation;
+- (void)popMediaFiles:(id)arg1;
+- (void)pushMediaFiles:(id)arg1;
+- (void)addNumberOfDownloadableItems:(long long)arg1;
+- (id)cameraFileWithObjectID:(unsigned long long)arg1;
+- (void)updateMediaFilesCount:(id)arg1;
+- (void)requestOpenSession;
+- (void)requestOpenSessionWithOptions:(id)arg1;
+- (void)requestOpenSessionWithOptions:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)dispatchAsyncForOperationType:(long long)arg1 block:(CDUnknownBlockType)arg2;
+- (void)requestCloseSessionWithOptions:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (id)requestDeleteFiles:(id)arg1 deleteFailed:(CDUnknownBlockType)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)setProductType:(id)arg1;
+- (_Bool)supportsMediaFormatCatalog;
+- (unsigned long long)increaseDeviceFailureCount;
+- (void)notifyDelegateOfAddedItem:(id)arg1;
+- (void)notifyDelegateOfAddedItems:(id)arg1 progress:(id)arg2;
+- (id)addCameraFiles:(id)arg1;
+- (void)discardCameraFiles:(id)arg1;
+- (void)removeMediaFile:(id)arg1;
+- (void)addCameraFolderToIndex:(id)arg1;
+- (void)removeCameraFolderFromIndex:(id)arg1;
+- (void)addCameraFileToIndex:(id)arg1;
+- (void)removeCameraFileFromIndex:(id)arg1;
+- (id)filesOfType:(id)arg1;
+- (void)handleCommandCompletionNotification:(id)arg1;
+- (void)handleImageCaptureEventNotification:(id)arg1;
+- (void)requestCloseSession;
+- (void)requestSyncClock;
+- (void)requestDeleteFiles:(id)arg1;
+- (void)requestEject;
+- (void)requestSendPTPCommand:(id)arg1 outData:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)setPtpEventForwarding:(_Bool)arg1;
+- (void)handlePTPEvent:(id)arg1;
+- (void)requestDownloadFile:(id)arg1 options:(id)arg2 downloadDelegate:(id)arg3 didDownloadSelector:(SEL)arg4 contextInfo:(void *)arg5;
+- (void)cancelDownload;
+- (void)removeFolder:(id)arg1;
+
+@end

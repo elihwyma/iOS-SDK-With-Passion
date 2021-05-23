@@ -1,0 +1,162 @@
+/*
+ Image: /System/Library/PrivateFrameworks/USDKit.framework/USDKit
+ */
+
+#import <USDKit/USKObject.h>
+
+@class MISSING_TYPE, NSString, USKToken;
+
+@interface USKProperty : USKObject
+
+{
+    struct UsdProperty _property;
+}
+
+@property (nonatomic, readonly) NSString *type;
+@property (nonatomic, readonly) USKToken *typeName;
+@property (nonatomic, readonly) NSString *role;
+@property (nonatomic, readonly) USKToken *roleName;
+
+- (float)floatValue;
+- (double)doubleValue;
+- (int)intValue;
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
+- (id)name;
+- (_Bool)boolValue;
+- (id)stringValue;
+- (id)data;
+- (id)path;
+- (id)resourcePath;
+- (void)setData:(id)arg1;
+- (void)setURL:(id)arg1;
+- (id)parentNode;
+- (id).cxx_construct;
+- (id)metadata;
+- (void)setStringValue:(id)arg1;
+- (void)setDoubleValue:(double)arg1;
+- (id)urlValue;
+- (_Bool)isAnimated;
+- (void)setBoolValue:(_Bool)arg1;
+- (void)setResourcePath:(id)arg1;
+- (id)stringArray;
+- (void)setIntValue:(int)arg1;
+- (MISSING_TYPE *)float2Value;
+- (MISSING_TYPE *)float3Value;
+- (MISSING_TYPE *)float4Value;
+- (void)setFloatValue:(float)arg1;
+- (void)setFloat2Value: /* Error: Ran out of types for this method. */;
+- (void)setFloat3Value: /* Error: Ran out of types for this method. */;
+- (void)setFloat4Value: /* Error: Ran out of types for this method. */;
+- (void)setFloat4x4Array:(CDStruct_f1db2b5e *)arg1 count:(unsigned long long)arg2;
+- (void)setDouble4x4Array:(CDStruct_f1db2b5e *)arg1 count:(unsigned long long)arg2;
+- (void)setFloatArray:(float *)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setDoubleArray:(double *)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setFloat3Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setDouble3Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setTokenValue:(id)arg1;
+- (_Bool)setConnectionWithTargetPaths:(id)arg1;
+- (void)setIntArray:(int *)arg1 count:(unsigned long long)arg2;
+- (void)setFloat3Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2;
+- (_Bool)setMetadataWithKey:(id)arg1 value:(id)arg2;
+- (void)setFloat2Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2;
+- (void)setObjectPath:(id)arg1;
+- (void)setStringArray:(id)arg1;
+- (void)setQuatfArray:(struct *)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setFloatArray:(float *)arg1 count:(unsigned long long)arg2;
+- (void)setDouble4x4Value:(CDStruct_f1db2b5e)arg1;
+- (void)setDouble4x4Value:(CDStruct_f1db2b5e)arg1 atTime:(double)arg2;
+- (void)setFloatValue:(float)arg1 atTime:(double)arg2;
+- (void)setFloat3Value:(double)arg1 atTime: /* Error: Ran out of types for this method. */;
+- (void)setQuatfValue:(struct)arg1 atTime:(double)arg2;
+- (void)setDouble3Value: /* Error: Ran out of types for this method. */;
+- (void)setQuatfValue:(struct)arg1;
+- (void)setTokenArray:(id)arg1;
+- (_Bool)setDictionaryMetadataWithKey:(id)arg1 dictionaryKey:(id)arg2 value:(id)arg3;
+- (id)targetObject;
+- (id)metadataWithKey:(id)arg1;
+- (unsigned long long)arraySize;
+- (CDStruct_f1db2b5e)double4x4Value;
+- (id)tokenValue;
+- (unsigned long long)double4x4Array:(CDStruct_f1db2b5e *)arg1 maxCount:(unsigned long long)arg2;
+- (id)timeSamples;
+- (unsigned long long)arraySizeAtTime:(double)arg1;
+- (unsigned long long)float3Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (unsigned long long)quatfArray:(struct *)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (id)tokenArray;
+- (MISSING_TYPE *)double2Value;
+- (MISSING_TYPE *)double3Value;
+- (MISSING_TYPE *)double4Value;
+- (struct)quatfValue;
+- (unsigned long long)intArray:(int *)arg1 maxCount:(unsigned long long)arg2;
+- (unsigned long long)quatfArray:(struct *)arg1 maxCount:(unsigned long long)arg2;
+- (id)resourcePathArray;
+- (unsigned long long)floatArray:(float *)arg1 maxCount:(unsigned long long)arg2;
+- (unsigned long long)float2Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2;
+- (unsigned long long)float3Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2;
+- (unsigned long long)float4Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2;
+- (unsigned long long)float4x4Array:(CDStruct_f1db2b5e *)arg1 maxCount:(unsigned long long)arg2;
+- (unsigned long long)doubleArray:(double *)arg1 maxCount:(unsigned long long)arg2;
+- (unsigned long long)double2Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2;
+- (unsigned long long)double3Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2;
+- (unsigned long long)double4Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2;
+- (void)setDouble2Value: /* Error: Ran out of types for this method. */;
+- (void)setDouble4Value: /* Error: Ran out of types for this method. */;
+- (void)setQuatfArray:(struct *)arg1 count:(unsigned long long)arg2;
+- (void)setResourcePathArray:(id)arg1;
+- (void)setFloat4Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2;
+- (void)setDoubleArray:(double *)arg1 count:(unsigned long long)arg2;
+- (void)setDouble2Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2;
+- (void)setDouble3Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2;
+- (void)setDouble4Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2;
+- (id)initWithUsdProperty:(struct UsdProperty)arg1;
+- (_Bool)setCustomMetadata:(id)arg1 value:(id)arg2;
+- (id)dictionaryMetadataWithKey:(id)arg1 dictionaryKey:(id)arg2;
+- (id)customMetadataWithKey:(id)arg1;
+- (struct UsdProperty)usdProperty;
+- (id)dataAtTime:(double)arg1;
+- (id)connectedPropertyPath;
+- (id)connectedPropertyPaths;
+- (double)doubleValueAtTime:(double)arg1;
+- (MISSING_TYPE *)double2ValueAtTime:(double)arg1;
+- (MISSING_TYPE *)double3ValueAtTime:(double)arg1;
+- (MISSING_TYPE *)double4ValueAtTime:(double)arg1;
+- (CDStruct_f1db2b5e)double4x4ValueAtTime:(double)arg1;
+- (float)floatValueAtTime:(double)arg1;
+- (MISSING_TYPE *)float2ValueAtTime:(double)arg1;
+- (MISSING_TYPE *)float3ValueAtTime:(double)arg1;
+- (MISSING_TYPE *)float4ValueAtTime:(double)arg1;
+- (struct)quatfValueAtTime:(double)arg1;
+- (unsigned long long)intArray:(int *)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (id)stringArrayAtTime:(double)arg1;
+- (id)tokenArrayAtTime:(double)arg1;
+- (id)objectPath;
+- (id)objectPathArray;
+- (unsigned long long)floatArray:(float *)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (unsigned long long)float2Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (unsigned long long)float4Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (unsigned long long)float4x4Array:(CDStruct_f1db2b5e *)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (unsigned long long)doubleArray:(double *)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (unsigned long long)double2Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (unsigned long long)double3Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (unsigned long long)double4Array:(MISSING_TYPE **)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (unsigned long long)double4x4Array:(CDStruct_f1db2b5e *)arg1 maxCount:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setData:(id)arg1 atTime:(double)arg2;
+- (void)setDoubleValue:(double)arg1 atTime:(double)arg2;
+- (void)setDouble2Value:(double)arg1 atTime: /* Error: Ran out of types for this method. */;
+- (void)setDouble3Value:(double)arg1 atTime: /* Error: Ran out of types for this method. */;
+- (void)setDouble4Value:(double)arg1 atTime: /* Error: Ran out of types for this method. */;
+- (void)setFloat2Value:(double)arg1 atTime: /* Error: Ran out of types for this method. */;
+- (void)setFloat4Value:(double)arg1 atTime: /* Error: Ran out of types for this method. */;
+- (void)setIntArray:(int *)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setStringArray:(id)arg1 atTime:(double)arg2;
+- (void)setTokenArray:(id)arg1 atTime:(double)arg2;
+- (void)setFloat2Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setFloat4Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setFloat4x4Array:(CDStruct_f1db2b5e *)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setDouble2Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setDouble4Array:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setDouble4x4Array:(CDStruct_f1db2b5e *)arg1 count:(unsigned long long)arg2 atTime:(double)arg3;
+- (void)setObjectPathArray:(id)arg1;
+
+@end

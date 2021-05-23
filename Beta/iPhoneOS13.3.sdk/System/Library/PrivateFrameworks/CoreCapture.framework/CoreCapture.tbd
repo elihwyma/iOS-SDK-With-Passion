@@ -1,0 +1,12 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: 57BAAF51-32C6-396A-83A3-E0AC8259497A' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/CoreCapture.framework/CoreCapture
+current-version:       1
+compatibility-version: 1
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ dyld_stub_binder ]
+...

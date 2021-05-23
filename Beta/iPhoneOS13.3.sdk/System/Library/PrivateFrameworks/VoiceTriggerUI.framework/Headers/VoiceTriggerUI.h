@@ -1,0 +1,56 @@
+/*
+ Image: /System/Library/PrivateFrameworks/VoiceTriggerUI.framework/VoiceTriggerUI
+ */
+
+#import <VoiceTriggerUI/VoiceTriggerUI-Structures.h>
+
+#import <VoiceTriggerUI/(null).h>
+#import <VoiceTriggerUI/(null).h>
+#import <VoiceTriggerUI/(null).h>
+#import <VoiceTriggerUI/(null).h>
+#import <VoiceTriggerUI/(null).h>
+#import <VoiceTriggerUI/(null).h>
+#import <VoiceTriggerUI/(null).h>
+#import <VoiceTriggerUI/(null).h>
+#import <VoiceTriggerUI/(null).h>
+#import <VoiceTriggerUI/AFMyriadDelegate-Protocol.h>
+#import <VoiceTriggerUI/AFUIDebugControllerDelegate-Protocol.h>
+#import <VoiceTriggerUI/AFUISiriLanguageDelegate-Protocol.h>
+#import <VoiceTriggerUI/CSVTUITrainingManagerDelegate-Protocol.h>
+#import <VoiceTriggerUI/NSObject-Protocol.h>
+#import <VoiceTriggerUI/NSString-VTUIEditDistance.h>
+#import <VoiceTriggerUI/SUICFlamesViewDelegate-Protocol.h>
+#import <VoiceTriggerUI/Swift-Protocol.h>
+#import <VoiceTriggerUI/UIPickerViewDataSource-Protocol.h>
+#import <VoiceTriggerUI/UIPickerViewDelegate-Protocol.h>
+#import <VoiceTriggerUI/UIScrollViewDelegate-Protocol.h>
+#import <VoiceTriggerUI/UITextViewDelegate-Protocol.h>
+#import <VoiceTriggerUI/VSSpeechSynthesizerDelegate-Protocol.h>
+#import <VoiceTriggerUI/VTUIArtworksManager.h>
+#import <VoiceTriggerUI/VTUIAudioHintPlayer.h>
+#import <VoiceTriggerUI/VTUIDictationDataSharingOptInAlertViewModel.h>
+#import <VoiceTriggerUI/VTUIDictationDataSharingOptInPresenter.h>
+#import <VoiceTriggerUI/VTUIDictationDataSharingReminderAlertViewModel.h>
+#import <VoiceTriggerUI/VTUIEnrollmentLanguageOptionsView.h>
+#import <VoiceTriggerUI/VTUIEnrollmentSetupIntroViewDelegate-Protocol.h>
+#import <VoiceTriggerUI/VTUIEnrollmentSuccessView.h>
+#import <VoiceTriggerUI/VTUIEnrollTrainingViewDelegate-Protocol.h>
+#import <VoiceTriggerUI/VTUIPagedLabel.h>
+#import <VoiceTriggerUI/VTUIProximityContainerView.h>
+#import <VoiceTriggerUI/VTUIProximityDataSharingOptInView.h>
+#import <VoiceTriggerUI/VTUIProximityEnrollmentLanguageOptionsView.h>
+#import <VoiceTriggerUI/VTUIProximityEnrollmentSetupIntroView.h>
+#import <VoiceTriggerUI/VTUIProximityEnrollmentSuccessView.h>
+#import <VoiceTriggerUI/VTUIProximityEnrollTrainingView.h>
+#import <VoiceTriggerUI/VTUIProximityEnrollTrainingViewController.h>
+#import <VoiceTriggerUI/VTUIProximityTryAgainView.h>
+#import <VoiceTriggerUI/VTUIProximityView.h>
+#import <VoiceTriggerUI/VTUISigmoid.h>
+#import <VoiceTriggerUI/VTUISiriDataSharingOptInPresentationDelegate-Protocol.h>
+#import <VoiceTriggerUI/VTUISiriDataSharingOptInPresenter.h>
+#import <VoiceTriggerUI/VTUISiriDataSharingOptInViewController.h>
+#import <VoiceTriggerUI/VTUISiriDataSharingOptInViewControllerDelegate-Protocol.h>
+#import <VoiceTriggerUI/VTUISpeechSynthesizer.h>
+#import <VoiceTriggerUI/VTUITickMarkView.h>
+#import <VoiceTriggerUI/VTUITurnOnSiriImageView.h>
+#import <VoiceTriggerUI/VTVideoView.h>

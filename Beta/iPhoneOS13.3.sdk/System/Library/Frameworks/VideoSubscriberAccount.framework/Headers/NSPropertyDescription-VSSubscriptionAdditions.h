@@ -1,0 +1,25 @@
+/*
+ Image: /System/Library/Frameworks/VideoSubscriberAccount.framework/VideoSubscriberAccount
+ */
+
+#import <CoreData/NSPropertyDescription.h>
+
+@class NSArray, NSString;
+
+@interface NSPropertyDescription (VSSubscriptionAdditions)
+
+@property (copy, nonatomic, getter=vs_subscriptionKeyPath, setter=vs_setSubscriptionKeyPath:) NSString *subscriptionKeyPath;
+@property (nonatomic, getter=vs_suitablePurposes, setter=vs_setSuitablePurposes:) long long suitablePurposes;
+@property (copy, nonatomic, getter=vs_propertyListKey, setter=vs_setPropertyListKey:) NSString *propertyListKey;
+@property (copy, nonatomic, getter=vs_propertyListValueTransformerName, setter=vs_setPropertyListValueTransformerName:) NSString *propertyListValueTransformerName;
+@property (copy, nonatomic, getter=vs_JSONKey, setter=vs_setJSONKey:) NSString *JSONKey;
+@property (nonatomic, getter=vs_isRequiredJSONValue, setter=vs_setRequiredJSONValue:) _Bool requiredJSONValue;
+@property (copy, nonatomic, getter=vs_expectedJSONValueClasses, setter=vs_setExpectedJSONValueClasses:) NSArray *expectedJSONValueClass;
+@property (copy, nonatomic, getter=vs_JSONValueTransformerName, setter=vs_setJSONValueTransformerName:) NSString *JSONValueTransformerName;
+
+- (_Bool)vs_isSuitableForPurpose:(long long)arg1;
+- (id)vs_JSONValueTransformer;
+- (void)vs_setUserInfoValue:(id)arg1 forKey:(id)arg2;
+- (id)vs_propertyListValueTransformer;
+
+@end

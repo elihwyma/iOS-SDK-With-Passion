@@ -1,0 +1,57 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CoreDuetContext.framework/CoreDuetContext
+ */
+
+#import <CoreDuetContext/CoreDuetContext-Structures.h>
+
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/(null).h>
+#import <CoreDuetContext/_CDAsyncContext-Protocol.h>
+#import <CoreDuetContext/_CDAsyncLocalContext-Protocol.h>
+#import <CoreDuetContext/_CDAsyncUserContext-Protocol.h>
+#import <CoreDuetContext/_CDContext-Protocol.h>
+#import <CoreDuetContext/_CDContextInternal-Protocol.h>
+#import <CoreDuetContext/_CDContextPersisting-Protocol.h>
+#import <CoreDuetContext/_CDContextQueries.h>
+#import <CoreDuetContext/_CDContextServer-Protocol.h>
+#import <CoreDuetContext/_CDContextualChangeRegistration.h>
+#import <CoreDuetContext/_CDContextualKeyPath.h>
+#import <CoreDuetContext/_CDContextualKeyPathAndValue.h>
+#import <CoreDuetContext/_CDCoreDataContextPersisting.h>
+#import <CoreDuetContext/_CDDictionaryEncoding-Protocol.h>
+#import <CoreDuetContext/_CDLocalContext-Protocol.h>
+#import <CoreDuetContext/_CDLocalContextServer-Protocol.h>
+#import <CoreDuetContext/_CDLogging-CDUserContext.h>
+#import <CoreDuetContext/_CDSharedMemoryContextPersisting.h>
+#import <CoreDuetContext/_CDUserContext-Protocol.h>
+#import <CoreDuetContext/_CDUserContextServer-Protocol.h>
+#import <CoreDuetContext/_CDUserContextServerMonitoring-Protocol.h>
+#import <CoreDuetContext/_CDXPCEventPublisherDelegate-Protocol.h>
+#import <CoreDuetContext/CLLocationManagerDelegate-Protocol.h>
+#import <CoreDuetContext/INIntent-CoreDuetContext.h>
+#import <CoreDuetContext/INInteraction-CoreDuetContext.h>
+#import <CoreDuetContext/NSCoding-Protocol.h>
+#import <CoreDuetContext/NSCopying-Protocol.h>
+#import <CoreDuetContext/NSObject-Protocol.h>
+#import <CoreDuetContext/NSSecureCoding-Protocol.h>
+#import <CoreDuetContext/NSXPCListenerDelegate-Protocol.h>
+#import <CoreDuetContext/Swift-Protocol.h>

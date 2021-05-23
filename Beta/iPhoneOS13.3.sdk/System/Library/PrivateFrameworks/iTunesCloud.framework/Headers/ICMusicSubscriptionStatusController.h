@@ -1,0 +1,60 @@
+/*
+ Image: /System/Library/PrivateFrameworks/iTunesCloud.framework/iTunesCloud
+ */
+
+#import <NSObject.h>
+
+@class NSMutableDictionary, NSOperationQueue, NSString, NSXPCConnection;
+
+@protocol OS_dispatch_queue, OS_dispatch_source;
+
+@interface ICMusicSubscriptionStatusController : NSObject
+
+{
+    NSObject<OS_dispatch_queue> *_accessQueue;
+    NSObject<OS_dispatch_queue> *_callbackQueue;
+    unsigned long long _numberOfActiveRemoteRequests;
+    NSOperationQueue *_operationQueue;
+    NSXPCConnection *_remoteRequestingClientConnection;
+    NSObject<OS_dispatch_source> *_remoteRequestingClientConnectionInvalidationTimer;
+    NSMutableDictionary *_statusHandlers;
+}
+
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
++ (id)sharedStatusController;
++ (_Bool)_hasEntitlementForMusicSubscriptionStatusService;
+
+- (id)init;
+- (void)dealloc;
+- (void)performSubscriptionStatusRequest:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)getSubscriptionStatusWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)_handleSubscriptionStatusCacheDidChangeNotification:(id)arg1;
+- (void)_handleSubscriptionStatusCacheUnderlyingCachingPropertiesDidChangeNotification:(id)arg1;
+- (void)_cancelRemoteRequestingClientConnectionInvalidationTimer;
+- (void)_invalidateRemoteRequestingClientConnection;
+- (void)getSubscriptionStatusForUserIdentity:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)getSubscriptionStatusForUserIdentity:(id)arg1 bypassingCache:(_Bool)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
+- (void)performSubscriptionStatusRequest:(id)arg1 withStatusHandler:(CDUnknownBlockType)arg2;
+- (void)_willBeginRemoteRequestForUniqueIdentifier:(id)arg1 statusHandler:(CDUnknownBlockType)arg2;
+- (id)_remoteRequestingClientConnection;
+- (void)deliverSubscriptionStatusResponse:(id)arg1 forUniqueIdentifier:(id)arg2 error:(id)arg3;
+- (void)enableSubscriptionForUserIdentity:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)disableSubscriptionForUserIdentity:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)refreshSubscriptionForUserIdentity:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)refreshSubscriptionUsingRequestContext:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (CDUnknownBlockType)_statusHandlerForUniqueIdentifier:(id)arg1;
+- (void)_didEndRemoteRequestForUniqueIdentifier:(id)arg1;
+- (void)_scheduleInvalidationOfRemoteRequestingClientConnection;
+- (void)_remoteRequestingClientConnectionInvalidationTimerDidExpire;
+- (void)enableSubscriptionWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)disableSubscriptionWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)refreshSubscriptionWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)invalidateCachedSubscriptionStatusWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)invalidateCachedSubscriptionStatusForUserIdentity:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)enablePeriodicSubscriptionRefresh;
+
+@end

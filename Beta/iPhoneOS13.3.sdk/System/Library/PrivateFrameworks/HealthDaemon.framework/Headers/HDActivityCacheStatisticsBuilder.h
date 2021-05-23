@@ -1,0 +1,80 @@
+/*
+ Image: /System/Library/PrivateFrameworks/HealthDaemon.framework/HealthDaemon
+ */
+
+#import <Foundation/NSObject.h>
+
+@class HKQuantity, NSNumber, NSString;
+
+@protocol HDActivityCacheStatisticsBuilderSourceOrderDelegate;
+
+@interface HDActivityCacheStatisticsBuilder : NSObject
+
+{
+    vector_89c96404 _workouts;
+    vector_6cc1e454 _standHourSamples;
+    vector_67487aec _activationLogSamples;
+    HKQuantity *_lastActiveEnergyValue;
+    NSNumber *_lastMoveMinuteValue;
+    HKQuantity *_lastDistanceWalkingValue;
+    NSNumber *_lastFlightsClimbedValue;
+    NSNumber *_lastStepCountValue;
+    NSNumber *_lastPushCountValue;
+    NSNumber *_lastStandHourValue;
+    NSNumber *_lastExerciseMinuteValue;
+    double _deepBreathingDurationValue;
+    vector_67487aec _activeSourcesList;
+    struct map<_HKDataTypeCode, std::__1::map<long long, _HDActivityCacheSourceTotal, std::__1::less<long long>, std::__1::allocator<std::__1::pair<const long long, _HDActivityCacheSourceTotal>>>, std::__1::less<_HKDataTypeCode>, std::__1::allocator<std::__1::pair<const _HKDataTypeCode, std::__1::map<long long, _HDActivityCacheSourceTotal, std::__1::less<long long>, std::__1::allocator<std::__1::pair<const long long, _HDActivityCacheSourceTotal>>>>>> _sourceTotalsByIntervalIndexByTypeCode;
+    double _builderStartTime;
+    double _builderEndTime;
+    NSString *_loggingName;
+    double _intervalDuration;
+    id <HDActivityCacheStatisticsBuilderSourceOrderDelegate> _sourceOrderDelegate;
+}
+
+@property (nonatomic) double intervalDuration;
+@property (weak, nonatomic) id <HDActivityCacheStatisticsBuilderSourceOrderDelegate> sourceOrderDelegate;
+
+- (id)init;
+- (id).cxx_construct;
+- (id)_loggingPrefix;
+- (void)addWorkouts:(const vector_89c96404 *)arg1;
+- (id)createMoveStatisticsWithIntervalComponents:(id)arg1 calendar:(id)arg2;
+- (id)createExerciseStatisticsWithIntervalComponents:(id)arg1 calendar:(id)arg2;
+- (id)createStandStatisticsWithCalendar:(id)arg1;
+- (id)workoutSamplesWithSourceManager:(id)arg1;
+- (id)activeEnergyValue;
+- (id)distanceWalkingValue;
+- (long long)standHourValue;
+- (long long)exerciseMinuteValue;
+- (long long)pushCountValue;
+- (long long)stepCountValue;
+- (double)deepBreathingDurationValue;
+- (long long)flightsClimbedValue;
+- (id)initWithDateInterval:(id)arg1 loggingName:(id)arg2;
+- (void)addActivationLogSamples:(const vector_7eaa0458 *)arg1;
+- (void)addDeepBreathingSessionDuration:(double)arg1;
+- (void)addStandHourSamples:(const vector_6cc1e454 *)arg1;
+- (void)addDeviceSamples:(const vector_7eaa0458 *)arg1 typeCode:(long long)arg2;
+- (void)addDeviceSample:(struct HDActivityCacheStatisticsBuilderSample)arg1 typeCode:(long long)arg2;
+- (void)addWorkoutSample:(struct HDActivityCacheStatisticsBuilderSample)arg1 typeCode:(long long)arg2;
+- (vector_d87a6415)_sourceOrderForTypeCode:(long long)arg1;
+- (double)_sumSourceTotals:(map_c63dce6d *)arg1 orderedSources:(vector_d87a6415)arg2;
+- (id)_workoutIdentifiersStringForActiveSource:(struct HDActivityCacheActiveSource *)arg1;
+- (void)_logActiveSourcesList:(vector_67487aec *)arg1;
+- (void)_resetAllCachedValues;
+- (void)_clearActiveSources;
+- (void)_clearCachedValueForTypeCode:(long long)arg1;
+- (vector_67487aec)_activeSourceVectorFromActivationLogSamples:(const vector_7eaa0458 *)arg1;
+- (void)_addSample:(struct HDActivityCacheStatisticsBuilderSample)arg1 toSourceTotals:(map_c63dce6d *)arg2 fromWorkout:(_Bool)arg3;
+- (void)_addSamples:(const vector_7eaa0458 *)arg1 toSourceTotals:(map_c63dce6d *)arg2 fromWorkout:(_Bool)arg3;
+- (_Bool)_sourceMapIsEmpty:(const map_c63dce6d *)arg1;
+- (double)_minTimestampInSourceTotals:(const map_c63dce6d *)arg1;
+- (double)_maxTimestampInSourceTotals:(const map_c63dce6d *)arg1;
+- (double)_sumSourceTotals:(map_c63dce6d *)arg1 orderedSources:(vector_d87a6415)arg2 strictStartTime:(double)arg3 strictEndTime:(double)arg4;
+- (id)_createStatisticsForType:(id)arg1 withIntervalComponents:(id)arg2 calendar:(id)arg3;
+- (void)_loadActiveSourceList;
+- (long long)moveMinuteValue;
+- (id)createStatisticsCollectionWithType:(id)arg1 intervalComponents:(id)arg2 calendar:(id)arg3;
+
+@end

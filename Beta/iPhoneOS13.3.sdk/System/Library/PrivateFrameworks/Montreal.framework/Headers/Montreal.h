@@ -1,0 +1,54 @@
+/*
+ Image: /System/Library/PrivateFrameworks/Montreal.framework/Montreal
+ */
+
+#import <Montreal/Montreal-Structures.h>
+
+#import <Montreal/MLPCNNNetwork.h>
+#import <Montreal/MLPConvolutionBase.h>
+#import <Montreal/MLPConvolutionLayer.h>
+#import <Montreal/MLPData.h>
+#import <Montreal/MLPDataBatch.h>
+#import <Montreal/MLPDenseLayer.h>
+#import <Montreal/MLPDeviceHandler.h>
+#import <Montreal/MLPDropoutLayer.h>
+#import <Montreal/MLPEmbeddingLayer.h>
+#import <Montreal/MLPImageDataBatch.h>
+#import <Montreal/MLPImageLayer.h>
+#import <Montreal/MLPInferenceResult.h>
+#import <Montreal/MLPLayer.h>
+#import <Montreal/MLPLayerOptimizerProtocol-Protocol.h>
+#import <Montreal/MLPLearningRateDecayHandler.h>
+#import <Montreal/MLPLearningRateDecayHandlerDelegate-Protocol.h>
+#import <Montreal/MLPLossLayer.h>
+#import <Montreal/MLPLSTMLayer.h>
+#import <Montreal/MLPMatrixLayer.h>
+#import <Montreal/MLPModelConvolutionDataSource.h>
+#import <Montreal/MLPModelLSTMDataSource.h>
+#import <Montreal/MLPNDArrayLossLabels.h>
+#import <Montreal/MLPNetwork.h>
+#import <Montreal/MLPOptimizer.h>
+#import <Montreal/MLPOptimizerAdam.h>
+#import <Montreal/MLPOptimizerSGD.h>
+#import <Montreal/MLPPoolingLayer.h>
+#import <Montreal/MLPSeqDataBatch.h>
+#import <Montreal/MLPSeqNetwork.h>
+#import <Montreal/MontrealLogIndent.h>
+#import <Montreal/MontrealModelJSONParser.h>
+#import <Montreal/MontrealNNDescription.h>
+#import <Montreal/MontrealNNDescriptionProtocol-Protocol.h>
+#import <Montreal/MontrealNNGenerateModel.h>
+#import <Montreal/MontrealNNGenerateNode.h>
+#import <Montreal/MontrealNNModelNetwork.h>
+#import <Montreal/MontrealNNModelNode.h>
+#import <Montreal/MontrealNNModelOptimizerParam.h>
+#import <Montreal/MontrealNNModelQuantization.h>
+#import <Montreal/MontrealNNModelTensor.h>
+#import <Montreal/MontrealNNModelWeight.h>
+#import <Montreal/MPSCNNConvolutionDataSource-Protocol.h>
+#import <Montreal/MPSMatrix-Utils.h>
+#import <Montreal/NSArray-Utils.h>
+#import <Montreal/NSCopying-Protocol.h>
+#import <Montreal/NSDictionary-Utils.h>
+#import <Montreal/NSObject-Protocol.h>
+#import <Montreal/Swift-Protocol.h>

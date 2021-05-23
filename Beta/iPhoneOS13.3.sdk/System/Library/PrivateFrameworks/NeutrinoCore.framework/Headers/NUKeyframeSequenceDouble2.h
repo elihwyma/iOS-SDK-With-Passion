@@ -1,0 +1,27 @@
+/*
+ Image: /System/Library/PrivateFrameworks/NeutrinoCore.framework/NeutrinoCore
+ */
+
+#import <NeutrinoCore/NUKeyframeSequence.h>
+
+@class MISSING_TYPE;
+
+@interface NUKeyframeSequenceDouble2 : NUKeyframeSequence
+
+{
+    MISSING_TYPE *_scale;
+    MISSING_TYPE *_bias;
+    MISSING_TYPE **_values;
+}
+
+- (void)dealloc;
+- (id)debugQuickLookObject;
+- (MISSING_TYPE *)sampleAtTime:(CDStruct_1b6d18a9)arg1;
+- (id)sparseSequence;
+- (void)_compressAndStoreValues:(MISSING_TYPE **)arg1 count:(unsigned long long)arg2;
+- (id)initWithInterpolation:(long long)arg1 count:(unsigned long long)arg2 times:(CDStruct_1b6d18a9 *)arg3 values:(MISSING_TYPE **)arg4;
+- (id)initWithKeyframeSequence:(id)arg1 values:(MISSING_TYPE **)arg2;
+- (MISSING_TYPE *)valueOfKeyframeAtIndex:(long long)arg1;
+- (MISSING_TYPE *)tangentOfKeyframeAtIndex:(long long)arg1;
+
+@end

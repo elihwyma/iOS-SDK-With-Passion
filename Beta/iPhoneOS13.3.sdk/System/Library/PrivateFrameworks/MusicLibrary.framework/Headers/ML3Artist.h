@@ -1,0 +1,27 @@
+/*
+ Image: /System/Library/PrivateFrameworks/MusicLibrary.framework/MusicLibrary
+ */
+
+#import <MusicLibrary/ML3Collection.h>
+
+@interface ML3Artist : ML3Collection
+
++ (void)initialize;
++ (id)allProperties;
++ (long long)revisionTrackingCode;
++ (id)trackForeignPersistentID;
++ (id)defaultOrderingTerms;
++ (id)databaseTable;
++ (_Bool)propertyIsCountProperty:(id)arg1;
++ (id)countingQueryForBaseQuery:(id)arg1 countProperty:(id)arg2 forIdentifier:(long long)arg3;
++ (id)predisambiguatedProperties;
++ (id)foreignPropertyForProperty:(id)arg1 entityClass:(Class)arg2;
++ (id)propertiesForGroupingKey;
++ (id)propertiesForGroupingUniqueCollections;
++ (id)protocolItemWithProperties:(id)arg1 inLibrary:(id)arg2;
+
+- (id)multiverseIdentifier;
+- (void)updateTrackValues:(id)arg1;
+- (id)protocolItem;
+
+@end

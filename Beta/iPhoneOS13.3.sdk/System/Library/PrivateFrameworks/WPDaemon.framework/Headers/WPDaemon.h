@@ -1,0 +1,51 @@
+/*
+ Image: /System/Library/PrivateFrameworks/WPDaemon.framework/WPDaemon
+ */
+
+#import <WPDaemon/WPDaemon-Structures.h>
+
+#import <WPDaemon/CBCentralManagerDelegate-Protocol.h>
+#import <WPDaemon/CBPeripheralDelegate-Protocol.h>
+#import <WPDaemon/CBPeripheralManagerDelegate-Protocol.h>
+#import <WPDaemon/CBScalablePipeManagerDelegate-Protocol.h>
+#import <WPDaemon/Endpoint.h>
+#import <WPDaemon/NSCoding-Protocol.h>
+#import <WPDaemon/NSCopying-Protocol.h>
+#import <WPDaemon/NSObject-Protocol.h>
+#import <WPDaemon/NSSecureCoding-Protocol.h>
+#import <WPDaemon/NSStreamDelegate-Protocol.h>
+#import <WPDaemon/NSXPCListenerDelegate-Protocol.h>
+#import <WPDaemon/PipeDataTransfer.h>
+#import <WPDaemon/PipeInfo.h>
+#import <WPDaemon/Swift-Protocol.h>
+#import <WPDaemon/WPAdvertisingRequest.h>
+#import <WPDaemon/WPAdvertisingRequestsQueue.h>
+#import <WPDaemon/WPCharacteristic.h>
+#import <WPDaemon/WPDAdvertisingData.h>
+#import <WPDaemon/WPDAdvertisingManager.h>
+#import <WPDaemon/WPDaemonServer.h>
+#import <WPDaemon/WPDClient.h>
+#import <WPDaemon/WPDClientProtocol-Protocol.h>
+#import <WPDaemon/WPDConnection.h>
+#import <WPDaemon/WPDManager.h>
+#import <WPDaemon/WPDObjectDiscoveryAdvertiser-Protocol.h>
+#import <WPDaemon/WPDObjectDiscoveryClient.h>
+#import <WPDaemon/WPDObjectDiscoveryData.h>
+#import <WPDaemon/WPDObjectDiscoveryManager.h>
+#import <WPDaemon/WPDObjectDiscoveryScanner-Protocol.h>
+#import <WPDaemon/WPDPendingCompletions.h>
+#import <WPDaemon/WPDPersistence.h>
+#import <WPDaemon/WPDPipeManager.h>
+#import <WPDaemon/WPDScanManager.h>
+#import <WPDaemon/WPDSearchPartyAgent.h>
+#import <WPDaemon/WPDStat.h>
+#import <WPDaemon/WPDState.h>
+#import <WPDaemon/WPDStatsManager.h>
+#import <WPDaemon/WPDXPCInterfaces.h>
+#import <WPDaemon/WPDZoneManager.h>
+#import <WPDaemon/WPPeerTrackingRequest.h>
+#import <WPDaemon/WPScanRequest.h>
+#import <WPDaemon/WPXPCClientProtocol-Protocol.h>
+#import <WPDaemon/WPXPCDaemonProtocol-Protocol.h>
+#import <WPDaemon/WPXPCTickleProtocol-Protocol.h>
+#import <WPDaemon/WPZoneTrackingRequest.h>

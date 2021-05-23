@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CalendarNotification.framework/CalendarNotification
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface CALNEventRepresentationDataSourceUtils : NSObject
+
++ (id)_userActivityUserInfoForEvent:(id)arg1;
++ (void)updateEventRepresentation:(id)arg1 forEvent:(id)arg2;
+
+@end

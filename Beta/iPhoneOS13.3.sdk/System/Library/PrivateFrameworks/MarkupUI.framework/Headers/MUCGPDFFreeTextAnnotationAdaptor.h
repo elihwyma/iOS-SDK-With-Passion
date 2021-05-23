@@ -1,0 +1,13 @@
+/*
+ Image: /System/Library/PrivateFrameworks/MarkupUI.framework/MarkupUI
+ */
+
+#import <MarkupUI/MUCGPDFAnnotationAdaptor.h>
+
+__attribute__((visibility("hidden")))
+@interface MUCGPDFFreeTextAnnotationAdaptor : MUCGPDFAnnotationAdaptor
+
++ (id)_concreteAKAnnotationWithCGPDFAnnotation:(struct CGPDFAnnotation *)arg1 ofPage:(struct CGPDFPage *)arg2;
++ (id)_concreteDictionaryRepresentationOfAKAnnotation:(id)arg1 forPage:(struct CGPDFPage *)arg2;
+
+@end

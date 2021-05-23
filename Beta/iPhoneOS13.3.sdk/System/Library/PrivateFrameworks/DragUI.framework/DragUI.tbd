@@ -1,0 +1,13 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: 0B978C4F-93FC-3849-A4E2-B48C4711DF0E' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/DragUI.framework/DragUI
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ dyld_stub_binder ]
+...

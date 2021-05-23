@@ -1,0 +1,26 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: DB61858C-5DE5-3A8D-974C-F3BDFDBC2D0D' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/DASActivitySchedulerUI.framework/DASActivitySchedulerUI
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64 ]
+    objc-classes:         [ __DASUIFetchContentInBackgroundAction,
+                            __DASUIFetchContentInBackgroundActionResponse,
+                            __DASUIHandleRemoteNotificationAction ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ ___CFConstantStringClassReference,
+                            __objc_empty_cache, _objc_alloc,
+                            _objc_autoreleaseReturnValue, _objc_msgSend,
+                            _objc_msgSendSuper2, _objc_release, _objc_retain,
+                            _objc_retainAutoreleaseReturnValue,
+                            _objc_retainAutoreleasedReturnValue,
+                            dyld_stub_binder ]
+    objc-classes:         [ _BSAction, _BSActionResponse, _BSMutableSettings,
+                            _NSNumber, _NSObject ]
+...

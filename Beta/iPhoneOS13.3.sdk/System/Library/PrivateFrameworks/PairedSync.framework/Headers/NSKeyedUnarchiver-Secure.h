@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/PrivateFrameworks/PairedSync.framework/PairedSync
+ */
+
+#import <Foundation/NSKeyedUnarchiver.h>
+
+@interface NSKeyedUnarchiver (Secure)
+
++ (id)secureUnarchiveObjectOfClasses:(id)arg1 withData:(id)arg2;
++ (id)secureUnarchiveObjectOfClasses:(id)arg1 withFile:(id)arg2;
+
+@end

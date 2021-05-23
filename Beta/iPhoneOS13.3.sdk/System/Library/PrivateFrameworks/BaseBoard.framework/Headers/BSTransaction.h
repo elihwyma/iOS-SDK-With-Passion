@@ -1,0 +1,180 @@
+/*
+ Image: /System/Library/PrivateFrameworks/BaseBoard.framework/BaseBoard
+ */
+
+#import <Foundation/NSObject.h>
+
+@class BSAuditHistory, NSArray, NSDate, NSError, NSHashTable, NSMutableArray, NSMutableDictionary, NSMutableSet, NSSet, NSString;
+
+@protocol OS_dispatch_queue, OS_os_log;
+
+@interface BSTransaction : NSObject
+
+{
+    NSMutableArray *_parentTransactionRelationships;
+    NSMutableSet *_lifeAssertions;
+    _Bool _failed;
+    _Bool _aborted;
+    _Bool _interrupted;
+    _Bool _inSubclassBegin;
+    NSError *_error;
+    NSDate *_startTime;
+    NSMutableDictionary *_milestonesToHandlers;
+    NSMutableArray *_childTransactionRelationships;
+    NSMutableSet *_milestones;
+    NSHashTable *_observers;
+    unsigned long long _state;
+    BSAuditHistory *_auditHistory;
+    NSObject<OS_os_log> *_auditHistoryLog;
+    _Bool _disableDebugLogCheckForUnitTesting;
+    _Bool _debugLoggingEnabled;
+    NSMutableSet *_debugLogCategories;
+    NSString *_cachedDescriptionProem;
+    NSMutableArray *_blockObservers;
+    CDUnknownBlockType _completionBlock;
+    _Bool _cachedDefaultBasedAuditHistoryEnabled;
+    _Bool _auditHistoryEnabled;
+}
+
+@property (nonatomic, readonly) unsigned long long state;
+@property (nonatomic, readonly, getter=isAborted) _Bool aborted;
+@property (nonatomic, getter=isAuditHistoryEnabled) _Bool auditHistoryEnabled;
+@property (nonatomic, readonly) NSObject<OS_dispatch_queue> *queue;
+@property (nonatomic, readonly) NSSet *milestones;
+@property (nonatomic, readonly) NSArray *childTransactions;
+@property (nonatomic, readonly, getter=hasStarted) _Bool started;
+@property (nonatomic, readonly, getter=isRunning) _Bool running;
+@property (nonatomic, readonly, getter=isComplete) _Bool complete;
+@property (nonatomic, readonly, getter=isFinishedWorking) _Bool finishedWorking;
+@property (nonatomic, readonly, getter=isInterrupted) _Bool interrupted;
+@property (nonatomic, readonly, getter=isInterruptible) _Bool interruptible;
+@property (nonatomic, readonly, getter=isFailed) _Bool failed;
+@property (nonatomic, readonly) NSError *error;
+@property (nonatomic, readonly) NSArray *allErrors;
+@property (copy, nonatomic) CDUnknownBlockType completionBlock;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
++ (id)_defaultTransactionLog;
+
+- (id)init;
+- (void)dealloc;
+- (unsigned long long)_state;
+- (void)addObserver:(id)arg1;
+- (void)removeObserver:(id)arg1;
+- (void)interrupt;
+- (void)begin;
+- (void)_failWithError:(id)arg1;
+- (void)_addDebugLogCategory:(id)arg1;
+- (_Bool)_debugLoggingEnabled;
+- (id)_descriptionProem;
+- (id)_debugLogCategories;
+- (void)_removeParentTransaction:(id)arg1;
+- (void)_unsafe_enumerateChildTransactionsWithBlock:(CDUnknownBlockType)arg1;
+- (void)addChildTransaction:(id)arg1 withSchedulingPolicy:(unsigned long long)arg2;
+- (_Bool)_inFinishedWorkingState;
+- (_Bool)_hasChildTransaction:(id)arg1;
+- (void)_addChildTransactionRelationship:(id)arg1;
+- (void)_removeChildTransactionRelationship:(id)arg1;
+- (id)_childRelationshipForTransaction:(id)arg1;
+- (_Bool)_areSerialParentTransactionsFinishedWorking;
+- (void)_willBegin;
+- (void)_enumerateObserversWithBlock:(CDUnknownBlockType)arg1;
+- (void)_setState:(unsigned long long)arg1;
+- (void)_begin;
+- (id)_childTransactionsWithSchedulingPolicy:(unsigned long long)arg1;
+- (void)_beginIfPossible;
+- (void)_didBegin;
+- (void)_preventTransactionCompletionForReason:(id)arg1 ignoringAuditHistory:(_Bool)arg2 andExecuteBlock:(CDUnknownBlockType)arg3;
+- (_Bool)_isRootTransaction;
+- (_Bool)_isDoingWork;
+- (_Bool)_canBeInterrupted;
+- (void)interruptWithReason:(id)arg1;
+- (void)_interruptWithReason:(id)arg1 force:(_Bool)arg2;
+- (id)_createErrorWithCode:(long long)arg1 reason:(id)arg2 description:(id)arg3 precipitatingError:(id)arg4;
+- (void)addMilestones:(id)arg1;
+- (id)_stringForMilestones:(id)arg1;
+- (void)_addAuditHistoryItem:(id)arg1;
+- (_Bool)removeMilestones:(id)arg1;
+- (_Bool)_removeMilestones:(id)arg1 ignoringAuditHistory:(_Bool)arg2;
+- (void)evaluateMilestone:(id)arg1 withEvaluator:(CDUnknownBlockType)arg2;
+- (_Bool)isWaitingForMilestone:(id)arg1;
+- (void)_didSatisfyMilestone:(id)arg1;
+- (id)_descriptionForDebugging:(_Bool)arg1 indentLevel:(unsigned long long)arg2;
+- (void)_checkAndReportIfCompleted;
+- (void)_failWithReason:(id)arg1 description:(id)arg2 precipitatingError:(id)arg3;
+- (_Bool)_shouldFailForChildTransaction:(id)arg1;
+- (void)_childTransactionDidComplete:(id)arg1;
+- (void)_childTransactionDidFinishWork:(id)arg1;
+- (void)_populateGraphIntoNodes:(id)arg1 edges:(id)arg2;
+- (id)_graphDescription;
+- (id)_customizedDescriptionProperties;
+- (id)_sanitizedCustomDescriptionProperties;
+- (id)_graphNodeIdentifier;
+- (id)_graphNodeDebugName;
+- (id)_buildGraphNodeDescription;
+- (id)_buildGraphEdgeDescriptionWithType:(id)arg1 fromTransaction:(id)arg2 toTransaction:(id)arg3;
+- (id)_descriptionForDebugging:(_Bool)arg1 indentLevel:(unsigned long long)arg2 visited:(id)arg3;
+- (id)_base64EncodedGraphDescription;
+- (_Bool)_hasParentTransaction:(id)arg1;
+- (id)_parentRelationshipForTransaction:(id)arg1;
+- (void)_unsafe_enumerateParentTransactionsWithBlock:(CDUnknownBlockType)arg1;
+- (void)_willAddChildTransaction:(id)arg1;
+- (void)_addParentTransaction:(id)arg1 withSchedulingPolicy:(unsigned long long)arg2;
+- (void)_didAddChildTransaction:(id)arg1;
+- (void)_willRemoveChildTransaction:(id)arg1;
+- (void)_didRemoveChildTransaction:(id)arg1;
+- (void)_terminateNow;
+- (void)_willFailWithReason:(id)arg1;
+- (void)_willComplete;
+- (void)_abortForError:(id)arg1;
+- (void)_noteCompleted;
+- (void)_didFinishWork;
+- (void)_notifyObserversOfFinishedWork;
+- (id)_parentTransactionsWithSchedulingPolicy:(unsigned long long)arg1;
+- (void)_noteChildTransactionFinishedWork:(id)arg1;
+- (void)_didComplete;
+- (void)_notifyObserversOfCompletion;
+- (id)_parentTransactions;
+- (void)_noteChildTransactionCompleted:(id)arg1;
+- (void)_willInterruptWithReason:(id)arg1;
+- (void)_didInterruptWithReason:(id)arg1;
+- (void)removeAllMilestones;
+- (_Bool)_areConcurrentChildTransactionsFinishedWorking;
+- (_Bool)_areChildTransactionsComplete;
+- (void)_noteFinishedWork;
+- (_Bool)_shouldComplete;
+- (_Bool)_areConcurrentParentTransactionsDoingWork;
+- (_Bool)_evaluateParentTransactionsWithSchedulingPolicy:(unsigned long long)arg1 evaluator:(CDUnknownBlockType)arg2;
+- (void)_addLifeAssertion:(id)arg1 ignoringAuditHistory:(_Bool)arg2;
+- (void)_removeLifeAssertion:(id)arg1 ignoringAuditHistory:(_Bool)arg2;
+- (void)_initializeAuditHistoryIfNecessary;
+- (double)watchdogTimeout;
+- (_Bool)shouldWatchdog:(id *)arg1;
+- (id)_initForUnitTesting;
+- (void)addChildTransaction:(id)arg1;
+- (_Bool)hasChildTransactionsOfClass:(Class)arg1;
+- (id)childTransactionsOfClass:(Class)arg1;
+- (void)removeAllChildTransactionsOfClass:(Class)arg1;
+- (void)removeChildTransaction:(id)arg1;
+- (void)removeAllChildTransactions;
+- (void)registerBlockObserver:(CDUnknownBlockType)arg1;
+- (_Bool)isInterruptable;
+- (void)failWithReason:(id)arg1;
+- (void)addMilestone:(id)arg1;
+- (_Bool)removeMilestone:(id)arg1;
+- (void)satisfyMilestone:(id)arg1;
+- (void)listenForSatisfiedMilestone:(id)arg1 withBlock:(CDUnknownBlockType)arg2;
+- (_Bool)_revertWithReason:(id)arg1;
+- (id)auditHistory;
+- (void)_evaluateCompletion;
+- (void)_failForTimeoutWithDescription:(id)arg1;
+- (void)_failWithReason:(id)arg1 description:(id)arg2;
+- (void)_forceInterrupt;
+- (id)_stringForInterruptReason:(id)arg1;
+- (void)_removeDebugLogCategory:(id)arg1;
+- (id)_loggingProem;
+
+@end

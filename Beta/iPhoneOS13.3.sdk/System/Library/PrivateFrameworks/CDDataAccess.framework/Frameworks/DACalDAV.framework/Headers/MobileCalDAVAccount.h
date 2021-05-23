@@ -1,0 +1,160 @@
+/*
+ Image: /System/Library/PrivateFrameworks/DataAccess.framework/Frameworks/DACalDAV.framework/DACalDAV
+ */
+
+#import <DataAccess/DAAccount.h>
+
+@class CalDAVPrincipalSearchPropertySet, CalDAVRefreshContext, CalDAVServerVersion, CoreDAVDiscoveryTaskGroup, DACoreDAVLogger, DACoreDAVTaskManager, MobileCalDAVAccountRefreshActor, MobileCalDAVPrincipal, NSArray, NSDictionary, NSMutableArray, NSMutableDictionary, NSMutableSet, NSSet, NSString, NSTimeZone, NSURL;
+
+@interface MobileCalDAVAccount : DAAccount
+
+{
+    int _wasMigrated;
+    NSMutableDictionary *_principals;
+    NSMutableDictionary *_itemIDsToMoveActions;
+    NSMutableSet *_mMovedItemURLStrings;
+    NSMutableSet *_calendars;
+    NSMutableArray *_duplicateCalendars;
+    CalDAVServerVersion *_serverVersion;
+    _Bool _needsAccountPropertyRefresh;
+    _Bool _isRefreshing;
+    _Bool _searchQueriesShouldCancel;
+    _Bool _isSpinning;
+    _Bool _subscribedCalendarsChanged;
+    int _preferredEventDaysToSync;
+    int _preferredToDoDaysToSync;
+    NSMutableSet *_movedItemURLStrings;
+    MobileCalDAVPrincipal *_mainPrincipal;
+    NSDictionary *_delegateUserInfos;
+    CalDAVPrincipalSearchPropertySet *_searchPropertySet;
+    CalDAVRefreshContext *_refreshContext;
+    CoreDAVDiscoveryTaskGroup *_checkValidityTaskGroup;
+    MobileCalDAVAccountRefreshActor *_actor;
+    NSMutableSet *_searchTaskSet;
+    DACoreDAVLogger *_coreDAVLogger;
+}
+
+@property (retain, nonatomic) CoreDAVDiscoveryTaskGroup *checkValidityTaskGroup;
+@property (retain, nonatomic) MobileCalDAVAccountRefreshActor *actor;
+@property (nonatomic) _Bool isSpinning;
+@property (retain, nonatomic) NSMutableSet *searchTaskSet;
+@property (retain, nonatomic) DACoreDAVLogger *coreDAVLogger;
+@property (retain, nonatomic) NSMutableDictionary *mPrincipals;
+@property (retain, nonatomic) NSMutableDictionary *mItemIDsToMoveActions;
+@property (retain, nonatomic) NSMutableSet *mMovedItemURLStrings;
+@property (retain, nonatomic) NSMutableSet *mCalendars;
+@property (nonatomic) _Bool subscribedCalendarsChanged;
+@property (retain, nonatomic) MobileCalDAVPrincipal *mainPrincipal;
+@property (nonatomic, readonly) NSDictionary *principals;
+@property (retain, nonatomic) NSDictionary *delegateUserInfos;
+@property (nonatomic, readonly) DACoreDAVTaskManager *taskManager;
+@property (retain, nonatomic) NSURL *collectionSetURL;
+@property (retain, nonatomic) CalDAVPrincipalSearchPropertySet *searchPropertySet;
+@property (retain, nonatomic) NSString *overriddenServer;
+@property (retain, nonatomic) NSString *overriddenScheme;
+@property (nonatomic) int overriddenPort;
+@property (nonatomic) _Bool isWritable;
+@property (nonatomic) _Bool wasMigrated;
+@property (nonatomic) _Bool needsAccountPropertyRefresh;
+@property (nonatomic) _Bool isRefreshing;
+@property (nonatomic, readonly) NSDictionary *itemIDsToMoveActions;
+@property (nonatomic, readonly) NSSet *movedItemURLStrings;
+@property (copy, nonatomic) NSString *calendarHomeSyncToken;
+@property (retain, nonatomic) CalDAVServerVersion *serverVersion;
+@property (nonatomic) int preferredEventDaysToSync;
+@property (nonatomic) int preferredToDoDaysToSync;
+@property (nonatomic, readonly) NSTimeZone *viewedTimeZone;
+@property (nonatomic, readonly) _Bool shouldFilterEventSyncTimeRange;
+@property (nonatomic, readonly) _Bool shouldFilterSyncTimeRangeForInbox;
+@property (nonatomic, readonly) _Bool shouldUseCalendarHomeSyncReport;
+@property (nonatomic, readonly) _Bool supportsReminders;
+@property (nonatomic, readonly) _Bool supportsEvents;
+@property (retain, nonatomic) CalDAVRefreshContext *refreshContext;
+@property (nonatomic, readonly) NSURL *serverBaseURL;
+@property (nonatomic, readonly) NSArray *wellKnownPaths;
+@property (nonatomic, readonly) NSSet *calendars;
+@property (retain, nonatomic) NSDictionary *subscribedCalendars;
+@property (nonatomic, readonly) NSArray *duplicateCalendars;
+@property (nonatomic) _Bool searchQueriesShouldCancel;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
+- (id)init;
+- (void)dealloc;
+- (id)accountDescription;
+- (void)setAccountDescription:(id)arg1;
+- (id)emailAddresses;
+- (id)logHandle;
+- (_Bool)isEqualToAccount:(id)arg1;
+- (id)principalPath;
+- (void)setPrincipalPath:(id)arg1;
+- (void)releasePowerAssertion;
+- (void)removeCalendar:(id)arg1;
+- (_Bool)addressIsAccountOwner:(id)arg1;
+- (void)ingestBackingAccountInfoProperties;
+- (id)initWithBackingAccountInfo:(id)arg1;
+- (void)removeFromCoreDAVLoggingDelegates;
+- (void)addToCoreDAVLoggingDelegates;
+- (_Bool)accountHasSignificantPropertyChangesFromOldAccountInfo:(id)arg1;
+- (id)onBehalfOfBundleIdentifier;
+- (_Bool)isDelegateAccount;
+- (_Bool)upgradeAccount;
+- (id)spinnerIdentifiers;
+- (void)setPrincipalURL:(id)arg1;
+- (_Bool)saveModifiedPropertiesOnBackingAccount;
+- (void)discoverInitialPropertiesWithConsumer:(id)arg1;
+- (_Bool)isCalDAVAccount;
+- (id)localizedIdenticalAccountFailureMessage;
+- (id)localizedInvalidPasswordMessage;
+- (void)_reallyPerformSearchQuery:(id)arg1;
+- (void)_reallyCancelSearchQuery:(id)arg1;
+- (void)_reallyCancelAllSearchQueries;
+- (_Bool)_reallySearchQueriesRunning;
+- (void)reloadCalendars;
+- (void)task:(id)arg1 didFinishWithError:(id)arg2;
+- (void)addPrincipal:(id)arg1;
+- (void)_setSpinning:(_Bool)arg1;
+- (void)_updateCalendarStore:(_Bool)arg1;
+- (void *)copyCalStore;
+- (void)_foundDuplicateCalendar:(id)arg1 ofCalendar:(id)arg2;
+- (void)_foundDuplicateCalendars:(int)arg1;
+- (void)_logDuplicateCalendarDetails:(void *)arg1;
+- (id)_calendarConstraintsResource;
+- (id)_calendarConstraintsPath;
+- (_Bool)_updateCalendarStoreProperties:(void *)arg1;
+- (_Bool)_updateCalendarStoreNoDBOpen:(_Bool)arg1;
+- (void)_clearOrphanedCalendarItemChangesOfType:(int)arg1 withContext:(id)arg2 goodCalendarIds:(id)arg3;
+- (void)_clearOrphanedChangesWithChangesCall:(CDUnknownFunctionPointerType)arg1 entityType:(int)arg2 withContext:(id)arg3;
+- (_Bool)_saveModifiedPrincipalsOnBackingAccount;
+- (void)_syncEndedWithError:(id)arg1;
+- (_Bool)_saveModifiedSubscribedCalendarsOnBackingAccount;
+- (void)_clearOrphanedChangesWithContext:(id)arg1;
+- (id)_collectActionsFromMoveDictionary:(struct __CFDictionary *)arg1 forDataclass:(id)arg2 outShouldSave:(_Bool *)arg3;
+- (void)_collectMoveActions;
+- (void)retainPowerAssertion;
+- (void)_syncStarted;
+- (id)childAccountWithIdentifier:(id)arg1;
+- (void)_setParentAccount:(id)arg1;
+- (void)setIsDelegateAccount:(_Bool)arg1;
+- (void)setDelegatePrincipalPath:(id)arg1;
+- (id)_powerAssertionContext;
+- (id)_powerAssertionGroupIdentifier;
+- (id)delegatePrincipalPath;
+- (void)noteHomeSetOnDifferentHost:(id)arg1;
+- (void)addCalendar:(id)arg1;
+- (void)removeCalendarWithURL:(id)arg1;
+- (void)removePrincipal:(id)arg1;
+- (void)cancelRefreshWithCompletion:(CDUnknownBlockType)arg1;
+- (void)refreshActor:(id)arg1 didCompleteWithError:(id)arg2;
+- (void)refreshWithContext:(id)arg1;
+- (void)updateDelegates;
+- (void)discoveryTask:(id)arg1 gotAccountInfo:(id)arg2 error:(id)arg3;
+- (void)dropPowerAssertions;
+- (void)reattainPowerAssertions;
+- (_Bool)shouldLogTransmittedData;
+- (void)coreDAVLogTransmittedDataPartial:(id)arg1;
+- (void)coreDAVTransmittedDataFinished;
+
+@end

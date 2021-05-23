@@ -1,0 +1,11 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ScreenTimeUI.framework/ScreenTimeUI
+ */
+
+#import <ScreenTimeUI/Swift-Protocol.h>
+
+@protocol NSSecureCoding <Swift>
+
++ (unsigned short)supportsSecureCoding;
+
+@end

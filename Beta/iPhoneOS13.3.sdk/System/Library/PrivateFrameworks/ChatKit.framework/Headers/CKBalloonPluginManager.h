@@ -1,0 +1,177 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ChatKit.framework/ChatKit
+ */
+
+#import <Foundation/NSObject.h>
+
+@class CKPreviewDispatchCache, IMBalloonPlugin, NSArray, NSCache, NSDictionary, NSMutableArray, NSMutableDictionary, NSMutableSet, NSSet, NSString;
+
+@interface CKBalloonPluginManager : NSObject
+
+{
+    NSArray *_appStripCandidatePlugins;
+    NSArray *_visibleAppStripPlugins;
+    NSArray *_visibleSwitcherPlugins;
+    NSArray *_recentAppStripPlugins;
+    NSArray *_visibleRecentAppStripPlugins;
+    _Bool _isAppInstallationEnabled;
+    _Bool _isAppRemovalEnabled;
+    _Bool _isCameraAllowed;
+    _Bool _appStoreAutoEnableToggled;
+    _Bool _keepingEmptySections;
+    _Bool _isAppInstallationObserver;
+    NSString *_lastLaunchedIdentifier;
+    IMBalloonPlugin *_lastViewedPlugin;
+    NSArray *_visiblePlugins;
+    NSArray *_cachedPotentiallyVisiblePlugins;
+    NSArray *_favoriteAppStripPlugins;
+    NSMutableSet *_currentExtensionConsumers;
+    NSDictionary *_pluginVersionMap;
+    NSDictionary *_pluginSeenMap;
+    NSDictionary *_pluginIndexPathMap;
+    NSMutableDictionary *_historicalPluginIndexPathMap;
+    NSMutableArray *_MRUPluginInteractionList;
+    NSDictionary *_pluginLaunchTimeMap;
+    NSArray *_allPlugins;
+    long long _numberOfSectionsToKeep;
+    NSMutableArray *_visibleInstallations;
+    NSSet *_oldVisibleSwitcherPluginIdentifiers;
+    NSCache *_iconCache;
+    CKPreviewDispatchCache *_snapshotCache;
+    NSMutableDictionary *_activeBrowsers;
+}
+
+@property (nonatomic, readonly) _Bool isAppRemovalEnabled;
+@property (nonatomic, readonly) NSArray *visibleDrawerPlugins;
+@property (nonatomic, readonly) NSArray *visibleFavoriteAppStripPlugins;
+@property (nonatomic, readonly) NSArray *visibleRecentAppStripPlugins;
+@property (nonatomic, readonly) NSArray *recentAppStripPlugins;
+@property (nonatomic, readonly) NSArray *potentiallyVisiblePlugins;
+@property (nonatomic, readonly) NSArray *potentiallyVisibleNonFavoritePlugins;
+@property (retain, nonatomic) NSDictionary *pluginIndexPathMap;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (retain, nonatomic) NSArray *visiblePlugins;
+@property (retain, nonatomic) NSArray *cachedPotentiallyVisiblePlugins;
+@property (retain, nonatomic) NSArray *visibleSwitcherPlugins;
+@property (retain, nonatomic) NSArray *favoriteAppStripPlugins;
+@property (nonatomic) _Bool isAppInstallationEnabled;
+@property (nonatomic) _Bool isAppRemovalEnabled;
+@property (nonatomic) _Bool isCameraAllowed;
+@property (retain, nonatomic) NSMutableSet *currentExtensionConsumers;
+@property (retain, nonatomic) NSDictionary *pluginVersionMap;
+@property (retain, nonatomic) NSDictionary *pluginSeenMap;
+@property (retain, nonatomic) NSDictionary *pluginIndexPathMap;
+@property (retain, nonatomic) NSMutableDictionary *historicalPluginIndexPathMap;
+@property (retain, nonatomic) NSMutableArray *MRUPluginInteractionList;
+@property (retain, nonatomic) NSDictionary *pluginLaunchTimeMap;
+@property (retain, nonatomic) NSArray *allPlugins;
+@property (nonatomic, getter=isKeepingEmptySections) _Bool keepingEmptySections;
+@property (nonatomic) long long numberOfSectionsToKeep;
+@property (retain, nonatomic) NSMutableArray *visibleInstallations;
+@property (nonatomic) _Bool isAppInstallationObserver;
+@property (retain, nonatomic) NSSet *oldVisibleSwitcherPluginIdentifiers;
+@property (retain, nonatomic) NSCache *iconCache;
+@property (retain, nonatomic) CKPreviewDispatchCache *snapshotCache;
+@property (retain, nonatomic) NSMutableDictionary *activeBrowsers;
+@property (nonatomic, readonly) _Bool hasLoadedExtensions;
+@property (nonatomic, readonly) NSArray *allEnabledPlugins;
+@property (nonatomic, readonly) NSArray *disabledPlugins;
+@property (retain, nonatomic) NSString *lastLaunchedIdentifier;
+@property (weak, nonatomic) IMBalloonPlugin *lastViewedPlugin;
+@property (nonatomic, readonly) _Bool isAppStoreEnabled;
+@property (nonatomic, getter=isAppStoreAutoEnableToggled) _Bool appStoreAutoEnableToggled;
+
++ (id)sharedInstance;
++ (id)recentPlugin;
++ (id)morePlugin;
++ (id)defaultFavoritePlugins;
+
+- (id)init;
+- (void)dealloc;
+- (void)prepareForSuspend;
+- (id)viewControllerForPluginIdentifier:(id)arg1;
+- (id)existingPhotoBrowserViewController;
+- (void)invalidateAllActivePlugins;
+- (void)forceKillRemoteExtensionsWithDelay:(_Bool)arg1;
+- (void)removeExtensionConsumer:(id)arg1;
+- (void)addExtensionConsumer:(id)arg1;
+- (void)invalidatePhotosPlugin;
+- (void)commitInteractionTimeOrderingChanges;
+- (id)pluginForAdamID:(id)arg1;
+- (id)pluginForIdentifier:(id)arg1;
+- (void)forceKillNonCameraRemoteExtensionsImmediately;
+- (void)updateInteractionTimeForPlugin:(id)arg1;
+- (void)reloadInstalledApps:(id)arg1;
+- (void)handleManagedConfigSettingsChangeNotification:(id)arg1;
+- (struct __CFString *)healthKitAchievementAvailabilityChangedNotification;
+- (id)_decodeIndexPathMap:(id)arg1;
+- (void)_updateHistoricalPluginIndexPathMap;
+- (void)refreshPlugins;
+- (_Bool)_shouldForceRegenerateIndexPathMap;
+- (void)regeneratePluginIndexPaths;
+- (void)cleanSeenMap;
+- (void)invalidateIconCache;
+- (void)saveWithNotification:(_Bool)arg1;
+- (_Bool)_shouldUninstallContainingBundle:(id)arg1;
+- (void)_disableAppWithBalloonIdentifier:(id)arg1;
+- (void)_addAppWithBalloonIdentifier:(id)arg1;
+- (id)_encodeIndexPathMap:(id)arg1;
+- (_Bool)isInternalPlugin:(id)arg1;
+- (_Bool)isPluginEnabled:(id)arg1;
+- (void)_setSeen:(_Bool)arg1 forPlugin:(id)arg2;
+- (id)allPluginsPassingTest:(CDUnknownBlockType)arg1;
+- (id)createFakeAppsForPPTTesting:(unsigned long long)arg1;
+- (_Bool)isEnabledAndVisible:(id)arg1;
+- (_Bool)isPluginSeenWithInstalledVersion:(id)arg1;
+- (_Bool)isPluginVisible:(id)arg1;
+- (_Bool)_shouldShowActivity;
+- (_Bool)_shouldShowSURF;
+- (void)healthStickerStatusChanged;
+- (void)removeAppWithIdentifier:(id)arg1;
+- (void)setEnabled:(_Bool)arg1 forPlugin:(id)arg2;
+- (id)balloonPluginIdentifierForAppExtensionBundleIdentifier:(id)arg1;
+- (void)clearBalloonPluginCache;
+- (unsigned long long)launchStatusForPlugin:(id)arg1;
+- (void)updateLaunchStatus:(unsigned long long)arg1 forPlugin:(id)arg2 withNotification:(_Bool)arg3;
+- (long long)lastViewedPluginIndex;
+- (id)lastLaunchedPlugin;
+- (void)updateLaunchTimeForPlugin:(id)arg1;
+- (id)launchTimeForPlugin:(id)arg1;
+- (unsigned long long)badgeValueForPlugin:(id)arg1;
+- (_Bool)isPluginSeen:(id)arg1;
+- (void)setSeen:(_Bool)arg1 forPlugin:(id)arg2;
+- (unsigned long long)unseenPluginCount;
+- (void)forceTearDownRemoteViewsSkippingCameraApp:(_Bool)arg1;
+- (void)forceKillRemoteExtensionsWithDelay:(_Bool)arg1 skipCameraApp:(_Bool)arg2;
+- (id)bundleIdentifiersForCurrentExtensionConsumers;
+- (void)invalidateAllActivePluginsSkippingCameraApp:(_Bool)arg1;
+- (id)existingViewControllerForPluginIdentifier:(id)arg1;
+- (id)viewControllerForPluginIdentifier:(id)arg1 dataSource:(id)arg2;
+- (void)_invalidatePluginForKey:(id)arg1;
+- (id)newViewControllerForPluginIdentifier:(id)arg1 dataSource:(id)arg2;
+- (void)invalidateAllActiveSwitcherPlugins;
+- (id)browserSnapshotForKey:(id)arg1;
+- (void)updateSnapshotForBrowserViewController:(id)arg1 currentBounds:(struct CGRect)arg2;
+- (void)invalidateAppManagerPlugin;
+- (id)photosBrowserViewControllerWithPluginPayloads:(id)arg1;
+- (id)digitalTouchViewControllerWithDataSource:(id)arg1;
+- (id)handwritingViewControllerWithPluginPayloads:(id)arg1;
+- (_Bool)isViewController:(id)arg1 fromPluginWithIdentifier:(id)arg2;
+- (void)updateIndexPath:(id)arg1 forPlugin:(id)arg2 isDrawerPluginPath:(_Bool)arg3;
+- (void)_refreshVisibleDrawerPluginsDueToAppInstallationChange;
+- (id)filteredArrayOfInstallationsThatShouldBeVisible:(id)arg1;
+- (id)orderedPlugins:(_Bool)arg1;
+- (id)candidateAppStripPlugins;
+- (id)allPotentiallyVisiblePlugins;
+- (id)_pluginIndexPathForFavoritePluginWithIdentifier:(id)arg1 pluginMap:(id)arg2 fallbackMap:(id)arg3;
+- (_Bool)_addPluginToRecentsFrontIfNeeded:(id)arg1 frontOfRecents:(id)arg2 pluginMap:(id)arg3 fallbackMap:(id)arg4;
+- (void)appInstallationWatcher:(id)arg1 changedAppInstallation:(id)arg2;
+- (void)appInstallationWatcher:(id)arg1 addedAppInstallation:(id)arg2;
+- (void)updateAppInstallations;
+- (void)removeVisibleInstallationWithID:(id)arg1;
+- (id)descriptionOfVisibleDrawerPlugins;
+
+@end

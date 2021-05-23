@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/PrivateFrameworks/NanoTimeKitCompanion.framework/NanoTimeKitCompanion
+ */
+
+#import <NanoTimeKitCompanion/Swift-Protocol.h>
+
+@protocol NTKComplicationPickerViewDataSource <Swift>
+
+- (unsigned short)complicationPickerView:getDisplay:controller:forComplication: /* Error: Ran out of types for this method. */;
+- (unsigned short)complicationPickerView:layoutRuleForComplicationDisplay: /* Error: Ran out of types for this method. */;
+
+@end

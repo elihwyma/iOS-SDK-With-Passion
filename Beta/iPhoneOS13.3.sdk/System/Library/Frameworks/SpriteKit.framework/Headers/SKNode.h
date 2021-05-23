@@ -1,0 +1,181 @@
+/*
+ Image: /System/Library/Frameworks/SpriteKit.framework/SpriteKit
+ */
+
+#import <UIKit/UIResponder.h>
+
+@class GKEntity, MISSING_TYPE, NSArray, NSDictionary, NSMutableArray, NSMutableDictionary, NSString, SKPhysicsBody, SKReachConstraints, SKScene, UIView;
+
+@protocol UIFocusEnvironment, UIFocusItemContainer;
+
+@interface SKNode : UIResponder
+
+{
+    struct SKCNode *_skcNode;
+    SKNode *_parent;
+    NSMutableArray *_children;
+    NSMutableArray *_actions;
+    NSMutableDictionary *_keyedActions;
+    NSMutableDictionary *_keyedSubSprites;
+    NSMutableDictionary *_info;
+    NSMutableDictionary *_attributeValues;
+    NSString *_name;
+    NSMutableDictionary *_userData;
+    NSArray *_constraints;
+    unsigned int _version;
+    _Bool _userInteractionEnabled;
+    _Bool _performFullCapture;
+    SKReachConstraints *_reachConstraints;
+    long long _focusBehavior;
+    GKEntity *_entity;
+}
+
+@property (weak, nonatomic) GKEntity *entity;
+@property (nonatomic, readonly) CDStruct_14d5dc5e globalBoundingVerts;
+@property (nonatomic, readonly) CDStruct_14d5dc5e globalAccumulatedBoundingVerts;
+@property (nonatomic, readonly) const struct CGPath *outline;
+@property (nonatomic) _Bool _showBounds;
+@property (nonatomic, readonly) struct CGRect _untransformedBounds;
+@property (nonatomic, readonly) struct CGSize _untransformedSize;
+@property (nonatomic) struct CGPoint _anchorPoint;
+@property (nonatomic, readonly) struct CGSize _size;
+@property (retain, nonatomic) NSMutableDictionary *_info;
+@property (nonatomic, readonly) NSArray *_allActions;
+@property (nonatomic, readonly) shared_ptr_11a7378b _aether;
+@property (weak, nonatomic) GKEntity *entity;
+@property _Bool performFullCapture;
+@property (nonatomic, readonly) struct SKCNode *_backingNode;
+@property (nonatomic) double xRotation;
+@property (nonatomic) double yRotation;
+@property (nonatomic, readonly) struct CGRect frame;
+@property (nonatomic) struct CGPoint position;
+@property (nonatomic) double zPosition;
+@property (nonatomic) double zRotation;
+@property (nonatomic) double xScale;
+@property (nonatomic) double yScale;
+@property (nonatomic) double speed;
+@property (nonatomic) double alpha;
+@property (nonatomic, getter=isPaused) _Bool paused;
+@property (nonatomic, getter=isHidden) _Bool hidden;
+@property (nonatomic, getter=isUserInteractionEnabled) _Bool userInteractionEnabled;
+@property (nonatomic) long long focusBehavior;
+@property (nonatomic, readonly) SKNode *parent;
+@property (nonatomic, readonly) NSArray *children;
+@property (copy, nonatomic) NSString *name;
+@property (nonatomic, readonly) SKScene *scene;
+@property (retain, nonatomic) SKPhysicsBody *physicsBody;
+@property (retain, nonatomic) NSMutableDictionary *userData;
+@property (copy, nonatomic) SKReachConstraints *reachConstraints;
+@property (copy, nonatomic) NSArray *constraints;
+@property (copy, nonatomic) NSDictionary *attributeValues;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (copy, nonatomic, readonly) NSArray *preferredFocusEnvironments;
+@property (weak, nonatomic, readonly) id <UIFocusEnvironment> parentFocusEnvironment;
+@property (nonatomic, readonly) id <UIFocusItemContainer> focusItemContainer;
+@property (weak, nonatomic, readonly) UIView *preferredFocusedView;
+@property (nonatomic, readonly) _Bool canBecomeFocused;
+
++ (_Bool)supportsSecureCoding;
++ (id)node;
++ (id)nodeWithFileNamed:(id)arg1;
++ (id)debugHierarchyPropertyDescriptions;
++ (id)debugHierarchyValueForPropertyWithName:(id)arg1 onObject:(id)arg2 outOptions:(id *)arg3 outError:(id *)arg4;
++ (id)debugHierarchyObjectsInGroupWithID:(id)arg1 onObject:(id)arg2 outOptions:(id *)arg3;
++ (id)nodeWithFileNamed:(id)arg1 securelyWithClasses:(id)arg2 andError:(id *)arg3;
++ (id)debugHierarchyChildGroupingID;
++ (id)nodeFromCaptureData:(id)arg1;
+
+- (id)init;
+- (void)dealloc;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)copy;
+- (void)addChild:(id)arg1;
+- (void)setParent:(id)arg1;
+- (void)encodeWithCoder:(id)arg1;
+- (id)initWithCoder:(id)arg1;
+- (id)objectForKeyedSubscript:(id)arg1;
+- (struct CGSize)size;
+- (void)_update:(double)arg1;
+- (void)removeAllActions;
+- (_Bool)needsUpdate;
+- (void)setSize:(struct CGSize)arg1;
+- (void)setScale:(double)arg1;
+- (_Bool)containsPoint:(struct CGPoint)arg1;
+- (void)removeChild:(id)arg1;
+- (void)setNeedsFocusUpdate;
+- (void)updateFocusIfNeeded;
+- (_Bool)shouldUpdateFocusInContext:(id)arg1;
+- (void)didUpdateFocusInContext:(id)arg1 withAnimationCoordinator:(id)arg2;
+- (_Bool)_isEligibleForFocusInteraction;
+- (id)containingView;
+- (id)_descendants;
+- (id)actionForKey:(id)arg1;
+- (_Bool)hasActions;
+- (_Bool)hasChildren;
+- (void)insertChild:(id)arg1 atIndex:(long long)arg2;
+- (void)removeFromParent;
+- (_Bool)intersectsNode:(id)arg1;
+- (id)nodeAtPoint:(struct CGPoint)arg1 recursive:(_Bool)arg2;
+- (void)runAction:(id)arg1;
+- (id)physicsField;
+- (_Bool)_isEffectivelyHidden;
+- (_Bool)_isEligibleForFocus;
+- (void)removeActionForKey:(id)arg1;
+- (id)childNodeWithName:(id)arg1;
+- (id)_subnodeFromIndexPath:(id)arg1;
+- (struct CGRect)_convertFrameToView:(id)arg1;
+- (_Bool)isEqualToNode:(id)arg1;
+- (struct SKCNode *)_makeBackingNode;
+- (void)_didMakeBackingNode;
+- (void)removeChildrenInArray:(id)arg1;
+- (struct CGRect)calculateAccumulatedFrame;
+- (void)_removeChild:(id)arg1;
+- (void)_removeAction:(id)arg1;
+- (void)enumerateChildNodesWithName:(id)arg1 usingBlock:(CDUnknownBlockType)arg2;
+- (struct CGPoint)convertPoint:(struct CGPoint)arg1 fromNode:(id)arg2;
+- (struct CGPoint)convertPoint:(struct CGPoint)arg1 toNode:(id)arg2;
+- (id)_descendantsWithPredicate:(CDUnknownBlockType)arg1;
+- (id)createDebugHierarchyVisualRepresentation;
+- (struct CGPoint)convertPointFromParent:(struct CGPoint)arg1;
+- (struct CGPoint)convertPointToParent:(struct CGPoint)arg1;
+- (void)runAction:(id)arg1 withKey:(id)arg2;
+- (id)_copyImageData;
+- (id)archiveToFile:(id)arg1;
+- (void)debugPrint;
+- (id)valueForAttributeNamed:(id)arg1;
+- (void)setValue:(id)arg1 forAttributeNamed:(id)arg2;
+- (void)_initAccessibility;
+- (Class)swiftClassFromString:(id)arg1 moduleName:(id)arg2;
+- (void)_runAction:(id)arg1;
+- (void)addChild:(id)arg1 withKey:(id)arg2;
+- (void)_enumerateChildNodesWithName:(id)arg1 usingBlock:(CDUnknownBlockType)arg2 stopPointer:(_Bool *)arg3;
+- (void)_processSearchTokens:(vector_408ca79d)arg1 visited:(set_3449d313 *)arg2 usingBlock:(CDUnknownBlockType)arg3 stopPointer:(_Bool *)arg4;
+- (void)_descendantsToMutableArray:(id)arg1;
+- (void)_descendantsWithPredicate:(CDUnknownBlockType)arg1 toMutableArray:(id)arg2;
+- (_Bool)intersectsNode:(id)arg1 useAlphaTest:(_Bool)arg2;
+- (void)moveToParent:(id)arg1;
+- (_Bool)inParentHierarchy:(id)arg1;
+- (void)removeChildAtIndex:(long long)arg1;
+- (void)removeAllChildren;
+- (void)_performCleanup;
+- (void)_scaleFactorChangedFrom:(float)arg1 to:(float)arg2;
+- (void)_flippedChangedFrom:(_Bool)arg1 to:(_Bool)arg2;
+- (void)runAction:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (_Bool)containsPoint:(struct CGPoint)arg1 withRadius:(double)arg2;
+- (id)nodeAtPoint:(struct CGPoint)arg1;
+- (id)nodesAtPoint:(struct CGPoint)arg1;
+- (_Bool)hasUniformAlphaAndIsVisible;
+- (void)_debugPrint:(int)arg1 mask:(unsigned long long)arg2;
+- (void)_debugPrint:(int)arg1;
+- (id)childrenInRect:(struct CGRect)arg1;
+- (id)createFullCaptureData;
+- (void)_getWorldTransform:(float *)arg1 positionY:(float *)arg2 rotation:(float *)arg3 xScale:(float *)arg4 yScale:(float *)arg5;
+- (void)_getBasePhysicsScale:(float *)arg1 yScale:(float *)arg2;
+- (void)updatePhysicsPositionAndScaleFromSprite;
+- (id)allIntersectionsWithNode:(id)arg1 useAlphaTest:(_Bool)arg2;
+- (_Bool)_pathFromPhysicsBodyToPoints:(MISSING_TYPE ***)arg1 outSize:(unsigned long long *)arg2;
+
+@end

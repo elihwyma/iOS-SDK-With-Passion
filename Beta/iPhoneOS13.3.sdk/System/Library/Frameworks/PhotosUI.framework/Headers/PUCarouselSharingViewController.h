@@ -1,0 +1,197 @@
+/*
+ Image: /System/Library/Frameworks/PhotosUI.framework/PhotosUI
+ */
+
+#import <UIKit/UIViewController.h>
+
+#import <PhotosUI/Swift-Protocol.h>
+
+@class NSIndexPath, NSMapTable, NSMutableArray, NSMutableDictionary, NSMutableSet, NSObject, NSString, PHAsset, PHCachingImageManager, PHFetchResult, PUAssetTransitionInfo, PUPhotoSelectionManager, PUPhotosSharingCollectionViewLayout, PUPhotosSharingTransitionContext, PUPhotosSharingViewControllerSpec, PUScrollViewSpeedometer, PXAssetBadgeManager, PXPhotosDataSource, UICollectionView, UICollectionViewLayout, UITapGestureRecognizer;
+
+@protocol OS_os_log, PUCarouselSharingViewControllerDelegate;
+
+@interface PUCarouselSharingViewController : UIViewController <Swift>
+
+{
+    PUScrollViewSpeedometer *_speedometer;
+    NSMutableDictionary *_resultsForAssetCollection;
+    NSMutableDictionary *_assetItemsByAssetIdentifier;
+    NSMapTable *_indexPathsByOptionView;
+    UITapGestureRecognizer *_tapGestureRecognizer;
+    NSIndexPath *_inFlightReferenceIndexPath;
+    _Bool _shouldScrollToSelection;
+    _Bool _inFlightRotation;
+    _Bool _shouldPlayVitalityHintAfterViewDidAppear;
+    _Bool _readyForInteraction;
+    _Bool __viewInSyncWithModel;
+    _Bool __loopingPlaybackAllowed;
+    PHFetchResult *_photoCollectionsFetchResult;
+    PUPhotoSelectionManager *_photoSelectionManager;
+    id <PUCarouselSharingViewControllerDelegate> _delegate;
+    PUPhotosSharingViewControllerSpec *_spec;
+    UICollectionView *_mainCollectionView;
+    PUPhotosSharingCollectionViewLayout *_mainCollectionViewLayout;
+    PHCachingImageManager *_cachingImageManager;
+    NSMutableSet *__preheatedAssets;
+    UICollectionViewLayout *__transitionLayout;
+    PUPhotosSharingTransitionContext *_photosSharingTransitionContext;
+    PUAssetTransitionInfo *_assetTransitionInfo;
+    PUAssetTransitionInfo *_leadingAssetTransitionInfo;
+    PUAssetTransitionInfo *_trailingAssetTransitionInfo;
+    PHAsset *__lastKnownReferenceAsset;
+    NSIndexPath *__lastKnownReferenceIndexPath;
+    PXAssetBadgeManager *__badgeManager;
+    CDUnknownBlockType __pptOnDidEndScrollingBlock;
+    NSMutableArray *__photoViewLoaderBlocks;
+    NSMutableArray *__livePhotoViewLoaderBlocks;
+    PXPhotosDataSource *_photosDataSource;
+    struct CGRect __previousPreheatRect;
+}
+
+@property (retain, nonatomic) PUPhotosSharingViewControllerSpec *spec;
+@property (retain, nonatomic, setter=_setMainCollectionView:) UICollectionView *mainCollectionView;
+@property (retain, nonatomic, setter=_setMainCollectionViewLayout:) PUPhotosSharingCollectionViewLayout *mainCollectionViewLayout;
+@property (nonatomic, getter=_isViewInSyncWithModel, setter=_setViewInSyncWithModel:) _Bool _viewInSyncWithModel;
+@property (retain, nonatomic) PUPhotoSelectionManager *photoSelectionManager;
+@property (nonatomic, readonly) PHCachingImageManager *cachingImageManager;
+@property (nonatomic, setter=_setPreviousPreheatRect:) struct CGRect _previousPreheatRect;
+@property (retain, nonatomic, setter=_setPreheatedAssets:) NSMutableSet *_preheatedAssets;
+@property (retain, nonatomic, setter=_setTransitionLayout:) UICollectionViewLayout *_transitionLayout;
+@property (retain, nonatomic) PUPhotosSharingTransitionContext *photosSharingTransitionContext;
+@property (retain, nonatomic) PUAssetTransitionInfo *assetTransitionInfo;
+@property (retain, nonatomic) PUAssetTransitionInfo *leadingAssetTransitionInfo;
+@property (retain, nonatomic) PUAssetTransitionInfo *trailingAssetTransitionInfo;
+@property (retain, nonatomic, setter=_setLastKnownReferenceAsset:) PHAsset *_lastKnownReferenceAsset;
+@property (retain, nonatomic, setter=_setLastKnownReferenceIndexPath:) NSIndexPath *_lastKnownReferenceIndexPath;
+@property (nonatomic, getter=_isLoopingPlaybackAllowed, setter=_setLoopingPlaybackAllowed:) _Bool _loopingPlaybackAllowed;
+@property (nonatomic, readonly) PXAssetBadgeManager *_badgeManager;
+@property (copy, nonatomic, setter=_pptSetOnDidEndScrollingBlock:) CDUnknownBlockType _pptOnDidEndScrollingBlock;
+@property (nonatomic, readonly) NSObject<OS_os_log> *sharingLog;
+@property (nonatomic, readonly) NSMutableArray *_photoViewLoaderBlocks;
+@property (nonatomic, readonly) NSMutableArray *_livePhotoViewLoaderBlocks;
+@property (retain, nonatomic) PXPhotosDataSource *photosDataSource;
+@property (nonatomic, readonly) PHFetchResult *photoCollectionsFetchResult;
+@property (weak, nonatomic) id <PUCarouselSharingViewControllerDelegate> delegate;
+@property (nonatomic, readonly) PHAsset *currentAsset;
+@property (nonatomic, readonly) NSString *localizedSelectionTitle;
+@property (nonatomic, getter=isReadyForInteraction) _Bool readyForInteraction;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (nonatomic, readonly) PHFetchResult *assetCollectionsFetchResult;
+
+- (void)dealloc;
+- (_Bool)gestureRecognizerShouldBegin:(id)arg1;
+- (_Bool)gestureRecognizer:(id)arg1 shouldRecognizeSimultaneouslyWithGestureRecognizer:(id)arg2;
+- (_Bool)gestureRecognizer:(id)arg1 shouldReceiveTouch:(id)arg2;
+- (void)scrollViewDidScroll:(id)arg1;
+- (void)scrollViewWillBeginDragging:(id)arg1;
+- (void)scrollViewWillEndDragging:(id)arg1 withVelocity:(struct CGPoint)arg2 targetContentOffset:(inout struct CGPoint *)arg3;
+- (void)scrollViewDidEndDragging:(id)arg1 willDecelerate:(_Bool)arg2;
+- (void)scrollViewDidEndDecelerating:(id)arg1;
+- (void)scrollViewDidEndScrollingAnimation:(id)arg1;
+- (void)viewWillAppear:(_Bool)arg1;
+- (void)viewWillDisappear:(_Bool)arg1;
+- (void)viewDidLoad;
+- (void)viewWillLayoutSubviews;
+- (long long)numberOfSectionsInCollectionView:(id)arg1;
+- (long long)collectionView:(id)arg1 numberOfItemsInSection:(long long)arg2;
+- (id)collectionView:(id)arg1 cellForItemAtIndexPath:(id)arg2;
+- (void)viewWillTransitionToSize:(struct CGSize)arg1 withTransitionCoordinator:(id)arg2;
+- (void)viewDidLayoutSubviews;
+- (void)viewDidAppear:(_Bool)arg1;
+- (id)collectionView:(id)arg1 viewForSupplementaryElementOfKind:(id)arg2 atIndexPath:(id)arg3;
+- (long long)_numberOfSections;
+- (_Bool)collectionView:(id)arg1 shouldSelectItemAtIndexPath:(id)arg2;
+- (void)collectionView:(id)arg1 didEndDisplayingCell:(id)arg2 forItemAtIndexPath:(id)arg3;
+- (void)collectionView:(id)arg1 didEndDisplayingSupplementaryView:(id)arg2 forElementOfKind:(id)arg3 atIndexPath:(id)arg4;
+- (long long)_numberOfItemsInSection:(long long)arg1;
+- (id)currentIndexPath;
+- (void)_statusBarFrameDidChange:(id)arg1;
+- (id)prepareForPhotoLibraryChange:(id)arg1;
+- (void)photoLibraryDidChangeOnMainQueue:(id)arg1;
+- (id)assetsInAssetCollection:(id)arg1;
+- (id)ppt_scrollView;
+- (_Bool)prepareForDismissingForced:(_Bool)arg1;
+- (void)_updateInterfaceForModelReloadAnimated:(_Bool)arg1;
+- (void)_resetPreheating;
+- (void)_updatePreheatedAssets;
+- (void)oneUpAssetTransition:(id)arg1 requestTransitionContextWithCompletion:(CDUnknownBlockType)arg2;
+- (struct CGRect)oneUpAssetTransitionAssetFinalFrame:(id)arg1;
+- (void)setOneUpPhotosSharingTransitionContext:(id)arg1;
+- (void)setOneUpPhotosSharingTransitionInfo:(id)arg1;
+- (id)transitionCollectionView;
+- (void)setPhotosSharingTransitionLayout:(id)arg1 animated:(_Bool)arg2;
+- (struct CGSize)layout:(id)arg1 collectionView:(id)arg2 sizeForItemAtIndexPath:(id)arg3;
+- (void)_updateMainViewAnimated:(_Bool)arg1;
+- (void)_getFirstValidIndexPath:(id *)arg1 lastValidIndexPath:(id *)arg2;
+- (void)_updatePhotoForAsset:(id)arg1 cell:(id)arg2 atIndexPath:(id)arg3;
+- (void)_updateCell:(id)arg1 forItemAtIndexPath:(id)arg2;
+- (void)_handleTapAtIndexPath:(id)arg1;
+- (void)_handleTapInMainCollectionView:(id)arg1;
+- (id)_assetAtIndexPath:(id)arg1;
+- (void)_pageToIndexPath:(id)arg1 animated:(_Bool)arg2;
+- (id)_indexPathOfCenterVisibleItemInCollectionView:(id)arg1;
+- (double)_horizontalOffsetInCollectionView:(id)arg1 forCenteringOnItemAtIndexPath:(id)arg2;
+- (id)_selectionViewAtIndexPath:(id)arg1 forCollectionView:(id)arg2;
+- (struct CGRect)_frameAtIndexPath:(id)arg1 inView:(id)arg2;
+- (void)scrollViewSpeedometer:(id)arg1 regimeDidChange:(long long)arg2 from:(long long)arg3;
+- (void)_updateVisibleCells;
+- (unsigned long long)_indexForPhotoCollection:(id)arg1;
+- (void)photoViewContentHelper:(id)arg1 livePhotoWillBeginPlaybackWithStyle:(long long)arg2;
+- (struct CGSize)layout:(id)arg1 collectionView:(id)arg2 sizeForBadgeViewOfKind:(id)arg3 forItemAtIndexPath:(id)arg4;
+- (double)layout:(id)arg1 collectionView:(id)arg2 bottomBadgeInsetforItemAtIndexPath:(id)arg3;
+- (void)layout:(id)arg1 collectionView:(id)arg2 itemAtIndexPath:(id)arg3 didChangeToVisibleFrame:(struct CGRect)arg4;
+- (id)layout:(id)arg1 collectionView:(id)arg2 referenceIndexPathWithOffsetX:(double *)arg3;
+- (_Bool)_shouldShowAsset:(id)arg1;
+- (struct CGSize)_sizeForItemAtIndexPath:(id)arg1;
+- (void)_handleStillImageRequestResult:(id)arg1 info:(id)arg2 forCell:(id)arg3 indexPath:(id)arg4;
+- (void)_updateAdditionalContentForAsset:(id)arg1 cell:(id)arg2;
+- (void)_handleSchedulingStillPhotoRequestResult:(id)arg1 forCell:(id)arg2 tag:(long long)arg3;
+- (void)_handleStillPhotoRequestResult:(id)arg1 forCell:(id)arg2 tag:(long long)arg3;
+- (void)_handleSchedulingLivePhotoRequestResult:(id)arg1 forCell:(id)arg2 tag:(long long)arg3;
+- (void)_handleLivePhotoRequestResult:(id)arg1 forCell:(id)arg2 tag:(long long)arg3;
+- (void)_handleLoopingVideoRequestResult:(id)arg1 forCell:(id)arg2 asset:(id)arg3 tag:(long long)arg4;
+- (void)_handleAnimatedImageResult:(id)arg1 forCell:(id)arg2 asset:(id)arg3 tag:(long long)arg4;
+- (id)_indexPathInCollectionView:(id)arg1 closestToPoint:(struct CGPoint)arg2;
+- (id)_indexPathInCollectionView:(id)arg1 closestToContentOffsetX:(double)arg2;
+- (id)_photoCollectionAtIndex:(long long)arg1;
+- (id)_indexPathOfAsset:(id)arg1 sectionHint:(long long)arg2;
+- (id)_activityAssetItemForAsset:(id)arg1 createIfNecessary:(_Bool)arg2;
+- (void)_addActivityAssetItem:(id)arg1;
+- (void)_removeActivityAssetItem:(id)arg1;
+- (void)_setSelected:(_Bool)arg1 atIndexPath:(id)arg2 animated:(_Bool)arg3;
+- (_Bool)_isAnyAssetSelected;
+- (void)_updateOptionView:(id)arg1 atIndexPath:(id)arg2;
+- (void)_handleSelectionOption:(id)arg1;
+- (void)_playLivePhotoHintIfNeededAtIndexPath:(id)arg1;
+- (struct CGRect)_collectionViewContentFrame;
+- (id)_validIndexPathFromIndexPath:(id)arg1;
+- (void)_updateLastKnownReferenceIndexPath;
+- (void)_setLastKnownReferenceAsset:(id)arg1 indexPath:(id)arg2;
+- (id)_optionViewAtIndexPath:(id)arg1 forCollectionView:(id)arg2;
+- (struct CGRect)frameForBadgeOfKind:(id)arg1 forItemFrame:(struct CGRect)arg2 atIndexPath:(id)arg3;
+- (_Bool)ppt_scrollToAssetAtRelativeIndex:(long long)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)ppt_faultInScollViewContentSize;
+- (void)_processCollectionListChangeNotifications:(id)arg1 singleCollectionNotifications:(id)arg2 needsReloadData:(_Bool)arg3;
+- (void)_statusBarFrameWillChange:(id)arg1;
+- (id)_firstSelectedIndexPath;
+- (id)initWithPhotoCollectionsFetchResult:(id)arg1 assetsFetchResultsByAssetCollection:(id)arg2 selection:(id)arg3;
+- (void)_playVitalityHintAfterViewDidAppear;
+- (void)_handlePhotoViewLoaderBlocks;
+- (id)currentActivityAssetItems;
+- (id)_updatedActivityAssetItemsForAssets:(id)arg1;
+- (void)_replaceActivityAssetItem:(id)arg1 withAssetItem:(id)arg2;
+- (_Bool)isItemAtIndexPathSelected:(id)arg1;
+- (void)selectItemAtIndexPath:(id)arg1;
+- (void)deselectItemAtIndexPath:(id)arg1;
+- (void)_getMainCollectionViewFrame:(struct CGRect *)arg1 collectionViewLayoutInsets:(struct UIEdgeInsets *)arg2;
+- (void)_updateAssetTransitionInfo:(id)arg1;
+- (void)_updateCellAtIndexPath:(id)arg1 withTransitionInfo:(id)arg2;
+- (void)setHideCellForCurrentReferenceAsset:(_Bool)arg1;
+- (id)referenceAssetTransitionInfo;
+- (id)adjacentVisibleAssetsTransitionInfos;
+- (id)_badgeTransitionInfosForCell:(id)arg1;
+
+@end

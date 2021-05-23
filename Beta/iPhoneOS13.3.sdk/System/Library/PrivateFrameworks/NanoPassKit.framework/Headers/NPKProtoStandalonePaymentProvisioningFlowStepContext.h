@@ -1,0 +1,96 @@
+/*
+ Image: /System/Library/PrivateFrameworks/NanoPassKit.framework/NanoPassKit
+ */
+
+#import <ProtocolBuffer/PBCodable.h>
+
+@class NPKProtoStandalonePaymentProvisioningFlowChooseCredentialsStepContext, NPKProtoStandalonePaymentProvisioningFlowChooseFlowStepContext, NPKProtoStandalonePaymentProvisioningFlowChooseProductStepContext, NPKProtoStandalonePaymentProvisioningFlowDigitalIssuanceAmountStepContext, NPKProtoStandalonePaymentProvisioningFlowDigitalIssuancePaymentStepContext, NPKProtoStandalonePaymentProvisioningFlowIssuerVerificationChannelsStepContext, NPKProtoStandalonePaymentProvisioningFlowIssuerVerificationCodeStepContext, NPKProtoStandalonePaymentProvisioningFlowIssuerVerificationFieldsStepContext, NPKProtoStandalonePaymentProvisioningFlowLocalDeviceManualEntryProgressStepContext, NPKProtoStandalonePaymentProvisioningFlowLocalDeviceManualEntryStepContext, NPKProtoStandalonePaymentProvisioningFlowManualEntryStepContext, NPKProtoStandalonePaymentProvisioningFlowMoreInformationStepContext, NPKProtoStandalonePaymentProvisioningFlowProductDisambiguationStepContext, NPKProtoStandalonePaymentProvisioningFlowProvisioningProgressStepContext, NPKProtoStandalonePaymentProvisioningFlowProvisioningResultStepContext, NPKProtoStandalonePaymentProvisioningFlowReaderModeEntryStepContext, NPKProtoStandalonePaymentProvisioningFlowReaderModeIngestionStepContext, NPKProtoStandalonePaymentProvisioningFlowSecondaryManualEntryStepContext, NPKProtoStandalonePaymentProvisioningFlowTermsAndConditionsStepContext, NPKProtoStandalonePaymentProvisioningFlowWelcomeStepContext, NSString;
+
+@interface NPKProtoStandalonePaymentProvisioningFlowStepContext : PBCodable
+
+{
+    NSString *_backStepIdentifier;
+    NPKProtoStandalonePaymentProvisioningFlowChooseCredentialsStepContext *_chooseCredentialsStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowChooseFlowStepContext *_chooseFlowStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowChooseProductStepContext *_chooseProductStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowDigitalIssuanceAmountStepContext *_digitalIssuanceAmountStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowDigitalIssuancePaymentStepContext *_digitalIssuancePaymentStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowIssuerVerificationChannelsStepContext *_issuerVerificationChannelsStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowIssuerVerificationCodeStepContext *_issuerVerificationCodeStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowIssuerVerificationFieldsStepContext *_issuerVerificationFieldsStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowLocalDeviceManualEntryProgressStepContext *_localDeviceManualEntryProgressStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowLocalDeviceManualEntryStepContext *_localDeviceManualEntryStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowManualEntryStepContext *_manualEntryStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowMoreInformationStepContext *_moreInformationStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowProductDisambiguationStepContext *_productDisambiguationStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowProvisioningProgressStepContext *_provisioningProgressStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowProvisioningResultStepContext *_provisioningResultStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowReaderModeEntryStepContext *_readerModeEntryStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowReaderModeIngestionStepContext *_readerModeIngestionStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowSecondaryManualEntryStepContext *_secondaryManualEntryStepContext;
+    NSString *_stepIdentifier;
+    NPKProtoStandalonePaymentProvisioningFlowTermsAndConditionsStepContext *_termsAndConditionsStepContext;
+    NPKProtoStandalonePaymentProvisioningFlowWelcomeStepContext *_welcomeStepContext;
+    _Bool _allowsAddLater;
+    struct {
+        unsigned int allowsAddLater:1;
+    } _has;
+}
+
+@property (retain, nonatomic) NSString *stepIdentifier;
+@property (nonatomic, readonly) _Bool hasBackStepIdentifier;
+@property (retain, nonatomic) NSString *backStepIdentifier;
+@property (nonatomic) _Bool hasAllowsAddLater;
+@property (nonatomic) _Bool allowsAddLater;
+@property (nonatomic, readonly) _Bool hasWelcomeStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowWelcomeStepContext *welcomeStepContext;
+@property (nonatomic, readonly) _Bool hasChooseFlowStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowChooseFlowStepContext *chooseFlowStepContext;
+@property (nonatomic, readonly) _Bool hasChooseProductStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowChooseProductStepContext *chooseProductStepContext;
+@property (nonatomic, readonly) _Bool hasChooseCredentialsStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowChooseCredentialsStepContext *chooseCredentialsStepContext;
+@property (nonatomic, readonly) _Bool hasDigitalIssuanceAmountStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowDigitalIssuanceAmountStepContext *digitalIssuanceAmountStepContext;
+@property (nonatomic, readonly) _Bool hasDigitalIssuancePaymentStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowDigitalIssuancePaymentStepContext *digitalIssuancePaymentStepContext;
+@property (nonatomic, readonly) _Bool hasMoreInformationStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowMoreInformationStepContext *moreInformationStepContext;
+@property (nonatomic, readonly) _Bool hasReaderModeEntryStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowReaderModeEntryStepContext *readerModeEntryStepContext;
+@property (nonatomic, readonly) _Bool hasReaderModeIngestionStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowReaderModeIngestionStepContext *readerModeIngestionStepContext;
+@property (nonatomic, readonly) _Bool hasManualEntryStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowManualEntryStepContext *manualEntryStepContext;
+@property (nonatomic, readonly) _Bool hasSecondaryManualEntryStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowSecondaryManualEntryStepContext *secondaryManualEntryStepContext;
+@property (nonatomic, readonly) _Bool hasLocalDeviceManualEntryStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowLocalDeviceManualEntryStepContext *localDeviceManualEntryStepContext;
+@property (nonatomic, readonly) _Bool hasLocalDeviceManualEntryProgressStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowLocalDeviceManualEntryProgressStepContext *localDeviceManualEntryProgressStepContext;
+@property (nonatomic, readonly) _Bool hasProductDisambiguationStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowProductDisambiguationStepContext *productDisambiguationStepContext;
+@property (nonatomic, readonly) _Bool hasTermsAndConditionsStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowTermsAndConditionsStepContext *termsAndConditionsStepContext;
+@property (nonatomic, readonly) _Bool hasProvisioningProgressStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowProvisioningProgressStepContext *provisioningProgressStepContext;
+@property (nonatomic, readonly) _Bool hasProvisioningResultStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowProvisioningResultStepContext *provisioningResultStepContext;
+@property (nonatomic, readonly) _Bool hasIssuerVerificationChannelsStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowIssuerVerificationChannelsStepContext *issuerVerificationChannelsStepContext;
+@property (nonatomic, readonly) _Bool hasIssuerVerificationFieldsStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowIssuerVerificationFieldsStepContext *issuerVerificationFieldsStepContext;
+@property (nonatomic, readonly) _Bool hasIssuerVerificationCodeStepContext;
+@property (retain, nonatomic) NPKProtoStandalonePaymentProvisioningFlowIssuerVerificationCodeStepContext *issuerVerificationCodeStepContext;
+
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)dictionaryRepresentation;
+- (void)writeTo:(id)arg1;
+- (void)mergeFrom:(id)arg1;
+- (_Bool)readFrom:(id)arg1;
+- (void)copyTo:(id)arg1;
+
+@end

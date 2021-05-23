@@ -1,0 +1,21 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CoreParsec.framework/CoreParsec
+ */
+
+#import <CoreParsec/Swift-Protocol.h>
+
+@class NSData;
+
+@protocol _CPSearchViewAppearFeedback <Swift>
+
+@property (nonatomic) unsigned long long timestamp;
+@property (nonatomic) int viewAppearEvent;
+@property (nonatomic) _Bool isOnLockScreen;
+@property (nonatomic) _Bool isOverApp;
+@property (nonatomic) _Bool readerTextAvailable;
+@property (nonatomic, readonly) NSData *jsonData;
+
+- (unsigned short)initWithDictionary: /* Error: Ran out of types for this method. */;
+- (unsigned short)initWithJSON: /* Error: Ran out of types for this method. */;
+
+@end

@@ -1,0 +1,76 @@
+/*
+ Image: /System/Library/Frameworks/Photos.framework/Photos
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSMutableArray, NSMutableDictionary, NSMutableSet, NSProgress, NSString, PHImportOptions, PHImportResults, PHImportSource, PHPhotoLibrary, PLImportFileManager;
+
+@protocol OS_dispatch_queue, PHImportServiceImporterDelegate;
+
+@interface PHImporter : NSObject
+
+{
+    id <PHImportServiceImporterDelegate> _delegate;
+    CDUnknownBlockType _completionHandler;
+    NSObject<OS_dispatch_queue> *_importQueue;
+    unsigned char _importState;
+    PLImportFileManager *_importFileManager;
+    NSMutableDictionary *_parentFolderMapping;
+    NSMutableArray *_downloadedRecords;
+    _Bool _isCanceled;
+    NSMutableDictionary *_folderByFolderPath;
+    NSMutableDictionary *_containerPathByLocalIdentifier;
+    NSMutableDictionary *_albumByAlbumPath;
+    NSMutableDictionary *_albumRequestsByAlbumId;
+    NSMutableDictionary *_folderRequestByFolderId;
+    unsigned long long _importBatchSize;
+    NSProgress *_progress;
+    PHImportOptions *_options;
+    PHImportResults *_results;
+    PHPhotoLibrary *_library;
+    NSString *_importSessionID;
+    NSMutableSet *_importedBurstUUIDs;
+    PHImportSource *_source;
+}
+
+@property (retain, nonatomic) NSProgress *progress;
+@property (retain, nonatomic) PHImportOptions *options;
+@property (retain, nonatomic) PHImportResults *results;
+@property (retain, nonatomic) PHPhotoLibrary *library;
+@property (retain, nonatomic) NSString *importSessionID;
+@property (retain, nonatomic) NSMutableSet *importedBurstUUIDs;
+@property (retain, nonatomic) PHImportSource *source;
+
++ (void)importAssets:(id)arg1 fromImportSource:(id)arg2 intoLibrary:(id)arg3 withOptions:(id)arg4 progress:(id *)arg5 delegate:(id)arg6 atEnd:(CDUnknownBlockType)arg7;
++ (void)dumpImageData:(id)arg1;
++ (void)dumpMetadataForData:(id)arg1;
+
+- (void)cancellationHandler;
+- (id)initWithLibrary:(id)arg1 options:(id)arg2 source:(id)arg3 delegate:(id)arg4 completionHandler:(CDUnknownBlockType)arg5;
+- (id)beginImport:(id)arg1;
+- (void)importNextAsset:(id)arg1;
+- (_Bool)shouldImportRecordAsReference:(id)arg1;
+- (void)downloadNextAssetInRecord:(id)arg1 recordEnumerator:(id)arg2 completionHandler:(CDUnknownBlockType)arg3;
+- (void)importRecords:(id)arg1;
+- (id)_recordsToImportWithCount:(unsigned long long)arg1;
+- (_Bool)shouldIngestInPlace:(id)arg1;
+- (void)importRecords:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)_importRecord:(id)arg1 createdAlbumIdentifiers:(id)arg2 createdFolderIdentifiers:(id)arg3;
+- (void)_applyFastVideoModernizationToRecord:(id)arg1;
+- (void)addDescriptionPropertiesFromImportAsset:(id)arg1 toCreationRequest:(id)arg2;
+- (void)finishImport;
+- (_Bool)handleErrorsForRecord:(id)arg1 batch:(id)arg2 file:(char *)arg3 line:(int)arg4;
+- (void)validateSourceForAsset:(id)arg1;
+- (id)createFolderForPath:(id)arg1 inFolder:(id)arg2 error:(id *)arg3;
+- (id)folderChangeRequestForFolder:(id)arg1;
+- (void)updateAlbumCacheWithAlbumIdentifiers:(id)arg1;
+- (void)updateFolderCacheWithFolders:(id)arg1;
+- (void)addRecordToResults:(id)arg1;
+- (id)relativePathComponentsForAlbumPath:(id)arg1 fromRootPath:(id)arg2;
+- (id)ensureContainersExistForAlbumPath:(id)arg1 forAsset:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (id)createAlbumForPath:(id)arg1 inFolder:(id)arg2 error:(id *)arg3;
+- (void)importedBurstAsset:(id)arg1;
+- (id)removeImportDirectoryForLibrary:(id)arg1;
+
+@end

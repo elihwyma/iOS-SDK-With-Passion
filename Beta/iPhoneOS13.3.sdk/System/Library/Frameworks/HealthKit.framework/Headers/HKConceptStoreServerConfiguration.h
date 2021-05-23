@@ -1,0 +1,9 @@
+/*
+ Image: /System/Library/Frameworks/HealthKit.framework/HealthKit
+ */
+
+#import <HealthKit/HKTaskConfiguration.h>
+
+@interface HKConceptStoreServerConfiguration : HKTaskConfiguration
+
+@end

@@ -1,0 +1,176 @@
+/*
+ Image: /System/Library/PrivateFrameworks/SpringBoard.framework/SpringBoard
+ */
+
+#import <PrototypeTools/PTSettings.h>
+
+@class PTOutlet, SBAppSwitcherOrbGestureSettings, SBFloatingSwitcherSettings, SBFluidSwitcherAnimationSettings;
+
+@interface SBAppSwitcherSettings : PTSettings
+
+{
+    long long _simplicityOptions;
+    _Bool _useAsynchronousRendering;
+    _Bool _shouldRoundCornersDuringSwipeUp;
+    _Bool _useTitleOpacityPrototypeSettings;
+    _Bool _showModifierDebugLabel;
+    _Bool _showMainModifierTimeline;
+    _Bool _showFloatingModifierTimeline;
+    _Bool _shouldDisableSwitcherModelUpdatesForDemo;
+    _Bool _simplicityOptionNoSnapshots;
+    _Bool _simplicityOptionNoCrossfade;
+    _Bool _simplicityOptionNoLabels;
+    _Bool _simplicityOptionNoIcons;
+    _Bool _simplicityOptionNoBlurs;
+    _Bool _simplicityOptionNoShadows;
+    _Bool _simplicityOptionNoControlCenter;
+    _Bool _simplicityOptionNoSnapshotBkg;
+    _Bool _showFloats;
+    long long _switcherStyle;
+    double _asynchronousRenderingDisableSurfaceCacheDelayDuration;
+    double _preventMedusaSnapshotsAfterTransitionDuration;
+    SBFloatingSwitcherSettings *_floatingSwitcherSettings;
+    SBAppSwitcherOrbGestureSettings *_orbGestureSettings;
+    double _mScale;
+    double _centerPoint;
+    double _maxScale;
+    double _mAlpha;
+    double _bAlpha;
+    double _mDarkening;
+    double _bDarkening;
+    double _maxDarkening;
+    double _tetheredInsertionRemovalInsetForDeterminingVisibility;
+    long long _selectionHighlightStyle;
+    double _highlightSquishyScale;
+    double _highlightDimOpacity;
+    double _switcherCardShadowRadius;
+    double _switcherCardShadowOpacity;
+    double _switcherCardShadowOffset;
+    double _appExposeNonFloatingSingleRowScale;
+    double _appExposeNonFloatingDoubleRowScale;
+    double _appExposeFloatingDoubleRowScale;
+    double _gridSwitcherPageScale;
+    double _gridSwitcherHorizontalInterpageSpacingLandscape;
+    double _gridSwitcherVerticalNaturalSpacingLandscape;
+    double _gridSwitcherHorizontalInterpageSpacingPortrait;
+    double _gridSwitcherVerticalNaturalSpacingPortrait;
+    double _gridSwitcherSnapToControlCenterHeightSlop;
+    double _gridSwitcherSwipeUpNormalizedRubberbandingRange;
+    double _gridSwitcherSwipeUpNormalizedRubberbandedTranslationAtMinimumScale;
+    double _gridSwitcherSwipeUpMinimumScale;
+    unsigned long long _numberOfSnapshotsToCacheInSwitcher;
+    unsigned long long _numberOfSnapshotsToAlwaysKeepAround;
+    double _spacingBetweenLeadingEdgeAndIcon;
+    double _spacingBetweenTrailingEdgeAndLabels;
+    double _iconSideLength;
+    double _spacingBetweenSnapshotAndIcon;
+    double _spacingBetweenSnapshotAndDescriptionLabelBaseline;
+    double _spacingBetweenTitleAndSubtitleBaseline;
+    double _spacingBetweenIconAndLabel;
+    double _spacingBetweenLabelAndSecondIcon;
+    double _spacingBetweenBoundsCenterAndSecondIcon;
+    double _deckSwitcherPageScale;
+    double _deckSwitcherDecelerationRate;
+    double _aExpLayoutCoeff;
+    double _bExpLayoutCoeff;
+    double _depthPadding;
+    double _offscreenCardScaleForFlyIn;
+    double _coplanarSpacingPhone;
+    double _coplanarSpacingPad;
+    double _titleOpacityACoeff;
+    double _titleOpacityBCoeff;
+    double _titleOpacityCCoeff;
+    double _titleOpacityDCoeff;
+    SBFluidSwitcherAnimationSettings *_animationSettings;
+    PTOutlet *_stashModelOutlet;
+    PTOutlet *_loadModelOutlet;
+    PTOutlet *_addAppsToModelOutlet;
+    PTOutlet *_addPPTAppsToModelOutlet;
+}
+
+@property long long simplicityOptions;
+@property _Bool simplicityOptionNoSnapshots;
+@property _Bool simplicityOptionNoCrossfade;
+@property _Bool simplicityOptionNoLabels;
+@property _Bool simplicityOptionNoIcons;
+@property _Bool simplicityOptionNoBlurs;
+@property _Bool simplicityOptionNoShadows;
+@property _Bool simplicityOptionNoControlCenter;
+@property _Bool simplicityOptionNoSnapshotBkg;
+@property _Bool showFloats;
+@property long long switcherStyle;
+@property _Bool useAsynchronousRendering;
+@property _Bool shouldRoundCornersDuringSwipeUp;
+@property double asynchronousRenderingDisableSurfaceCacheDelayDuration;
+@property double preventMedusaSnapshotsAfterTransitionDuration;
+@property (retain, nonatomic) SBFloatingSwitcherSettings *floatingSwitcherSettings;
+@property (retain, nonatomic) SBAppSwitcherOrbGestureSettings *orbGestureSettings;
+@property double mScale;
+@property double centerPoint;
+@property double maxScale;
+@property double mAlpha;
+@property double bAlpha;
+@property double mDarkening;
+@property double bDarkening;
+@property double maxDarkening;
+@property double tetheredInsertionRemovalInsetForDeterminingVisibility;
+@property long long selectionHighlightStyle;
+@property double highlightSquishyScale;
+@property double highlightDimOpacity;
+@property double switcherCardShadowRadius;
+@property double switcherCardShadowOpacity;
+@property double switcherCardShadowOffset;
+@property double appExposeNonFloatingSingleRowScale;
+@property double appExposeNonFloatingDoubleRowScale;
+@property double appExposeFloatingDoubleRowScale;
+@property double gridSwitcherPageScale;
+@property double gridSwitcherHorizontalInterpageSpacingLandscape;
+@property double gridSwitcherVerticalNaturalSpacingLandscape;
+@property double gridSwitcherHorizontalInterpageSpacingPortrait;
+@property double gridSwitcherVerticalNaturalSpacingPortrait;
+@property double gridSwitcherSnapToControlCenterHeightSlop;
+@property double gridSwitcherSwipeUpNormalizedRubberbandingRange;
+@property double gridSwitcherSwipeUpNormalizedRubberbandedTranslationAtMinimumScale;
+@property double gridSwitcherSwipeUpMinimumScale;
+@property unsigned long long numberOfSnapshotsToCacheInSwitcher;
+@property unsigned long long numberOfSnapshotsToAlwaysKeepAround;
+@property double spacingBetweenLeadingEdgeAndIcon;
+@property double spacingBetweenTrailingEdgeAndLabels;
+@property double iconSideLength;
+@property double spacingBetweenSnapshotAndIcon;
+@property double spacingBetweenSnapshotAndDescriptionLabelBaseline;
+@property double spacingBetweenTitleAndSubtitleBaseline;
+@property double spacingBetweenIconAndLabel;
+@property double spacingBetweenLabelAndSecondIcon;
+@property double spacingBetweenBoundsCenterAndSecondIcon;
+@property double deckSwitcherPageScale;
+@property double deckSwitcherDecelerationRate;
+@property double aExpLayoutCoeff;
+@property double bExpLayoutCoeff;
+@property double depthPadding;
+@property double offscreenCardScaleForFlyIn;
+@property double coplanarSpacingPhone;
+@property double coplanarSpacingPad;
+@property _Bool useTitleOpacityPrototypeSettings;
+@property double titleOpacityACoeff;
+@property double titleOpacityBCoeff;
+@property double titleOpacityCCoeff;
+@property double titleOpacityDCoeff;
+@property _Bool showModifierDebugLabel;
+@property _Bool showMainModifierTimeline;
+@property _Bool showFloatingModifierTimeline;
+@property _Bool shouldDisableSwitcherModelUpdatesForDemo;
+@property (retain, nonatomic) SBFluidSwitcherAnimationSettings *animationSettings;
+@property (retain, nonatomic) PTOutlet *stashModelOutlet;
+@property (retain, nonatomic) PTOutlet *loadModelOutlet;
+@property (retain, nonatomic) PTOutlet *addAppsToModelOutlet;
+@property (retain, nonatomic) PTOutlet *addPPTAppsToModelOutlet;
+
++ (id)settingsControllerModule;
+
+- (void)setDefaultValues;
+- (id)archiveValueForKey:(id)arg1;
+- (_Bool)shouldSimplifyForOptions:(long long)arg1;
+- (long long)effectiveSwitcherStyle;
+
+@end

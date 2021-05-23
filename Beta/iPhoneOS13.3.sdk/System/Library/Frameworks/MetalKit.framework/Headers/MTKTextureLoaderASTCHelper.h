@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/Frameworks/MetalKit.framework/MetalKit
+ */
+
+#import <Foundation/NSObject.h>
+
+__attribute__((visibility("hidden")))
+@interface MTKTextureLoaderASTCHelper : NSObject
+
++ (long long)isASTCHDRData:(id)arg1 textureType:(unsigned long long)arg2 error:(id *)arg3;
+
+@end

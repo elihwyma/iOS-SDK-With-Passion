@@ -1,0 +1,26 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ManagedConfiguration.framework/ManagedConfiguration
+ */
+
+#import <Foundation/NSDictionary.h>
+
+@interface NSDictionary (MCUtilities)
+
++ (id)MCShortenedDictionary:(id)arg1;
++ (id)MCShortenedArray:(id)arg1;
++ (id)MCShortenedData:(id)arg1;
++ (id)MCShortenedObject:(id)arg1;
++ (id)MCDictionaryFromFile:(id)arg1;
+
+- (id)MCMutableDeepCopyWithZone:(struct _NSZone *)arg1;
+- (id)MCDeepCopyWithZone:(struct _NSZone *)arg1;
+- (_Bool)MCWriteToBinaryFile:(id)arg1 atomically:(_Bool)arg2;
+- (id)MCMutableDeepCopy;
+- (id)MCDeepCopy;
+- (id)MCRetainRequiredObjectKey:(id)arg1 type:(Class)arg2 errorDomain:(id)arg3 missingDataCode:(long long)arg4 missingDataErrorString:(id)arg5 invalidDataCode:(long long)arg6 invalidDataErrorString:(id)arg7 outError:(id *)arg8;
+- (id)MCRetainOptionalObjectKey:(id)arg1 type:(Class)arg2 errorDomain:(id)arg3 invalidDataCode:(long long)arg4 invalidDataErrorString:(id)arg5 outError:(id *)arg6;
+- (id)MCRetainRequiredNonZeroLengthStringKey:(id)arg1 errorDomain:(id)arg2 missingDataCode:(long long)arg3 missingDataErrorString:(id)arg4 invalidDataCode:(long long)arg5 invalidDataErrorString:(id)arg6 outError:(id *)arg7;
+- (id)MCRetainOptionalNonZeroLengthStringKey:(id)arg1 errorDomain:(id)arg2 invalidDataCode:(long long)arg3 invalidDataErrorString:(id)arg4 outError:(id *)arg5;
+- (id)MCShortenedPlistDescription;
+
+@end

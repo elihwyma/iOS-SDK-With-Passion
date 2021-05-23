@@ -1,0 +1,9 @@
+/*
+ Image: /System/Library/PrivateFrameworks/AppSupport.framework/AppSupport
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface CPMemoryPool : NSObject
+
+@end

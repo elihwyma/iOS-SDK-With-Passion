@@ -1,0 +1,56 @@
+/*
+ Image: /System/Library/PrivateFrameworks/TrustedPeers.framework/TrustedPeers
+ */
+
+#import <TrustedPeers/TrustedPeers-Structures.h>
+
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/(null).h>
+#import <TrustedPeers/_SFECKeyPair-TPKeyPair.h>
+#import <TrustedPeers/_SFECPublicKey-TPPublicKey.h>
+#import <TrustedPeers/NSCoding-Protocol.h>
+#import <TrustedPeers/NSCopying-Protocol.h>
+#import <TrustedPeers/NSError-UsefulConstructors.h>
+#import <TrustedPeers/NSObject-Protocol.h>
+#import <TrustedPeers/NSSecureCoding-Protocol.h>
+#import <TrustedPeers/Swift-Protocol.h>
+#import <TrustedPeers/TPCachedViableBottles.h>
+#import <TrustedPeers/TPKeyPair-Protocol.h>
+#import <TrustedPeers/TPMachineID.h>
+#import <TrustedPeers/TPMachineIDList.h>
+#import <TrustedPeers/TPPBAncientEpoch.h>
+#import <TrustedPeers/TPPBDictionaryMatchingRuleFieldExists.h>
+#import <TrustedPeers/TPPBDisposition.h>
+#import <TrustedPeers/TPPBDispositionDisallowedMachineID.h>
+#import <TrustedPeers/TPPBDispositionDuplicateMachineID.h>
+#import <TrustedPeers/TPPBDispositionEntry.h>
+#import <TrustedPeers/TPPBPolicyProhibits.h>
+#import <TrustedPeers/TPPBUnknownMachineID.h>
+#import <TrustedPeers/TPPeerDynamicInfo.h>
+#import <TrustedPeers/TPPeerPermanentInfo.h>
+#import <TrustedPeers/TPPeerStableInfo.h>
+#import <TrustedPeers/TPPolicy-Protocol.h>
+#import <TrustedPeers/TPPublicKey-Protocol.h>
+#import <TrustedPeers/TPPublicKeyFactory-Protocol.h>
+#import <TrustedPeers/TPRecoveryKeyPair.h>

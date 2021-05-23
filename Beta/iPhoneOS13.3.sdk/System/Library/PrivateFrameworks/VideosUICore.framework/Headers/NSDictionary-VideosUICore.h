@@ -1,0 +1,20 @@
+/*
+ Image: /System/Library/PrivateFrameworks/VideosUICore.framework/VideosUICore
+ */
+
+#import <Foundation/NSDictionary.h>
+
+@interface NSDictionary (VideosUICore)
+
+- (id)vui_dictionaryForKey:(id)arg1;
+- (id)vui_stringForKey:(id)arg1;
+- (id)vui_arrayForKey:(id)arg1;
+- (id)vui_numberForKey:(id)arg1;
+- (_Bool)vui_boolForKey:(id)arg1 defaultValue:(_Bool)arg2;
+- (id)vui_dateForKey:(id)arg1;
+- (id)vui_URLForKey:(id)arg1;
+- (id)vui_errorForKey:(id)arg1;
+- (id)_vui_lookupValueForKey:(id)arg1 expectedClass:(Class)arg2;
+- (id)vui_dataForKey:(id)arg1;
+
+@end

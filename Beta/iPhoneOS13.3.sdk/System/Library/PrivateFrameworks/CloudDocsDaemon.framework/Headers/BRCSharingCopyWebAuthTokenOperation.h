@@ -1,0 +1,27 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CloudDocsDaemon.framework/CloudDocsDaemon
+ */
+
+#import <CloudDocsDaemon/_BRCFrameworkOperation.h>
+
+@class NSString;
+
+__attribute__((visibility("hidden")))
+@interface BRCSharingCopyWebAuthTokenOperation : _BRCFrameworkOperation
+
+{
+    NSString *_ckContainerID;
+}
+
+@property (retain, nonatomic) NSString *ckContainerID;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
+- (void)main;
+- (_Bool)shouldRetryForError:(id)arg1;
+- (id)createActivity;
+- (id)initWithSyncContext:(id)arg1 ckContainerID:(id)arg2;
+
+@end

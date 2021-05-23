@@ -1,0 +1,11 @@
+/*
+ Image: /System/Library/PrivateFrameworks/NeutrinoCore.framework/NeutrinoCore
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface NUAuxiliaryImageFactory : NSObject
+
++ (id)auxiliaryImageFromCoreGraphicsInfoDictionary:(id)arg1 forCGAuxiliaryImageTypeString:(id)arg2 error:(out id *)arg3;
+
+@end

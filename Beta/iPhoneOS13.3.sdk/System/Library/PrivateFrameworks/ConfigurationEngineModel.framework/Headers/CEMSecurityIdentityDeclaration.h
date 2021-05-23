@@ -1,0 +1,37 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ConfigurationEngineModel.framework/ConfigurationEngineModel
+ */
+
+#import <ConfigurationEngineModel/CEMConfigurationBase.h>
+
+@class NSString;
+
+@interface CEMSecurityIdentityDeclaration : CEMConfigurationBase
+
+{
+    NSString *_payloadCredentialIdentifier;
+}
+
+@property (copy, nonatomic) NSString *payloadCredentialIdentifier;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
++ (id)profileType;
++ (id)allowedPayloadKeys;
++ (id)registeredClassName;
++ (id)registeredIdentifier;
++ (id)restrictionPayloadKeys;
++ (id)buildWithIdentifier:(id)arg1 withCredentialIdentifier:(id)arg2;
++ (id)buildRequiredOnlyWithIdentifier:(id)arg1 withCredentialIdentifier:(id)arg2;
+
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (_Bool)multipleAllowed;
+- (_Bool)mustBeSupervised;
+- (int)activationLevel;
+- (id)assetReferences;
+- (_Bool)loadPayload:(id)arg1 error:(id *)arg2;
+- (id)serializePayloadWithAssetProviders:(id)arg1;
+
+@end

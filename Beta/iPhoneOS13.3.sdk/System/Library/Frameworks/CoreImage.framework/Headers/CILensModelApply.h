@@ -1,0 +1,23 @@
+/*
+ Image: /System/Library/Frameworks/CoreImage.framework/CoreImage
+ */
+
+#import <CoreImage/CIFilter.h>
+
+@class CIImage;
+
+__attribute__((visibility("hidden")))
+@interface CILensModelApply : CIFilter
+
+{
+    CIImage *inputImage;
+    CIImage *inputLensModelParams;
+}
+
+@property (retain, nonatomic) CIImage *inputImage;
+@property (retain, nonatomic) CIImage *inputLensModelParams;
+
+- (id)outputImage;
+- (id)kernel;
+
+@end

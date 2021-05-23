@@ -1,0 +1,31 @@
+/*
+ Image: /System/Library/PrivateFrameworks/PhotoLibraryServices.framework/PhotoLibraryServices
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSString;
+
+@interface PLInMemoryOnlyUniformTypeIdentifier : NSObject
+
+{
+    NSString *_identifier;
+}
+
+@property (copy, nonatomic) NSString *identifier;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (nonatomic, readonly) _Bool conformsToRawImage;
+@property (nonatomic, readonly) _Bool conformsToImage;
+@property (nonatomic, readonly) _Bool conformsToMovie;
+@property (nonatomic, readonly, getter=isPrimaryImageFormat) _Bool primaryImageFormat;
+@property (nonatomic, readonly) _Bool isPlayableVideo;
+
+- (_Bool)isEqual:(id)arg1;
+- (id)initWithIdentifier:(id)arg1;
+- (_Bool)conformsToJPEG;
+- (_Bool)conformsToAudio;
+
+@end

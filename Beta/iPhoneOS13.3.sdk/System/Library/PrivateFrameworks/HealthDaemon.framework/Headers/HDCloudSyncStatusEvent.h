@@ -1,0 +1,41 @@
+/*
+ Image: /System/Library/PrivateFrameworks/HealthDaemon.framework/HealthDaemon
+ */
+
+#import <HealthDaemon/HDCloudSyncEvent.h>
+
+@class NSNumber, NSString;
+
+@interface HDCloudSyncStatusEvent : HDCloudSyncEvent
+
+{
+    NSNumber *_timeSinceUploadSuccess;
+    NSNumber *_timeSinceDownloadSuccess;
+    NSNumber *_timeSinceLastUploadForwardProgress;
+    NSNumber *_timeUntilRebaseRequired;
+    NSNumber *_baseLineEpoch;
+    NSNumber *_hasEncounteredGapInCurrentEpoch;
+    NSNumber *_emptyZoneCount;
+}
+
+@property (copy, nonatomic, readonly) NSNumber *timeSinceUploadSuccess;
+@property (copy, nonatomic, readonly) NSNumber *timeSinceDownloadSuccess;
+@property (copy, nonatomic, readonly) NSNumber *timeSinceLastUploadForwardProgress;
+@property (copy, nonatomic, readonly) NSNumber *timeUntilRebaseRequired;
+@property (copy, nonatomic, readonly) NSNumber *baseLineEpoch;
+@property (copy, nonatomic, readonly) NSNumber *hasEncounteredGapInCurrentEpoch;
+@property (copy, nonatomic, readonly) NSNumber *emptyZoneCount;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
++ (id)_persistedSyncStateForConfiguration:(id)arg1;
++ (id)_lastSuccessfulPullDateForConfiguration:(id)arg1;
++ (id)statusEventWithConfiguration:(id)arg1 cloudKitIdentifier:(id)arg2;
+
+- (unsigned int)AWDMetricID;
+- (id)codableRepresentationForAWDSubmission;
+- (id)initWithProfile:(id)arg1 operation:(long long)arg2 reason:(long long)arg3 options:(unsigned long long)arg4 syncCirclePrefix:(id)arg5 containerID:(id)arg6 cloudKitIdentifier:(id)arg7 syncID:(id)arg8 operationID:(id)arg9 syncState:(id)arg10 lastSuccessfulPullDate:(id)arg11 lastPushForwardProgressDate:(id)arg12 cloudKitManateeEnabled:(_Bool)arg13 internalSettingManateeEnabled:(_Bool)arg14;
+
+@end

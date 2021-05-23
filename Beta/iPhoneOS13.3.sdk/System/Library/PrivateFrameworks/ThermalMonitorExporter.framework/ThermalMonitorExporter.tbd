@@ -1,0 +1,29 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: 5A64FC16-EA3D-3C8D-8D75-D8DC18B67059' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/ThermalMonitorExporter.framework/ThermalMonitorExporter
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64 ]
+    symbols:              [ _ThermalMonitorExporterReadValue,
+                            _ThermalMonitorExporterVersionNumber,
+                            _ThermalMonitorExporterVersionString ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ _CFArrayGetCount, _CFArrayGetValueAtIndex,
+                            _CFDictionaryCreate, _CFNumberCreate, _CFRelease,
+                            _CFRetain, _IOHIDEventGetFloatValue,
+                            _IOHIDEventSystemClientCopyServices,
+                            _IOHIDEventSystemClientCreate,
+                            _IOHIDEventSystemClientSetMatching,
+                            _IOHIDServiceClientCopyEvent,
+                            __NSConcreteGlobalBlock,
+                            ___CFConstantStringClassReference, ___stack_chk_fail,
+                            ___stack_chk_guard, _dispatch_once,
+                            _kCFAllocatorDefault, _kCFTypeDictionaryKeyCallBacks,
+                            _kCFTypeDictionaryValueCallBacks, dyld_stub_binder ]
+...

@@ -1,0 +1,29 @@
+/*
+ Image: /System/Library/PrivateFrameworks/PBBridgeSupport.framework/PBBridgeSupport
+ */
+
+#import <ProtocolBuffer/PBCodable.h>
+
+@interface PBBProtoDidFailToCreatePasscode : PBCodable
+
+{
+    int _error;
+    struct {
+        unsigned int error:1;
+    } _has;
+}
+
+@property (nonatomic) _Bool hasError;
+@property (nonatomic) int error;
+
+- (_Bool)isEqual:(id)arg1;
+- (unsigned long long)hash;
+- (id)description;
+- (id)copyWithZone:(struct _NSZone *)arg1;
+- (id)dictionaryRepresentation;
+- (void)writeTo:(id)arg1;
+- (void)mergeFrom:(id)arg1;
+- (_Bool)readFrom:(id)arg1;
+- (void)copyTo:(id)arg1;
+
+@end

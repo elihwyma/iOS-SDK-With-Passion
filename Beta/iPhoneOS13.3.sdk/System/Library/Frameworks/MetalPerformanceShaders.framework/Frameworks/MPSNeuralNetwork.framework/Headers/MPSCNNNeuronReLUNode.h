@@ -1,0 +1,15 @@
+/*
+ Image: /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSNeuralNetwork.framework/MPSNeuralNetwork
+ */
+
+#import <MPSNeuralNetwork/MPSCNNNeuronNode.h>
+
+@interface MPSCNNNeuronReLUNode : MPSCNNNeuronNode
+
++ (id)nodeWithSource:(id)arg1;
++ (id)nodeWithSource:(id)arg1 a:(float)arg2;
+
+- (id)initWithSource:(id)arg1;
+- (id)initWithSource:(id)arg1 a:(float)arg2;
+
+@end

@@ -1,0 +1,59 @@
+/*
+ Image: /System/Library/PrivateFrameworks/PhotoLibrary.framework/PhotoLibrary
+ */
+
+typedef void (*CDUnknownFunctionPointerType)(void);
+typedef void (^CDUnknownBlockType)(void);
+
+struct CGAffineTransform {
+    double _field1;
+    double _field2;
+    double _field3;
+    double _field4;
+    double _field5;
+    double _field6;
+};
+
+struct CGPoint {
+    double x;
+    double y;
+};
+
+struct CGRect {
+    struct CGPoint origin;
+    struct CGSize size;
+};
+
+struct CGSize {
+    double width;
+    double height;
+};
+
+struct UIEdgeInsets {
+    double _field1;
+    double _field2;
+    double _field3;
+    double _field4;
+};
+
+struct entryList {
+    struct lruEntry *tqh_first;
+    struct lruEntry **tqh_last;
+};
+
+struct lruEntry {
+    id _field1;
+    long long _field2;
+    struct {
+        struct lruEntry *_field1;
+        struct lruEntry **_field2;
+    } _field3;
+};
+
+typedef struct {
+    long long version;
+    void *info;
+    CDUnknownFunctionPointerType retain;
+    CDUnknownFunctionPointerType release;
+    CDUnknownFunctionPointerType copyDescription;
+} CDStruct_4210025a;

@@ -1,0 +1,29 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: 0CDF5A42-5EB4-38B1-9EF0-1E8062306020' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/CoreDuetDataModel.framework/CoreDuetDataModel
+current-version:       1
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64 ]
+    objc-classes:         [ _CDDMAirplaneModeEvent, _CDDMAppNameMapper,
+                            _CDDMAppStateChangeEvent, _CDDMAttributeNameMapper,
+                            _CDDMBacklightEvent, _CDDMBatteryEvent,
+                            _CDDMBookkeeping, _CDDMBootOrShutdownEvent,
+                            _CDDMDeviceEvent, _CDDMDeviceMapper, _CDDMForecast,
+                            _CDDMForecastInteger, _CDDMForecastReal,
+                            _CDDMForecastScore, _CDDMForecastString,
+                            _CDDMIntegerAttribute, _CDDMPluginEvent, _CDDMPool,
+                            _CDDMPoolNameMapper, _CDDMRealAttribute,
+                            _CDDMScreenLockEvent, _CDDMSleepOrWakeEvent,
+                            _CDDMStatisticInteger, _CDDMStatisticReal,
+                            _CDDMStatisticString, _CDDMStringAttribute,
+                            _CDDMThermalEvent, _CDDMWakednessEvent ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ __objc_empty_cache, dyld_stub_binder ]
+    objc-classes:         [ _NSManagedObject, _NSObject ]
+...

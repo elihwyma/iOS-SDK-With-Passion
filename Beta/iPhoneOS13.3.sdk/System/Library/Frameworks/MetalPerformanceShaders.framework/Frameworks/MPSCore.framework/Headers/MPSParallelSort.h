@@ -1,0 +1,37 @@
+/*
+ Image: /System/Library/Frameworks/MetalPerformanceShaders.framework/Frameworks/MPSCore.framework/MPSCore
+ */
+
+#import <MPSCore/MPSKernel.h>
+
+@class MPSParallelExclusiveScan;
+
+@interface MPSParallelSort : MPSKernel
+
+{
+    unsigned long long dataTypeSizeInBytes;
+    unsigned int _sourceDataType;
+    unsigned int _destinationDataType;
+    int _sortOp;
+    MPSParallelExclusiveScan *_exclusiveScanKernel;
+    unsigned int _keyPairDataType;
+    unsigned int _valuePairDataType;
+}
+
+@property (nonatomic, readonly) unsigned int keyPairDataType;
+@property (nonatomic, readonly) unsigned int valuePairDataType;
+
++ (const struct MPSLibraryInfo *)libraryInfo;
+
+- (void)dealloc;
+- (void)encodeWithCoder:(id)arg1;
+- (id)initWithDevice:(id)arg1;
+- (id)copyWithZone:(struct _NSZone *)arg1 device:(id)arg2;
+- (id)initPrivateWithDevice:(id)arg1;
+- (id)initWithCoder:(id)arg1 device:(id)arg2;
+- (void)encodeToCommandBuffer:(id)arg1 sourceBuffer:(id)arg2 sourceOffset:(unsigned long long)arg3 destinationBuffer:(id)arg4 destinationOffset:(unsigned long long)arg5 numEntries:(unsigned long long)arg6;
+- (id)initWithDevice:(id)arg1 keyPairDataType:(unsigned int)arg2 valuePairDataType:(unsigned int)arg3;
+- (id)initWithDevice:(id)arg1 keyPairDataType:(unsigned int)arg2 valuePairDataType:(unsigned int)arg3 sortOp:(int)arg4;
+- (void)encodeToCommandBuffer:(id)arg1 sourceKeyBuffer:(id)arg2 sourceKeyOffset:(unsigned long long)arg3 sourceValueBuffer:(id)arg4 sourceValueOffset:(unsigned long long)arg5 destinationKeyBuffer:(id)arg6 destinationKeyOffset:(unsigned long long)arg7 destinationValueBuffer:(id)arg8 destinationValueOffset:(unsigned long long)arg9 numEntries:(unsigned long long)arg10;
+
+@end

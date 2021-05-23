@@ -1,0 +1,19 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: 6226E2E1-D780-3F38-A6ED-EDF79A9627A6' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/Frameworks/UIKit.framework/UIKit
+current-version:       61000
+compatibility-version: 1
+objc-constraint:       retain_release
+exports:
+  - archs:                [ arm64 ]
+    re-exports:           [ /System/Library/Frameworks/FileProvider.framework/FileProvider,
+                            /System/Library/PrivateFrameworks/DocumentManager.framework/DocumentManager,
+                            /System/Library/PrivateFrameworks/ShareSheet.framework/ShareSheet,
+                            /System/Library/PrivateFrameworks/UIKitCore.framework/UIKitCore ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ dyld_stub_binder ]
+...

@@ -1,0 +1,16 @@
+--- !tapi-tbd-v2
+archs:                 [ arm64 ]
+uuids:                 [ 'arm64: 8857003E-52A6-375D-ABBD-19A3A046E3E9' ]
+platform:              ios
+flags:                 [ flat_namespace ]
+install-name:          /System/Library/PrivateFrameworks/DataDeliveryServices.framework/DataDeliveryServices
+current-version:       1
+compatibility-version: 1
+exports:
+  - archs:                [ arm64 ]
+    symbols:              [ _DataDeliveryServicesVersionNumber,
+                            _DataDeliveryServicesVersionString ]
+undefineds:
+  - archs:                [ arm64 ]
+    symbols:              [ dyld_stub_binder ]
+...

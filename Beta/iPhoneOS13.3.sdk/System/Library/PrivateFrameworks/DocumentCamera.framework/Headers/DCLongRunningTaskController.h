@@ -1,0 +1,60 @@
+/*
+ Image: /System/Library/PrivateFrameworks/DocumentCamera.framework/DocumentCamera
+ */
+
+#import <Foundation/NSObject.h>
+
+@class DCProgressViewController, NSDate, NSProgress, NSString, UIViewController, UIWindow;
+
+__attribute__((visibility("hidden")))
+@interface DCLongRunningTaskController : NSObject
+
+{
+    _Bool _isCancelled;
+    _Bool _shouldShowCancelButton;
+    _Bool _shouldShowCircularProgress;
+    _Bool _progressViewControllerDidFinishPresenting;
+    _Bool _shouldDismissProgressViewController;
+    NSString *_progressFormatString;
+    struct UIViewController *_viewControllerToPresentFrom;
+    struct UIWindow *_window;
+    double _intervalBeforeOpeningProgressDialog;
+    id _keepAlive;
+    CDUnknownBlockType _completionBlock;
+    CDUnknownBlockType _updateProgressUIBlock;
+    NSProgress *_progress;
+    NSDate *_lastAccessibilityAnnouncementDate;
+    NSDate *_openProgressDate;
+    DCProgressViewController *_progressViewController;
+}
+
+@property (retain, nonatomic) UIWindow *window;
+@property (nonatomic) double intervalBeforeOpeningProgressDialog;
+@property (retain, nonatomic) id keepAlive;
+@property (copy, nonatomic) CDUnknownBlockType completionBlock;
+@property (copy, nonatomic) CDUnknownBlockType updateProgressUIBlock;
+@property (retain, nonatomic) NSProgress *progress;
+@property (retain, nonatomic) NSDate *lastAccessibilityAnnouncementDate;
+@property (retain, nonatomic) NSDate *openProgressDate;
+@property (nonatomic) _Bool isCancelled;
+@property (retain, nonatomic) DCProgressViewController *progressViewController;
+@property (nonatomic) _Bool progressViewControllerDidFinishPresenting;
+@property (nonatomic) _Bool shouldDismissProgressViewController;
+@property (nonatomic) _Bool shouldShowCancelButton;
+@property (copy, nonatomic) NSString *progressFormatString;
+@property (retain, nonatomic) UIViewController *viewControllerToPresentFrom;
+@property (nonatomic) _Bool shouldShowCircularProgress;
+
++ (void)setMainWindow:(struct UIWindow *)arg1;
+
+- (id)init;
+- (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
+- (void)updateProgress;
+- (id)initWithWindow:(struct UIWindow *)arg1 intervalBeforeOpeningProgressDialog:(double)arg2;
+- (void)startTask:(CDUnknownBlockType)arg1 completionBlock:(CDUnknownBlockType)arg2;
+- (void)completeTaskIfNecessary;
+- (void)openProgressDialog;
+- (void)closeProgressDialog;
+- (void)willDismissProgressViewController:(id)arg1;
+
+@end

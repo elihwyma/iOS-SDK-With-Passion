@@ -1,0 +1,166 @@
+/*
+ Image: /System/Library/PrivateFrameworks/IOAccessoryManager.framework/IOAccessoryManager
+ */
+
+#import <Foundation/NSObject.h>
+
+@class NSMutableData;
+
+@interface HalogenLdcmCalc : NSObject
+
+{
+    _Bool _isDigitalFilterTrigger;
+    int _nSamples;
+    int _diffWindowSize;
+    int _clipDetectWindowSize;
+    int _sizeofSample;
+    int _tmp1DataBuffSize;
+    int _tmp2DataBuffSize;
+    int _tmp3DataBuffSize;
+    double _precalVoltageSignalLevel;
+    double _precalVoltageNoiseLevel;
+    double _precalVoltageSNR;
+    double _precalCurrentSignalLevel;
+    double _precalCurrentNoiseLevel;
+    double _precalCurrentSNR;
+    double _voltageGainCorrection;
+    double _currentGainCorrection;
+    double _currentPhaseCompensation;
+    double _calVoltageSignalLevel;
+    double _calVoltageNoiseLevel;
+    double _calVoltageSNR;
+    double _calCurrentSignalLevel;
+    double _calCurrentNoiseLevel;
+    double _calCurrentSNR;
+    double _goertzelImpedance;
+    double _goertzelPhase;
+    double _compensatedImpedance;
+    double _compensatedPhase;
+    double _clippingScore;
+    double _resistanceInOhms;
+    double _capacitanceInNanoF;
+    double _measurementVoltageSignalLevel;
+    double _measurementVoltageNoiseLevel;
+    double _measurementVoltageSNR;
+    double _measurementCurrentSignalLevel;
+    double _measurementCurrentNoiseLevel;
+    double _measurementCurrentSNR;
+    double _measurementCondetSNR;
+    double _sampleRate;
+    double _signalFrequency;
+    double _adcGain;
+    double _tiaGain;
+    double _hydraImpedance;
+    double _movesumClipThreshold;
+    double _hydraR;
+    double _ldcmAcCap;
+    double _sanitycheckImpedanceLowerbound;
+    double _sanitycheckImpedanceUpperbound;
+    double _sanitycheckPhaseLowerbound;
+    double _sanitycheckPhaseUperbound;
+    double _sanitycheckVoltageGainCorrectionLowerbound;
+    double _sanitycheckVoltageGainCorrectionUpperbound;
+    double _sanitycheckCurrentGainCorrectionLowerbound;
+    double _sanitycheckCurrentGainCorrectionUpperbound;
+    double _sanitycheckCurrentPhaseCompensationLowerbound;
+    double _sanitycheckCurrentPhaseCompensationUpperbound;
+    NSMutableData *_tmp1DataBuff;
+    NSMutableData *_tmp2DataBuff;
+    NSMutableData *_tmp3DataBuff;
+    struct OpaqueFFTSetupD *_fftContext;
+}
+
+@property int nSamples;
+@property int diffWindowSize;
+@property int clipDetectWindowSize;
+@property int sizeofSample;
+@property double sampleRate;
+@property double signalFrequency;
+@property double adcGain;
+@property double tiaGain;
+@property double hydraImpedance;
+@property double movesumClipThreshold;
+@property double hydraR;
+@property double ldcmAcCap;
+@property double sanitycheckImpedanceLowerbound;
+@property double sanitycheckImpedanceUpperbound;
+@property double sanitycheckPhaseLowerbound;
+@property double sanitycheckPhaseUperbound;
+@property double sanitycheckVoltageGainCorrectionLowerbound;
+@property double sanitycheckVoltageGainCorrectionUpperbound;
+@property double sanitycheckCurrentGainCorrectionLowerbound;
+@property double sanitycheckCurrentGainCorrectionUpperbound;
+@property double sanitycheckCurrentPhaseCompensationLowerbound;
+@property double sanitycheckCurrentPhaseCompensationUpperbound;
+@property _Bool isDigitalFilterTrigger;
+@property NSMutableData *tmp1DataBuff;
+@property int tmp1DataBuffSize;
+@property NSMutableData *tmp2DataBuff;
+@property int tmp2DataBuffSize;
+@property NSMutableData *tmp3DataBuff;
+@property int tmp3DataBuffSize;
+@property struct OpaqueFFTSetupD *fftContext;
+@property (readonly) double precalVoltageSignalLevel;
+@property (readonly) double precalVoltageNoiseLevel;
+@property (readonly) double precalVoltageSNR;
+@property (readonly) double precalCurrentSignalLevel;
+@property (readonly) double precalCurrentNoiseLevel;
+@property (readonly) double precalCurrentSNR;
+@property (readonly) double voltageGainCorrection;
+@property (readonly) double currentGainCorrection;
+@property (readonly) double currentPhaseCompensation;
+@property (readonly) double calVoltageSignalLevel;
+@property (readonly) double calVoltageNoiseLevel;
+@property (readonly) double calVoltageSNR;
+@property (readonly) double calCurrentSignalLevel;
+@property (readonly) double calCurrentNoiseLevel;
+@property (readonly) double calCurrentSNR;
+@property (readonly) double goertzelImpedance;
+@property (readonly) double goertzelPhase;
+@property (readonly) double compensatedImpedance;
+@property (readonly) double compensatedPhase;
+@property (readonly) double clippingScore;
+@property (readonly) double resistanceInOhms;
+@property (readonly) double capacitanceInNanoF;
+@property (readonly) double measurementVoltageSignalLevel;
+@property (readonly) double measurementVoltageNoiseLevel;
+@property (readonly) double measurementVoltageSNR;
+@property (readonly) double measurementCurrentSignalLevel;
+@property (readonly) double measurementCurrentNoiseLevel;
+@property (readonly) double measurementCurrentSNR;
+@property (readonly) double measurementCondetSNR;
+
+- (void)dealloc;
+- (id)initWithSize:(int)arg1;
+- (void)_freeBuffers;
+- (_Bool)isBoundViolation_currentGainCorrection;
+- (_Bool)isBoundViolation_currentPhaseCompensation;
+- (_Bool)isLowerBoundViolation_goertzelImpedance;
+- (_Bool)isUpperBoundViolation_goertzelImpedance;
+- (_Bool)isLowerBoundViolation_goertzelPhase;
+- (_Bool)isUpperBoundViolation_goertzelPhase;
+- (_Bool)isBoundViolation_measurementCondetSNR;
+- (_Bool)_allocBuffers;
+- (double)_snr:(id)arg1 withGain:(double)arg2 hasSignalLevel:(double *)arg3 hasNoiseLevel:(double *)arg4 hasCondetSnr:(double *)arg5;
+- (void)_goertzelSecondOrder:(id)arg1 hasFftValue:(double *)arg2 hasPhase:(double *)arg3 withHanning:(_Bool)arg4;
+- (_Bool)isBoundViolation_voltageGainCorrection;
+- (void)_applyGain:(double)arg1 toData:(id)arg2;
+- (void)_applyFractionalPhaseShift:(id)arg1 withPhaseDelay:(double)arg2;
+- (_Bool)_isClipped:(id)arg1;
+- (void)_applyTiaGain:(id)arg1 toCurrentData:(id)arg2;
+- (void)_applyDigitalFilter:(id)arg1;
+- (void)_doHydraComp:(double)arg1 withPhase:(double)arg2;
+- (void)_rcSolver;
+- (void)_applyHanningWindow:(id)arg1 withSize:(int)arg2;
+- (double)_condetSnr:(double *)arg1;
+- (double)_mean:(double *)arg1 ofSize:(unsigned long long)arg2;
+- (double)_variance:(double *)arg1 ofSize:(unsigned long long)arg2;
+- (double)_median:(double *)arg1 ofSize:(unsigned long long)arg2;
+- (double)_stdev:(double *)arg1 ofSize:(unsigned long long)arg2;
+- (void)_reconstructSignal:(id)arg1;
+- (double)_sineExtractor:(id)arg1;
+- (int)doPreCalibration:(id)arg1 withCurrentData:(id)arg2;
+- (int)doCalibration:(id)arg1 withCurrentData:(id)arg2;
+- (int)doLiquidDetection:(id)arg1 withCurrentData:(id)arg2 isReceptacleEmpty:(_Bool)arg3 isReceptacleWet:(_Bool)arg4 withWetTransitionThreshold:(double)arg5 withDryTransitionThreshold:(double)arg6;
+
+@end

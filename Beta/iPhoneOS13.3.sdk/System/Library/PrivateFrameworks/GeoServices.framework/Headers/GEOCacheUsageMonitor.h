@@ -1,0 +1,36 @@
+/*
+ Image: /System/Library/PrivateFrameworks/GeoServices.framework/GeoServices
+ */
+
+#import <NSObject.h>
+
+@class NSMutableDictionary;
+
+@protocol OS_dispatch_queue, OS_dispatch_source;
+
+@interface GEOCacheUsageMonitor : NSObject
+
+{
+    NSMutableDictionary *_typeToHits;
+    NSMutableDictionary *_typeToMisses;
+    NSMutableDictionary *_tileCacheHitData;
+    NSMutableDictionary *_tileCacheMissData;
+    NSObject<OS_dispatch_source> *_timer;
+    NSObject<OS_dispatch_queue> *_isolationQueue;
+}
+
++ (id)sharedMonitor;
+
+- (id)init;
+- (void)dealloc;
+- (void)flush;
+- (void)_flush;
+- (void)recordTileCacheHitForReason:(unsigned char)arg1 tileSource:(unsigned char)arg2 firstAccess:(_Bool)arg3 tileKey:(const struct _GEOTileKey *)arg4 tileSizeInBytes:(unsigned int)arg5;
+- (void)recordTileCacheMissForReason:(unsigned char)arg1 missType:(int)arg2 tileKey:(const struct _GEOTileKey *)arg3 tileSizeInBytes:(unsigned int)arg4 httpStatus:(unsigned int)arg5;
+- (void)recordTileCacheMissForReason:(unsigned char)arg1 missType:(int)arg2 tileKey:(const struct _GEOTileKey *)arg3 loadError:(id)arg4;
+- (void)recordCacheHitForType:(int)arg1;
+- (void)recordCacheMissForType:(int)arg1;
+- (void)_startTimerIfNecessary;
+- (void)_recordTileCacheEventWithKey:(id)arg1 cacheEventDict:(id)arg2 tileSizeInBytes:(unsigned int)arg3 error:(id)arg4;
+
+@end

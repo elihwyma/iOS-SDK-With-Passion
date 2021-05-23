@@ -1,0 +1,177 @@
+/*
+ Image: /System/Library/PrivateFrameworks/PassKitCore.framework/PassKitCore
+ */
+
+#import <NSObject.h>
+
+@class CLLocationManager, NSArray, NSHashTable, NSLock, NSMutableArray, NSMutableSet, NSSet, NSString, NSTimer, PKPaymentCredential, PKPaymentEligibilityResponse, PKPaymentPass, PKPaymentProvisioningControllerCredentialQueue, PKPaymentProvisioningResponse, PKPaymentRequirementsResponse, PKPaymentService, PKPaymentSetupMoreInfoItem, PKPaymentSetupProductModel, PKPaymentWebService;
+
+@protocol OS_dispatch_source;
+
+@interface PKPaymentProvisioningController : NSObject
+
+{
+    _Bool _preflightCompleted;
+    NSMutableSet *_tasks;
+    NSTimer *_descriptionTimer;
+    NSMutableArray *_associatedCredentials;
+    _Bool _provisioningUserInterfaceIsVisible;
+    _Bool _proxyTargetDeviceWebServiceInUse;
+    NSString *_provisioningNonce;
+    PKPaymentCredential *_currentCredential;
+    NSHashTable *_delegates;
+    NSLock *_delegateLock;
+    NSSet *_supportedFeatureIdentifierStrings;
+    NSSet *_supportedFeatureIdentifierStringsForAccountProvisioning;
+    unsigned long long _targetDeviceSupportsTypeF;
+    PKPaymentSetupMoreInfoItem *_marketExpressInfoItem;
+    CLLocationManager *_locationManager;
+    NSObject<OS_dispatch_source> *_locationTimer;
+    CDUnknownBlockType _locationCompletion;
+    PKPaymentService *_paymentService;
+    NSString *_productIdentifier;
+    NSString *_referrerIdentifier;
+    PKPaymentWebService *_webService;
+    long long _state;
+    NSString *_localizedProgressDescription;
+    NSArray *_purchaseCredentials;
+    PKPaymentProvisioningControllerCredentialQueue *_credentialProvisioningQueue;
+    PKPaymentSetupProductModel *_paymentSetupProductModel;
+    PKPaymentRequirementsResponse *_requirementsResponse;
+    PKPaymentEligibilityResponse *_eligibilityResponse;
+    PKPaymentProvisioningResponse *_provisioningResponse;
+    PKPaymentPass *_provisionedPass;
+    NSArray *_moreInfoItems;
+    NSSet *_automaticExpressModes;
+    NSArray *_allowedPaymentNetworks;
+    NSSet *_requiredTransitNetworkIdentifiers;
+    NSSet *_allowedFeatureIdentifiers;
+}
+
+@property (nonatomic, readonly) _Bool suppressDefaultCardholderNameField;
+@property (copy, nonatomic) NSString *referrerIdentifier;
+@property (nonatomic, readonly) PKPaymentWebService *webService;
+@property (nonatomic) long long state;
+@property (copy, nonatomic, readonly) NSString *localizedProgressDescription;
+@property (copy, nonatomic, readonly) NSArray *associatedCredentials;
+@property (copy, nonatomic, readonly) NSArray *purchaseCredentials;
+@property (copy, nonatomic, readonly) NSArray *allCredentials;
+@property (nonatomic, readonly) PKPaymentProvisioningControllerCredentialQueue *credentialProvisioningQueue;
+@property (nonatomic, readonly) PKPaymentSetupProductModel *paymentSetupProductModel;
+@property (nonatomic, readonly) PKPaymentRequirementsResponse *requirementsResponse;
+@property (copy, nonatomic, readonly) NSString *productIdentifier;
+@property (nonatomic, readonly) PKPaymentEligibilityResponse *eligibilityResponse;
+@property (nonatomic, readonly) PKPaymentProvisioningResponse *provisioningResponse;
+@property (nonatomic, readonly) PKPaymentPass *provisionedPass;
+@property (nonatomic, readonly) NSArray *moreInfoItems;
+@property (nonatomic, readonly) NSSet *automaticExpressModes;
+@property (nonatomic, readonly, getter=isPasscodeUpgradeRequired) _Bool passcodeUpgradeRequired;
+@property (retain, nonatomic) NSArray *allowedPaymentNetworks;
+@property (retain, nonatomic) NSSet *requiredTransitNetworkIdentifiers;
+@property (retain, nonatomic) NSSet *allowedFeatureIdentifiers;
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+
+- (void)dealloc;
+- (void)reset;
+- (void)addDelegate:(id)arg1;
+- (void)removeDelegate:(id)arg1;
+- (void)locationManager:(id)arg1 didUpdateLocations:(id)arg2;
+- (void)noteProvisioningUserInterfaceDidAppear;
+- (void)noteProvisioningUserInterfaceDidDisappear;
+- (_Bool)willPassWithUniqueIdentifierAutomaticallyBecomeDefault:(id)arg1;
+- (id)initWithWebService:(id)arg1;
+- (void)retrieveAllAvailableCredentials:(CDUnknownBlockType)arg1;
+- (void)performDeviceCheckInIfNeeded:(CDUnknownBlockType)arg1;
+- (void)registerDevice:(CDUnknownBlockType)arg1;
+- (void)validatePreconditions:(CDUnknownBlockType)arg1;
+- (void)updatePaymentSetupProductModelWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (void)associateCredentials:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)resolveProvisioningForCredential:(id)arg1;
+- (void)passcodeUpgradeCompleted:(_Bool)arg1;
+- (void)acceptTerms;
+- (void)requestProvisioning:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)requestEligibility:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)requestRequirements:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)_setState:(long long)arg1 notify:(_Bool)arg2;
+- (void)featureApplicationAdded:(id)arg1;
+- (void)featureApplicationRemoved:(id)arg1;
+- (void)featureApplicationChanged:(id)arg1;
+- (id)displayableErrorForError:(id)arg1;
+- (id)_displayableErrorOverrideForUnderlyingError:(id)arg1;
+- (void)resetForNewProvisioning;
+- (void)ingestPaymentPassForCredential:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)setupAccountCredentialForProvisioning:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)validatePreconditionsAndRegister:(CDUnknownBlockType)arg1;
+- (long long)_defaultResetState;
+- (void)preflightWithCompletion:(CDUnknownBlockType)arg1;
+- (id)_doesDisplayableErrorConstitutePreflightFailure:(id)arg1;
+- (id)_supportedFeatureIdentifierStrings;
+- (id)_supportedFeatureIdentifierStringsForAccountProvisioning;
+- (void)_addAccountToProductMatchingFeatureIdentifier:(unsigned long long)arg1;
+- (id)_fetchOrCreateProductsForIdentifier:(unsigned long long)arg1;
+- (_Bool)_featureApplicationInValidStateToPresent:(id)arg1;
+- (void)retrieveAccountCredentials:(CDUnknownBlockType)arg1;
+- (void)retrieveRemoteCredentials:(CDUnknownBlockType)arg1;
+- (void)_associateCredentials:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (_Bool)_hasSetupConfiguration;
+- (_Bool)_credentialIsValidForSetupConfiguration:(id)arg1;
+- (void)_updateCredentialWithPaymentPassAssets:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_updateCredentialWithPaymentPass:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_associateCredential:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)_queryEligibilityForCredential:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_queryRequirementsForCredential:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_downloadRemoteAssetsForPaymentPass:(id)arg1 paymentCredential:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)_informDelegatesOfPaymentPassUpdateOnCredential:(id)arg1;
+- (id)_filterPaymentSetupProducts:(id)arg1;
+- (void)setupFeatures:(CDUnknownBlockType)arg1;
+- (void)browsableBankAppsWithCompletionHandler:(CDUnknownBlockType)arg1;
+- (id)_mockBrowseBanksResponse;
+- (void)requestPurchasesForProduct:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)updateRemoteCredentials:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)requestProvisioningMethodMetadataForProduct:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (id)associatedCredentialsForDefaultBehaviour;
+- (void)_setupAccountCredentialForProvisioning:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_requestEligibility:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)_requestRequirements:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (void)_setLocalizedProgressDescription:(id)arg1;
+- (void)_passAlreadyProvisioned;
+- (void)_provisioningNonceWithCompletion:(CDUnknownBlockType)arg1;
+- (void)_requestProvisioning:(id)arg1 withCompletionHandler:(CDUnknownBlockType)arg2;
+- (unsigned long long)_noteProvisioningDidBegin;
+- (void)_noteProvisioningDidEndWithTaskIdentifier:(unsigned long long)arg1;
+- (void)_ingestPaymentPass:(id)arg1 withCompletion:(CDUnknownBlockType)arg2;
+- (void)_handleProvisioningError:(id)arg1 forRequest:(id)arg2;
+- (void)_downloadMoreInfoItemURLs:(id)arg1 withMetadata:(id)arg2 completion:(CDUnknownBlockType)arg3;
+- (void)_verifyPassIsSupportedForExpressInLocalMarket:(id)arg1 completion:(CDUnknownBlockType)arg2;
+- (void)_loadMoreInfoItemForMarket:(id)arg1 completionHandler:(CDUnknownBlockType)arg2;
+- (void)_startLocationSearchWithTimeout:(double)arg1 completion:(CDUnknownBlockType)arg2;
+- (_Bool)_isValidLocation:(id)arg1;
+- (void)_endRequiringUpgradedPasscodeIfNecessary;
+- (void)_startRequiringUpgradedPasscodeWithPasscodeMeetsPolicy:(_Bool)arg1;
+- (id)_paymentPassWithPaymentMethodType:(unsigned long long)arg1;
+- (void)_updateLocalizedProgressAndInvalidateTimer;
+- (void)paymentWebService:(id)arg1 didQueueTSMConnectionForTaskID:(unsigned long long)arg2;
+- (void)paymentWebService:(id)arg1 didCompleteTSMConnectionForTaskID:(unsigned long long)arg2;
+- (id)initWithWebService:(id)arg1 paymentSetupRequest:(id)arg2;
+- (void)validatePreconditionsRegisterAndAssociateRemoteCredentials:(CDUnknownBlockType)arg1;
+- (void)setupProductForProvisioning:(id)arg1 includePurchases:(_Bool)arg2 withCompletionHandler:(CDUnknownBlockType)arg3;
+- (void)resolveAmbiguousRequirementsWithProductIdentifier:(id)arg1;
+- (void)resolveRequirementsUsingProduct:(id)arg1;
+- (void)resolveRequirementsUsingProvisioningMethodMetadata:(id)arg1;
+- (void)resolveRequirementsUsingAlreadyProvisionedRemoteCredential:(id)arg1;
+- (void)declineTerms;
+- (void)removeProvisionedPass;
+- (_Bool)provisioningUserInterfaceIsVisible;
+- (void)preflightPasscodeUpgradeWithCompletion:(CDUnknownBlockType)arg1;
+- (void)makePaymentPassDefault:(id)arg1;
+- (_Bool)hasPaymentPass;
+- (_Bool)hasCreditPaymentPass;
+- (_Bool)hasDebitPaymentPass;
+- (id)passesWithPaymentMethodType:(unsigned long long)arg1;
+- (id)displayableErrorForProvisioningError:(id)arg1;
+- (void)_addAssociatedCredential:(id)arg1;
+
+@end

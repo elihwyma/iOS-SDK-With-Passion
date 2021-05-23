@@ -1,0 +1,11 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CoreDuet.framework/CoreDuet
+ */
+
+#import <CoreDuet/_DKObjectType.h>
+
+@interface _DKCategoryType : _DKObjectType
+
++ (Class)associatedObjectClass;
+
+@end

@@ -1,0 +1,172 @@
+/*
+ Image: /System/Library/PrivateFrameworks/NotesShared.framework/NotesShared
+ */
+
+#import <NotesShared/ICNoteContainer.h>
+
+@class ICAccountData, ICAccountProxy, ICFolder, NSData, NSPersistentStore, NSSet, NSString;
+
+@interface ICAccount : ICNoteContainer
+
+{
+    _Bool _didAddObservers;
+    _Bool _didAddTrashObservers;
+    ICFolder *_defaultFolder;
+    ICFolder *_trashFolder;
+    ICAccountProxy *_accountProxy;
+}
+
+@property (readonly) unsigned long long hash;
+@property (readonly) Class superclass;
+@property (copy, readonly) NSString *description;
+@property (copy, readonly) NSString *debugDescription;
+@property (retain, nonatomic) ICAccountProxy *accountProxy;
+@property (nonatomic) _Bool didAddObservers;
+@property (nonatomic) _Bool didAddTrashObservers;
+@property (retain, nonatomic) NSSet *ownerInverse;
+@property (retain, nonatomic) ICFolder *defaultFolder;
+@property (retain, nonatomic) ICFolder *trashFolder;
+@property (retain, nonatomic) NSString *name;
+@property (nonatomic, readonly) NSString *localizedName;
+@property (nonatomic, readonly) NSPersistentStore *persistentStore;
+@property (retain, nonatomic) NSSet *folders;
+@property (retain, nonatomic) NSSet *notes;
+@property (retain, nonatomic) NSSet *serverChangeTokens;
+@property (retain, nonatomic) NSSet *deviceMigrationStates;
+@property (retain, nonatomic) NSSet *legacyTombstones;
+@property (nonatomic) int accountType;
+@property (nonatomic) _Bool didChooseToMigrate;
+@property (nonatomic) _Bool didFinishMigration;
+@property (nonatomic) _Bool didMigrateOnMac;
+@property (nonatomic) _Bool storeDataSeparately;
+@property (retain, nonatomic) NSString *userRecordName;
+@property (retain, nonatomic) NSData *cryptoVerifier;
+@property (retain, nonatomic) ICAccountData *accountData;
+@property (nonatomic, readonly) _Bool isManaged;
+
++ (void)initialize;
++ (void)localeDidChange:(id)arg1;
++ (void)deleteAccount:(id)arg1;
++ (id)accountUtilities;
++ (void)setAccountUtilities:(id)arg1;
++ (_Bool)clearAccountForAppleCloudKitTable;
++ (id)localAccountInContext:(id)arg1;
++ (_Bool)hasActiveCloudKitAccountInContext:(id)arg1;
++ (id)newLocalAccountInContext:(id)arg1;
++ (id)localizedLocalAccountName;
++ (id)allAccountsInContext:(id)arg1;
++ (id)keyPathsForValuesAffectingCanBeSharedViaICloud;
++ (id)defaultAccountInContext:(id)arg1;
++ (id)keyPathsForValuesAffectingVisibleNoteContainerChildren;
++ (id)existingCloudObjectForRecordID:(id)arg1 accountID:(id)arg2 context:(id)arg3;
++ (id)allCloudObjectsInContext:(id)arg1;
++ (id)allActiveAccountsInContext:(id)arg1;
++ (id)allAccountIdentifiersInContext:(id)arg1;
++ (id)standardFolderIdentifierWithPrefix:(id)arg1 accountIdentifier:(id)arg2 accountType:(int)arg3;
++ (id)localizedLocalAccountNameMidSentence;
++ (id)keyPathsForValuesAffectingLocalizedName;
++ (id)accountWithIdentifier:(id)arg1 context:(id)arg2;
++ (id)newAccountWithIdentifier:(id)arg1 type:(int)arg2 context:(id)arg3;
++ (id)cloudKitAccountInContext:(id)arg1;
++ (id)accountsMatchingPredicate:(id)arg1 context:(id)arg2;
++ (id)allActiveCloudKitAccountsInContext:(id)arg1;
++ (id)cloudKitIfMigratedElseLocalAccountInContext:(id)arg1;
++ (id)allActiveAccountsInContext:(id)arg1 sortDescriptors:(id)arg2 relationshipKeyPathsForPrefetching:(id)arg3;
++ (id)accountsWithAccountType:(int)arg1 context:(id)arg2;
++ (unsigned long long)numberOfCloudKitAccountsInContext:(id)arg1 onlyMigrated:(_Bool)arg2;
++ (void)initializeLocalAccountNamesInBackground;
++ (void)deleteAccountWithBatchDelete:(id)arg1;
++ (id)cloudKitAccountWithIdentifier:(id)arg1 context:(id)arg2;
++ (id)allCloudKitAccountsInContext:(id)arg1;
++ (_Bool)isCloudKitAccountAvailable;
+
+- (void)dealloc;
+- (long long)compare:(id)arg1;
+- (void)observeValueForKeyPath:(id)arg1 ofObject:(id)arg2 change:(id)arg3 context:(void *)arg4;
+- (_Bool)isDeletable;
+- (id)cacheKey;
+- (id)containerIdentifier;
+- (id)recordType;
+- (id)recordName;
+- (id)accountName;
+- (_Bool)isLeaf;
+- (void)awakeFromFetch;
+- (void)willTurnIntoFault;
+- (void)awakeFromInsert;
+- (void)prepareForDeletion;
+- (void)setMarkedForDeletion:(_Bool)arg1;
+- (id)recordZoneName;
+- (id)predicateForSearchableNotes;
+- (id)predicateForSearchableAttachments;
+- (id)noteVisibilityTestingForSearchingAccount;
+- (_Bool)isAllNotesContainer;
+- (id)ic_loggingValues;
+- (_Bool)shouldBeDeletedFromLocalDatabase;
+- (_Bool)hasAnyCustomFolders;
+- (unsigned long long)visibleNotesIncludingTrashCount;
+- (id)predicateForVisibleNotes;
+- (id)predicateForPinnedNotes;
+- (id)titleForNavigationBar;
+- (id)visibleNotes;
+- (unsigned long long)visibleNotesCount;
+- (id)titleForTableViewCell;
+- (_Bool)canBeSharedViaICloud;
+- (void)updateSubFolderMergeableDataChangeCount;
+- (_Bool)supportsEditingNotes;
+- (id)visibleSubFolders;
+- (id)subFolderOrderMergeableData;
+- (void)setSubFolderOrderMergeableData:(id)arg1;
+- (id)customNoteSortTypeValue;
+- (id)accountFilesDirectoryURL;
+- (id)visibleNoteContainerChildren;
+- (_Bool)supportsLegacyTombstones;
+- (_Bool)canPasswordProtectNotes;
+- (id)previewImageDirectoryURL;
+- (_Bool)needsToBePushedToCloud;
+- (_Bool)needsToBeDeletedFromCloud;
+- (id)visibleFoldersWithParent:(id)arg1;
+- (id)reservedAccountFolderTitles;
+- (id)subFolderIdentifiersOrderedSet;
+- (id)standardFolderIdentifierWithPrefix:(id)arg1;
+- (id)predicateForVisibleAttachments;
+- (id)predicateForVisibleFolders;
+- (id)newlyCreatedRecord;
+- (void)mergeDataFromRecord:(id)arg1 accountID:(id)arg2;
+- (_Bool)isInICloudAccount;
+- (id)ic_loggingIdentifier;
+- (id)cryptoPassphraseVerifier;
+- (id)passwordProtectedNotes;
+- (void)removeAllObserversIfNecessary;
+- (void)noteWillBeDeletedOrUndeleted:(id)arg1;
+- (void)removeTrashObserversIfNecessary;
+- (void)updateTrashFolderHiddenNoteContainerState;
+- (id)defaultFolderIdentifier;
+- (id)trashFolderIdentifier;
+- (id)folderWithIdentifier:(id)arg1;
+- (void)createDefaultFolder;
+- (void)createTrashFolder;
+- (void)addTrashObserversIfNecessary;
+- (id)visibleFolders;
+- (id)customRootLevelFolders;
+- (id)predicateForFolders;
+- (id)predicateForNotesInAccount;
+- (id)allItemsFolderLocalizedTitle;
+- (id)accountDataCreateIfNecessary;
+- (id)localizedNameMidSentence;
+- (id)predicateForVisibleNotesIncludingTrash;
+- (void)updateAccountNameForAccountListSorting;
+- (id)predicateForAttachmentsInAccount;
+- (void)performBlockInPersonaContextIfNecessary:(CDUnknownBlockType)arg1;
+- (void)createStandardFolders;
+- (_Bool)hasSameCryptoKeyAsAccount:(id)arg1;
+- (_Bool)containsSharedFolders;
+- (unsigned long long)indexOfCustomRootLevelFolder:(id)arg1;
+- (_Bool)visibleRootFoldersContainFolderWithTitle:(id)arg1;
+- (id)visibleNoteContainers;
+- (id)allChildObjects;
+- (_Bool)shouldExcludeFilesFromCloudBackup;
+- (id)fallbackImageDirectoryURL;
+- (id)mediaDirectoryURL;
+- (id)exportableMediaDirectoryURL;
+
+@end

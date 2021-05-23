@@ -1,0 +1,171 @@
+/*
+ Image: /System/Library/PrivateFrameworks/ProVideo.framework/ProVideo
+ */
+
+#import <ProVideo/PVEffect.h>
+
+@class NSArray, NSLock, NSMutableDictionary, NSString, NSURL;
+
+@interface PVMotionEffect : PVEffect
+
+{
+    void *_document;
+    double _docPixelAspectRatio;
+    double _docDurInSeconds;
+    unsigned int _docFrames;
+    double _docFrameRate;
+    struct CGSize _documentSize;
+    struct CGSize _currentDocumentSize;
+    double _effectOutputAspect;
+    unsigned int _effectIndex;
+    unsigned int _numInputs;
+    _Bool _needsCrop;
+    NSLock *_documentLock;
+    struct METimeRemap _timeRemap;
+    struct OZChannelBool *_buildInEnableChan;
+    struct OZChannelBool *_buildOutEnableChan;
+    struct map<unsigned int, unsigned int, std::__1::less<unsigned int>, std::__1::allocator<std::__1::pair<const unsigned int, unsigned int>>> *_dropZoneIndexToID;
+    struct FigTime _motionPosterTime;
+    _Bool _cachedPosterTime;
+    struct atomic<DocLoadStatus> _docLoadStatus;
+    NSURL *_projectURL;
+    NSString *_projectPath;
+    unsigned int _topLevelGroupID;
+    int _topLevelGroupIDStatus;
+    vector_f672cb0f *_textObjectIDs;
+    NSArray *_defaultAttributedStrings;
+    CDStruct_1b6d18a9 _renderStartOffset;
+    _Bool _needToUpdateSceneDuration;
+    _Bool _cachedRenderDirty;
+    NSMutableDictionary *_cachedPublishedParams;
+    NSMutableDictionary *_parametersThatInvalidateCache;
+    struct FigTime _loopTime;
+}
+
+@property (nonatomic) struct FigTime loopTime;
+@property (retain, nonatomic) NSMutableDictionary *cachedPublishedParams;
+@property (retain, nonatomic) NSMutableDictionary *parametersThatInvalidateCache;
+
++ (void)initializeMotionInternal;
++ (void)handleCleanupEffectsCache;
++ (void)handleApplicationWillTerminate;
++ (void)handleApplicationDidReceiveMemoryWarning;
++ (void)registerEffects;
++ (id)newEffectWithURL:(id)arg1;
++ (id)newEffectWithData:(id)arg1;
++ (id)effectMap;
++ (id)_effectPathFromID:(id)arg1;
++ (void)registerTemplateInDirectory:(id)arg1 relPath:(id)arg2 effectID:(id)arg3 doingRescan:(_Bool)arg4 origCache:(id)arg5 newCache:(id)arg6;
++ (_Bool)replacedMappedEffectWithNewPath:(id)arg1;
++ (id)_bundleLibPaths;
++ (void)mapTemplatesInDirectory:(id)arg1 doingRescan:(_Bool)arg2 origCache:(id)arg3 newCache:(id)arg4;
++ (id)_userLibPaths;
++ (void)scanTemplatesInDirectory:(id)arg1 doingRescan:(_Bool)arg2 replaceMappedEffectPath:(_Bool)arg3 origCache:(id)arg4 newCache:(id)arg5;
++ (void)registerNoneEffectForType:(id)arg1 effectID:(id)arg2 origCache:(id)arg3 newCache:(id)arg4;
++ (void)initializeMotion;
++ (CDStruct_1b6d18a9)liveTitlePickerLoopTime;
++ (id)parameterKeyToPublishedParameterNameMap;
++ (void)setLiveTitlePickerLoopTime:(CDStruct_1b6d18a9)arg1;
++ (id)publishedParameterNameToParameterKeyMap;
++ (void)extractMetadataFromContentsOfFile:(id)arg1 toCacheEntry:(id)arg2;
++ (void)clearPreviewStats;
+
+- (void)dealloc;
+- (_Bool)isReady;
+- (int)orientation;
+- (id).cxx_construct;
+- (int)origin;
+- (void)releaseResources;
+- (struct CGSize)outputSize;
+- (struct CGSize)documentSize;
+- (id)effectParameters;
+- (void)setEffectParameters:(id)arg1;
+- (void)setRollRadians:(double)arg1;
+- (void)loadDocument;
+- (id)initWithEffectID:(id)arg1;
+- (_Bool)isTextFlipped;
+- (id)defaultAttributedString:(unsigned long long)arg1;
+- (id)textEditingBounds:(CDStruct_1b6d18a9)arg1;
+- (id)textTransforms:(CDStruct_1b6d18a9)arg1;
+- (_Bool)textImagePoints:(struct CGPoint *)arg1 textAtIndex:(unsigned long long)arg2 time:(CDStruct_1b6d18a9)arg3 includeDropShadow:(_Bool)arg4;
+- (void)disableRenderingTextObjectAtIndex:(unsigned int)arg1;
+- (void)enableRenderingTextObjectAtIndex:(unsigned int)arg1;
+- (_Bool)supportsFlippingText;
+- (_Bool)supportsOrientation;
+- (double)topLevelOpacity;
+- (_Bool)imagePoints:(struct CGPoint *)arg1 time:(CDStruct_1b6d18a9)arg2 includeDropShadow:(_Bool)arg3;
+- (_Bool)imagePointsAtPosterFrameTime:(struct CGPoint *)arg1 componentTime:(CDStruct_1b6d18a9)arg2 includeDropShadow:(_Bool)arg3;
+- (_Bool)topLevelGroupBounds:(struct CGRect *)arg1 atTime:(CDStruct_1b6d18a9)arg2 includeDropShadow:(_Bool)arg3 includeMasks:(_Bool)arg4;
+- (_Bool)topLevelGroupBoundsAtPosterFrame:(struct CGRect *)arg1 includeDropShadow:(_Bool)arg2 includeMasks:(_Bool)arg3;
+- (id)topLevelGroupTransformAtTime:(CDStruct_1b6d18a9)arg1;
+- (id)topLevelGroupTransformAtPosterFrame:(CDStruct_1b6d18a9)arg1;
+- (_Bool)resourcesAreReady;
+- (id)topLevelGroupTransform;
+- (_Bool)loadResources;
+- (void)updateInspectableProperties:(id)arg1;
+- (HGRef_265f9e4c)previewHGNodeForTime:(CDStruct_1b6d18a9)arg1 inputHGNode:(HGRef_265f9e4c)arg2 outputSize:(struct CGSize)arg3 renderer:(struct HGRenderer *)arg4;
+- (HGRef_265f9e4c)hgNodeForTime:(CDStruct_1b6d18a9)arg1 inputs:(const PVInputHGNodeMap_d4d649d7 *)arg2 renderer:(const HGRef_5aef67ae *)arg3 igContext:(HGRef_6bae45d3)arg4;
+- (_Bool)supportsExtendedRangeInputs;
+- (void)loadEffectInternal;
+- (void)setTopLevelGroupTransform:(id)arg1;
+- (_Bool)isTranscription;
+- (_Bool)shouldRenderPreviewAtPosterTime;
+- (void)clearTranscription;
+- (void)resetToDefaultTranscriptionForLocaleID:(id)arg1;
+- (void)setTranscriptionText:(id)arg1;
+- (_Bool)transcriptionHitTest:(struct CGPoint)arg1 time:(CDStruct_1b6d18a9)arg2;
+- (_Bool)hasBuiltInEnvironment;
+- (void)applyInspectableProperties;
+- (id)projectURL;
+- (id)projectPath;
+- (void)computeLoopMarkerBasedOnTranscription;
+- (void)computeIntroOutroPoints;
+- (void)buildDropZoneIdMap;
+- (void)storeDefaultStrings;
+- (int)posterFrameTime:(struct FigTime *)arg1;
+- (struct FigTime)motionTimeFromComponentTime:(CDStruct_1b6d18a9)arg1 effectRange:(CDStruct_e83c9415)arg2;
+- (_Bool)renderCachingCannotNotBeEnabled:(_Bool)arg1 isTextRenderingDisabled:(_Bool)arg2 isAtPosterFrame:(_Bool)arg3 hasAdditionalScale:(_Bool)arg4 hasTransformAnimation:(_Bool)arg5;
+- (void)didSetCacheInvalidatingParameter:(id)arg1 forKey:(id)arg2;
+- (_Bool)isSketch;
+- (void)adjustCutawayInputs:(map_184f33b3 *)arg1 splitCropRectA:(id)arg2 splitCropRectB:(id)arg3 pipRect:(id)arg4 pipScaleFactor:(id)arg5 renderScale:(float)arg6 pipNeedsCrop:(_Bool)arg7;
+- (void)adjustTransitionInputs:(map_184f33b3 *)arg1 renderScale:(float)arg2 renderer:(const HGRef_5aef67ae *)arg3 inputANeedsBackground:(_Bool)arg4 inputBNeedsBackground:(_Bool)arg5 slideCropRectA:(id)arg6 slideCropRectB:(id)arg7;
+- (void)adjustPosition:(id)arg1;
+- (void)applyConcatenatedTLGroupAndClipTransforms:(id)arg1 time:(CDStruct_1b6d18a9)arg2;
+- (void)adjustCamera:(id)arg1;
+- (struct HGRect)makeCropRectForDOD:(struct HGRect)arg1 renderRect:(struct CGRect)arg2 renderScale:(float)arg3;
+- (void)setIsFrontFacingCamera:(_Bool)arg1;
+- (void)setQuaternion:(double)arg1:(double)arg2:(double)arg3:(double)arg4;
+- (_Bool)hasEmojiRenderingWorkaround;
+- (void)disableElementWithPublishedParam:(struct PCString *)arg1 disable:(_Bool)arg2;
+- (_Bool)isSingleWordTranscription;
+- (void)disableWordFadeOutIfNecessary;
+- (void)setTopLevelGroupTransform_NoLock:(id)arg1;
+- (void)setEffectOutputAspectWithNumber:(id)arg1;
+- (void)adjustKenBurnsAnimation:(id)arg1;
+- (void)adjustCutawayBorder:(id)arg1;
+- (void)adjustCutawayFadeAnimation:(id)arg1;
+- (void)setMaskPoints:(id)arg1;
+- (void)setSketchStrokes:(id)arg1;
+- (void)setupTitleParameters:(id)arg1;
+- (void)setupTranscriptionParameters:(id)arg1;
+- (void)setupPublishedParameters:(id)arg1;
+- (void)setBuildInEnabled:(_Bool)arg1;
+- (void)setBuildOutEnabled:(_Bool)arg1;
+- (void)setTopLevelOpacity:(double)arg1;
+- (void)setForceDisableLoop:(_Bool)arg1;
+- (void)setForceDisableBuildAnimation:(_Bool)arg1;
+- (void)disableBackgroundMovie:(_Bool)arg1;
+- (int)_worldSpaceImagePoints:(struct CGPoint *)arg1 objectID:(unsigned int)arg2 time:(struct FigTime)arg3 componentTime:(CDStruct_1b6d18a9)arg4 includeDropShadow:(_Bool)arg5 includeMasks:(_Bool)arg6 flatten:(_Bool)arg7;
+- (struct FigTime)_posterTimeOrMotionTimeFromComponentTime:(CDStruct_1b6d18a9)arg1 effectRange:(CDStruct_e83c9415)arg2;
+- (int)_objectTransform:(PCMatrix44Tmpl_93ed1289 *)arg1 objectID:(unsigned int)arg2 time:(struct FigTime)arg3 componentTime:(CDStruct_1b6d18a9)arg4 flatten:(_Bool)arg5;
+- (int)_objectBounds:(PCRect_3a266109 *)arg1 objectID:(unsigned int)arg2 time:(struct FigTime)arg3 includeDropShadow:(_Bool)arg4 includeMasks:(_Bool)arg5;
+- (_Bool)parameterInvalidatesCache:(id)arg1;
+- (_Bool)didCacheInvalidatingParameterChange:(id)arg1 key:(id)arg2;
+- (id)publishedParams;
+- (vector_f672cb0f *)_textObjectIDs;
+- (_Bool)_supportsParam:(id)arg1;
+- (_Bool)shouldDisableWordFadeOut;
+- (int)numberOfInputsHint;
+- (void)setupTransitionParameters:(id)arg1;
+
+@end

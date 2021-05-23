@@ -1,0 +1,19 @@
+/*
+ Image: /System/Library/PrivateFrameworks/CalendarNotification.framework/CalendarNotification
+ */
+
+#import <Foundation/NSObject.h>
+
+@interface CALNNotificationDataSourceUtils : NSObject
+
++ (id)sourceClientIdentifierForNotification:(id)arg1;
++ (id)notificationReferenceOfType:(int)arg1 withSourceClientIdentifier:(id)arg2 inEventStore:(id)arg3 withNotificationReferenceProvider:(id)arg4;
++ (id)eventWithSourceClientIdentifier:(id)arg1 inEventStore:(id)arg2;
++ (id)calendarWithSourceClientIdentifier:(id)arg1 inEventStore:(id)arg2;
++ (id)objectIDWithSourceClientIdentifier:(id)arg1;
++ (void)hideCalendarFromNotificationCenter:(id)arg1 inEventStore:(id)arg2;
++ (void)respondToSharedCalendarInvitationWithSourceClientIdentifier:(id)arg1 inEventStore:(id)arg2 withDataAccessExpressConnection:(id)arg3 accept:(_Bool)arg4;
++ (void)reportSharedCalendarInvitationAsJunkWithSourceClientIdentifier:(id)arg1 inEventStore:(id)arg2;
++ (void)clearSharedCalendarInvitationResponseWithSourceClientIdentifier:(id)arg1 inEventStore:(id)arg2;
+
+@end

@@ -1,0 +1,12 @@
+/*
+ Image: /System/Library/Frameworks/EventKit.framework/EventKit
+ */
+
+#import <EventKit/Swift-Protocol.h>
+
+@protocol EKCancellableRemoteOperation <Swift>
+
+- (unsigned short)cancel;
+- (unsigned short)disconnect;
+
+@end
